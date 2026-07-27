@@ -4,6 +4,7 @@ __pycache__/
 uploads/
 *.db
 *.db-journal
+*.zip
 download_progress.json
 luatools_cookies.txt
 luatools_meta.json
