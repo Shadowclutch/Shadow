@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% block title %}CW Shadow - Game Fix Hub{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="hero">
+        <h1>Game Fixes</h1>
+        <p>Browse and download multiplayer fixes for your favorite games.</p>
+    </div>
+
+    <div class="controls">
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Search games..." oninput="filterFixes()">
+        </div>
+        <div class="filter-row">
+            <div class="filter-btns">
+                <button class="filter-btn active" onclick="setFilter('all', this)">All</button>
+                <button class="filter-btn" onclick="setFilter('bypass', this)">Bypass</button>
+                <button class="filter-btn" onclick="setFilter('repair', this)">Repair</button>
+                <button class="filter-btn" onclick="setFilter('other', this)">Other</button>
+            </div>
+            <div id="result-count"></div>
+        </div>
+    </div>
+
+    <div class="games-grid" id="games-grid">
+        {% for fix in fixes %}
+        <div class="game-card" data-category="{{ fix.category }}" data-search="{{ fix.game_name|lower }} {{ fix.app_id }}">
+            {% if fix.header_image %}
+            <div class="game-card-img">
+                <img src="{{ fix.header_image }}" alt="" loading="lazy"
+                    onload="this.classList.add('loaded')" onerror="this.parentElement.style.display='none'">
+            </div>
+            {% endif %}
+            <div class="game-card-info">
+                <div class="game-card-top">
+                    <div class="game-card-title">{{ fix.game_name }}</div>
+                    <div class="badge {{ fix.category }}">{{ fix.category }}</div>
+                </div>
+                {% if fix.description %}
+                <div class="game-card-desc">{{ fix.description }}</div>
+                {% endif %}
+                <div class="game-card-meta">
+                    {% if fix.app_id %}<span>{{ fix.app_id }}</span>{% endif %}
+                    {% if fix.tags %}<span>{{ fix.tags.split(',')[0][:18] }}</span>{% endif %}
+                </div>
+            </div>
+            <div class="game-card-footer">
+                {% if fix.file_size > 0 %}
+                <span class="file-size">{{ fix.file_size|filesizeformat }}</span>
+                <a href="{{ url_for('download', fix_id=fix.id) }}" class="dl-btn">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    Download
+                </a>
+                {% elif fix.lua_fix_id %}
+                <span class="file-size" style="color: var(--accent2);">Ready</span>
+                <a href="{{ url_for('download', fix_id=fix.id) }}" class="dl-btn">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    Download
+                </a>
+                {% else %}
+                <span class="file-size">N/A</span>
+                <span class="dl-btn pending">Unavailable</span>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div id="no-results" class="empty-state" style="display:none;">
+        <h3>No matches found</h3>
+        <p>Try a different search term.</p>
+    </div>
+</div>
+
+<script>
+let currentFilter = 'all';
+
+function setFilter(category, btn) {
+    currentFilter = category;
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    filterFixes();
+}
+
+function filterFixes() {
+    const query = document.getElementById('search').value.toLowerCase();
+    let visible = 0;
+    document.querySelectorAll('.game-card').forEach(card => {
+        const search = card.dataset.search || '';
+        const cat = card.dataset.category || '';
+        const matchesSearch = !query || search.includes(query);
+        const matchesFilter = currentFilter === 'all' || cat === currentFilter;
+        const show = matchesSearch && matchesFilter;
+        card.style.display = show ? '' : 'none';
+        if (show) visible++;
+    });
+    document.getElementById('result-count').textContent = visible + ' games';
+    document.getElementById('no-results').style.display = visible === 0 ? '' : 'none';
+}
+filterFixes();
+</script>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}CW Shadow - Admin Login{% endblock %}
+
+{% block content %}
+<div class="container" style="max-width: 400px;">
+    <div class="hero">
+        <h1 style="font-size: 28px;">Admin Access</h1>
+        <p>Enter password to continue.</p>
+    </div>
+    <form method="POST" style="margin-top: 32px;">
+        <div class="search-bar" style="margin-bottom: 16px;">
+            <input type="password" name="password" placeholder="Password" autofocus
+                style="padding-left: 18px; font-size: 15px;">
+        </div>
+        <button type="submit" class="dl-btn" style="width: 100%; justify-content: center; padding: 12px; font-size: 14px;">
+            Sign In
+        </button>
+    </form>
+</div>
+{% endblock %}

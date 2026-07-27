@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: cw-shadow
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: FLASK_SECRET
+        generateValue: true
+      - key: CW_ADMIN_PASS
+        value: cwtools2026
