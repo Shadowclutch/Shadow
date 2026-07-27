@@ -3,7 +3,7 @@ services:
     name: cw-shadow
     runtime: python
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn app:app
+    startCommand: python -m gunicorn app:app
     envVars:
       - key: FLASK_SECRET
         generateValue: true
