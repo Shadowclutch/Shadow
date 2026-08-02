@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "exported_at": 1785686773,
+  "exported_at": 1785687193,
   "users": [
     {
       "steamid": "1487668000478855188",
       "name": "ShadowClutchh",
       "avatar": "",
       "provider": "discord",
-      "created_at": 1785686773
+      "created_at": 1785687193
     }
   ],
   "sessions": [],
@@ -15,11 +15,17 @@
     {
       "token": "88d602cefcccb5b65316dc16ca16c90c53ba19dab8bae576fa4cfbfd98e31607",
       "steamid": "1487668000478855188",
-      "created_at": 1785686773,
-      "expires_at": 1817222773
+      "created_at": 1785687193,
+      "expires_at": 1817223193
     }
   ],
   "library": [
+    {
+      "steamid": "1487668000478855188",
+      "appid": 202990,
+      "name": "Call of Duty: Black Ops II - Multiplayer",
+      "added_at": 1785687135
+    },
     {
       "steamid": "1487668000478855188",
       "appid": 2003990,
