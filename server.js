@@ -348,6 +348,13 @@ setInterval(() => {
 const app = express();
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/cdn', express.static(path.join(__dirname, 'cdn'), {
+  setHeaders(res, filePath) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    if (filePath.endsWith('.zip')) res.setHeader('Content-Type', 'application/zip');
+    if (filePath.endsWith('.exe')) res.setHeader('Content-Type', 'application/octet-stream');
+  },
+}));
 
 app.get('/api/events', requireAuth, (req, res) => {
   res.setHeader('Content-Type', 'text/event-stream');
