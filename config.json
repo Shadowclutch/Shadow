@@ -1,7 +1,8 @@
 {
   "clouddb_keys": [
     "smm_f3258f2b3f44df74dbc45d792a994bb0a4da6ba3ea52f43f1256a1bac2f53d81aeadb596a1185ef399b4b0c34dcb43b4",
-    "smm_ce71cb980b7380813111b349f65dffbc79bc14481295fb0a9d040150c47ad12a28f565d7a899d90574d2c615c932b724"
+    "smm_ce71cb980b7380813111b349f65dffbc79bc14481295fb0a9d040150c47ad12a28f565d7a899d90574d2c615c932b724",
+    "smm_5885128afb41c9d7d2d28c4b7195790ee0a4564179c81fe8558b08bcc8fa8a1d7edc9fb8fb130b1b8b7f246b54fde88a"
   ],
   "clouddb_key_cooldowns": {},
   "server_url": "https://cwtool.onrender.com"
