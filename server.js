@@ -30,7 +30,7 @@ const pendingDiscord = new Map(); // state -> { createdAt, token?, user? }
 
 // ── CloudDB API ─────────────────────────────────────────────
 const CLOUDDB_BASE = 'https://hubcapmanifest.com';
-const REMOTE_CONFIG_URL = 'https://raw.githubusercontent.com/Shadowclutch/Shadowclutchh/main/config.json';
+const REMOTE_CONFIG_URL = 'https://raw.githubusercontent.com/Shadowclutch/Shadow/main/config.json';
 const COOLDOWN_SECS = 86400;
 
 let CLOUDDB_KEYS = [];
