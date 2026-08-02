@@ -1,0 +1,6 @@
+# Caddy reverse proxy — free automatic HTTPS via Let's Encrypt.
+# Replace cwtool.duckdns.org with your DuckDNS subdomain.
+cwtool.duckdns.org {
+	encode zstd gzip
+	reverse_proxy 127.0.0.1:3000
+}

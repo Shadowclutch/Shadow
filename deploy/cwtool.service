@@ -1,0 +1,16 @@
+[Unit]
+Description=CW Tool Web (multi-user Steam game sync)
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/cwtool
+ExecStart=/usr/bin/node /opt/cwtool/server.js
+Restart=always
+RestartSec=3
+Environment=NODE_ENV=production
+Environment=PORT=3000
+Environment=SITE_URL=https://cwtool.duckdns.org
+
+[Install]
+WantedBy=multi-user.target

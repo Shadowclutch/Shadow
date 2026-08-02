@@ -1,0 +1,7 @@
+node_modules/
+data.sqlite
+clouddb_cooldowns.json
+manifest_cache/
+*.log
+.env
+.DS_Store

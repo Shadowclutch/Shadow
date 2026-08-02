@@ -1,0 +1,17 @@
+{
+  "name": "steam-tool-web",
+  "version": "2.0.0",
+  "description": "Public Steam CloudDB tool — Steam OpenID login, per-user game library, and a local PC agent for auto-deploy",
+  "main": "server.js",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "agent": "node agent.js"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.16",
+    "express": "^4.19.2"
+  }
+}
