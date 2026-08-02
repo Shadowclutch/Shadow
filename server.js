@@ -481,6 +481,9 @@ app.get('/api/desktop/discord/login', (req, res) => {
   if (!DISCORD_CLIENT_ID || !DISCORD_CLIENT_SECRET) {
     return res.type('html').status(503).send(discordErrorPage('Discord login is not configured on this server.'));
   }
+  if (!/^\d{17,20}$/.test(DISCORD_CLIENT_ID)) {
+    return res.type('html').status(500).send(discordErrorPage('DISCORD_CLIENT_ID on this server is not a valid Discord Application ID. Open Discord Developer Portal -> your app -> OAuth2 -> copy the numeric Client ID, then update the Render env var.'));
+  }
   const state = String(req.query.state || '');
   if (state.length < 16 || !/^[a-zA-Z0-9]+$/.test(state)) {
     return res.status(400).send('Invalid login ticket.');
