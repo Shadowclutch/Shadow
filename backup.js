@@ -14,10 +14,11 @@ const db = require('./db');
 
 const REPO = process.env.GITHUB_BACKUP_REPO || 'Shadowclutch/Shadow';
 const FILE = process.env.GITHUB_BACKUP_FILE || 'cloud_backup.json';
+const BRANCH = process.env.GITHUB_BACKUP_BRANCH || 'backup';
 const TOKEN = process.env.GITHUB_REPO_TOKEN || '';
 
-const CDN_URL = `https://cdn.jsdelivr.net/gh/${REPO}@main/${FILE}`;
-const RAW_URL = `https://raw.githubusercontent.com/${REPO}/main/${FILE}`;
+const CDN_URL = `https://cdn.jsdelivr.net/gh/${REPO}@${BRANCH}/${FILE}`;
+const RAW_URL = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/${FILE}`;
 const API_BASE = `https://api.github.com/repos/${REPO}/contents/${FILE}`;
 
 let pushTimer = null;
@@ -60,7 +61,7 @@ async function fetchSnapshotJson() {
 async function currentFileSha() {
   try {
     const headers = TOKEN ? { Authorization: `Bearer ${TOKEN}` } : {};
-    const res = await httpRequest(API_BASE, { headers });
+    const res = await httpRequest(`${API_BASE}?ref=${BRANCH}`, { headers });
     if (res.status === 200) {
       const parsed = JSON.parse(res.body);
       return parsed.sha || null;
@@ -83,6 +84,7 @@ async function pushSnapshotNow() {
   const payload = {
     message: `cloud backup ${new Date().toISOString()}`,
     content: Buffer.from(JSON.stringify(snapshot, null, 2)).toString('base64'),
+    branch: BRANCH,
   };
   if (sha) payload.sha = sha;
   const res = await httpRequest(API_BASE, {
@@ -90,7 +92,7 @@ async function pushSnapshotNow() {
     headers: { Authorization: `Bearer ${TOKEN}`, 'Content-Type': 'application/json' },
   }, JSON.stringify(payload));
   if (res.status === 200 || res.status === 201) {
-    console.log(`[backup] pushed ${FILE} to ${REPO}`);
+    console.log(`[backup] pushed ${FILE} to ${REPO}@${BRANCH}`);
   } else {
     console.log(`[backup] push failed (${res.status}): ${res.body.slice(0, 300)}`);
   }
