@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "exported_at": 1785685171,
+  "users": [
+    {
+      "steamid": "1487668000478855188",
+      "name": "ShadowClutchh",
+      "avatar": "",
+      "provider": "discord",
+      "created_at": 1785685171
+    }
+  ],
+  "sessions": [],
+  "library": [
+    {
+      "steamid": "1487668000478855188",
+      "appid": 1548510,
+      "name": "Love Dating",
+      "added_at": 1785685171
+    },
+    {
+      "steamid": "1487668000478855188",
+      "appid": 1958080,
+      "name": "Aqua Populo Demo",
+      "added_at": 1785685171
+    }
+  ],
+  "agent_tokens": [
+    {
+      "token": "88d602cefcccb5b65316dc16ca16c90c53ba19dab8bae576fa4cfbfd98e31607",
+      "steamid": "1487668000478855188",
+      "created_at": 1785685171,
+      "expires_at": 1817221171
+    }
+  ]
+}

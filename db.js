@@ -139,6 +139,65 @@ function removeFromLibrary(steamid, appid) {
   removeLibraryStmt.run(steamid, appid);
 }
 
+// ── Backup snapshot (GitHub-repo persistence) ───────────────
+// The free Render tier wipes the local filesystem on every deploy/cold start,
+// so the full DB is mirrored to a JSON snapshot in the Shadow repo. On boot the
+// server restores from that snapshot, and every library/login change triggers a
+// debounced push back up.
+
+function exportSnapshot() {
+  return {
+    users: db.prepare('SELECT * FROM users').all(),
+    sessions: db.prepare('SELECT * FROM sessions').all(),
+    agent_tokens: db.prepare('SELECT * FROM agent_tokens').all(),
+    library: db.prepare('SELECT * FROM library').all(),
+  };
+}
+
+function importSnapshot(snap) {
+  const upsertUser = db.prepare(`
+    INSERT OR REPLACE INTO users (steamid, name, avatar, provider, created_at)
+    VALUES (?, ?, ?, ?, ?)
+  `);
+  const upsertSession = db.prepare(`
+    INSERT OR REPLACE INTO sessions (token, steamid, created_at, expires_at)
+    VALUES (?, ?, ?, ?)
+  `);
+  const upsertAgent = db.prepare(`
+    INSERT OR REPLACE INTO agent_tokens (token, steamid, created_at, expires_at)
+    VALUES (?, ?, ?, ?)
+  `);
+  const upsertLibrary = db.prepare(`
+    INSERT OR REPLACE INTO library (steamid, appid, name, added_at)
+    VALUES (?, ?, ?, ?)
+  `);
+  const counts = { users: 0, sessions: 0, agent_tokens: 0, library: 0 };
+  db.exec('BEGIN');
+  try {
+    for (const u of snap.users || []) {
+      upsertUser.run(u.steamid, u.name || '', u.avatar || '', u.provider || 'steam', u.created_at);
+      counts.users++;
+    }
+    for (const s of snap.sessions || []) {
+      upsertSession.run(s.token, s.steamid, s.created_at, s.expires_at);
+      counts.sessions++;
+    }
+    for (const a of snap.agent_tokens || []) {
+      upsertAgent.run(a.token, a.steamid, a.created_at, a.expires_at);
+      counts.agent_tokens++;
+    }
+    for (const l of snap.library || []) {
+      upsertLibrary.run(l.steamid, l.appid, l.name || '', l.added_at);
+      counts.library++;
+    }
+    db.exec('COMMIT');
+  } catch (e) {
+    db.exec('ROLLBACK');
+    throw e;
+  }
+  return counts;
+}
+
 // Housekeeping
 deleteExpired.run(Math.floor(Date.now() / 1000));
 
@@ -153,4 +212,6 @@ module.exports = {
   listLibrary,
   addToLibrary,
   removeFromLibrary,
+  exportSnapshot,
+  importSnapshot,
 };

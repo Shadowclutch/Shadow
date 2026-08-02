@@ -4,6 +4,7 @@ const fs = require('fs');
 const crypto = require('crypto');
 
 const db = require('./db');
+const backup = require('./backup');
 
 // ── Config ──────────────────────────────────────────────────
 const PORT = process.env.PORT || 3000;
@@ -465,6 +466,7 @@ app.post('/api/desktop/login', async (req, res) => {
     const profile = await fetchProfile(steamid);
     db.findOrCreateUser({ steamid, name: profile.name, avatar: profile.avatar });
     const token = db.getAgentToken(steamid);
+    backup.schedulePush();
     res.json({ steamid, name: profile.name, avatar: profile.avatar, token });
   } catch (e) {
     res.status(500).json({ error: 'Login error: ' + e.message });
@@ -510,6 +512,7 @@ app.get('/api/desktop/discord/callback', async (req, res) => {
     const entry = pendingDiscord.get(state);
     entry.token = db.getAgentToken(profile.id);
     entry.user = profile;
+    backup.schedulePush();
     res.type('html').send(discordSuccessPage(profile.name));
   } catch (e) {
     pendingDiscord.set(state, { createdAt: Date.now(), error: String(e.message).slice(0, 500) });
@@ -611,6 +614,7 @@ app.post('/api/library', rateLimit(30, 60000), requireAuth, (req, res) => {
   if (!Number.isInteger(appid) || appid <= 0) return res.status(400).json({ error: 'Invalid appid' });
   const row = db.addToLibrary(req.user.steamid, appid, name);
   notifySync(req.user.steamid);
+  backup.schedulePush();
   res.json({ item: row });
   prefetchManifest(appid); // store centrally now so all PCs sync from local cache
 });
@@ -618,6 +622,7 @@ app.post('/api/library', rateLimit(30, 60000), requireAuth, (req, res) => {
 app.delete('/api/library/:appid', requireAuth, (req, res) => {
   db.removeFromLibrary(req.user.steamid, Number(req.params.appid));
   notifySync(req.user.steamid);
+  backup.schedulePush();
   res.json({ ok: true });
 });
 
@@ -809,13 +814,16 @@ app.get('/api/sync/owned', requireAuth, async (req, res) => {
 });
 
 // ── Start ───────────────────────────────────────────────────
-app.listen(PORT, () => {
-  console.log(`[CWTool Web] Running at ${SITE_URL}`);
-  console.log(`[CWTool Web] CloudDB keys configured: ${CLOUDDB_KEYS.length}`);
-  console.log(`[CWTool Web] Steam API key (owned-games sync): ${STEAM_API_KEY ? 'yes' : 'no'}`);
-  console.log(`[CWTool Web] Discord login: ${DISCORD_CLIENT_ID ? 'configured' : 'NOT configured (set discord_client_id/secret in config.json or env)'}`);
-  console.log(`[CWTool Web]   web redirect:    ${DISCORD_REDIRECT_WEB}`);
-  console.log(`[CWTool Web]   desktop redirect:${DISCORD_REDIRECT_DESKTOP}`);
+backup.restoreFromRepo().finally(() => {
+  app.listen(PORT, () => {
+    console.log(`[CWTool Web] Running at ${SITE_URL}`);
+    console.log(`[CWTool Web] CloudDB keys configured: ${CLOUDDB_KEYS.length}`);
+    console.log(`[CWTool Web] Steam API key (owned-games sync): ${STEAM_API_KEY ? 'yes' : 'no'}`);
+    console.log(`[CWTool Web] Discord login: ${DISCORD_CLIENT_ID ? 'configured' : 'NOT configured (set discord_client_id/secret in config.json or env)'}`);
+    console.log(`[CWTool Web]   web redirect:    ${DISCORD_REDIRECT_WEB}`);
+    console.log(`[CWTool Web]   desktop redirect:${DISCORD_REDIRECT_DESKTOP}`);
+    console.log(`[CWTool Web] GitHub backup: ${process.env.GITHUB_REPO_TOKEN ? 'ENABLED' : 'DISABLED (set GITHUB_REPO_TOKEN to persist the library across deploys)'}`);
+  });
 });
 
 loadClouddbKeys();
