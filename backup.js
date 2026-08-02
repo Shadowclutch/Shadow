@@ -46,7 +46,9 @@ function httpRequest(url, opts = {}, body = null) {
 }
 
 async function fetchSnapshotJson() {
-  for (const url of [CDN_URL, RAW_URL]) {
+  // Try the canonical raw URL first (always reflects the latest commit). jsDelivr
+  // caches aggressively, so a stale CDN copy must never be trusted over raw.
+  for (const url of [RAW_URL, CDN_URL]) {
     try {
       const res = await httpRequest(url);
       if (res.status === 200) {
