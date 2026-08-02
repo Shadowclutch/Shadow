@@ -232,7 +232,11 @@ async function discordExchange(code, redirectUri) {
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
     body: body.toString(),
   }, 15000);
-  if (!res.ok) throw new Error('Discord token exchange failed (HTTP ' + res.status + ')');
+  if (!res.ok) {
+    let detail = '';
+    try { detail = (await res.text()).slice(0, 300); } catch {}
+    throw new Error('Discord token exchange failed (' + res.status + '): ' + detail);
+  }
   return res.json();
 }
 
@@ -466,7 +470,11 @@ app.post('/api/desktop/login', async (req, res) => {
 // token. The desktop polls /api/desktop/discord/status?state=<ticket> until it
 // receives the token. No local redirect port is needed on the desktop.
 app.get('/api/desktop/discord/configured', (req, res) => {
-  res.json({ configured: !!(DISCORD_CLIENT_ID && DISCORD_CLIENT_SECRET) });
+  res.json({
+    configured: !!(DISCORD_CLIENT_ID && DISCORD_CLIENT_SECRET),
+    web_redirect: DISCORD_REDIRECT_WEB,
+    desktop_redirect: DISCORD_REDIRECT_DESKTOP,
+  });
 });
 
 app.get('/api/desktop/discord/login', (req, res) => {
@@ -494,7 +502,7 @@ app.get('/api/desktop/discord/callback', async (req, res) => {
     entry.user = profile;
     res.type('html').send(discordSuccessPage(profile.name));
   } catch (e) {
-    pendingDiscord.delete(state);
+    pendingDiscord.set(state, { createdAt: Date.now(), error: String(e.message).slice(0, 500) });
     res.type('html').status(500).send(discordErrorPage(e.message));
   }
 });
@@ -510,6 +518,10 @@ app.get('/api/desktop/discord/status', rateLimit(120, 60000), (req, res) => {
   if (entry.token) {
     pendingDiscord.delete(state);
     return res.json({ pending: false, token: entry.token, user: entry.user });
+  }
+  if (entry.error) {
+    pendingDiscord.delete(state);
+    return res.json({ pending: false, error: entry.error });
   }
   res.json({ pending: true });
 });
