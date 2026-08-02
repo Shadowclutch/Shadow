@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "exported_at": 1785686648,
+  "exported_at": 1785686773,
   "users": [
     {
       "steamid": "1487668000478855188",
       "name": "ShadowClutchh",
       "avatar": "",
       "provider": "discord",
-      "created_at": 1785686648
+      "created_at": 1785686773
     }
   ],
   "sessions": [],
@@ -15,11 +15,17 @@
     {
       "token": "88d602cefcccb5b65316dc16ca16c90c53ba19dab8bae576fa4cfbfd98e31607",
       "steamid": "1487668000478855188",
-      "created_at": 1785686648,
-      "expires_at": 1817222648
+      "created_at": 1785686773,
+      "expires_at": 1817222773
     }
   ],
   "library": [
+    {
+      "steamid": "1487668000478855188",
+      "appid": 2003990,
+      "name": " Arcade Sundown",
+      "added_at": 1785686704
+    },
     {
       "steamid": "1487668000478855188",
       "appid": 5254,
