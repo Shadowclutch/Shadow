@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785782009,
+  "exported_at": 1785782170,
   "users": [
     {
       "steamid": "1487668000478855188",
@@ -111,6 +111,12 @@
       "appid": 1422450,
       "name": "Deadlock",
       "added_at": 1785782007
+    },
+    {
+      "steamid": "1388117382454841366",
+      "appid": 48190,
+      "name": "Assassin's Creed Brotherhood",
+      "added_at": 1785782147
     }
   ]
 }
