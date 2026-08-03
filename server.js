@@ -843,9 +843,23 @@ app.get('/api/sync/owned', requireAuth, async (req, res) => {
 });
 
 // ── Start ───────────────────────────────────────────────────
-backup.restoreFromRepo().finally(() => {
+// With a persistent DB (DATABASE_URL), the stored data is authoritative, so we
+// only restore from the GitHub backup when the DB is empty (e.g. the very first
+// boot after switching to Postgres). On the SQLite fallback the disk can be
+// wiped on every deploy, so restore unconditionally.
+(async () => {
+  let counts = { users: -1 };
+  try { counts = await db.countRows(); } catch {}
+  const empty = counts.users === 0 && counts.library === 0;
+  const pgMode = db.backend === 'pg';
+  if (!pgMode || empty) {
+    await backup.restoreFromRepo().catch((e) => console.log(`[CWTool Web] restore skipped: ${e.message}`));
+  } else {
+    console.log(`[CWTool Web] Persistent DB already has data (users=${counts.users}) — skipping GitHub restore.`);
+  }
   app.listen(PORT, () => {
     console.log(`[CWTool Web] Running at ${SITE_URL}`);
+    console.log(`[CWTool Web] Storage: ${db.backend === 'pg' ? 'Postgres (persistent)' : 'SQLite (fallback)'}`);
     console.log(`[CWTool Web] CloudDB keys configured: ${CLOUDDB_KEYS.length}`);
     console.log(`[CWTool Web] Steam API key (owned-games sync): ${STEAM_API_KEY ? 'yes' : 'no'}`);
     console.log(`[CWTool Web] Discord login: ${DISCORD_CLIENT_ID ? 'configured' : 'NOT configured (set discord_client_id/secret in config.json or env)'}`);
@@ -853,6 +867,6 @@ backup.restoreFromRepo().finally(() => {
     console.log(`[CWTool Web]   desktop redirect:${DISCORD_REDIRECT_DESKTOP}`);
     console.log(`[CWTool Web] GitHub backup: ${process.env.GITHUB_REPO_TOKEN ? 'ENABLED' : 'DISABLED (set GITHUB_REPO_TOKEN to persist the library across deploys)'}`);
   });
-});
+})();
 
 loadClouddbKeys();

@@ -167,6 +167,15 @@ async function removeFromLibrary(steamid, appid) {
 }
 
 // ── Backup snapshot (GitHub-repo persistence) ───────────────
+async function countRows() {
+  return {
+    users: (await A.get('SELECT COUNT(*) AS n FROM users')).n,
+    sessions: (await A.get('SELECT COUNT(*) AS n FROM sessions')).n,
+    library: (await A.get('SELECT COUNT(*) AS n FROM library')).n,
+    agent_tokens: (await A.get('SELECT COUNT(*) AS n FROM agent_tokens')).n,
+  };
+}
+
 async function exportSnapshot() {
   return {
     users: await A.all('SELECT * FROM users'),
@@ -235,6 +244,7 @@ module.exports = {
   listLibrary,
   addToLibrary,
   removeFromLibrary,
+  countRows,
   exportSnapshot,
   importSnapshot,
 };
