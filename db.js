@@ -193,11 +193,12 @@ async function removeFromLibrary(steamid, appid) {
 
 // ── Backup snapshot (GitHub-repo persistence) ───────────────
 async function countRows() {
+  const toNum = (r) => r && typeof r.n === 'bigint' ? Number(r.n) : (Number(r.n) || 0);
   return {
-    users: (await A.get('SELECT COUNT(*) AS n FROM users')).n,
-    sessions: (await A.get('SELECT COUNT(*) AS n FROM sessions')).n,
-    library: (await A.get('SELECT COUNT(*) AS n FROM library')).n,
-    agent_tokens: (await A.get('SELECT COUNT(*) AS n FROM agent_tokens')).n,
+    users: toNum(await A.get('SELECT COUNT(*) AS n FROM users')),
+    sessions: toNum(await A.get('SELECT COUNT(*) AS n FROM sessions')),
+    library: toNum(await A.get('SELECT COUNT(*) AS n FROM library')),
+    agent_tokens: toNum(await A.get('SELECT COUNT(*) AS n FROM agent_tokens')),
   };
 }
 
