@@ -610,6 +610,21 @@ app.get('/api/backup/status', (req, res) => {
   });
 });
 
+// Trigger an immediate full-snapshot backup push. Desktop apps call this after
+// library changes so the server (which owns GITHUB_REPO_TOKEN) writes the shared
+// backup covering ALL users — no client needs the GitHub token. When the token
+// isn't configured the server returns pushed:false and the client falls back to
+// its own merge push.
+app.post('/api/backup/push', rateLimit(30, 60000), requireAuth, async (req, res) => {
+  try {
+    const result = await backup.pushSnapshotNow();
+    if (result && result.ok) return res.json({ pushed: true, full_snapshot: true });
+    res.json({ pushed: false, reason: (result && result.reason) || 'push_failed' });
+  } catch (e) {
+    res.json({ pushed: false, reason: 'error' });
+  }
+});
+
 app.get('/api/library', requireAuth, (req, res) => {
   const items = db.listLibrary(req.user.steamid).map((g) => ({
     ...g,

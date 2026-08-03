@@ -75,7 +75,7 @@ async function currentFileSha() {
 async function pushSnapshotNow() {
   if (!TOKEN) {
     console.log('[backup] GITHUB_REPO_TOKEN not set — skipping push to repo');
-    return;
+    return { ok: false, reason: 'server_token_not_set' };
   }
   const snapshot = {
     version: 1,
@@ -95,9 +95,10 @@ async function pushSnapshotNow() {
   }, JSON.stringify(payload));
   if (res.status === 200 || res.status === 201) {
     console.log(`[backup] pushed ${FILE} to ${REPO}@${BRANCH}`);
-  } else {
-    console.log(`[backup] push failed (${res.status}): ${res.body.slice(0, 300)}`);
+    return { ok: true };
   }
+  console.log(`[backup] push failed (${res.status}): ${res.body.slice(0, 300)}`);
+  return { ok: false, reason: `http_${res.status}` };
 }
 
 // Debounced so bursts of library edits produce one push.
