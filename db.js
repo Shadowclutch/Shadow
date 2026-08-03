@@ -69,15 +69,16 @@ function createPg(connStr) {
   const dns = require('dns');
   const parse = require('pg-connection-string').parse;
   const c = parse(connStr);
-  const state = { pool: null };
+  const state = { pool: null, meta: { host: c.host, port: c.port || 5432, database: c.database } };
   // Render's free tier has no IPv6, but Supabase hostnames can resolve to AAAA
   // records first (Node's default dns-result-order is `verbatim`). Force the
   // IPv4 address so the connection actually goes through.
   const ready = (async () => {
     let host = c.host;
     try {
-      const { address } = await dns.promises.lookup(c.host, { family: 4 });
-      host = address;
+      const r = await dns.promises.lookup(c.host, { family: 4 });
+      host = r.address;
+      state.meta.resolved4 = host;
       console.log(`[db] Postgres host ${c.host} -> IPv4 ${host}`);
     } catch (e) {
       console.log(`[db] IPv4 lookup failed for ${c.host} (${e.message}) — using original host`);
@@ -101,6 +102,7 @@ function createPg(connStr) {
   return {
     backend: 'pg',
     ready,
+    meta: () => ({ ...state.meta, connected: !!state.pool }),
     async run(sql, params) { await ready; await state.pool.query(pgify(sql, params)); },
     async all(sql, params) { await ready; const r = await state.pool.query(pgify(sql, params)); return r.rows; },
     async get(sql, params) { await ready; const r = await state.pool.query(pgify(sql, params)); return r.rows[0] || null; },
@@ -200,11 +202,12 @@ async function countRows() {
 }
 
 async function diagnose() {
+  const meta = (typeof A.meta === 'function') ? A.meta() : { backend: A.backend };
   try {
     const r = await A.get('SELECT 1 AS ok');
-    return { ok: true, backend: A.backend, result: r };
+    return { ok: true, backend: A.backend, meta, result: r };
   } catch (e) {
-    return { ok: false, backend: A.backend, error: String((e && e.message) || e) };
+    return { ok: false, backend: A.backend, meta, error: String((e && e.message) || e) };
   }
 }
 
