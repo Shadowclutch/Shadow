@@ -600,6 +600,16 @@ function installerBat(siteUrl, token) {
 }
 
 // ── Library ─────────────────────────────────────────────────
+app.get('/api/backup/status', (req, res) => {
+  res.json({
+    token_set: !!process.env.GITHUB_REPO_TOKEN,
+    token_len: process.env.GITHUB_REPO_TOKEN ? process.env.GITHUB_REPO_TOKEN.length : 0,
+    backup_repo: process.env.GITHUB_BACKUP_REPO || 'Shadowclutch/Shadow',
+    backup_branch: process.env.GITHUB_BACKUP_BRANCH || 'backup',
+    uptime_sec: Math.floor(process.uptime()),
+  });
+});
+
 app.get('/api/library', requireAuth, (req, res) => {
   const items = db.listLibrary(req.user.steamid).map((g) => ({
     ...g,
