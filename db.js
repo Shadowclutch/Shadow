@@ -66,22 +66,45 @@ function createSqlite() {
 
 function createPg(connStr) {
   const { Pool } = require('pg');
-  const pool = new Pool({
-    connectionString: connStr,
-    ssl: { rejectUnauthorized: false },
-    max: 5,
+  const dns = require('dns');
+  const parse = require('pg-connection-string').parse;
+  const c = parse(connStr);
+  const state = { pool: null };
+  // Render's free tier has no IPv6, but Supabase hostnames can resolve to AAAA
+  // records first (Node's default dns-result-order is `verbatim`). Force the
+  // IPv4 address so the connection actually goes through.
+  const ready = (async () => {
+    let host = c.host;
+    try {
+      const { address } = await dns.promises.lookup(c.host, { family: 4 });
+      host = address;
+      console.log(`[db] Postgres host ${c.host} -> IPv4 ${host}`);
+    } catch (e) {
+      console.log(`[db] IPv4 lookup failed for ${c.host} (${e.message}) — using original host`);
+    }
+    state.pool = new Pool({
+      host,
+      port: c.port ? Number(c.port) : 5432,
+      user: c.user,
+      password: c.password,
+      database: c.database,
+      ssl: { rejectUnauthorized: false },
+      max: 5,
+      connectionTimeoutMillis: 15000,
+    });
+    await state.pool.query(SCHEMA);
+    console.log(`[db] Postgres backend ready (${host}:${c.port || 5432}/${c.database})`);
+  })().catch((e) => {
+    console.error(`[db] Postgres init failed: ${e.message}`);
+    throw e;
   });
-  const ready = pool.query(SCHEMA).then(
-    () => console.log(`[db] Postgres backend ready (${connStr.replace(/:[^:@]+@/, ':***@').slice(0, 48)}...)`),
-    (e) => console.error(`[db] Postgres schema init failed: ${e.message}`)
-  );
   return {
     backend: 'pg',
     ready,
-    async run(sql, params) { await ready; await pool.query(pgify(sql, params)); },
-    async all(sql, params) { await ready; const r = await pool.query(pgify(sql, params)); return r.rows; },
-    async get(sql, params) { await ready; const r = await pool.query(pgify(sql, params)); return r.rows[0] || null; },
-    async close() { await pool.end(); },
+    async run(sql, params) { await ready; await state.pool.query(pgify(sql, params)); },
+    async all(sql, params) { await ready; const r = await state.pool.query(pgify(sql, params)); return r.rows; },
+    async get(sql, params) { await ready; const r = await state.pool.query(pgify(sql, params)); return r.rows[0] || null; },
+    async close() { await ready; await state.pool.end(); },
   };
 }
 
