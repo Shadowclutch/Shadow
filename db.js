@@ -69,7 +69,7 @@ function createPg(connStr) {
   const dns = require('dns');
   const parse = require('pg-connection-string').parse;
   const c = parse(connStr);
-  const state = { pool: null, meta: { host: c.host, port: c.port || 5432, database: c.database } };
+  const state = { pool: null, meta: { host: c.host, port: c.port || 5432, database: c.database, user: c.user } };
   // Render's free tier has no IPv6, but Supabase hostnames can resolve to AAAA
   // records first (Node's default dns-result-order is `verbatim`). Force the
   // IPv4 address so the connection actually goes through.
