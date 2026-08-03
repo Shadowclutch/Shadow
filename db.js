@@ -1,13 +1,18 @@
-// SQLite storage via Node's built-in node:sqlite (no native compilation needed).
-const { DatabaseSync } = require('node:sqlite');
+// Storage layer with a dual backend:
+//   - Postgres (via `pg`) when DATABASE_URL is set — the DB then lives in a
+//     persistent hosted database (e.g. Neon) and survives Render restarts, which
+//     is the "complete" fix for data durability.
+//   - SQLite (Node's built-in node:sqlite) otherwise — used on Render only as a
+//     fallback when no DATABASE_URL is configured.
+// The public API is uniform and async, so callers use `await` everywhere.
 const path = require('path');
 const crypto = require('crypto');
 
-const DB_PATH = process.env.DATABASE_PATH || path.join(__dirname, 'data.sqlite');
+const USE_PG = !!process.env.DATABASE_URL && /^postgres(ql)?:\/\//.test(process.env.DATABASE_URL);
 const SESSION_TTL_DAYS = 30;
+const AGENT_TOKEN_TTL_DAYS = 365;
 
-const db = new DatabaseSync(DB_PATH);
-db.exec(`
+const SCHEMA = `
   CREATE TABLE IF NOT EXISTS users (
     steamid TEXT PRIMARY KEY,
     name TEXT NOT NULL DEFAULT '',
@@ -34,174 +39,192 @@ db.exec(`
     created_at INTEGER NOT NULL,
     expires_at INTEGER NOT NULL
   );
-`);
-// Backwards-compatible migration for existing databases: identify the auth
-// provider (steam / discord) for each user. New installs get it via DDL above.
-try {
-  db.exec(`ALTER TABLE users ADD COLUMN provider TEXT NOT NULL DEFAULT 'steam'`);
-} catch {}
+`;
 
-// ── Users ───────────────────────────────────────────────────
-const upsertUser = db.prepare(`
-  INSERT INTO users (steamid, name, avatar, provider, created_at)
-  VALUES (?, ?, ?, ?, ?)
-  ON CONFLICT(steamid) DO UPDATE SET name = excluded.name, avatar = excluded.avatar, provider = excluded.provider
-`);
-
-function findOrCreateUser({ steamid, name, avatar, provider = 'steam' }) {
-  const now = Math.floor(Date.now() / 1000);
-  upsertUser.run(steamid, name, avatar, provider, now);
-  return { steamid, name, avatar, provider, created_at: now };
+// Convert SQLite `?` placeholders to Postgres `$1, $2, ...`.
+function pgify(sql, params) {
+  let n = 0;
+  const text = sql.replace(/\?/g, () => `$${++n}`);
+  return { text, values: params || [] };
 }
 
-const getUserStmt = db.prepare('SELECT * FROM users WHERE steamid = ?');
-function getUser(steamid) {
-  return getUserStmt.get(steamid) || null;
+function createSqlite() {
+  const { DatabaseSync } = require('node:sqlite');
+  const db = new DatabaseSync(process.env.DATABASE_PATH || path.join(__dirname, 'data.sqlite'));
+  db.exec(SCHEMA);
+  // Backwards-compatible migration for existing databases.
+  try { db.exec(`ALTER TABLE users ADD COLUMN provider TEXT NOT NULL DEFAULT 'steam'`); } catch {}
+  return {
+    backend: 'sqlite',
+    ready: Promise.resolve(),
+    async run(sql, params) { db.prepare(sql).run(...(params || [])); },
+    async all(sql, params) { return db.prepare(sql).all(...(params || [])); },
+    async get(sql, params) { return db.prepare(sql).get(...(params || [])) || null; },
+    async close() {},
+  };
+}
+
+function createPg(connStr) {
+  const { Pool } = require('pg');
+  const pool = new Pool({
+    connectionString: connStr,
+    ssl: { rejectUnauthorized: false },
+    max: 5,
+  });
+  const ready = pool.query(SCHEMA).then(
+    () => console.log(`[db] Postgres backend ready (${connStr.replace(/:[^:@]+@/, ':***@').slice(0, 48)}...)`),
+    (e) => console.error(`[db] Postgres schema init failed: ${e.message}`)
+  );
+  return {
+    backend: 'pg',
+    ready,
+    async run(sql, params) { await ready; await pool.query(pgify(sql, params)); },
+    async all(sql, params) { await ready; const r = await pool.query(pgify(sql, params)); return r.rows; },
+    async get(sql, params) { await ready; const r = await pool.query(pgify(sql, params)); return r.rows[0] || null; },
+    async close() { await pool.end(); },
+  };
+}
+
+const A = USE_PG ? createPg(process.env.DATABASE_URL) : createSqlite();
+
+// ── Users ───────────────────────────────────────────────────
+async function findOrCreateUser({ steamid, name, avatar, provider = 'steam' }) {
+  const now = Math.floor(Date.now() / 1000);
+  await A.run(`
+    INSERT INTO users (steamid, name, avatar, provider, created_at)
+    VALUES (?, ?, ?, ?, ?)
+    ON CONFLICT(steamid) DO UPDATE SET name = excluded.name, avatar = excluded.avatar, provider = excluded.provider
+  `, [steamid, name || '', avatar || '', provider, now]);
+  return { steamid, name: name || '', avatar: avatar || '', provider, created_at: now };
+}
+
+async function getUser(steamid) {
+  return A.get('SELECT * FROM users WHERE steamid = ?', [steamid]);
 }
 
 // ── Sessions ────────────────────────────────────────────────
-const insertSession = db.prepare(`
-  INSERT INTO sessions (token, steamid, created_at, expires_at) VALUES (?, ?, ?, ?)
-`);
-const getSessionStmt = db.prepare('SELECT * FROM sessions WHERE token = ?');
-const deleteSessionStmt = db.prepare('DELETE FROM sessions WHERE token = ?');
-const deleteExpired = db.prepare('DELETE FROM sessions WHERE expires_at < ?');
-
-function createSession(steamid) {
+async function createSession(steamid) {
   const token = crypto.randomBytes(32).toString('hex');
   const now = Math.floor(Date.now() / 1000);
-  insertSession.run(token, steamid, now, now + SESSION_TTL_DAYS * 86400);
+  await A.run('INSERT INTO sessions (token, steamid, created_at, expires_at) VALUES (?, ?, ?, ?)',
+    [token, steamid, now, now + SESSION_TTL_DAYS * 86400]);
   return token;
 }
 
-function getSession(token) {
+async function getSession(token) {
   if (!token) return null;
-  const s = getSessionStmt.get(token);
+  const s = await A.get('SELECT * FROM sessions WHERE token = ?', [token]);
   if (!s) return null;
   if (s.expires_at < Math.floor(Date.now() / 1000)) {
-    deleteSessionStmt.run(token);
+    await A.run('DELETE FROM sessions WHERE token = ?', [token]);
     return null;
   }
   return s;
 }
 
-function deleteSession(token) {
-  if (token) deleteSessionStmt.run(token);
+async function deleteSession(token) {
+  if (token) await A.run('DELETE FROM sessions WHERE token = ?', [token]);
 }
 
 // ── Agent tokens (long-lived, for the background PC agent) ──
-const AGENT_TOKEN_TTL_DAYS = 365;
-const getAgentTokenStmt = db.prepare('SELECT * FROM agent_tokens WHERE token = ?');
-const insertAgentToken = db.prepare(`
-  INSERT INTO agent_tokens (token, steamid, created_at, expires_at) VALUES (?, ?, ?, ?)
-`);
-
-function getAgentToken(steamid) {
+async function getAgentToken(steamid) {
   const now = Math.floor(Date.now() / 1000);
-  const rows = db.prepare('SELECT * FROM agent_tokens WHERE steamid = ? ORDER BY created_at DESC').all(steamid);
+  const rows = await A.all('SELECT * FROM agent_tokens WHERE steamid = ? ORDER BY created_at DESC', [steamid]);
   for (const r of rows) {
     if (r.expires_at > now) return r.token;
   }
   const token = crypto.randomBytes(32).toString('hex');
-  insertAgentToken.run(token, steamid, now, now + AGENT_TOKEN_TTL_DAYS * 86400);
+  await A.run('INSERT INTO agent_tokens (token, steamid, created_at, expires_at) VALUES (?, ?, ?, ?)',
+    [token, steamid, now, now + AGENT_TOKEN_TTL_DAYS * 86400]);
   return token;
 }
 
-function findAgentToken(token) {
+async function findAgentToken(token) {
   if (!token) return null;
-  const r = getAgentTokenStmt.get(token);
+  const r = await A.get('SELECT * FROM agent_tokens WHERE token = ?', [token]);
   if (!r) return null;
   if (r.expires_at < Math.floor(Date.now() / 1000)) return null;
   return r;
 }
 
 // ── Library ─────────────────────────────────────────────────
-const listLibraryStmt = db.prepare('SELECT appid, name, added_at FROM library WHERE steamid = ? ORDER BY added_at DESC');
-const getLibraryItem = db.prepare('SELECT * FROM library WHERE steamid = ? AND appid = ?');
-const upsertLibrary = db.prepare(`
-  INSERT INTO library (steamid, appid, name, added_at)
-  VALUES (?, ?, ?, ?)
-  ON CONFLICT(steamid, appid) DO UPDATE SET name = excluded.name
-`);
-const removeLibraryStmt = db.prepare('DELETE FROM library WHERE steamid = ? AND appid = ?');
-
-function listLibrary(steamid) {
-  return listLibraryStmt.all(steamid);
+async function listLibrary(steamid) {
+  return A.all('SELECT appid, name, added_at FROM library WHERE steamid = ? ORDER BY added_at DESC', [steamid]);
 }
 
-function addToLibrary(steamid, appid, name) {
+async function addToLibrary(steamid, appid, name) {
   const now = Math.floor(Date.now() / 1000);
-  upsertLibrary.run(steamid, appid, name, now);
-  return getLibraryItem.get(steamid, appid);
+  await A.run(`
+    INSERT INTO library (steamid, appid, name, added_at)
+    VALUES (?, ?, ?, ?)
+    ON CONFLICT(steamid, appid) DO UPDATE SET name = excluded.name
+  `, [steamid, appid, name || '', now]);
+  return A.get('SELECT * FROM library WHERE steamid = ? AND appid = ?', [steamid, appid]);
 }
 
-function removeFromLibrary(steamid, appid) {
-  removeLibraryStmt.run(steamid, appid);
+async function removeFromLibrary(steamid, appid) {
+  await A.run('DELETE FROM library WHERE steamid = ? AND appid = ?', [steamid, appid]);
 }
 
 // ── Backup snapshot (GitHub-repo persistence) ───────────────
-// The free Render tier wipes the local filesystem on every deploy/cold start,
-// so the full DB is mirrored to a JSON snapshot in the Shadow repo. On boot the
-// server restores from that snapshot, and every library/login change triggers a
-// debounced push back up.
-
-function exportSnapshot() {
+async function exportSnapshot() {
   return {
-    users: db.prepare('SELECT * FROM users').all(),
-    sessions: db.prepare('SELECT * FROM sessions').all(),
-    agent_tokens: db.prepare('SELECT * FROM agent_tokens').all(),
-    library: db.prepare('SELECT * FROM library').all(),
+    users: await A.all('SELECT * FROM users'),
+    sessions: await A.all('SELECT * FROM sessions'),
+    agent_tokens: await A.all('SELECT * FROM agent_tokens'),
+    library: await A.all('SELECT * FROM library'),
   };
 }
 
-function importSnapshot(snap) {
-  const upsertUser = db.prepare(`
-    INSERT OR REPLACE INTO users (steamid, name, avatar, provider, created_at)
-    VALUES (?, ?, ?, ?, ?)
-  `);
-  const upsertSession = db.prepare(`
-    INSERT OR REPLACE INTO sessions (token, steamid, created_at, expires_at)
-    VALUES (?, ?, ?, ?)
-  `);
-  const upsertAgent = db.prepare(`
-    INSERT OR REPLACE INTO agent_tokens (token, steamid, created_at, expires_at)
-    VALUES (?, ?, ?, ?)
-  `);
-  const upsertLibrary = db.prepare(`
-    INSERT OR REPLACE INTO library (steamid, appid, name, added_at)
-    VALUES (?, ?, ?, ?)
-  `);
+async function importSnapshot(snap) {
   const counts = { users: 0, sessions: 0, agent_tokens: 0, library: 0 };
-  db.exec('BEGIN');
-  try {
-    for (const u of snap.users || []) {
-      upsertUser.run(u.steamid, u.name || '', u.avatar || '', u.provider || 'steam', u.created_at);
-      counts.users++;
+  const upserts = [
+    { table: 'users', rows: snap.users || [], sql: `
+        INSERT INTO users (steamid, name, avatar, provider, created_at)
+        VALUES (?, ?, ?, ?, ?)
+        ON CONFLICT(steamid) DO UPDATE SET name = excluded.name, avatar = excluded.avatar,
+          provider = excluded.provider, created_at = excluded.created_at` },
+    { table: 'sessions', rows: snap.sessions || [], sql: `
+        INSERT INTO sessions (token, steamid, created_at, expires_at)
+        VALUES (?, ?, ?, ?)
+        ON CONFLICT(token) DO UPDATE SET steamid = excluded.steamid,
+          created_at = excluded.created_at, expires_at = excluded.expires_at` },
+    { table: 'agent_tokens', rows: snap.agent_tokens || [], sql: `
+        INSERT INTO agent_tokens (token, steamid, created_at, expires_at)
+        VALUES (?, ?, ?, ?)
+        ON CONFLICT(token) DO UPDATE SET steamid = excluded.steamid,
+          created_at = excluded.created_at, expires_at = excluded.expires_at` },
+    { table: 'library', rows: snap.library || [], sql: `
+        INSERT INTO library (steamid, appid, name, added_at)
+        VALUES (?, ?, ?, ?)
+        ON CONFLICT(steamid, appid) DO UPDATE SET name = excluded.name, added_at = excluded.added_at` },
+  ];
+  for (const u of upserts) {
+    for (const row of u.rows) {
+      try {
+        const params = u.table === 'users'
+          ? [row.steamid, row.name || '', row.avatar || '', row.provider || 'steam', row.created_at]
+          : u.table === 'library'
+            ? [row.steamid, row.appid, row.name || '', row.added_at]
+            : [row.token, row.steamid, row.created_at, row.expires_at];
+        await A.run(u.sql, params);
+        counts[u.table]++;
+      } catch {
+        // Tolerate individual bad rows (e.g. FK to a missing user) so a single
+        // corrupt entry can't abort the whole restore.
+      }
     }
-    for (const s of snap.sessions || []) {
-      upsertSession.run(s.token, s.steamid, s.created_at, s.expires_at);
-      counts.sessions++;
-    }
-    for (const a of snap.agent_tokens || []) {
-      upsertAgent.run(a.token, a.steamid, a.created_at, a.expires_at);
-      counts.agent_tokens++;
-    }
-    for (const l of snap.library || []) {
-      upsertLibrary.run(l.steamid, l.appid, l.name || '', l.added_at);
-      counts.library++;
-    }
-    db.exec('COMMIT');
-  } catch (e) {
-    db.exec('ROLLBACK');
-    throw e;
   }
   return counts;
 }
 
-// Housekeeping
-deleteExpired.run(Math.floor(Date.now() / 1000));
+// Housekeeping (fire-and-forget — runs once after the schema is ready).
+A.ready.then(() => {
+  A.run('DELETE FROM sessions WHERE expires_at < ?', [Math.floor(Date.now() / 1000)]).catch(() => {});
+}).catch(() => {});
 
 module.exports = {
+  backend: A.backend,
   findOrCreateUser,
   getUser,
   createSession,

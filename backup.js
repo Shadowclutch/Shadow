@@ -80,7 +80,7 @@ async function pushSnapshotNow() {
   const snapshot = {
     version: 1,
     exported_at: Math.floor(Date.now() / 1000),
-    ...db.exportSnapshot(),
+    ...(await db.exportSnapshot()),
   };
   const sha = await currentFileSha();
   const payload = {
@@ -124,7 +124,7 @@ async function restoreFromRepo() {
       console.log('[backup] no remote snapshot found — starting with fresh DB');
       return { restored: false };
     }
-    const counts = db.importSnapshot(snap);
+    const counts = await db.importSnapshot(snap);
     console.log(`[backup] restored snapshot: users=${counts.users} sessions=${counts.sessions} agent_tokens=${counts.agent_tokens} library=${counts.library}`);
     return { restored: true, counts };
   } catch (e) {

@@ -285,24 +285,28 @@ function readCookie(req, name) {
   return null;
 }
 
-function requireAuth(req, res, next) {
-  let token = readCookie(req, SESSION_COOKIE);
-  // Allow Authorization: Bearer <token> for non-browser clients (PC agent)
-  const auth = req.headers.authorization || '';
-  if (auth.startsWith('Bearer ')) token = auth.slice(7).trim();
-  const session = db.getSession(token);
-  if (session) {
-    req.user = db.getUser(session.steamid);
-    req.sessionToken = token;
-    return req.user ? next() : res.status(401).json({ error: 'Not authenticated' });
+async function requireAuth(req, res, next) {
+  try {
+    let token = readCookie(req, SESSION_COOKIE);
+    // Allow Authorization: Bearer <token> for non-browser clients (PC agent)
+    const auth = req.headers.authorization || '';
+    if (auth.startsWith('Bearer ')) token = auth.slice(7).trim();
+    const session = await db.getSession(token);
+    if (session) {
+      req.user = await db.getUser(session.steamid);
+      req.sessionToken = token;
+      return req.user ? next() : res.status(401).json({ error: 'Not authenticated' });
+    }
+    const agent = await db.findAgentToken(token);
+    if (agent) {
+      req.user = await db.getUser(agent.steamid);
+      req.sessionToken = agent.token;
+      return req.user ? next() : res.status(401).json({ error: 'Not authenticated' });
+    }
+    return res.status(401).json({ error: 'Not authenticated' });
+  } catch (e) {
+    return res.status(500).json({ error: 'Authentication error' });
   }
-  const agent = db.findAgentToken(token);
-  if (agent) {
-    req.user = db.getUser(agent.steamid);
-    req.sessionToken = agent.token;
-    return req.user ? next() : res.status(401).json({ error: 'Not authenticated' });
-  }
-  return res.status(401).json({ error: 'Not authenticated' });
 }
 
 function setSessionCookie(res, token) {
@@ -404,8 +408,8 @@ app.get('/auth/steam/callback', async (req, res) => {
     const steamid = await validateOpenId(req.query);
     if (!steamid) return res.status(400).send('Steam login validation failed.');
     const profile = await fetchProfile(steamid);
-    db.findOrCreateUser({ steamid, name: profile.name, avatar: profile.avatar });
-    const token = db.createSession(steamid);
+    await db.findOrCreateUser({ steamid, name: profile.name, avatar: profile.avatar });
+    const token = await db.createSession(steamid);
     setSessionCookie(res, token);
     res.redirect('/');
   } catch (e) {
@@ -430,8 +434,8 @@ app.get('/auth/discord/callback', async (req, res) => {
   try {
     const tok = await discordExchange(code, DISCORD_REDIRECT_WEB);
     const profile = discordUserProfile(await discordFetchUser(tok.access_token));
-    db.findOrCreateUser({ steamid: profile.id, provider: 'discord', name: profile.name, avatar: profile.avatar });
-    const token = db.createSession(profile.id);
+    await db.findOrCreateUser({ steamid: profile.id, provider: 'discord', name: profile.name, avatar: profile.avatar });
+    const token = await db.createSession(profile.id);
     setSessionCookie(res, token);
     res.redirect('/');
   } catch (e) {
@@ -440,9 +444,9 @@ app.get('/auth/discord/callback', async (req, res) => {
   }
 });
 
-app.get('/auth/logout', (req, res) => {
+app.get('/auth/logout', async (req, res) => {
   const token = readCookie(req, SESSION_COOKIE);
-  db.deleteSession(token);
+  await db.deleteSession(token);
   res.setHeader('Set-Cookie', `${SESSION_COOKIE}=; Path=/; HttpOnly; SameSite=Lax; Max-Age=0`);
   res.redirect('/');
 });
@@ -464,8 +468,8 @@ app.post('/api/desktop/login', async (req, res) => {
     const steamid = await validateOpenId(req.body || {});
     if (!steamid) return res.status(401).json({ error: 'Steam login validation failed.' });
     const profile = await fetchProfile(steamid);
-    db.findOrCreateUser({ steamid, name: profile.name, avatar: profile.avatar });
-    const token = db.getAgentToken(steamid);
+    await db.findOrCreateUser({ steamid, name: profile.name, avatar: profile.avatar });
+    const token = await db.getAgentToken(steamid);
     backup.schedulePush();
     res.json({ steamid, name: profile.name, avatar: profile.avatar, token });
   } catch (e) {
@@ -508,9 +512,9 @@ app.get('/api/desktop/discord/callback', async (req, res) => {
   try {
     const tok = await discordExchange(code, DISCORD_REDIRECT_DESKTOP);
     const profile = discordUserProfile(await discordFetchUser(tok.access_token));
-    db.findOrCreateUser({ steamid: profile.id, provider: 'discord', name: profile.name, avatar: profile.avatar });
+    await db.findOrCreateUser({ steamid: profile.id, provider: 'discord', name: profile.name, avatar: profile.avatar });
     const entry = pendingDiscord.get(state);
-    entry.token = db.getAgentToken(profile.id);
+    entry.token = await db.getAgentToken(profile.id);
     entry.user = profile;
     backup.schedulePush();
     res.type('html').send(discordSuccessPage(profile.name));
@@ -539,8 +543,8 @@ app.get('/api/desktop/discord/status', rateLimit(120, 60000), (req, res) => {
   res.json({ pending: true });
 });
 
-app.get('/api/agent/token', requireAuth, (req, res) => {
-  res.json({ token: db.getAgentToken(req.user.steamid) });
+app.get('/api/agent/token', requireAuth, async (req, res) => {
+  res.json({ token: await db.getAgentToken(req.user.steamid) });
 });
 
 // Serve the agent source files so a downloaded installer can fetch them onto any PC.
@@ -552,8 +556,8 @@ app.get('/agent/:file', (req, res) => {
 
 // Generate a self-installing .bat with the user's agent token embedded. The user
 // double-clicks it once; it sets up the background sync agent with zero commands.
-app.get('/api/agent/installer', rateLimit(10, 60000), requireAuth, (req, res) => {
-  const token = db.getAgentToken(req.user.steamid);
+app.get('/api/agent/installer', rateLimit(10, 60000), requireAuth, async (req, res) => {
+  const token = await db.getAgentToken(req.user.steamid);
   const bat = installerBat(SITE_URL, token);
   res.setHeader('Content-Type', 'application/octet-stream');
   res.setHeader('Content-Disposition', 'attachment; filename="CWAgent-Setup.bat"');
@@ -625,27 +629,27 @@ app.post('/api/backup/push', rateLimit(30, 60000), requireAuth, async (req, res)
   }
 });
 
-app.get('/api/library', requireAuth, (req, res) => {
-  const items = db.listLibrary(req.user.steamid).map((g) => ({
+app.get('/api/library', requireAuth, async (req, res) => {
+  const items = (await db.listLibrary(req.user.steamid)).map((g) => ({
     ...g,
     cached: !!readManifestCache(g.appid),
   }));
   res.json({ total: items.length, items });
 });
 
-app.post('/api/library', rateLimit(30, 60000), requireAuth, (req, res) => {
+app.post('/api/library', rateLimit(30, 60000), requireAuth, async (req, res) => {
   const appid = Number(req.body && req.body.appid);
   const name = String((req.body && req.body.name) || '');
   if (!Number.isInteger(appid) || appid <= 0) return res.status(400).json({ error: 'Invalid appid' });
-  const row = db.addToLibrary(req.user.steamid, appid, name);
+  const row = await db.addToLibrary(req.user.steamid, appid, name);
   notifySync(req.user.steamid);
   backup.schedulePush();
   res.json({ item: row });
   prefetchManifest(appid); // store centrally now so all PCs sync from local cache
 });
 
-app.delete('/api/library/:appid', requireAuth, (req, res) => {
-  db.removeFromLibrary(req.user.steamid, Number(req.params.appid));
+app.delete('/api/library/:appid', requireAuth, async (req, res) => {
+  await db.removeFromLibrary(req.user.steamid, Number(req.params.appid));
   notifySync(req.user.steamid);
   backup.schedulePush();
   res.json({ ok: true });
