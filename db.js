@@ -205,7 +205,8 @@ async function diagnose() {
   const meta = (typeof A.meta === 'function') ? A.meta() : { backend: A.backend };
   try {
     const r = await A.get('SELECT 1 AS ok');
-    return { ok: true, backend: A.backend, meta, result: r };
+    const counts = await countRows();
+    return { ok: true, backend: A.backend, meta, counts, result: r };
   } catch (e) {
     return { ok: false, backend: A.backend, meta, error: String((e && e.message) || e) };
   }
