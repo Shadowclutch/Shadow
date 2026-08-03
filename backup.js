@@ -23,6 +23,12 @@ const API_BASE = `https://api.github.com/repos/${REPO}/contents/${FILE}`;
 
 let pushTimer = null;
 let pushInFlight = false;
+let lastPushAt = 0;
+// Postgres is the source of truth, so the GitHub snapshot is only a safety net.
+// Auto-pushes are throttled to at most one per interval (default 30 min) so a
+// busy server with thousands of users doesn't hammer the GitHub API or rewrite
+// the whole file constantly. Manual /api/backup/push always forces a push.
+const AUTO_PUSH_MIN_INTERVAL_MS = parseInt(process.env.BACKUP_MIN_INTERVAL_MS || (30 * 60 * 1000), 10);
 
 function httpRequest(url, opts = {}, body = null) {
   return new Promise((resolve, reject) => {
@@ -94,6 +100,7 @@ async function pushSnapshotNow() {
     headers: { Authorization: `Bearer ${TOKEN}`, 'Content-Type': 'application/json' },
   }, JSON.stringify(payload));
   if (res.status === 200 || res.status === 201) {
+    lastPushAt = Date.now();
     console.log(`[backup] pushed ${FILE} to ${REPO}@${BRANCH}`);
     return { ok: true };
   }
@@ -101,13 +108,19 @@ async function pushSnapshotNow() {
   return { ok: false, reason: `http_${res.status}` };
 }
 
-// Debounced so bursts of library edits produce one push.
+// Debounced so bursts of library edits produce one push, and throttled so we
+// only push the safety-net snapshot at most once per interval.
 function schedulePush(delayMs = 3000) {
   if (!TOKEN) return;
   clearTimeout(pushTimer);
   pushTimer = setTimeout(() => {
     if (pushInFlight) {
       schedulePush(3000);
+      return;
+    }
+    const sinceLast = Date.now() - lastPushAt;
+    if (sinceLast < AUTO_PUSH_MIN_INTERVAL_MS) {
+      console.log(`[backup] auto-push skipped (last push ${Math.round(sinceLast / 1000)}s ago; interval ${Math.round(AUTO_PUSH_MIN_INTERVAL_MS / 60000)}min)`);
       return;
     }
     pushInFlight = true;

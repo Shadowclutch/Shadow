@@ -396,7 +396,9 @@ app.get('/api/agent/status', requireAuth, (req, res) => {
   res.json({ online, lastSeen: last ? new Date(last).toISOString() : null, agents: subscribers.get(req.user.steamid)?.size || 0 });
 });
 
-app.get('/api/health', (req, res) => res.json({ ok: true, clouddbConfigured: CLOUDDB_KEYS.length > 0 }));
+app.get('/api/health', async (req, res) => {
+  res.json({ ok: true, backend: db.backend, uptime: process.uptime(), clouddbConfigured: CLOUDDB_KEYS.length > 0 });
+});
 
 app.get('/api/dbcheck', async (req, res) => {
   res.json(await db.diagnose());
