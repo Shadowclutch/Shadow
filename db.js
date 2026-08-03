@@ -176,6 +176,15 @@ async function countRows() {
   };
 }
 
+async function diagnose() {
+  try {
+    const r = await A.get('SELECT 1 AS ok');
+    return { ok: true, backend: A.backend, result: r };
+  } catch (e) {
+    return { ok: false, backend: A.backend, error: String((e && e.message) || e) };
+  }
+}
+
 async function exportSnapshot() {
   return {
     users: await A.all('SELECT * FROM users'),
@@ -245,6 +254,7 @@ module.exports = {
   addToLibrary,
   removeFromLibrary,
   countRows,
+  diagnose,
   exportSnapshot,
   importSnapshot,
 };

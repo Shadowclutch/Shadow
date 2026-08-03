@@ -398,6 +398,10 @@ app.get('/api/agent/status', requireAuth, (req, res) => {
 
 app.get('/api/health', (req, res) => res.json({ ok: true, clouddbConfigured: CLOUDDB_KEYS.length > 0 }));
 
+app.get('/api/dbcheck', async (req, res) => {
+  res.json(await db.diagnose());
+});
+
 // ── Auth routes ─────────────────────────────────────────────
 app.get('/auth/steam', (req, res) => {
   res.redirect(openidLoginUrl());
