@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785865328,
+  "exported_at": 1785865346,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1393,6 +1393,12 @@
       "appid": 1222700,
       "name": "A Way Out",
       "added_at": 1785865326
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 3564740,
+      "name": "Where Winds Meet",
+      "added_at": 1785865344
     }
   ]
 }
