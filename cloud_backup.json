@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785862999,
+  "exported_at": 1785863036,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -750,6 +750,12 @@
       "appid": 2358720,
       "name": "Black Myth: Wukong",
       "added_at": 1785862997
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 13520,
+      "name": "Far Cry",
+      "added_at": 1785863033
     }
   ]
 }
