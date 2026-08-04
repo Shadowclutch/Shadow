@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785864928,
+  "exported_at": 1785864939,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1273,6 +1273,12 @@
       "appid": 586200,
       "name": "Street Fighter 30th Anniversary Collection",
       "added_at": 1785864926
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 1364780,
+      "name": "Street Fighter™ 6",
+      "added_at": 1785864936
     }
   ]
 }
