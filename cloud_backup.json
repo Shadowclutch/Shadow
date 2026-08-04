@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785863506,
+  "exported_at": 1785863518,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -900,6 +900,12 @@
       "appid": 247430,
       "name": "Hitman: Contracts",
       "added_at": 1785863504
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 6860,
+      "name": "Hitman: Blood Money",
+      "added_at": 1785863516
     }
   ]
 }
