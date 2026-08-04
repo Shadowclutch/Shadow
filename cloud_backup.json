@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785854378,
+  "exported_at": 1785854650,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -404,6 +404,12 @@
       "appid": 2001760,
       "name": "Beast of Reincarnation",
       "added_at": 1785854377
+    },
+    {
+      "steamid": "1487668000478855188",
+      "appid": 2373980,
+      "name": "\"NOBUNAGA'S AMBITION: Awakening\" Additional Officer Graphics and Trait of Popular Officers from the \"NOBUNAGA'S AMBITION\" 40th Anniversary Series' Popularity Rankings",
+      "added_at": 1785854648
     }
   ]
 }
