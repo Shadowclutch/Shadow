@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785865261,
+  "exported_at": 1785865284,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1369,6 +1369,12 @@
       "appid": 431960,
       "name": "Wallpaper Engine",
       "added_at": 1785865259
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 2239550,
+      "name": "Watch Dogs: Legion",
+      "added_at": 1785865281
     }
   ]
 }
