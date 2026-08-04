@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785864958,
+  "exported_at": 1785864974,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1285,6 +1285,12 @@
       "appid": 21660,
       "name": "Street Fighter IV",
       "added_at": 1785864956
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 310950,
+      "name": "Street Fighter V",
+      "added_at": 1785864972
     }
   ]
 }
