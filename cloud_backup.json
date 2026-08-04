@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785865785,
+  "exported_at": 1785865894,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1477,6 +1477,12 @@
       "appid": 1222140,
       "name": "Detroit: Become Human",
       "added_at": 1785865703
+    },
+    {
+      "steamid": "1487668000478855188",
+      "appid": 2483160,
+      "name": "",
+      "added_at": 1785865892
     }
   ]
 }
