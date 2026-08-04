@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785870198,
+  "exported_at": 1785870204,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1720,6 +1720,24 @@
       "appid": 1981881,
       "name": "Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles: Nezuko (Advanced Demon Form) Character Pack",
       "added_at": 1785870196
+    },
+    {
+      "steamid": "709510904299126835",
+      "appid": 1977370,
+      "name": "Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles: Kimetsu Academy Summer Uniforms",
+      "added_at": 1785870202
+    },
+    {
+      "steamid": "709510904299126835",
+      "appid": 1981884,
+      "name": "Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles: Gyutaro Character Pack",
+      "added_at": 1785870203
+    },
+    {
+      "steamid": "709510904299126835",
+      "appid": 1996370,
+      "name": "Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles: Inosuke (Entertainment District) Character Pack",
+      "added_at": 1785870204
     }
   ]
 }
