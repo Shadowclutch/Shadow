@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785862782,
+  "exported_at": 1785862855,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -708,6 +708,12 @@
       "appid": 1245620,
       "name": "ELDEN RING",
       "added_at": 1785862780
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 1080110,
+      "name": "F1 2020",
+      "added_at": 1785862853
     }
   ]
 }
