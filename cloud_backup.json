@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785864746,
+  "exported_at": 1785864757,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1225,6 +1225,12 @@
       "appid": 287290,
       "name": "Resident Evil Revelations 2",
       "added_at": 1785864743
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 1196590,
+      "name": "Resident Evil Village",
+      "added_at": 1785864755
     }
   ]
 }
