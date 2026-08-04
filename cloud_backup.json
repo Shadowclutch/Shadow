@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785865088,
+  "exported_at": 1785865100,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1315,6 +1315,12 @@
       "appid": 2379390,
       "name": "Tom Clancy’s Rainbow Six Extraction",
       "added_at": 1785865086
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 359550,
+      "name": "Tom Clancy's Rainbow Six Siege",
+      "added_at": 1785865098
     }
   ]
 }
