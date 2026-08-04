@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785863969,
+  "exported_at": 1785864003,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1014,6 +1014,12 @@
       "appid": 1110910,
       "name": "Mortal Shell",
       "added_at": 1785863882
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 355130,
+      "name": "MotoGP™15",
+      "added_at": 1785864000
     }
   ]
 }
