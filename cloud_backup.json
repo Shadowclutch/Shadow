@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785864836,
+  "exported_at": 1785864848,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1243,6 +1243,12 @@
       "appid": 2124490,
       "name": "SILENT HILL 2",
       "added_at": 1785864834
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 2947440,
+      "name": "SILENT HILL f",
+      "added_at": 1785864846
     }
   ]
 }
