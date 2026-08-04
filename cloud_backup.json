@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785863631,
+  "exported_at": 1785863635,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -942,6 +942,12 @@
       "appid": 575590,
       "name": "Balloon Popping Pigs",
       "added_at": 1785863629
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 50130,
+      "name": "Mafia II (Classic)",
+      "added_at": 1785863633
     }
   ]
 }
