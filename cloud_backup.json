@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785876384,
+  "exported_at": 1785877516,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -134,6 +134,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1245857828183347221/1de4ef3d944e43de1437e919abe6fb8b.png",
       "provider": "discord",
       "created_at": 1785875259
+    },
+    {
+      "steamid": "1345121200619262073",
+      "name": "Gabyoventex",
+      "avatar": "https://cdn.discordapp.com/avatars/1345121200619262073/97d37ad89fae37fafbd09e043b39d16b.png",
+      "provider": "discord",
+      "created_at": 1785877506
     }
   ],
   "sessions": [],
@@ -251,6 +258,12 @@
       "steamid": "1245857828183347221",
       "created_at": 1785875260,
       "expires_at": 1817411260
+    },
+    {
+      "token": "32ee80afc8e6e1562f3505d7f81ef61df2b5f6620e559b14fa6770c490f1af15",
+      "steamid": "1345121200619262073",
+      "created_at": 1785877508,
+      "expires_at": 1817413508
     }
   ],
   "library": [
@@ -1867,6 +1880,12 @@
       "appid": 1089980,
       "name": "The Henry Stickmin Collection",
       "added_at": 1785876382
+    },
+    {
+      "steamid": "1345121200619262073",
+      "appid": 3240220,
+      "name": "Grand Theft Auto V Enhanced",
+      "added_at": 1785877514
     }
   ]
 }
