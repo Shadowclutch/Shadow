@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785825061,
+  "exported_at": 1785835466,
   "users": [
     {
       "steamid": "1487668000478855188",
@@ -29,6 +29,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1255560457776009309/675a9b0094beee5e7c7bc9afbba44b84.png",
       "provider": "discord",
       "created_at": 1785819015
+    },
+    {
+      "steamid": "1510082065813471392",
+      "name": "eclipt",
+      "avatar": "https://cdn.discordapp.com/avatars/1510082065813471392/4baf98e401e802effcb60ba133dc2433.png",
+      "provider": "discord",
+      "created_at": 1785835461
     }
   ],
   "sessions": [],
@@ -56,6 +63,12 @@
       "steamid": "1255560457776009309",
       "created_at": 1785819016,
       "expires_at": 1817355016
+    },
+    {
+      "token": "9208a7cecc040e5384c4d872efefe09398a6d2aea27b21b3ffa14821be0d351e",
+      "steamid": "1510082065813471392",
+      "created_at": 1785835462,
+      "expires_at": 1817371462
     }
   ],
   "library": [
