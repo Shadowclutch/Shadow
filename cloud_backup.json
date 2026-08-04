@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785862575,
+  "exported_at": 1785862591,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -660,6 +660,12 @@
       "appid": 209000,
       "name": "Batman™: Arkham Origins",
       "added_at": 1785862573
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 208650,
+      "name": "Batman™: Arkham Knight",
+      "added_at": 1785862589
     }
   ]
 }
