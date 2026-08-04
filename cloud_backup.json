@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785863693,
+  "exported_at": 1785863706,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -966,6 +966,12 @@
       "appid": 1088850,
       "name": "Marvel's Guardians of the Galaxy",
       "added_at": 1785863691
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 368260,
+      "name": "Marvel's Midnight Suns",
+      "added_at": 1785863704
     }
   ]
 }
