@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785861842,
+  "exported_at": 1785861889,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -497,6 +497,12 @@
       "appid": 2974330,
       "name": "God of War Ragnarök - Digital Deluxe Edition Upgrade",
       "added_at": 1785861840
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 15100,
+      "name": "Assassin's Creed",
+      "added_at": 1785861887
     }
   ]
 }
