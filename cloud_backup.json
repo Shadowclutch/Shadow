@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785862299,
+  "exported_at": 1785862319,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -582,6 +582,12 @@
       "appid": 368500,
       "name": "Assassin's Creed Syndicate",
       "added_at": 1785862297
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 3751950,
+      "name": "Assassin's Creed Black Flag Resynced",
+      "added_at": 1785862317
     }
   ]
 }
