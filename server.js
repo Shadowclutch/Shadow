@@ -34,6 +34,11 @@ const CLOUDDB_BASE = 'https://hubcapmanifest.com';
 const REMOTE_CONFIG_URL = 'https://raw.githubusercontent.com/Shadowclutch/Shadow/main/config.json';
 const COOLDOWN_SECS = 86400;
 
+function nextDailyReset() {
+  const now = new Date();
+  return Math.floor(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() + 1) / 1000);
+}
+
 let CLOUDDB_KEYS = [];
 const keyCooldown = new Map();
 const COOLDOWN_STATE_PATH = path.join(__dirname, 'clouddb_cooldowns.json');
@@ -98,7 +103,7 @@ function activeKey() {
 }
 
 function markKeyCooldown(key) {
-  keyCooldown.set(key, Math.floor(Date.now() / 1000) + COOLDOWN_SECS);
+  keyCooldown.set(key, nextDailyReset());
   persistCooldowns();
 }
 
