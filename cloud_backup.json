@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785853217,
+  "exported_at": 1785853222,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -379,6 +379,12 @@
       "appid": 3797340,
       "name": "Anomalous Coffee Machine 2",
       "added_at": 1785842310
+    },
+    {
+      "steamid": "1120991811087912991",
+      "appid": 2651280,
+      "name": "Marvel's Spider-Man 2",
+      "added_at": 1785853221
     }
   ]
 }
