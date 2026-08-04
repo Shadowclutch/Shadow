@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785863208,
+  "exported_at": 1785863224,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -822,6 +822,12 @@
       "appid": 2483190,
       "name": "Forza Horizon 6",
       "added_at": 1785863206
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 2440510,
+      "name": "Forza Motorsport",
+      "added_at": 1785863222
     }
   ]
 }
