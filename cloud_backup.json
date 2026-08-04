@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785870206,
+  "exported_at": 1785870209,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1744,6 +1744,24 @@
       "appid": 1669201,
       "name": "Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles: Kimetsu Academy Nezuko, Zenitsu, Inosuke Early Unlock",
       "added_at": 1785870205
+    },
+    {
+      "steamid": "709510904299126835",
+      "appid": 1769970,
+      "name": "Demon Slayer -Kimetsu No Yaiba- The Hinokami Chronicles: Core Add-on Bundle",
+      "added_at": 1785870207
+    },
+    {
+      "steamid": "709510904299126835",
+      "appid": 1981880,
+      "name": "Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles: Character Pass",
+      "added_at": 1785870207
+    },
+    {
+      "steamid": "709510904299126835",
+      "appid": 1669203,
+      "name": "Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles: Butterfly Mansion Patient Wear for Tanjiro, Zenitsu & Inosuke",
+      "added_at": 1785870208
     }
   ]
 }
