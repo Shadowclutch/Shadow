@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785865597,
+  "exported_at": 1785865615,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1465,6 +1465,12 @@
       "appid": 752590,
       "name": "A Plague Tale: Innocence",
       "added_at": 1785865595
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 1182900,
+      "name": "A Plague Tale: Requiem",
+      "added_at": 1785865613
     }
   ]
 }
