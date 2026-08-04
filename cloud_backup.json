@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785864338,
+  "exported_at": 1785864442,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1129,6 +1129,12 @@
       "appid": 1846380,
       "name": "Need for Speed™ Unbound",
       "added_at": 1785864336
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 1325200,
+      "name": "Nioh 2 – The Complete Edition",
+      "added_at": 1785864439
     }
   ]
 }
