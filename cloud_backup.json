@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785862333,
+  "exported_at": 1785862350,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -594,6 +594,12 @@
       "appid": 354380,
       "name": "Assassin’s Creed® Chronicles: China",
       "added_at": 1785862330
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 359610,
+      "name": "Assassin’s Creed® Chronicles: India",
+      "added_at": 1785862348
     }
   ]
 }
