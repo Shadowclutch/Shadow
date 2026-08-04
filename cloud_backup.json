@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785865149,
+  "exported_at": 1785865160,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1333,6 +1333,12 @@
       "appid": 365590,
       "name": "Tom Clancy's The Division",
       "added_at": 1785865146
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 2221490,
+      "name": "Tom Clancy's The Division 2",
+      "added_at": 1785865158
     }
   ]
 }
