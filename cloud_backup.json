@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785864559,
+  "exported_at": 1785864575,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1165,6 +1165,12 @@
       "appid": 2668510,
       "name": "Red Dead Redemption",
       "added_at": 1785864557
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 1174180,
+      "name": "Red Dead Redemption 2",
+      "added_at": 1785864573
     }
   ]
 }
