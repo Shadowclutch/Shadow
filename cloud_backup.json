@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785863534,
+  "exported_at": 1785863546,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -912,6 +912,12 @@
       "appid": 203140,
       "name": "Hitman: Absolution",
       "added_at": 1785863532
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 1659040,
+      "name": "HITMAN World of Assassination",
+      "added_at": 1785863544
     }
   ]
 }
