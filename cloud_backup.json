@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785863546,
+  "exported_at": 1785863572,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -918,6 +918,12 @@
       "appid": 1659040,
       "name": "HITMAN World of Assassination",
       "added_at": 1785863544
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 1426210,
+      "name": "It Takes Two",
+      "added_at": 1785863570
     }
   ]
 }
