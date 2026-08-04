@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785835466,
+  "exported_at": 1785835701,
   "users": [
     {
       "steamid": "1487668000478855188",
@@ -36,6 +36,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1510082065813471392/4baf98e401e802effcb60ba133dc2433.png",
       "provider": "discord",
       "created_at": 1785835461
+    },
+    {
+      "steamid": "1004049495224492062",
+      "name": "Kinan",
+      "avatar": "https://cdn.discordapp.com/avatars/1004049495224492062/e156930933864f7d831a20267df64293.png",
+      "provider": "discord",
+      "created_at": 1785835692
     }
   ],
   "sessions": [],
@@ -69,6 +76,12 @@
       "steamid": "1510082065813471392",
       "created_at": 1785835462,
       "expires_at": 1817371462
+    },
+    {
+      "token": "a010b30208e5af7c250190c34c4c770c1ff57684b2ad71714ea25efdfe105b73",
+      "steamid": "1004049495224492062",
+      "created_at": 1785835694,
+      "expires_at": 1817371694
     }
   ],
   "library": [
@@ -305,6 +318,12 @@
       "appid": 456630,
       "name": "",
       "added_at": 1785825059
+    },
+    {
+      "steamid": "1004049495224492062",
+      "appid": 225540,
+      "name": "Just Cause 3",
+      "added_at": 1785835699
     }
   ]
 }
