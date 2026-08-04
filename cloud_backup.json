@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785865615,
+  "exported_at": 1785865662,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1471,6 +1471,12 @@
       "appid": 1182900,
       "name": "A Plague Tale: Requiem",
       "added_at": 1785865613
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 960990,
+      "name": "Beyond: Two Souls",
+      "added_at": 1785865660
     }
   ]
 }
