@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785863333,
+  "exported_at": 1785863346,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -864,6 +864,12 @@
       "appid": 271590,
       "name": "Grand Theft Auto V Legacy",
       "added_at": 1785863331
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 1546990,
+      "name": "Grand Theft Auto: Vice City - The Definitive Edition",
+      "added_at": 1785863344
     }
   ]
 }
