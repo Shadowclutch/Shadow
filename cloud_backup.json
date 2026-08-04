@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785870527,
+  "exported_at": 1785870861,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1577,6 +1577,12 @@
       "appid": 4181540,
       "name": "WWE 2K26 Joe Hendry Pack",
       "added_at": 1785870525
+    },
+    {
+      "steamid": "1004049495224492062",
+      "appid": 1672970,
+      "name": "Minecraft Dungeons",
+      "added_at": 1785870859
     },
     {
       "steamid": "1281541356266852363",
