@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785864254,
+  "exported_at": 1785864280,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1105,6 +1105,12 @@
       "appid": 1328660,
       "name": "Need for Speed™ Hot Pursuit Remastered",
       "added_at": 1785864252
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 1262560,
+      "name": "Need for Speed™ Most Wanted",
+      "added_at": 1785864278
     }
   ]
 }
