@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785862319,
+  "exported_at": 1785862333,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -588,6 +588,12 @@
       "appid": 3751950,
       "name": "Assassin's Creed Black Flag Resynced",
       "added_at": 1785862317
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 354380,
+      "name": "Assassin’s Creed® Chronicles: China",
+      "added_at": 1785862330
     }
   ]
 }
