@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785870061,
+  "exported_at": 1785870130,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1660,6 +1660,12 @@
       "appid": 3954230,
       "name": "007 First Light - Golden Gun (Weapon Skin)",
       "added_at": 1785870062
+    },
+    {
+      "steamid": "1004049495224492062",
+      "appid": 945360,
+      "name": "Among Us",
+      "added_at": 1785870130
     }
   ]
 }
