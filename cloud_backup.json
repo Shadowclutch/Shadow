@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785861820,
+  "exported_at": 1785861833,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -479,6 +479,12 @@
       "appid": 1593500,
       "name": "God of War",
       "added_at": 1785861818
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 2322010,
+      "name": "God of War Ragnarök",
+      "added_at": 1785861832
     }
   ]
 }
