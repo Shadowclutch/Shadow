@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785870185,
+  "exported_at": 1785870195,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1684,6 +1684,36 @@
       "appid": 4010500,
       "name": "Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles 2: Akaza (Infinity Castle) Character Pack",
       "added_at": 1785870183
+    },
+    {
+      "steamid": "709510904299126835",
+      "appid": 1977381,
+      "name": "Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles: Tanjiro, Zenitsu, & Inosuke (Entertainment District) Character Pack",
+      "added_at": 1785870192
+    },
+    {
+      "steamid": "709510904299126835",
+      "appid": 1981930,
+      "name": "Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles: Zenitsu (Entertainment District) Character Pack",
+      "added_at": 1785870194
+    },
+    {
+      "steamid": "709510904299126835",
+      "appid": 1977380,
+      "name": "Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles: Tengen Uzui Character Pack",
+      "added_at": 1785870194
+    },
+    {
+      "steamid": "709510904299126835",
+      "appid": 1981882,
+      "name": "Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles: Tanjiro (Entertainment District) Character Pack",
+      "added_at": 1785870196
+    },
+    {
+      "steamid": "1004049495224492062",
+      "appid": 252950,
+      "name": "Rocket League",
+      "added_at": 1785870196
     }
   ]
 }
