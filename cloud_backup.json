@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785862451,
+  "exported_at": 1785862463,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -636,6 +636,12 @@
       "appid": 3159330,
       "name": "Assassin's Creed Shadows",
       "added_at": 1785862448
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 2208920,
+      "name": "Assassin's Creed Valhalla",
+      "added_at": 1785862461
     }
   ]
 }
