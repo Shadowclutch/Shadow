@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785863301,
+  "exported_at": 1785863320,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -852,6 +852,12 @@
       "appid": 1547000,
       "name": "Grand Theft Auto: San Andreas - The Definitive Edition",
       "added_at": 1785863299
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 3240220,
+      "name": "Grand Theft Auto V Enhanced",
+      "added_at": 1785863318
     }
   ]
 }
