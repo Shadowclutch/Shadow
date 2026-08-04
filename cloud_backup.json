@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785863820,
+  "exported_at": 1785863832,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1002,6 +1002,12 @@
       "appid": 1971870,
       "name": "Mortal Kombat 1",
       "added_at": 1785863818
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 976310,
+      "name": "Mortal Kombat 11",
+      "added_at": 1785863830
     }
   ]
 }
