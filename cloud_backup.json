@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785861833,
+  "exported_at": 1785861837,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -485,6 +485,12 @@
       "appid": 2322010,
       "name": "God of War Ragnarök",
       "added_at": 1785861832
+    },
+    {
+      "steamid": "1487668000478855188",
+      "appid": 3340,
+      "name": "AstroPop Deluxe",
+      "added_at": 1785861835
     }
   ]
 }
