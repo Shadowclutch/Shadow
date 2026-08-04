@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785865362,
+  "exported_at": 1785865392,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1405,6 +1405,12 @@
       "appid": 292030,
       "name": "The Witcher 3: Wild Hunt",
       "added_at": 1785865359
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 612880,
+      "name": "Wolfenstein II: The New Colossus",
+      "added_at": 1785865390
     }
   ]
 }
