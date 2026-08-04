@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785871634,
+  "exported_at": 1785871652,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1591,12 +1591,6 @@
       "added_at": 1785871255
     },
     {
-      "steamid": "695939946346840135",
-      "appid": 205100,
-      "name": "Dishonored",
-      "added_at": 1785871561
-    },
-    {
       "steamid": "1281541356266852363",
       "appid": 4704690,
       "name": "MECCHA CHAMELEON",
@@ -1835,6 +1829,12 @@
       "appid": 218785,
       "name": "Dishonored RHCP Knife of Dunwall",
       "added_at": 1785871633
+    },
+    {
+      "steamid": "695939946346840135",
+      "appid": 205100,
+      "name": "Dishonored",
+      "added_at": 1785871561
     }
   ]
 }
