@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785842308,
+  "exported_at": 1785842312,
   "users": [
     {
       "steamid": "1487668000478855188",
@@ -360,6 +360,12 @@
       "appid": 3173560,
       "name": "Anomalous Coffee Machine",
       "added_at": 1785842304
+    },
+    {
+      "steamid": "1004049495224492062",
+      "appid": 3797340,
+      "name": "Anomalous Coffee Machine 2",
+      "added_at": 1785842310
     }
   ]
 }
