@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785862082,
+  "exported_at": 1785862098,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -546,6 +546,12 @@
       "appid": 208480,
       "name": "Assassin's Creed® III",
       "added_at": 1785862074
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 911400,
+      "name": "Assassin's Creed III Remastered",
+      "added_at": 1785862096
     }
   ]
 }
