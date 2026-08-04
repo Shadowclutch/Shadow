@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785862745,
+  "exported_at": 1785862766,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -696,6 +696,12 @@
       "appid": 2669320,
       "name": "EA SPORTS FC 25",
       "added_at": 1785862742
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 1849250,
+      "name": "EA SPORTS™ WRC",
+      "added_at": 1785862763
     }
   ]
 }
