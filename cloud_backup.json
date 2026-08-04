@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785835702,
+  "exported_at": 1785835745,
   "users": [
     {
       "steamid": "1487668000478855188",
@@ -324,6 +324,12 @@
       "appid": 225540,
       "name": "Just Cause 3",
       "added_at": 1785835699
+    },
+    {
+      "steamid": "1004049495224492062",
+      "appid": 1593500,
+      "name": "God of War",
+      "added_at": 1785835743
     }
   ]
 }
