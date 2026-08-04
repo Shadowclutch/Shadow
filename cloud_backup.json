@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785864998,
+  "exported_at": 1785865011,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1297,6 +1297,12 @@
       "appid": 389730,
       "name": "TEKKEN 7",
       "added_at": 1785864996
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 1778820,
+      "name": "TEKKEN 8",
+      "added_at": 1785865009
     }
   ]
 }
