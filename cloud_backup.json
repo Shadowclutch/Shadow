@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785861837,
+  "exported_at": 1785861842,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -491,6 +491,12 @@
       "appid": 3340,
       "name": "AstroPop Deluxe",
       "added_at": 1785861835
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 2974330,
+      "name": "God of War Ragnarök - Digital Deluxe Edition Upgrade",
+      "added_at": 1785861840
     }
   ]
 }
