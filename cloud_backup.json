@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785887495,
+  "exported_at": 1785887568,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -148,6 +148,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/892783748108677151/3da72e2c264686ef0b7fdbcd4056874e.png",
       "provider": "discord",
       "created_at": 1785884966
+    },
+    {
+      "steamid": "1469496155581845752",
+      "name": "XxKweenZzxX",
+      "avatar": "https://cdn.discordapp.com/avatars/1469496155581845752/aecb6626166ffa04d136666a0219acf2.png",
+      "provider": "discord",
+      "created_at": 1785887557
     }
   ],
   "sessions": [],
@@ -277,6 +284,12 @@
       "steamid": "892783748108677151",
       "created_at": 1785884968,
       "expires_at": 1817420968
+    },
+    {
+      "token": "e9c0dabbda2848123a7f3935d4a4d39f369de607b14bbbd8551b3ad08cf39b0f",
+      "steamid": "1469496155581845752",
+      "created_at": 1785887559,
+      "expires_at": 1817423559
     }
   ],
   "library": [
@@ -1923,6 +1936,12 @@
       "appid": 4018960,
       "name": "Rhythia Plus",
       "added_at": 1785887493
+    },
+    {
+      "steamid": "1469496155581845752",
+      "appid": 1091500,
+      "name": "Cyberpunk 2077",
+      "added_at": 1785887566
     }
   ]
 }
