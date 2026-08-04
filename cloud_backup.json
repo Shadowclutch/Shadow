@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785863858,
+  "exported_at": 1785863884,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1020,6 +1020,12 @@
       "appid": 307780,
       "name": "Mortal Kombat X",
       "added_at": 1785863856
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 1110910,
+      "name": "Mortal Shell",
+      "added_at": 1785863882
     }
   ]
 }
