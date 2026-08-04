@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785863650,
+  "exported_at": 1785863660,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -954,6 +954,12 @@
       "appid": 1030830,
       "name": "Mafia II: Definitive Edition",
       "added_at": 1785863647
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 360430,
+      "name": "Mafia III: Definitive Edition",
+      "added_at": 1785863658
     }
   ]
 }
