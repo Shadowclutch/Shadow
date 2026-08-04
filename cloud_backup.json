@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785870204,
+  "exported_at": 1785870206,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1738,6 +1738,12 @@
       "appid": 1996370,
       "name": "Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles: Inosuke (Entertainment District) Character Pack",
       "added_at": 1785870204
+    },
+    {
+      "steamid": "709510904299126835",
+      "appid": 1669201,
+      "name": "Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles: Kimetsu Academy Nezuko, Zenitsu, Inosuke Early Unlock",
+      "added_at": 1785870205
     }
   ]
 }
