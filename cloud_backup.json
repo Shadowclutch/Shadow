@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785864136,
+  "exported_at": 1785864203,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1081,6 +1081,12 @@
       "appid": 3875050,
       "name": "MotoGP™26",
       "added_at": 1785864134
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 1262540,
+      "name": "Need for Speed™",
+      "added_at": 1785864201
     }
   ]
 }
