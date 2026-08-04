@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785870060,
+  "exported_at": 1785870061,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1648,6 +1648,18 @@
       "appid": 4521820,
       "name": "007 First Light - Observant Spy (Outfit)",
       "added_at": 1785870060
+    },
+    {
+      "steamid": "1004049495224492062",
+      "appid": 4521830,
+      "name": "007 First Light - Leisure Beam (Outfit)",
+      "added_at": 1785870061
+    },
+    {
+      "steamid": "1004049495224492062",
+      "appid": 3954230,
+      "name": "007 First Light - Golden Gun (Weapon Skin)",
+      "added_at": 1785870062
     }
   ]
 }
