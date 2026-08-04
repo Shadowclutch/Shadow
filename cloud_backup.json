@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785863518,
+  "exported_at": 1785863534,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -906,6 +906,12 @@
       "appid": 6860,
       "name": "Hitman: Blood Money",
       "added_at": 1785863516
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 203140,
+      "name": "Hitman: Absolution",
+      "added_at": 1785863532
     }
   ]
 }
