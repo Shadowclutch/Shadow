@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785854318,
+  "exported_at": 1785854378,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -398,6 +398,12 @@
       "appid": 2651280,
       "name": "Marvel's Spider-Man 2",
       "added_at": 1785853221
+    },
+    {
+      "steamid": "515886430019387398",
+      "appid": 2001760,
+      "name": "Beast of Reincarnation",
+      "added_at": 1785854377
     }
   ]
 }
