@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785865245,
+  "exported_at": 1785865261,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1363,6 +1363,12 @@
       "appid": 2172010,
       "name": "Until Dawn™",
       "added_at": 1785865242
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 431960,
+      "name": "Wallpaper Engine",
+      "added_at": 1785865259
     }
   ]
 }
