@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785863288,
+  "exported_at": 1785863301,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -846,6 +846,12 @@
       "appid": 12210,
       "name": "Grand Theft Auto IV: The Complete Edition",
       "added_at": 1785863286
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 1547000,
+      "name": "Grand Theft Auto: San Andreas - The Definitive Edition",
+      "added_at": 1785863299
     }
   ]
 }
