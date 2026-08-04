@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785865011,
+  "exported_at": 1785865074,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1303,6 +1303,12 @@
       "appid": 1778820,
       "name": "TEKKEN 8",
       "added_at": 1785865009
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 460930,
+      "name": "Tom Clancy's Ghost Recon® Wildlands",
+      "added_at": 1785865072
     }
   ]
 }
