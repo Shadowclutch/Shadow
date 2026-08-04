@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785862558,
+  "exported_at": 1785862575,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -654,6 +654,12 @@
       "appid": 200260,
       "name": "Batman: Arkham City GOTY",
       "added_at": 1785862556
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 209000,
+      "name": "Batman™: Arkham Origins",
+      "added_at": 1785862573
     }
   ]
 }
