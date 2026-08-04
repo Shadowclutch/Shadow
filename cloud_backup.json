@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785865160,
+  "exported_at": 1785865176,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1339,6 +1339,12 @@
       "appid": 2221490,
       "name": "Tom Clancy's The Division 2",
       "added_at": 1785865158
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 203160,
+      "name": "Tomb Raider",
+      "added_at": 1785865173
     }
   ]
 }
