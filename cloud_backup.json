@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785865451,
+  "exported_at": 1785865466,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1435,6 +1435,12 @@
       "appid": 2277560,
       "name": "WUCHANG: Fallen Feathers",
       "added_at": 1785865449
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 3513350,
+      "name": "Wuthering Waves",
+      "added_at": 1785865463
     }
   ]
 }
