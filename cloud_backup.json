@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785869695,
+  "exported_at": 1785870031,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -106,6 +106,13 @@
       "avatar": "",
       "provider": "discord",
       "created_at": 1785869259
+    },
+    {
+      "steamid": "709510904299126835",
+      "name": "Kyori",
+      "avatar": "https://cdn.discordapp.com/avatars/709510904299126835/9fd969df1af6cd332a0f7d820a86986f.png",
+      "provider": "discord",
+      "created_at": 1785869988
     }
   ],
   "sessions": [],
@@ -199,6 +206,12 @@
       "steamid": "1281541356266852363",
       "created_at": 1785869261,
       "expires_at": 1817405261
+    },
+    {
+      "token": "c4382b93c6ad63553181a09c05d7a466991c979ed85de0398a3061bcac8df027",
+      "steamid": "709510904299126835",
+      "created_at": 1785869990,
+      "expires_at": 1817405990
     }
   ],
   "library": [
@@ -1533,6 +1546,18 @@
       "appid": 7940,
       "name": "Call of Duty 4: Modern Warfare (2007)",
       "added_at": 1785868817
+    },
+    {
+      "steamid": "1281541356266852363",
+      "appid": 4704690,
+      "name": "MECCHA CHAMELEON",
+      "added_at": 1785869915
+    },
+    {
+      "steamid": "1004049495224492062",
+      "appid": 3768760,
+      "name": "007 First Light",
+      "added_at": 1785870029
     }
   ]
 }
