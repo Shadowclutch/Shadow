@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785862421,
+  "exported_at": 1785862434,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -624,6 +624,12 @@
       "appid": 582160,
       "name": "Assassin's Creed Origins",
       "added_at": 1785862419
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 311560,
+      "name": "Assassin's Creed Rogue",
+      "added_at": 1785862433
     }
   ]
 }
