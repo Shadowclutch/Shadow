@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785838071,
+  "exported_at": 1785842307,
   "users": [
     {
       "steamid": "1487668000478855188",
@@ -354,6 +354,12 @@
       "appid": 1548510,
       "name": "Love Dating",
       "added_at": 1785838068
+    },
+    {
+      "steamid": "1004049495224492062",
+      "appid": 3173560,
+      "name": "Anomalous Coffee Machine",
+      "added_at": 1785842304
     }
   ]
 }
