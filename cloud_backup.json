@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785862405,
+  "exported_at": 1785862421,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -618,6 +618,12 @@
       "appid": 812140,
       "name": "Assassin's Creed Odyssey",
       "added_at": 1785862403
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 582160,
+      "name": "Assassin's Creed Origins",
+      "added_at": 1785862419
     }
   ]
 }
