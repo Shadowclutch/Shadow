@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785862546,
+  "exported_at": 1785862558,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -648,6 +648,12 @@
       "appid": 35140,
       "name": "Batman: Arkham Asylum GOTY Edition",
       "added_at": 1785862544
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 200260,
+      "name": "Batman: Arkham City GOTY",
+      "added_at": 1785862556
     }
   ]
 }
