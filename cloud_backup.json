@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785864848,
+  "exported_at": 1785864860,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1249,6 +1249,12 @@
       "appid": 2947440,
       "name": "SILENT HILL f",
       "added_at": 1785864846
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 19000,
+      "name": "Silent Hill: Homecoming",
+      "added_at": 1785864858
     }
   ]
 }
