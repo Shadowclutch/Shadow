@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785865100,
+  "exported_at": 1785865130,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1321,6 +1321,12 @@
       "appid": 359550,
       "name": "Tom Clancy's Rainbow Six Siege",
       "added_at": 1785865098
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 33220,
+      "name": "Tom Clancy's Splinter Cell: Conviction",
+      "added_at": 1785865128
     }
   ]
 }
