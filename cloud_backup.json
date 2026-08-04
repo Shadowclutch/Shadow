@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785864661,
+  "exported_at": 1785864674,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1195,6 +1195,12 @@
       "appid": 2050650,
       "name": "Resident Evil 4",
       "added_at": 1785864658
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 21690,
+      "name": "Resident Evil 5",
+      "added_at": 1785864672
     }
   ]
 }
