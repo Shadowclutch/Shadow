@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785860179,
+  "exported_at": 1785861709,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -455,6 +455,12 @@
       "appid": 50,
       "name": "Half-Life: Opposing Force",
       "added_at": 1785860176
+    },
+    {
+      "steamid": "1487668000478855188",
+      "appid": 3240220,
+      "name": "",
+      "added_at": 1785861706
     }
   ]
 }
