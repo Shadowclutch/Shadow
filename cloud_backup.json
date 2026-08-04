@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785870861,
+  "exported_at": 1785871257,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1583,6 +1583,12 @@
       "appid": 1672970,
       "name": "Minecraft Dungeons",
       "added_at": 1785870859
+    },
+    {
+      "steamid": "1004049495224492062",
+      "appid": 620,
+      "name": "Portal 2",
+      "added_at": 1785871255
     },
     {
       "steamid": "1281541356266852363",
