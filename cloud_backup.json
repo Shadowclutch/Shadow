@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785864785,
+  "exported_at": 1785864836,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1237,6 +1237,12 @@
       "appid": 814380,
       "name": "Sekiro™: Shadows Die Twice",
       "added_at": 1785864783
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 2124490,
+      "name": "SILENT HILL 2",
+      "added_at": 1785864834
     }
   ]
 }
