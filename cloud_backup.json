@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785863832,
+  "exported_at": 1785863845,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1008,6 +1008,12 @@
       "appid": 976310,
       "name": "Mortal Kombat 11",
       "added_at": 1785863830
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 237110,
+      "name": "Mortal Kombat Komplete Edition",
+      "added_at": 1785863843
     }
   ]
 }
