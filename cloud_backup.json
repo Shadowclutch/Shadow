@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785863036,
+  "exported_at": 1785863048,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -756,6 +756,12 @@
       "appid": 13520,
       "name": "Far Cry",
       "added_at": 1785863033
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 19900,
+      "name": "Far Cry 2",
+      "added_at": 1785863046
     }
   ]
 }
