@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785864306,
+  "exported_at": 1785864322,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1117,6 +1117,12 @@
       "appid": 1262580,
       "name": "Need for Speed™ Payback",
       "added_at": 1785864304
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 1262600,
+      "name": "Need for Speed™ Rivals",
+      "added_at": 1785864320
     }
   ]
 }
