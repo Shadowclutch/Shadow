@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785819026,
+  "exported_at": 1785819094,
   "users": [
     {
       "steamid": "1487668000478855188",
@@ -130,6 +130,12 @@
       "appid": 48190,
       "name": "Assassin's Creed Brotherhood",
       "added_at": 1785782147
+    },
+    {
+      "steamid": "1255560457776009309",
+      "appid": 3768760,
+      "name": "007 First Light",
+      "added_at": 1785819092
     }
   ]
 }
