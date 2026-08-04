@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785862366,
+  "exported_at": 1785862389,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -606,6 +606,12 @@
       "appid": 359600,
       "name": "Assassin’s Creed® Chronicles: Russia",
       "added_at": 1785862364
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 3035570,
+      "name": "Assassin's Creed Mirage",
+      "added_at": 1785862387
     }
   ]
 }
