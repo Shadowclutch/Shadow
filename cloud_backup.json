@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785870179,
+  "exported_at": 1785870185,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1678,6 +1678,12 @@
       "appid": 2928600,
       "name": "Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles 2",
       "added_at": 1785870177
+    },
+    {
+      "steamid": "709510904299126835",
+      "appid": 4010500,
+      "name": "Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles 2: Akaza (Infinity Castle) Character Pack",
+      "added_at": 1785870183
     }
   ]
 }
