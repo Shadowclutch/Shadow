@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785857055,
+  "exported_at": 1785857687,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -71,6 +71,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1494884217786601607/8c02c9a0c04c1cb378fa4ff9baaffd5c.png",
       "provider": "discord",
       "created_at": 1785857046
+    },
+    {
+      "steamid": "1245683012641751064",
+      "name": "ᴡᴀsᴛᴇᴅ",
+      "avatar": "https://cdn.discordapp.com/avatars/1245683012641751064/ded9083e1064227d41d1164d2a009522.png",
+      "provider": "discord",
+      "created_at": 1785857674
     }
   ],
   "sessions": [],
@@ -134,6 +141,12 @@
       "steamid": "1494884217786601607",
       "created_at": 1785857048,
       "expires_at": 1817393048
+    },
+    {
+      "token": "c4a1f38c8c6114a450dede641df541b8f581c16f366c6dc719391028f57170d9",
+      "steamid": "1245683012641751064",
+      "created_at": 1785857676,
+      "expires_at": 1817393676
     }
   ],
   "library": [
@@ -436,6 +449,12 @@
       "appid": 2373980,
       "name": "\"NOBUNAGA'S AMBITION: Awakening\" Additional Officer Graphics and Trait of Popular Officers from the \"NOBUNAGA'S AMBITION\" 40th Anniversary Series' Popularity Rankings",
       "added_at": 1785854648
+    },
+    {
+      "steamid": "1245683012641751064",
+      "appid": 271590,
+      "name": "",
+      "added_at": 1785857684
     }
   ]
 }
