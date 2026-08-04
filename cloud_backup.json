@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785865401,
+  "exported_at": 1785865415,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1417,6 +1417,12 @@
       "appid": 201810,
       "name": "Wolfenstein: The New Order",
       "added_at": 1785865398
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 1056960,
+      "name": "Wolfenstein: Youngblood",
+      "added_at": 1785865413
     }
   ]
 }
