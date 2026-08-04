@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785863621,
+  "exported_at": 1785863631,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -936,6 +936,12 @@
       "appid": 1030840,
       "name": "Mafia: Definitive Edition",
       "added_at": 1785863619
+    },
+    {
+      "steamid": "1487668000478855188",
+      "appid": 575590,
+      "name": "Balloon Popping Pigs",
+      "added_at": 1785863629
     }
   ]
 }
