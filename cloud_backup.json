@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785861800,
+  "exported_at": 1785861820,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -467,6 +467,18 @@
       "appid": 733840,
       "name": "Anime Bubble Pop",
       "added_at": 1785861798
+    },
+    {
+      "steamid": "1487668000478855188",
+      "appid": 1661610,
+      "name": "Apopia: Sugar Coated Tale",
+      "added_at": 1785861816
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 1593500,
+      "name": "God of War",
+      "added_at": 1785861818
     }
   ]
 }
