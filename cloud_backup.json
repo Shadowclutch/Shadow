@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785878068,
+  "exported_at": 1785879251,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1868,6 +1868,12 @@
       "appid": 403640,
       "name": "Dishonored 2",
       "added_at": 1785871632
+    },
+    {
+      "steamid": "1339664390248726609",
+      "appid": 271590,
+      "name": "Grand Theft Auto V Legacy",
+      "added_at": 1785879249
     },
     {
       "steamid": "695939946346840135",
