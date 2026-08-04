@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785864518,
+  "exported_at": 1785864559,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1159,6 +1159,12 @@
       "appid": 1623730,
       "name": "Palworld",
       "added_at": 1785864515
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 2668510,
+      "name": "Red Dead Redemption",
+      "added_at": 1785864557
     }
   ]
 }
