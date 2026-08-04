@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785865294,
+  "exported_at": 1785865315,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1381,6 +1381,12 @@
       "appid": 243470,
       "name": "Watch_Dogs",
       "added_at": 1785865292
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 447040,
+      "name": "Watch_Dogs 2",
+      "added_at": 1785865313
     }
   ]
 }
