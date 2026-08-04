@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785869381,
+  "exported_at": 1785869695,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1533,12 +1533,6 @@
       "appid": 7940,
       "name": "Call of Duty 4: Modern Warfare (2007)",
       "added_at": 1785868817
-    },
-    {
-      "steamid": "1487668000478855188",
-      "appid": 1661610,
-      "name": "Apopia: Sugar Coated Tale",
-      "added_at": 1785869378
     }
   ]
 }
