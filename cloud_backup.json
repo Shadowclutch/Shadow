@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785870056,
+  "exported_at": 1785870058,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1612,6 +1612,18 @@
       "appid": 3950810,
       "name": "007 First Light - Gleaming Earphones (Gadget Skin)",
       "added_at": 1785870056
+    },
+    {
+      "steamid": "1004049495224492062",
+      "appid": 3950900,
+      "name": "007 First Light - Gentleman Operator (Exclusive Outfit)",
+      "added_at": 1785870057
+    },
+    {
+      "steamid": "1004049495224492062",
+      "appid": 4521810,
+      "name": "007 First Light - Forest Operative (Exclusive Outfit)",
+      "added_at": 1785870057
     }
   ]
 }
