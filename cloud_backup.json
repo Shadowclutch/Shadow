@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785863735,
+  "exported_at": 1785863748,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -984,6 +984,12 @@
       "appid": 1817190,
       "name": "Marvel's Spider-Man: Miles Morales",
       "added_at": 1785863732
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 1817070,
+      "name": "Marvel’s Spider-Man Remastered",
+      "added_at": 1785863746
     }
   ]
 }
