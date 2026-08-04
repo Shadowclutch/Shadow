@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785870130,
+  "exported_at": 1785870179,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1666,6 +1666,18 @@
       "appid": 945360,
       "name": "Among Us",
       "added_at": 1785870130
+    },
+    {
+      "steamid": "709510904299126835",
+      "appid": 1490890,
+      "name": "Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles",
+      "added_at": 1785870176
+    },
+    {
+      "steamid": "709510904299126835",
+      "appid": 2928600,
+      "name": "Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles 2",
+      "added_at": 1785870177
     }
   ]
 }
