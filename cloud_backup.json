@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785864879,
+  "exported_at": 1785864889,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1261,6 +1261,12 @@
       "appid": 202170,
       "name": "Sleeping Dogs™",
       "added_at": 1785864876
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 307690,
+      "name": "Sleeping Dogs: Definitive Edition",
+      "added_at": 1785864887
     }
   ]
 }
