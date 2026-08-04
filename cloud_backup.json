@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785885871,
+  "exported_at": 1785886019,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1917,6 +1917,12 @@
       "appid": 204100,
       "name": "Max Payne 3",
       "added_at": 1785885870
+    },
+    {
+      "steamid": "1245857828183347221",
+      "appid": 1030840,
+      "name": "Mafia: Definitive Edition",
+      "added_at": 1785886017
     }
   ]
 }
