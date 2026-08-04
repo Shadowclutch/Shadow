@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785863139,
+  "exported_at": 1785863155,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -798,6 +798,12 @@
       "appid": 939960,
       "name": "Far Cry New Dawn",
       "added_at": 1785863137
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 371660,
+      "name": "Far Cry Primal",
+      "added_at": 1785863153
     }
   ]
 }
