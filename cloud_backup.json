@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785870209,
+  "exported_at": 1785870380,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1762,6 +1762,12 @@
       "appid": 1669203,
       "name": "Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles: Butterfly Mansion Patient Wear for Tanjiro, Zenitsu & Inosuke",
       "added_at": 1785870208
+    },
+    {
+      "steamid": "1004049495224492062",
+      "appid": 517630,
+      "name": "Just Cause 4",
+      "added_at": 1785870378
     }
   ]
 }
