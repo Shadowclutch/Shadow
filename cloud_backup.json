@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785863780,
+  "exported_at": 1785863820,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -996,6 +996,12 @@
       "appid": 4704690,
       "name": "MECCHA CHAMELEON",
       "added_at": 1785863778
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 1971870,
+      "name": "Mortal Kombat 1",
+      "added_at": 1785863818
     }
   ]
 }
