@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785863722,
+  "exported_at": 1785863735,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -978,6 +978,12 @@
       "appid": 2651280,
       "name": "Marvel's Spider-Man 2",
       "added_at": 1785863720
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 1817190,
+      "name": "Marvel's Spider-Man: Miles Morales",
+      "added_at": 1785863732
     }
   ]
 }
