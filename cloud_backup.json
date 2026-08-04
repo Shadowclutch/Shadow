@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785886019,
+  "exported_at": 1785886333,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1911,18 +1911,6 @@
       "appid": 1089980,
       "name": "The Henry Stickmin Collection",
       "added_at": 1785876382
-    },
-    {
-      "steamid": "1245857828183347221",
-      "appid": 204100,
-      "name": "Max Payne 3",
-      "added_at": 1785885870
-    },
-    {
-      "steamid": "1245857828183347221",
-      "appid": 1030840,
-      "name": "Mafia: Definitive Edition",
-      "added_at": 1785886017
     }
   ]
 }
