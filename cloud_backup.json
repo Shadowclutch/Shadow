@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785862924,
+  "exported_at": 1785862999,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -744,6 +744,12 @@
       "appid": 3059520,
       "name": "F1® 25",
       "added_at": 1785862922
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 2358720,
+      "name": "Black Myth: Wukong",
+      "added_at": 1785862997
     }
   ]
 }
