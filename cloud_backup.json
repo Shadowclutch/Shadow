@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785861889,
+  "exported_at": 1785861894,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -503,6 +503,12 @@
       "appid": 15100,
       "name": "Assassin's Creed",
       "added_at": 1785861887
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 33362,
+      "name": "Assassin's Creed 2 - Mac",
+      "added_at": 1785861891
     }
   ]
 }
