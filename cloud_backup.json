@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785875264,
+  "exported_at": 1785876384,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1861,6 +1861,12 @@
       "appid": 2144400,
       "name": "100% Orange Juice - Character Song Pack: Pudding Pop",
       "added_at": 1785872312
+    },
+    {
+      "steamid": "1339664390248726609",
+      "appid": 1089980,
+      "name": "The Henry Stickmin Collection",
+      "added_at": 1785876382
     }
   ]
 }
