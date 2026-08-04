@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785862463,
+  "exported_at": 1785862546,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -642,6 +642,12 @@
       "appid": 2208920,
       "name": "Assassin's Creed Valhalla",
       "added_at": 1785862461
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 35140,
+      "name": "Batman: Arkham Asylum GOTY Edition",
+      "added_at": 1785862544
     }
   ]
 }
