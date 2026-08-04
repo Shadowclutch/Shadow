@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785870195,
+  "exported_at": 1785870198,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1713,6 +1713,12 @@
       "steamid": "1004049495224492062",
       "appid": 252950,
       "name": "Rocket League",
+      "added_at": 1785870196
+    },
+    {
+      "steamid": "709510904299126835",
+      "appid": 1981881,
+      "name": "Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles: Nezuko (Advanced Demon Form) Character Pack",
       "added_at": 1785870196
     }
   ]
