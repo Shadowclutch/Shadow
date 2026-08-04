@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785864700,
+  "exported_at": 1785864711,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1207,6 +1207,12 @@
       "appid": 221040,
       "name": "Resident Evil 6",
       "added_at": 1785864698
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 418370,
+      "name": "Resident Evil 7 Biohazard",
+      "added_at": 1785864709
     }
   ]
 }
