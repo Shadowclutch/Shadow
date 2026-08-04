@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785864120,
+  "exported_at": 1785864136,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1075,6 +1075,12 @@
       "appid": 3077390,
       "name": "MotoGP™25",
       "added_at": 1785864118
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 3875050,
+      "name": "MotoGP™26",
+      "added_at": 1785864134
     }
   ]
 }
