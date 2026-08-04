@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785835826,
+  "exported_at": 1785835833,
   "users": [
     {
       "steamid": "1487668000478855188",
@@ -336,6 +336,12 @@
       "appid": 1546990,
       "name": "Grand Theft Auto: Vice City - The Definitive Edition",
       "added_at": 1785835824
+    },
+    {
+      "steamid": "1004049495224492062",
+      "appid": 12170,
+      "name": "Grand Theft Auto",
+      "added_at": 1785835831
     }
   ]
 }
