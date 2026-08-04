@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785864974,
+  "exported_at": 1785864998,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1291,6 +1291,12 @@
       "appid": 310950,
       "name": "Street Fighter V",
       "added_at": 1785864972
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 389730,
+      "name": "TEKKEN 7",
+      "added_at": 1785864996
     }
   ]
 }
