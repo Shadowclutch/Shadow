@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785864496,
+  "exported_at": 1785864518,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1153,6 +1153,12 @@
       "appid": 1089090,
       "name": "ONE PIECE: PIRATE WARRIORS 4",
       "added_at": 1785864494
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 1623730,
+      "name": "Palworld",
+      "added_at": 1785864515
     }
   ]
 }
