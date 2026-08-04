@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785863748,
+  "exported_at": 1785863780,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -990,6 +990,12 @@
       "appid": 1817070,
       "name": "Marvel’s Spider-Man Remastered",
       "added_at": 1785863746
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 4704690,
+      "name": "MECCHA CHAMELEON",
+      "added_at": 1785863778
     }
   ]
 }
