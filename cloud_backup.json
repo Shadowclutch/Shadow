@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785863320,
+  "exported_at": 1785863333,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -858,6 +858,12 @@
       "appid": 3240220,
       "name": "Grand Theft Auto V Enhanced",
       "added_at": 1785863318
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 271590,
+      "name": "Grand Theft Auto V Legacy",
+      "added_at": 1785863331
     }
   ]
 }
