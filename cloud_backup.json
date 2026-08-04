@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785863481,
+  "exported_at": 1785863506,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -894,6 +894,12 @@
       "appid": 6850,
       "name": "Hitman 2: Silent Assassin",
       "added_at": 1785863479
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 247430,
+      "name": "Hitman: Contracts",
+      "added_at": 1785863504
     }
   ]
 }
