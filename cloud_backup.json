@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785865586,
+  "exported_at": 1785865597,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1459,6 +1459,12 @@
       "appid": 1821510,
       "name": " A Space Odyssey",
       "added_at": 1785865584
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 752590,
+      "name": "A Plague Tale: Innocence",
+      "added_at": 1785865595
     }
   ]
 }
