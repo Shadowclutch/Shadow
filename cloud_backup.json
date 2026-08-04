@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785866168,
+  "exported_at": 1785866448,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1483,6 +1483,12 @@
       "appid": 1648210,
       "name": "Apopia: Prologue",
       "added_at": 1785866087
+    },
+    {
+      "steamid": "1487668000478855188",
+      "appid": 2406870,
+      "name": "Battlepopes",
+      "added_at": 1785866446
     }
   ]
 }
