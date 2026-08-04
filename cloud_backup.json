@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785870031,
+  "exported_at": 1785870055,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1558,6 +1558,54 @@
       "appid": 3768760,
       "name": "007 First Light",
       "added_at": 1785870029
+    },
+    {
+      "steamid": "1004049495224492062",
+      "appid": 4707780,
+      "name": "007 First Light - 00 Pack",
+      "added_at": 1785870052
+    },
+    {
+      "steamid": "1004049495224492062",
+      "appid": 3950930,
+      "name": "007 First Light - Agent's Mark (Weapon Skin)",
+      "added_at": 1785870052
+    },
+    {
+      "steamid": "1004049495224492062",
+      "appid": 3986520,
+      "name": "007 First Light - Deluxe Edition Upgrade",
+      "added_at": 1785870053
+    },
+    {
+      "steamid": "1004049495224492062",
+      "appid": 3954260,
+      "name": "007 First Light - Classic Tuxedo (Exclusive Outfit) ",
+      "added_at": 1785870053
+    },
+    {
+      "steamid": "1004049495224492062",
+      "appid": 3950870,
+      "name": "007 First Light - Day of the Dead (Exclusive Outfit)",
+      "added_at": 1785870054
+    },
+    {
+      "steamid": "1004049495224492062",
+      "appid": 3950880,
+      "name": "007 First Light - Desert Explorer (Exclusive Outfit)",
+      "added_at": 1785870055
+    },
+    {
+      "steamid": "1004049495224492062",
+      "appid": 4601250,
+      "name": "007 First Light - Diamond in the Rough (Outfit)",
+      "added_at": 1785870055
+    },
+    {
+      "steamid": "1004049495224492062",
+      "appid": 4521800,
+      "name": "007 First Light - First Class (Outfit)",
+      "added_at": 1785870055
     }
   ]
 }
