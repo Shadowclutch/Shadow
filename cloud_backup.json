@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785862766,
+  "exported_at": 1785862782,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -702,6 +702,12 @@
       "appid": 1849250,
       "name": "EA SPORTS™ WRC",
       "added_at": 1785862763
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 1245620,
+      "name": "ELDEN RING",
+      "added_at": 1785862780
     }
   ]
 }
