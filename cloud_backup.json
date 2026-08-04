@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785861934,
+  "exported_at": 1785862029,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -515,6 +515,12 @@
       "appid": 48190,
       "name": "Assassin's Creed Brotherhood",
       "added_at": 1785861932
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 33230,
+      "name": "Assassin's Creed II",
+      "added_at": 1785862028
     }
   ]
 }
