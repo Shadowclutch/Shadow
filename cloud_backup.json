@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785864711,
+  "exported_at": 1785864723,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1213,6 +1213,12 @@
       "appid": 418370,
       "name": "Resident Evil 7 Biohazard",
       "added_at": 1785864709
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 222480,
+      "name": "Resident Evil Revelations",
+      "added_at": 1785864721
     }
   ]
 }
