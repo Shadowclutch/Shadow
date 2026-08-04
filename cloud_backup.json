@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785868690,
+  "exported_at": 1785868721,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1508,6 +1508,12 @@
       "appid": 2406870,
       "name": "Battlepopes",
       "added_at": 1785866446
+    },
+    {
+      "steamid": "1487668000478855188",
+      "appid": 2630,
+      "name": "Call of Duty 2",
+      "added_at": 1785868719
     }
   ]
 }
