@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785865466,
+  "exported_at": 1785865550,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1441,6 +1441,12 @@
       "appid": 3513350,
       "name": "Wuthering Waves",
       "added_at": 1785865463
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 1888930,
+      "name": "The Last of Us™ Part I",
+      "added_at": 1785865548
     }
   ]
 }
