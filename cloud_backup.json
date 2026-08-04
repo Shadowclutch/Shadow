@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785868809,
+  "exported_at": 1785868819,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1520,6 +1520,12 @@
       "appid": 80844,
       "name": "Call of Duty Black Ops - Call of the Dead Trailer",
       "added_at": 1785868806
+    },
+    {
+      "steamid": "1487668000478855188",
+      "appid": 7940,
+      "name": "Call of Duty 4: Modern Warfare (2007)",
+      "added_at": 1785868817
     }
   ]
 }
