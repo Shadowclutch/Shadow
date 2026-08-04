@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785864453,
+  "exported_at": 1785864484,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1141,6 +1141,12 @@
       "appid": 485510,
       "name": "Nioh: Complete Edition",
       "added_at": 1785864452
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 814000,
+      "name": "ONE PIECE ODYSSEY",
+      "added_at": 1785864482
     }
   ]
 }
