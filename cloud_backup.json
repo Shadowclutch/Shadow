@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785864889,
+  "exported_at": 1785864928,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1267,6 +1267,12 @@
       "appid": 307690,
       "name": "Sleeping Dogs: Definitive Edition",
       "added_at": 1785864887
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 586200,
+      "name": "Street Fighter 30th Anniversary Collection",
+      "added_at": 1785864926
     }
   ]
 }
