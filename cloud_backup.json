@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785865392,
+  "exported_at": 1785865401,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1411,6 +1411,12 @@
       "appid": 612880,
       "name": "Wolfenstein II: The New Colossus",
       "added_at": 1785865390
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 201810,
+      "name": "Wolfenstein: The New Order",
+      "added_at": 1785865398
     }
   ]
 }
