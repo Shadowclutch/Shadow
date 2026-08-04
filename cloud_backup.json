@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785862262,
+  "exported_at": 1785862281,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -570,6 +570,12 @@
       "appid": 277590,
       "name": "Assassin's Creed Freedom Cry",
       "added_at": 1785862260
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 289650,
+      "name": "Assassin's Creed Unity",
+      "added_at": 1785862279
     }
   ]
 }
