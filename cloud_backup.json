@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785870058,
+  "exported_at": 1785870059,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1624,6 +1624,18 @@
       "appid": 4521810,
       "name": "007 First Light - Forest Operative (Exclusive Outfit)",
       "added_at": 1785870057
+    },
+    {
+      "steamid": "1004049495224492062",
+      "appid": 3950820,
+      "name": "007 First Light - Gleaming Lighter (Gadget Skin)",
+      "added_at": 1785870059
+    },
+    {
+      "steamid": "1004049495224492062",
+      "appid": 3950850,
+      "name": "007 First Light - Gleaming Phone (Gadget Skin)",
+      "added_at": 1785870059
     }
   ]
 }
