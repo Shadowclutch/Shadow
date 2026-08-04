@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785865227,
+  "exported_at": 1785865245,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1357,6 +1357,12 @@
       "appid": 1659420,
       "name": "UNCHARTED™: Legacy of Thieves Collection",
       "added_at": 1785865224
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 2172010,
+      "name": "Until Dawn™",
+      "added_at": 1785865242
     }
   ]
 }
