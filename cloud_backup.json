@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785865176,
+  "exported_at": 1785865192,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1345,6 +1345,12 @@
       "appid": 203160,
       "name": "Tomb Raider",
       "added_at": 1785865173
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 2478970,
+      "name": "Tomb Raider I-III Remastered Starring Lara Croft",
+      "added_at": 1785865190
     }
   ]
 }
