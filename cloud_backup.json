@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785862389,
+  "exported_at": 1785862405,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -612,6 +612,12 @@
       "appid": 3035570,
       "name": "Assassin's Creed Mirage",
       "added_at": 1785862387
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 812140,
+      "name": "Assassin's Creed Odyssey",
+      "added_at": 1785862403
     }
   ]
 }
