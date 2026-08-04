@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785864442,
+  "exported_at": 1785864453,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1135,6 +1135,12 @@
       "appid": 1325200,
       "name": "Nioh 2 – The Complete Edition",
       "added_at": 1785864439
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 485510,
+      "name": "Nioh: Complete Edition",
+      "added_at": 1785864452
     }
   ]
 }
