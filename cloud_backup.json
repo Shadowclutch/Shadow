@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785865433,
+  "exported_at": 1785865451,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1429,6 +1429,12 @@
       "appid": 699130,
       "name": "World War Z",
       "added_at": 1785865431
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 2277560,
+      "name": "WUCHANG: Fallen Feathers",
+      "added_at": 1785865449
     }
   ]
 }
