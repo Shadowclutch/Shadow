@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785865315,
+  "exported_at": 1785865328,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1387,6 +1387,12 @@
       "appid": 447040,
       "name": "Watch_Dogs 2",
       "added_at": 1785865313
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 1222700,
+      "name": "A Way Out",
+      "added_at": 1785865326
     }
   ]
 }
