@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785862243,
+  "exported_at": 1785862262,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -564,6 +564,12 @@
       "appid": 242050,
       "name": "Assassin's Creed IV Black Flag",
       "added_at": 1785862241
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 277590,
+      "name": "Assassin's Creed Freedom Cry",
+      "added_at": 1785862260
     }
   ]
 }
