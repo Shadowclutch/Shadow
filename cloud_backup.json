@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785855338,
+  "exported_at": 1785857051,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -64,6 +64,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1007140362789330944/2222fa9acaf6c388e08bb2e7c8bc9f5d.png",
       "provider": "discord",
       "created_at": 1785855329
+    },
+    {
+      "steamid": "1494884217786601607",
+      "name": "romanthegoat",
+      "avatar": "https://cdn.discordapp.com/avatars/1494884217786601607/8c02c9a0c04c1cb378fa4ff9baaffd5c.png",
+      "provider": "discord",
+      "created_at": 1785857046
     }
   ],
   "sessions": [],
@@ -121,6 +128,12 @@
       "steamid": "1007140362789330944",
       "created_at": 1785855330,
       "expires_at": 1817391330
+    },
+    {
+      "token": "70e7934161a1c3a4af993221660e76676384abedb10b3fb2b804aa0573e4a994",
+      "steamid": "1494884217786601607",
+      "created_at": 1785857048,
+      "expires_at": 1817393048
     }
   ],
   "library": [
