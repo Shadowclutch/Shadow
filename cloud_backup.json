@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785864757,
+  "exported_at": 1785864785,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1231,6 +1231,12 @@
       "appid": 1196590,
       "name": "Resident Evil Village",
       "added_at": 1785864755
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 814380,
+      "name": "Sekiro™: Shadows Die Twice",
+      "added_at": 1785864783
     }
   ]
 }
