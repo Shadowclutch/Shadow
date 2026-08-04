@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785863451,
+  "exported_at": 1785863463,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -882,6 +882,12 @@
       "appid": 6900,
       "name": "Hitman: Codename 47",
       "added_at": 1785863449
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 863550,
+      "name": "HITMAN™ 2",
+      "added_at": 1785863461
     }
   ]
 }
