@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785886333,
+  "exported_at": 1785887360,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1911,6 +1911,12 @@
       "appid": 1089980,
       "name": "The Henry Stickmin Collection",
       "added_at": 1785876382
+    },
+    {
+      "steamid": "1345121200619262073",
+      "appid": 2250500,
+      "name": "Rhythia",
+      "added_at": 1785887358
     }
   ]
 }
