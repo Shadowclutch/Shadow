@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785864214,
+  "exported_at": 1785864226,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1093,6 +1093,12 @@
       "appid": 1222680,
       "name": "Need for Speed™ Heat ",
       "added_at": 1785864212
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 47870,
+      "name": "Need for Speed: Hot Pursuit",
+      "added_at": 1785864224
     }
   ]
 }
