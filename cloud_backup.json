@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785863572,
+  "exported_at": 1785863609,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -924,6 +924,12 @@
       "appid": 1426210,
       "name": "It Takes Two",
       "added_at": 1785863570
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 40990,
+      "name": "Mafia",
+      "added_at": 1785863607
     }
   ]
 }
