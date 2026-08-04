@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785870523,
+  "exported_at": 1785870527,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1571,6 +1571,12 @@
       "appid": 3717070,
       "name": "WWE 2K26",
       "added_at": 1785870521
+    },
+    {
+      "steamid": "1004049495224492062",
+      "appid": 4181540,
+      "name": "WWE 2K26 Joe Hendry Pack",
+      "added_at": 1785870525
     },
     {
       "steamid": "1281541356266852363",
