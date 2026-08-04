@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785865284,
+  "exported_at": 1785865294,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1375,6 +1375,12 @@
       "appid": 2239550,
       "name": "Watch Dogs: Legion",
       "added_at": 1785865281
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 243470,
+      "name": "Watch_Dogs",
+      "added_at": 1785865292
     }
   ]
 }
