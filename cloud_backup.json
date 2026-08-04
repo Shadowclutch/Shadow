@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785864322,
+  "exported_at": 1785864338,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1123,6 +1123,12 @@
       "appid": 1262600,
       "name": "Need for Speed™ Rivals",
       "added_at": 1785864320
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 1846380,
+      "name": "Need for Speed™ Unbound",
+      "added_at": 1785864336
     }
   ]
 }
