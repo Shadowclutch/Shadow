@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785864625,
+  "exported_at": 1785864637,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1183,6 +1183,12 @@
       "appid": 883710,
       "name": "Resident Evil 2",
       "added_at": 1785864623
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 952060,
+      "name": "Resident Evil 3",
+      "added_at": 1785864635
     }
   ]
 }
