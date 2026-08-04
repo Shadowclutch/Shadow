@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785862057,
+  "exported_at": 1785862076,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -527,6 +527,12 @@
       "appid": 201870,
       "name": "Assassin's Creed Revelations",
       "added_at": 1785862055
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 208480,
+      "name": "Assassin's Creed® III",
+      "added_at": 1785862074
     }
   ]
 }
