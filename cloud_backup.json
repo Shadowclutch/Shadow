@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785870059,
+  "exported_at": 1785870060,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1636,6 +1636,18 @@
       "appid": 3950850,
       "name": "007 First Light - Gleaming Phone (Gadget Skin)",
       "added_at": 1785870059
+    },
+    {
+      "steamid": "1004049495224492062",
+      "appid": 3950830,
+      "name": "007 First Light - Gleaming Pen (Gadget Skin)",
+      "added_at": 1785870060
+    },
+    {
+      "steamid": "1004049495224492062",
+      "appid": 4521820,
+      "name": "007 First Light - Observant Spy (Outfit)",
+      "added_at": 1785870060
     }
   ]
 }
