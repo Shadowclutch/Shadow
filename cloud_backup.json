@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785861709,
+  "exported_at": 1785861800,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -461,6 +461,12 @@
       "appid": 3240220,
       "name": "",
       "added_at": 1785861706
+    },
+    {
+      "steamid": "1487668000478855188",
+      "appid": 733840,
+      "name": "Anime Bubble Pop",
+      "added_at": 1785861798
     }
   ]
 }
