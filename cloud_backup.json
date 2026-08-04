@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785870055,
+  "exported_at": 1785870056,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1606,6 +1606,12 @@
       "appid": 4521800,
       "name": "007 First Light - First Class (Outfit)",
       "added_at": 1785870055
+    },
+    {
+      "steamid": "1004049495224492062",
+      "appid": 3950810,
+      "name": "007 First Light - Gleaming Earphones (Gadget Skin)",
+      "added_at": 1785870056
     }
   ]
 }
