@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785865550,
+  "exported_at": 1785865562,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1447,6 +1447,12 @@
       "appid": 1888930,
       "name": "The Last of Us™ Part I",
       "added_at": 1785865548
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 2531310,
+      "name": "The Last of Us™ Part II Remastered",
+      "added_at": 1785865560
     }
   ]
 }
