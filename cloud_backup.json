@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785865346,
+  "exported_at": 1785865362,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1399,6 +1399,12 @@
       "appid": 3564740,
       "name": "Where Winds Meet",
       "added_at": 1785865344
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 292030,
+      "name": "The Witcher 3: Wild Hunt",
+      "added_at": 1785865359
     }
   ]
 }
