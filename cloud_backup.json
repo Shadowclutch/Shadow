@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785870511,
+  "exported_at": 1785870523,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1565,6 +1565,12 @@
       "appid": 1238860,
       "name": "Battlefield 4™ ",
       "added_at": 1785870509
+    },
+    {
+      "steamid": "1004049495224492062",
+      "appid": 3717070,
+      "name": "WWE 2K26",
+      "added_at": 1785870521
     },
     {
       "steamid": "1281541356266852363",
