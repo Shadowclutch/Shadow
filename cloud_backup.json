@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785863463,
+  "exported_at": 1785863481,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -888,6 +888,12 @@
       "appid": 863550,
       "name": "HITMAN™ 2",
       "added_at": 1785863461
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 6850,
+      "name": "Hitman 2: Silent Assassin",
+      "added_at": 1785863479
     }
   ]
 }
