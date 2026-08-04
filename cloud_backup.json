@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785862591,
+  "exported_at": 1785862651,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -240,6 +240,12 @@
       "appid": 3768760,
       "name": "007 First Light",
       "added_at": 1785819092
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 3321460,
+      "name": "Crimson Desert",
+      "added_at": 1785862649
     },
     {
       "steamid": "1255560457776009309",
