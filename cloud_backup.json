@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785863253,
+  "exported_at": 1785863276,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -834,6 +834,12 @@
       "appid": 2215430,
       "name": "Ghost of Tsushima DIRECTOR'S CUT",
       "added_at": 1785863251
+    },
+    {
+      "steamid": "1007140362789330944",
+      "appid": 1546970,
+      "name": "Grand Theft Auto III - The Definitive Edition",
+      "added_at": 1785863274
     }
   ]
 }
