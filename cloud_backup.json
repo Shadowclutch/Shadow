@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785939568,
+  "exported_at": 1785940246,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -64,6 +64,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1245683012641751064/ded9083e1064227d41d1164d2a009522.png",
       "provider": "discord",
       "created_at": 1785857674
+    },
+    {
+      "steamid": "721026721905770578",
+      "name": "Neymar da Silva Santos Júnior",
+      "avatar": "https://cdn.discordapp.com/avatars/721026721905770578/acff514f5f90c84b51721e57103833be.png",
+      "provider": "discord",
+      "created_at": 1785940233
     },
     {
       "steamid": "1310549128039763990",
@@ -537,6 +544,12 @@
       "steamid": "1412987670874820638",
       "created_at": 1785939562,
       "expires_at": 1817475562
+    },
+    {
+      "token": "05d3944892599b74bed21fc5a193bc60726685fc25cdadab842cfe1c119fc1de",
+      "steamid": "721026721905770578",
+      "created_at": 1785940234,
+      "expires_at": 1817476234
     }
   ],
   "library": [
@@ -2471,6 +2484,30 @@
       "appid": 4800590,
       "name": "Supermarket Chaos",
       "added_at": 1785938541
+    },
+    {
+      "steamid": "721026721905770578",
+      "appid": 3768760,
+      "name": "007 First Light",
+      "added_at": 1785940240
+    },
+    {
+      "steamid": "721026721905770578",
+      "appid": 3751950,
+      "name": "Assassin's Creed Black Flag Resynced",
+      "added_at": 1785940241
+    },
+    {
+      "steamid": "721026721905770578",
+      "appid": 2517220,
+      "name": "Entity: The Black Day",
+      "added_at": 1785940243
+    },
+    {
+      "steamid": "721026721905770578",
+      "appid": 2483190,
+      "name": "Forza Horizon 6",
+      "added_at": 1785940245
     }
   ],
   "downloads": [
@@ -2551,6 +2588,15 @@
       "machine_id": "7158f06c-709e-4e06-9088-1ad181dc081a",
       "activated_at": 1785932410,
       "created_at": 1785932393
+    },
+    {
+      "key": "SHADOW-K5HW-ZJFX-3GCU-6ZLJ",
+      "email": "",
+      "session_id": "",
+      "status": "unused",
+      "machine_id": "",
+      "activated_at": 0,
+      "created_at": 1785940149
     }
   ]
 }
