@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785958482,
+  "exported_at": 1785959493,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -3185,6 +3185,12 @@
       "appid": 3241660,
       "name": "R.E.P.O.",
       "added_at": 1785958478
+    },
+    {
+      "steamid": "721026721905770578",
+      "appid": 4224910,
+      "name": "Ready or Not: Boiling Point",
+      "added_at": 1785959491
     }
   ],
   "downloads": [
