@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785918332,
+  "exported_at": 1785918515,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -2290,6 +2290,12 @@
       "appid": 3314340,
       "name": "Burgie's cozy kitchen",
       "added_at": 1785918330
+    },
+    {
+      "steamid": "1345121200619262073",
+      "appid": 2561580,
+      "name": "Horizon Zero Dawn™ Remastered",
+      "added_at": 1785918513
     }
   ]
 }
