@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785917376,
+  "exported_at": 1785917490,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -2272,6 +2272,12 @@
       "appid": 620,
       "name": "Portal 2",
       "added_at": 1785917374
+    },
+    {
+      "steamid": "1345121200619262073",
+      "appid": 400,
+      "name": "Portal",
+      "added_at": 1785917489
     }
   ]
 }
