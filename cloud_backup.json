@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785950136,
+  "exported_at": 1785950204,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1941,12 +1941,6 @@
     },
     {
       "steamid": "1487668000478855188",
-      "appid": 12100,
-      "name": "Grand Theft Auto III",
-      "added_at": 1785866557
-    },
-    {
-      "steamid": "1487668000478855188",
       "appid": 2406870,
       "name": "Battlepopes",
       "added_at": 1785866446
@@ -2664,6 +2658,12 @@
       "appid": 3240220,
       "name": "Grand Theft Auto V Enhanced",
       "added_at": 1785948397
+    },
+    {
+      "steamid": "1487668000478855188",
+      "appid": 12100,
+      "name": "Grand Theft Auto III",
+      "added_at": 1785866557
     }
   ],
   "downloads": [
