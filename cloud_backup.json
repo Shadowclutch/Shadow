@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785952549,
+  "exported_at": 1785952858,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -3115,6 +3115,18 @@
       "appid": 552700,
       "name": "WORLD OF FINAL FANTASY",
       "added_at": 1785952546
+    },
+    {
+      "steamid": "1510802203831697478",
+      "appid": 2552430,
+      "name": "KINGDOM HEARTS -HD 1.5+2.5 ReMIX-",
+      "added_at": 1785952856
+    },
+    {
+      "steamid": "1510802203831697478",
+      "appid": 2552440,
+      "name": "KINGDOM HEARTS HD 2.8 Final Chapter Prologue",
+      "added_at": 1785952859
     }
   ],
   "downloads": [
