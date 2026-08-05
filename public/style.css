@@ -493,18 +493,43 @@ body.landing {
   width: 20px; height: 20px; border-radius: 50%; display: inline-grid; place-items: center;
   font-size: 12px; flex: none;
 }
-.pay-title { margin: 4px 0 12px; font-size: 13px; color: var(--muted); text-transform: uppercase; letter-spacing: 1.5px; }
+.pay-title { margin: 22px 0 12px; font-size: 13px; color: var(--muted); text-transform: uppercase; letter-spacing: 1.5px; }
+.pay-steps { display: grid; gap: 12px; margin: 0 0 4px; text-align: left; }
+.pay-step { display: flex; gap: 12px; align-items: flex-start; background: rgba(10,15,30,0.5); border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; }
+.pay-step-num {
+  width: 26px; height: 26px; flex: none; border-radius: 50%; display: grid; place-items: center;
+  background: linear-gradient(120deg, var(--accent), var(--accent-2)); color: #06121f;
+  font-weight: 800; font-size: 13px;
+}
+.pay-step-body { display: grid; gap: 2px; }
+.pay-step-body b { font-size: 14px; color: var(--text); }
+.pay-step-body span { font-size: 12.5px; color: var(--muted); line-height: 1.5; }
 .pay-methods { display: grid; gap: 10px; margin-bottom: 16px; }
 .pay-method {
   background: rgba(10,15,30,0.6); border: 1px solid var(--border); border-radius: 12px;
   padding: 13px 15px; text-align: left; font-size: 13.5px;
 }
-.pay-method b { display: block; color: var(--accent); margin-bottom: 3px; font-size: 13px; }
-.pay-method code {
-  display: block; font-family: var(--mono); color: var(--text);
-  word-break: break-all; margin-bottom: 3px; font-size: 13px; letter-spacing: 0.3px;
+.pay-method-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 8px; }
+.pay-method-head b { color: var(--accent); font-size: 14px; }
+.pay-tag { font-size: 11px; color: var(--accent-2); background: rgba(57,217,138,0.12); padding: 3px 8px; border-radius: 20px; font-weight: 600; }
+.pay-tag.coming-soon { color: #b9a26b; background: rgba(233,196,106,0.12); }
+.pay-copy {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  background: #0a1022; border: 1px solid #33436a; border-radius: 10px; padding: 10px 12px;
 }
-.pay-method span { color: var(--muted); font-size: 12px; }
+.pay-copy code {
+  font-family: var(--mono); color: var(--text); letter-spacing: 0.5px; font-size: 13.5px;
+  overflow-wrap: anywhere;
+}
+.copy-btn {
+  flex: none; display: grid; place-items: center; width: 32px; height: 32px;
+  background: rgba(79,140,255,0.12); border: 1px solid rgba(79,140,255,0.3);
+  border-radius: 8px; color: var(--accent); cursor: pointer; transition: background .15s, transform .1s;
+}
+.copy-btn:hover { background: rgba(79,140,255,0.22); }
+.copy-btn:active { transform: scale(0.94); }
+.copy-btn.copied { background: rgba(57,217,138,0.2); border-color: rgba(57,217,138,0.4); color: var(--accent-2); }
+.pay-method-note { display: block; font-size: 12px; color: var(--muted); line-height: 1.5; margin-top: 8px; }
 .pay-note { font-size: 13.5px; color: var(--muted); line-height: 1.6; margin: 0; }
 .insta-link { color: var(--accent); text-decoration: none; font-weight: 600; }
 .insta-link:hover { text-decoration: underline; }
