@@ -5,18 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ShadowTools — Fix, Unlock & Manage Your Steam Library</title>
   <meta name="description" content="ShadowTools is your all-in-one Steam toolkit: repair crashes, unlock games, add to your library and auto-sync to every PC." />
+  <link rel="icon" href="/favicon.png" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="/logo.png" />
 </head>
 <body class="landing">
 
   <header class="landing-header">
     <div class="landing-nav">
       <a class="brand" href="/">
-        <img src="/logo.png" alt="ShadowTools logo" class="brand-logo" />
-        <div>
-          <h1>ShadowTools</h1>
-          <p class="subtitle">Steam, but better</p>
+        <img src="/logo.png" alt="ShadowTools" class="brand-logo" />
+        <div class="brand-text">
+          <span class="brand-name">ShadowTools</span>
+          <span class="brand-tag">by Shadowclutch</span>
         </div>
       </a>
       <nav class="nav-links">
@@ -26,7 +26,7 @@
       </nav>
       <div class="nav-cta">
         <a class="btn btn-ghost" href="/app">Sign in</a>
-        <a class="btn btn-primary" href="#pricing">Buy now</a>
+        <a class="btn btn-primary" href="#pricing">Buy license</a>
       </div>
     </div>
   </header>
@@ -35,51 +35,69 @@
   <section class="hero">
     <div class="hero-inner">
       <div class="hero-text">
-        <span class="badge badge-on">v3.1.1 · Windows</span>
-        <h2>Repair. Unlock. <span class="accent">Sync.</span></h2>
+        <span class="badge badge-on">v3.1.1 · Windows 10 / 11</span>
+        <h1>Repair. Unlock. <span class="accent">Sync.</span></h1>
         <p>
-          One clean desktop app for your Steam library — fix crash errors, unlock titles,
-          add games from the CloudDB catalog, and keep every PC in sync automatically.
+          The complete Steam toolkit in one clean desktop app — fix crash errors,
+          unlock titles, add games from a 100k+ catalog, and keep every PC in sync automatically.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary btn-lg" href="/api/download?src=site" id="downloadBtn">
-            ↓ Download ShadowTools
+          <a class="btn btn-primary btn-lg" href="/api/download?src=site">
+            <span class="btn-icon">⬇</span> Download ShadowTools
           </a>
           <a class="btn btn-ghost btn-lg" href="#pricing">Get a license →</a>
         </div>
-        <p class="hero-note" id="downloadCount">
-          <span class="spinner"></span> Checking downloads...
-        </p>
-        <p class="hero-note">Zip password: <code>SHADOW</code></p>
+        <div class="hero-stats">
+          <span id="downloadCount"><span class="spinner"></span> Checking downloads...</span>
+          <span class="dot">·</span>
+          <span>Zip password: <code>SHADOW</code></span>
+        </div>
       </div>
       <div class="hero-art">
-        <img src="/logo.png" alt="ShadowTools" class="hero-logo" />
+        <div class="app-mock">
+          <div class="mock-top">
+            <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+            <span class="mock-title">Shadowclutch</span>
+          </div>
+          <div class="mock-body">
+            <div class="mock-sidebar">
+              <span class="mock-item"></span><span class="mock-item"></span><span class="mock-item"></span><span class="mock-item"></span>
+            </div>
+            <div class="mock-main">
+              <div class="mock-bar"></div>
+              <div class="mock-cards">
+                <div class="mock-card"></div><div class="mock-card"></div><div class="mock-card"></div>
+                <div class="mock-card"></div><div class="mock-card"></div><div class="mock-card"></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ══ FEATURES ══ -->
   <section class="features" id="features">
-    <h3 class="section-title">Everything you need</h3>
+    <h2 class="section-title">Everything you need</h2>
     <div class="feature-grid">
       <div class="feature-card">
         <div class="feature-icon">🛠</div>
-        <h4>Steam Fixer</h4>
+        <h3>Steam Fixer</h3>
         <p>Repairs Steam installation issues and crash errors with one click — automatically restarts Steam when done.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">🔓</div>
-        <h4>Unlock &amp; Adder</h4>
+        <h3>Unlock &amp; Adder</h3>
         <p>Add games from a 100k+ CloudDB catalog and unlock titles straight into your library.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">☁️</div>
-        <h4>Cloud Sync</h4>
-        <p>Sign in once, and your game library syncs to every PC — a background agent deploys new games automatically.</p>
+        <h3>Cloud Sync</h3>
+        <p>Sign in once, and your library syncs to every PC — a background agent deploys new games automatically.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">⚡</div>
-        <h4>Bypasses &amp; Fixes</h4>
+        <h3>Bypasses &amp; Fixes</h3>
         <p>Built-in fixes database and bypass tools for games that won't launch.</p>
       </div>
     </div>
@@ -87,18 +105,19 @@
 
   <!-- ══ PRICING ══ -->
   <section class="pricing" id="pricing">
-    <h3 class="section-title">One-time payment, lifetime license</h3>
-    <p class="pricing-sub">One-time payment — your key never expires.</p>
+    <h2 class="section-title">One-time payment · lifetime license</h2>
+    <p class="pricing-sub">Pay once, use forever. Your key never expires.</p>
     <div class="price-card">
-      <h4>ShadowTools Pro</h4>
-      <div class="price" id="priceDisplay">₹300</div>
+      <h3>ShadowTools Pro</h3>
+      <div class="price">₹300</div>
+      <p class="price-caption">≈ $3.50 · one-time, no subscription</p>
       <ul>
-        <li>✓ Lifetime license key</li>
-        <li>✓ All tools unlocked (fixer, adder, bypasses)</li>
-        <li>✓ Cloud library sync on unlimited PCs</li>
-        <li>✓ Free updates</li>
+        <li><span class="check">✓</span> Lifetime license key</li>
+        <li><span class="check">✓</span> All tools unlocked (fixer, adder, bypasses)</li>
+        <li><span class="check">✓</span> Cloud library sync on unlimited PCs</li>
+        <li><span class="check">✓</span> Free updates</li>
       </ul>
-      <h5 class="pay-title">How to pay</h5>
+      <h4 class="pay-title">How to pay</h4>
       <div class="pay-methods">
         <div class="pay-method">
           <b>UPI</b>
@@ -111,31 +130,37 @@
           <span>USDT / crypto</span>
         </div>
       </div>
-      <p class="pay-note">Pay with any method above, then message me your payment screenshot + email on <b>YOUR_CONTACT</b> (WhatsApp / Telegram / Discord). I'll send your license key right away.</p>
-      <p class="price-note">Payment by the seller manually — no automated checkout.</p>
+      <p class="pay-note">
+        Pay with any method above, then DM me your payment screenshot on
+        <a href="https://www.instagram.com/shadowclutch__" target="_blank" rel="noopener" class="insta-link">Instagram @shadowclutch__</a>.
+        I'll send your license key right away.
+      </p>
     </div>
   </section>
 
+  <!-- ══ FOOTER ══ -->
   <footer class="landing-footer">
     <div class="footer-inner">
       <div class="brand">
-        <img src="/logo.png" alt="ShadowTools logo" class="brand-logo" />
-        <div>
-          <h1>ShadowTools</h1>
-          <p class="subtitle">Your Steam, synced</p>
+        <img src="/logo.png" alt="ShadowTools" class="brand-logo" />
+        <div class="brand-text">
+          <span class="brand-name">ShadowTools</span>
+          <span class="brand-tag">Steam, but better</span>
         </div>
       </div>
       <div class="footer-links">
         <a href="/app">Cloud Library</a>
         <a href="/api/health">API status</a>
-        <a href="/buy/support">Support</a>
+        <a href="https://www.instagram.com/shadowclutch__" target="_blank" rel="noopener">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          Instagram
+        </a>
       </div>
-      <p class="footer-copy">© 2026 ShadowTools. All rights reserved.</p>
+      <p class="footer-copy">© 2026 ShadowTools · Shadowclutch. All rights reserved.</p>
     </div>
   </footer>
 
   <script>
-    // ── Live download counter ─────────────────────────────
     async function loadDownloadCount() {
       try {
         const r = await fetch('/api/download/count');
