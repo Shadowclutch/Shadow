@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785916698,
+  "exported_at": 1785916796,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -2178,12 +2178,6 @@
     },
     {
       "steamid": "1345121200619262073",
-      "appid": 431960,
-      "name": "Wallpaper Engine",
-      "added_at": 1785916139
-    },
-    {
-      "steamid": "1345121200619262073",
       "appid": 413150,
       "name": "Stardew Valley",
       "added_at": 1785916194
@@ -2247,6 +2241,12 @@
       "appid": 3405690,
       "name": "EA SPORTS FC™ 26",
       "added_at": 1785916696
+    },
+    {
+      "steamid": "1345121200619262073",
+      "appid": 431960,
+      "name": "Wallpaper Engine",
+      "added_at": 1785916139
     }
   ]
 }
