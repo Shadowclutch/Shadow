@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785914477,
+  "exported_at": 1785915862,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -2126,6 +2126,12 @@
       "appid": 228380,
       "name": "Wreckfest",
       "added_at": 1785914475
+    },
+    {
+      "steamid": "1345121200619262073",
+      "appid": 1808500,
+      "name": "ARC Raiders",
+      "added_at": 1785915860
     }
   ]
 }
