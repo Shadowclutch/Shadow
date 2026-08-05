@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785918515,
+  "exported_at": 1785918558,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -2296,6 +2296,12 @@
       "appid": 2561580,
       "name": "Horizon Zero Dawn™ Remastered",
       "added_at": 1785918513
+    },
+    {
+      "steamid": "1345121200619262073",
+      "appid": 2420110,
+      "name": "Horizon Forbidden West™ Complete Edition",
+      "added_at": 1785918556
     }
   ]
 }
