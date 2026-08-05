@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785943971,
+  "exported_at": 1785944029,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -2694,6 +2694,20 @@
       "ip": "152.58.153.198",
       "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
       "created_at": 1785943293
+    },
+    {
+      "id": "7b6cb93f9e395da1735e4cb3",
+      "source": "site",
+      "ip": "152.58.130.169",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+      "created_at": 1785943991
+    },
+    {
+      "id": "b459e6f84356d5c96c277941",
+      "source": "site",
+      "ip": "152.58.153.198",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+      "created_at": 1785944009
     }
   ],
   "license_keys": [
@@ -2773,6 +2787,17 @@
       "created_at": 1785943355,
       "trial": 1,
       "expires_at": 1785943955
+    },
+    {
+      "key": "TRIAL-L249-AFVN-FQMK-S56X",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-live-check",
+      "activated_at": 1785944026,
+      "created_at": 1785944026,
+      "trial": 1,
+      "expires_at": 1785944146
     }
   ]
 }
