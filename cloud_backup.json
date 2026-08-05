@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785959563,
+  "exported_at": 1785959587,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -3203,6 +3203,12 @@
       "appid": 3015760,
       "name": "Ready or Not: Home Invasion",
       "added_at": 1785959561
+    },
+    {
+      "steamid": "721026721905770578",
+      "appid": 1844910,
+      "name": "Ready or Not: Supporter Edition",
+      "added_at": 1785959585
     }
   ],
   "downloads": [
