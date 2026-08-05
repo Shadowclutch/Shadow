@@ -1202,9 +1202,14 @@ async function refresh(){
     <td>\${k.email || '–'}</td>
     <td title="\${k.machine_id}">\${k.machine_id ? k.machine_id.slice(0,10) + '…' : '–'}</td>
     <td>\${fmt(k.created_at)}</td>
-    <td>\${k.status==='revoked' ? '' : '<button class="danger" onclick="revoke(\'' + k.key + '\')">Revoke</button>'}</td>
+    <td>\${k.status==='revoked' ? '' : '<button class="danger" data-revoke="\${k.key}">Revoke</button>'}</td>
   </tr>\`).join('');
 }
+document.addEventListener('click', (e) => {
+  const btn = e.target.closest('[data-revoke]');
+  if (!btn) return;
+  revoke(btn.getAttribute('data-revoke'));
+});
 async function revoke(key){ await api('/api/license/admin/revoke', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({key})}); toast('Revoked ' + key); refresh(); }
 document.getElementById('genBtn').onclick = async () => {
   const count = parseInt(document.getElementById('count').value || '1', 10);
