@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785918218,
+  "exported_at": 1785918332,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -2284,6 +2284,12 @@
       "appid": 1174180,
       "name": "Red Dead Redemption 2",
       "added_at": 1785918216
+    },
+    {
+      "steamid": "1345121200619262073",
+      "appid": 3314340,
+      "name": "Burgie's cozy kitchen",
+      "added_at": 1785918330
     }
   ]
 }
