@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785951275,
+  "exported_at": 1785951995,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -2862,17 +2862,6 @@
       "expires_at": 0
     },
     {
-      "key": "SHADOW-K5HW-ZJFX-3GCU-6ZLJ",
-      "email": "",
-      "session_id": "",
-      "status": "unused",
-      "machine_id": "",
-      "activated_at": 0,
-      "created_at": 1785940149,
-      "trial": 0,
-      "expires_at": 0
-    },
-    {
       "key": "TRIAL-WSN5-5HPX-4T7Z-GD9B",
       "email": "",
       "session_id": "",
@@ -2959,6 +2948,28 @@
       "created_at": 1785948740,
       "trial": 0,
       "expires_at": 0
+    },
+    {
+      "key": "SHADOW-K5HW-ZJFX-3GCU-6ZLJ",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-bd9bf79180b100cc17190b44",
+      "activated_at": 1785951495,
+      "created_at": 1785940149,
+      "trial": 0,
+      "expires_at": 0
+    },
+    {
+      "key": "TRIAL-BAZM-C8BZ-RKUQ-BV82",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "sig-e2e-test-6561e23b",
+      "activated_at": 1785951992,
+      "created_at": 1785951991,
+      "trial": 1,
+      "expires_at": 1785952111
     }
   ]
 }
