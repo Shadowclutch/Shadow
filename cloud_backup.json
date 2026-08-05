@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785955331,
+  "exported_at": 1785955410,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -3545,6 +3545,17 @@
       "created_at": 1785955327,
       "trial": 0,
       "expires_at": 0
+    },
+    {
+      "key": "TRIAL-B4Y4-E83A-HU9L-P4JG",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-ec96309c479bee38af913258",
+      "activated_at": 1785955407,
+      "created_at": 1785955406,
+      "trial": 1,
+      "expires_at": 1785955526
     }
   ]
 }
