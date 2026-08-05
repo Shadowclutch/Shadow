@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785888957,
+  "exported_at": 1785889522,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1948,6 +1948,12 @@
       "appid": 1850570,
       "name": "DEATH STRANDING DIRECTOR'S CUT",
       "added_at": 1785888955
+    },
+    {
+      "steamid": "1345121200619262073",
+      "appid": 284160,
+      "name": "BeamNG.drive",
+      "added_at": 1785889520
     }
   ]
 }
