@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785947996,
+  "exported_at": 1785948214,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -2646,6 +2646,12 @@
       "appid": 2909400,
       "name": "FINAL FANTASY VII REBIRTH",
       "added_at": 1785946780
+    },
+    {
+      "steamid": "1341837918955901071",
+      "appid": 1817070,
+      "name": "Marvel’s Spider-Man Remastered",
+      "added_at": 1785948212
     }
   ],
   "downloads": [
