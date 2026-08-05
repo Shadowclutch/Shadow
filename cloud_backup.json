@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785915937,
+  "exported_at": 1785915961,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -2138,6 +2138,12 @@
       "appid": 1721470,
       "name": "Poppy Playtime",
       "added_at": 1785915935
+    },
+    {
+      "steamid": "1345121200619262073",
+      "appid": 1817490,
+      "name": "Poppy Playtime - Chapter 2",
+      "added_at": 1785915959
     }
   ]
 }
