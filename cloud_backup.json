@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785931138,
+  "exported_at": 1785931220,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -2421,6 +2421,12 @@
       "appid": 3357650,
       "name": "PRAGMATA",
       "added_at": 1785927843
+    },
+    {
+      "steamid": "504330993012965389",
+      "appid": 3468650,
+      "name": "Cricket 26 - The Official Game of the Ashes",
+      "added_at": 1785931218
     }
   ],
   "downloads": [
