@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785946991,
+  "exported_at": 1785947597,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -2747,6 +2747,20 @@
       "ip": "72.14.199.232",
       "user_agent": "Mediapartners-Google",
       "created_at": 1785946077
+    },
+    {
+      "id": "079588afd3844250cdf46902",
+      "source": "verify",
+      "ip": "152.58.153.198",
+      "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.8972",
+      "created_at": 1785947364
+    },
+    {
+      "id": "63beb87746142527d51f5764",
+      "source": "site",
+      "ip": "152.58.153.198",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+      "created_at": 1785947512
     }
   ],
   "license_keys": [
@@ -2859,6 +2873,17 @@
       "created_at": 1785945059,
       "trial": 0,
       "expires_at": 0
+    },
+    {
+      "key": "TRIAL-DNAX-FWZN-KFM8-MXRY",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-c584bc44429537d5a3499ea6",
+      "activated_at": 1785947594,
+      "created_at": 1785947593,
+      "trial": 1,
+      "expires_at": 1785947713
     }
   ]
 }
