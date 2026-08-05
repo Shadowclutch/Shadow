@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785935396,
+  "exported_at": 1785935400,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -2440,6 +2440,12 @@
       "appid": 3468650,
       "name": "Cricket 26 - The Official Game of the Ashes",
       "added_at": 1785931218
+    },
+    {
+      "steamid": "751518015635456153",
+      "appid": 1623730,
+      "name": "Palworld",
+      "added_at": 1785935398
     }
   ],
   "downloads": [
