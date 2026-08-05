@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785907327,
+  "exported_at": 1785908041,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -2050,6 +2050,12 @@
       "appid": 1868140,
       "name": "DAVE THE DIVER",
       "added_at": 1785907324
+    },
+    {
+      "steamid": "718000676009017344",
+      "appid": 3404260,
+      "name": "Dead as Disco",
+      "added_at": 1785908038
     }
   ]
 }
