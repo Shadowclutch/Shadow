@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785943475,
+  "exported_at": 1785943539,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -2608,6 +2608,12 @@
       "appid": 920210,
       "name": "LEGO® Star Wars™: The Skywalker Saga",
       "added_at": 1785943473
+    },
+    {
+      "steamid": "718000676009017344",
+      "appid": 2138710,
+      "name": "Sifu",
+      "added_at": 1785943536
     }
   ],
   "downloads": [
