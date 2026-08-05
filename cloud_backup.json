@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785955288,
+  "exported_at": 1785955331,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -3532,6 +3532,17 @@
       "machine_id": "sigtest-exe-1",
       "activated_at": 1785955126,
       "created_at": 1785955123,
+      "trial": 0,
+      "expires_at": 0
+    },
+    {
+      "key": "SHADOW-52CA-G58A-LGFP-H25Z",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "sigtest-final-1",
+      "activated_at": 1785955328,
+      "created_at": 1785955327,
       "trial": 0,
       "expires_at": 0
     }
