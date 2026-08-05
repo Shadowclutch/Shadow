@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785940523,
+  "exported_at": 1785940642,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -2553,6 +2553,12 @@
       "appid": 2840770,
       "name": "Avatar: Frontiers of Pandora",
       "added_at": 1785940341
+    },
+    {
+      "steamid": "872516016175980594",
+      "appid": 611790,
+      "name": "House Party",
+      "added_at": 1785940639
     }
   ],
   "downloads": [
