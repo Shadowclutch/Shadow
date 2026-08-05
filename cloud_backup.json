@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785919263,
+  "exported_at": 1785919474,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -2320,6 +2320,12 @@
       "appid": 1091500,
       "name": "Cyberpunk 2077",
       "added_at": 1785919262
+    },
+    {
+      "steamid": "1345121200619262073",
+      "appid": 4534960,
+      "name": "Dear Passengers",
+      "added_at": 1785919472
     }
   ]
 }
