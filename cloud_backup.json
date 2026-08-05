@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785950455,
+  "exported_at": 1785950546,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -2658,6 +2658,18 @@
       "appid": 12100,
       "name": "Grand Theft Auto III",
       "added_at": 1785866557
+    },
+    {
+      "steamid": "1487668000478855188",
+      "appid": 12210,
+      "name": "Grand Theft Auto IV: The Complete Edition",
+      "added_at": 1785950542
+    },
+    {
+      "steamid": "1487668000478855188",
+      "appid": 3240220,
+      "name": "Grand Theft Auto V Enhanced",
+      "added_at": 1785950545
     }
   ],
   "downloads": [
