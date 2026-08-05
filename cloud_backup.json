@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785927845,
+  "exported_at": 1785929371,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -260,6 +260,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1525774698376462471/abf917bf64b887d2d265a49ee9c29a5a.png",
       "provider": "discord",
       "created_at": 1785927037
+    },
+    {
+      "steamid": "1495347497563062403",
+      "name": "savagehinter61",
+      "avatar": "",
+      "provider": "discord",
+      "created_at": 1785929364
     }
   ],
   "sessions": [],
@@ -485,6 +492,12 @@
       "steamid": "1525774698376462471",
       "created_at": 1785927039,
       "expires_at": 1817463039
+    },
+    {
+      "token": "ff5af5aa0d8e0bee842e3a604b95cd10693e57ca919ea73167dfdac98abdf1c3",
+      "steamid": "1495347497563062403",
+      "created_at": 1785929365,
+      "expires_at": 1817465365
     }
   ],
   "library": [
