@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785932396,
+  "exported_at": 1785932414,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -2468,9 +2468,9 @@
       "key": "SHADOW-LYQV-MP7K-QYXQ-Y8FL",
       "email": "",
       "session_id": "",
-      "status": "unused",
-      "machine_id": "",
-      "activated_at": 0,
+      "status": "active",
+      "machine_id": "7158f06c-709e-4e06-9088-1ad181dc081a",
+      "activated_at": 1785932410,
       "created_at": 1785932393
     }
   ]
