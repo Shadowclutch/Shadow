@@ -34,6 +34,10 @@ Endpoints:
 - `POST /api/license/activate` — `{key, machine_id}`; binds key to one PC (second PC rejected).
 - `POST /api/license/validate` — `{key, machine_id}`; status check.
 - `GET /api/license/redeem?session_id=...` — fetch key for a session.
+- `POST /api/license/admin/create` — `{count?, email?}` + admin token → mints new key(s) for manual sales (UPI/Binance).
+- `GET /api/license/admin/list` — + admin token → all keys with status/email/machine.
+- `POST /api/license/admin/revoke` — `{key}` + admin token → revokes a key (blocks future activation).
+- `GET /admin?token=...` — browser admin dashboard (mint keys, revoke, view stats).
 
 Required env vars on Render (add via Render dashboard → cwtool service → Environment):
 - `STRIPE_SECRET_KEY` — sk_live_... (Stripe Dashboard → Developers → API keys)

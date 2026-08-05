@@ -905,6 +905,60 @@ app.get('/api/download/count', async (req, res) => {
   }
 });
 
+function requireAdmin(req, res) {
+  if (!ADMIN_TOKEN) return res.status(503).json({ error: 'ADMIN_TOKEN not configured' });
+  if (req.query.token !== ADMIN_TOKEN && req.headers['x-admin-token'] !== ADMIN_TOKEN) {
+    res.status(403).json({ error: 'Forbidden' });
+    return false;
+  }
+  return true;
+}
+
+// ── Admin: manual key generation (for UPI / Binance / manual sales) ──
+// POST /api/license/admin/create  { count?, email? }  → mints new key(s)
+app.post('/api/license/admin/create', async (req, res) => {
+  if (!requireAdmin(req, res)) return;
+  try {
+    const count = Math.min(Math.max(parseInt((req.body && req.body.count) || '1', 10) || 1, 1), 100);
+    const email = String((req.body && req.body.email) || '').slice(0, 200);
+    const keys = [];
+    for (let i = 0; i < count; i++) {
+      const key = generateLicenseKey();
+      await db.createLicenseKey({ key, email });
+      keys.push(key);
+    }
+    backup.schedulePush();
+    console.log(`[ShadowTools Web] Admin minted ${count} license key(s)`);
+    res.json({ ok: true, keys });
+  } catch (e) {
+    res.status(500).json({ ok: false, error: e.message });
+  }
+});
+
+// GET /api/license/admin/list  → all keys with status
+app.get('/api/license/admin/list', async (req, res) => {
+  if (!requireAdmin(req, res)) return;
+  try {
+    res.json({ ok: true, keys: await db.listLicenseKeys() });
+  } catch (e) {
+    res.status(500).json({ ok: false, error: e.message });
+  }
+});
+
+// POST /api/license/admin/revoke  { key }  → blocks activation (already-active PCs keep working until revalidate)
+app.post('/api/license/admin/revoke', async (req, res) => {
+  if (!requireAdmin(req, res)) return;
+  try {
+    const key = String((req.body && req.body.key) || '').trim().toUpperCase();
+    if (!key) return res.status(400).json({ ok: false, error: 'Missing key' });
+    await db.revokeLicenseKey(key);
+    backup.schedulePush();
+    res.json({ ok: true });
+  } catch (e) {
+    res.status(500).json({ ok: false, error: e.message });
+  }
+});
+
 // ── Stripe checkout (one-time payment → license key) ────────
 function generateLicenseKey() {
   const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
@@ -1078,6 +1132,90 @@ async function load(){
   document.getElementById('keyBox').innerHTML='Could not fetch key yet. Please check your email or contact support.';
 }
 load();
+</script></body></html>`);
+});
+
+// Admin dashboard — key minting + stats (protected by ADMIN_TOKEN).
+app.get('/admin', (req, res) => {
+  if (!requireAdmin(req, res)) return;
+  res.send(`<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ShadowTools Admin</title>
+<style>
+  body{font-family:'Segoe UI',system-ui,sans-serif;background:#0a0f1e;color:#e8ecf4;margin:0;padding:24px}
+  h1{font-size:22px;margin:0 0 4px} .sub{color:#6b7794;font-size:13px;margin:0 0 20px}
+  .card{background:#121a2f;border:1px solid #26304d;border-radius:14px;padding:20px;margin-bottom:20px;max-width:900px}
+  h2{font-size:15px;margin:0 0 14px;color:#ffd479}
+  input,select,button{background:#0a0f1e;border:1px solid #3b4a6e;color:#e8ecf4;border-radius:8px;padding:9px 12px;font-size:14px}
+  button{cursor:pointer;background:#1f3a6e;border-color:#2c4c8a}
+  button:hover{background:#274b8f} button.danger{background:#5a1d2b;border-color:#7e2a3e} button.danger:hover{background:#6e2335}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th,td{text-align:left;padding:8px 10px;border-bottom:1px solid #1d2742}
+  th{color:#9aa7c4;font-weight:600}
+  code{font-family:Consolas,monospace;color:#ffd479;letter-spacing:0.5px}
+  .badge{padding:2px 8px;border-radius:20px;font-size:11px}
+  .b-unused{background:#22304f;color:#8fb3ff}.b-active{background:#1d3d26;color:#7ee08a}.b-revoked{background:#4a1c26;color:#ff8a8a}
+  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  .toast{position:fixed;bottom:20px;right:20px;background:#1d3d26;border:1px solid #2e5a3a;padding:10px 16px;border-radius:8px;display:none}
+  .stats{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:14px}
+  .stat{background:#0a0f1e;border:1px solid #26304d;border-radius:10px;padding:10px 18px;text-align:center}
+  .stat b{display:block;font-size:22px;color:#ffd479}.stat span{font-size:11px;color:#6b7794}
+</style></head><body>
+<h1>ShadowTools Admin</h1>
+<p class="sub">Mint license keys for manual sales (UPI / Binance / etc.) &amp; monitor activity</p>
+<div class="card">
+  <div class="stats">
+    <div class="stat"><b id="statTotal">–</b><span>Total keys</span></div>
+    <div class="stat"><b id="statActive">–</b><span>Activated</span></div>
+    <div class="stat"><b id="statRevoked">–</b><span>Revoked</span></div>
+    <div class="stat"><b id="statDownloads">–</b><span>Downloads</span></div>
+  </div>
+  <div class="row">
+    <label>Generate keys</label>
+    <input type="number" id="count" value="1" min="1" max="100" style="width:70px" />
+    <input type="text" id="email" placeholder="Buyer email (optional)" style="width:240px" />
+    <button id="genBtn">Mint key(s)</button>
+  </div>
+</div>
+<div class="card">
+  <h2>All license keys</h2>
+  <table><thead><tr><th>Key</th><th>Status</th><th>Email</th><th>Machine</th><th>Created</th><th></th></tr></thead>
+  <tbody id="rows"></tbody></table>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+const TOKEN = ${JSON.stringify(ADMIN_TOKEN)};
+const api = (path, opts) => fetch(path + (path.includes('?') ? '&' : '?') + 'token=' + encodeURIComponent(TOKEN), opts).then(r => r.json());
+function fmt(ts){ if(!ts) return '–'; return new Date(ts*1000).toLocaleString(); }
+function toast(msg){ const t=document.getElementById('toast'); t.textContent=msg; t.style.display='block'; clearTimeout(toast._t); toast._t=setTimeout(()=>t.style.display='none',3000); }
+async function refresh(){
+  const [list, stats] = await Promise.all([api('/api/license/admin/list'), api('/api/stats')]);
+  if(!list.ok){ toast(list.error || 'Failed'); return; }
+  document.getElementById('statTotal').textContent = stats.licenses ? stats.licenses.total : '–';
+  document.getElementById('statActive').textContent = stats.licenses ? stats.licenses.active : '–';
+  const revoked = list.keys.filter(k=>k.status==='revoked').length;
+  document.getElementById('statRevoked').textContent = revoked;
+  document.getElementById('statDownloads').textContent = stats.downloads ? stats.downloads.total : '–';
+  const rows = list.keys.slice(0, 200);
+  document.getElementById('rows').innerHTML = rows.map(k => \`<tr>
+    <td><code>\${k.key}</code></td>
+    <td><span class="badge b-\${k.status==='active'?'active':k.status==='revoked'?'revoked':'unused'}">\${k.status}</span></td>
+    <td>\${k.email || '–'}</td>
+    <td title="\${k.machine_id}">\${k.machine_id ? k.machine_id.slice(0,10) + '…' : '–'}</td>
+    <td>\${fmt(k.created_at)}</td>
+    <td>\${k.status==='revoked' ? '' : '<button class="danger" onclick="revoke(\'' + k.key + '\')">Revoke</button>'}</td>
+  </tr>\`).join('');
+}
+async function revoke(key){ await api('/api/license/admin/revoke', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({key})}); toast('Revoked ' + key); refresh(); }
+document.getElementById('genBtn').onclick = async () => {
+  const count = parseInt(document.getElementById('count').value || '1', 10);
+  const email = document.getElementById('email').value.trim();
+  const r = await api('/api/license/admin/create', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({count, email})});
+  if(!r.ok){ toast(r.error || 'Failed'); return; }
+  toast('Minted ' + r.keys.length + ' key(s)');
+  document.getElementById('email').value = '';
+  refresh();
+};
+refresh();
 </script></body></html>`);
 });
 

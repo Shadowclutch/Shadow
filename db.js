@@ -259,6 +259,23 @@ async function licenseStats() {
   return { total, sold, active };
 }
 
+async function listLicenseKeys() {
+  const rows = await A.all('SELECT * FROM license_keys ORDER BY created_at DESC');
+  return (rows || []).map((r) => ({
+    key: r.key,
+    email: r.email,
+    session_id: r.session_id,
+    status: r.status,
+    machine_id: r.machine_id,
+    activated_at: r.activated_at,
+    created_at: r.created_at,
+  }));
+}
+
+async function revokeLicenseKey(key) {
+  await A.run(`UPDATE license_keys SET status = 'revoked' WHERE key = ?`, [key]);
+}
+
 // ── Backup snapshot (GitHub-repo persistence) ───────────────
 async function countRows() {
   const toNum = (r) => r && typeof r.n === 'bigint' ? Number(r.n) : (Number(r.n) || 0);
@@ -384,6 +401,8 @@ module.exports = {
   getLicenseBySession,
   activateLicenseKey,
   licenseStats,
+  listLicenseKeys,
+  revokeLicenseKey,
   countRows,
   diagnose,
   exportSnapshot,
