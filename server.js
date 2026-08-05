@@ -40,6 +40,55 @@ const EXE_DOWNLOAD_URL = process.env.EXE_DOWNLOAD_URL || serverCfg.exe_download_
 // Admin token for the stats page.
 const ADMIN_TOKEN = process.env.ADMIN_TOKEN || serverCfg.admin_token || '';
 
+// ── License response signing (anti fake-server) ─────────────
+// Every /api/license/* response carries an Ed25519 signature so the desktop app
+// can prove the reply really came from this server. A cracker's mock server
+// cannot forge valid signatures (it doesn't hold the private key), so fake
+// servers can neither grant licenses nor force-revoke them.
+let signPrivateKey = null;
+let signPublicKey = null;
+let signEnabled = false;
+
+async function initSignKey() {
+  try {
+    let pem = (process.env.SIGN_PRIVATE_KEY || serverCfg.sign_private_key || '').trim();
+    if (!pem) {
+      pem = ((await db.getSetting('sign_private_key')) || '').trim();
+    }
+    if (!pem) {
+      const { privateKey } = crypto.generateKeyPairSync('ed25519');
+      pem = privateKey.export({ type: 'pkcs8', format: 'pem' });
+      try { await db.setSetting('sign_private_key', pem); } catch {}
+    }
+    signPrivateKey = crypto.createPrivateKey(pem);
+    signPublicKey = crypto.createPublicKey(signPrivateKey).export({ type: 'spki', format: 'pem' });
+    signEnabled = true;
+    console.log('[ShadowTools Web] License response signing ENABLED (Ed25519)');
+  } catch (e) {
+    signEnabled = false;
+    console.error(`[ShadowTools Web] License signing init failed (continuing unsigned): ${e.message}`);
+  }
+}
+
+function signLicenseMessage(msg) {
+  if (!signPrivateKey) return '';
+  return crypto.sign(null, Buffer.from(msg, 'utf8'), signPrivateKey).toString('base64');
+}
+
+// Attach a signature to a license response. For OK responses the signed message
+// carries key|status|expires_at|ts so the app's parsed (trusted) data cannot be
+// tampered with in transit. For errors it carries a hash of the error text.
+function signedResponse(payload, errorMessage) {
+  const ts = Math.floor(Date.now() / 1000);
+  let msg;
+  if (errorMessage) {
+    msg = 'ERR|' + crypto.createHash('sha256').update(String(errorMessage)).digest('hex').slice(0, 32) + '|' + ts;
+  } else {
+    msg = ['OK', String(payload.key), String(payload.status), Number(payload.expires_at) || 0, ts].join('|');
+  }
+  return { ...payload, ts, msg, sig: signLicenseMessage(msg) };
+}
+
 // ── CloudDB API ─────────────────────────────────────────────
 const CLOUDDB_BASE = 'https://hubcapmanifest.com';
 const REMOTE_CONFIG_URL = 'https://raw.githubusercontent.com/Shadowclutch/Shadow/main/config.json';
@@ -1138,6 +1187,28 @@ app.post('/api/stripe/webhook', async (req, res) => {
 });
 
 // ── License endpoints (used by the desktop app) ─────────────
+// Public: the current public key (base64 of the SPKI PEM). The exe embeds this
+// constant, so a change here requires shipping a new build.
+app.get('/api/license/pubkey', (req, res) => {
+  if (!signPublicKey) return res.status(503).json({ ok: false, error: 'License signing not configured' });
+  res.json({ ok: true, alg: 'Ed25519', pubkey: Buffer.from(signPublicKey, 'utf8').toString('base64') });
+});
+
+// Admin: dump the signing keypair so it can be saved into SIGN_PRIVATE_KEY (env)
+// for durability. Prefer env at startup, else the value is read from the DB.
+app.get('/api/license/admin/signing', async (req, res) => {
+  if (!requireAdmin(req, res)) return;
+  const stored = ((await db.getSetting('sign_private_key')) || '').trim();
+  res.json({
+    ok: true,
+    alg: 'Ed25519',
+    from_env: !!(process.env.SIGN_PRIVATE_KEY || serverCfg.sign_private_key),
+    private_key_pem_b64: signPrivateKey ? Buffer.from(signPrivateKey.export({ type: 'pkcs8', format: 'pem' }), 'utf8').toString('base64') : '',
+    public_key_pem_b64: signPublicKey ? Buffer.from(signPublicKey, 'utf8').toString('base64') : '',
+    stored_in_db: !!stored,
+  });
+});
+
 // POST /api/license/trial  { machine_id }  → one free trial key per machine (10 min)
 app.post('/api/license/trial', rateLimit(20, 60000), async (req, res) => {
   try {
@@ -1146,10 +1217,10 @@ app.post('/api/license/trial', rateLimit(20, 60000), async (req, res) => {
     const rows = await db.all("SELECT * FROM license_keys WHERE machine_id = ? AND trial = 1", [machineId]);
     const live = (rows || []).find((r) => !db.isLicenseExpired(r));
     if (live) {
-      return res.json({ ok: true, key: live.key, trial: 1, expires_at: live.expires_at });
+      return res.json(signedResponse({ ok: true, key: live.key, trial: 1, status: 'active', expires_at: live.expires_at }));
     }
     if ((rows || []).length > 0) {
-      return res.json({ ok: false, error: 'Free trial already used on this PC. Purchase a license key to continue.' });
+      return res.json(signedResponse({ ok: false, error: 'Free trial already used on this PC. Purchase a license key to continue.' }, 'Free trial already used on this PC. Purchase a license key to continue.'));
     }
     const key = generateTrialKey();
     const ttlMin = 2;
@@ -1158,9 +1229,9 @@ app.post('/api/license/trial', rateLimit(20, 60000), async (req, res) => {
     await db.activateLicenseKey(key, machineId);
     backup.schedulePush();
     console.log(`[ShadowTools Web] Free trial started for machine ${machineId} (${ttlMin} min)`);
-    res.json({ ok: true, key, trial: 1, expires_at: expiresAt });
+    res.json(signedResponse({ ok: true, key, trial: 1, status: 'active', expires_at: expiresAt }));
   } catch (e) {
-    res.status(500).json({ ok: false, error: e.message });
+    res.status(500).json(signedResponse({ ok: false, error: e.message }, e.message));
   }
 });
 
@@ -1171,17 +1242,17 @@ app.post('/api/license/activate', rateLimit(20, 60000), async (req, res) => {
     if (!key) return res.status(400).json({ ok: false, error: 'Missing license key' });
     if (!machineId) return res.status(400).json({ ok: false, error: 'Missing machine id' });
     const row = await db.getLicenseKey(key);
-    if (!row) return res.json({ ok: false, error: 'Invalid license key' });
-    if (row.status === 'revoked') return res.json({ ok: false, error: 'License key revoked' });
-    if (db.isLicenseExpired(row)) return res.json({ ok: false, error: 'License key has expired' });
+    if (!row) return res.json(signedResponse({ ok: false, error: 'Invalid license key' }, 'Invalid license key'));
+    if (row.status === 'revoked') return res.json(signedResponse({ ok: false, error: 'License key revoked' }, 'License key revoked'));
+    if (db.isLicenseExpired(row)) return res.json(signedResponse({ ok: false, error: 'License key has expired' }, 'License key has expired'));
     if (row.status === 'active' && row.machine_id && row.machine_id !== machineId) {
-      return res.json({ ok: false, error: 'License key is already activated on another PC' });
+      return res.json(signedResponse({ ok: false, error: 'License key is already activated on another PC' }, 'License key is already activated on another PC'));
     }
     await db.activateLicenseKey(key, machineId);
     backup.schedulePush();
-    res.json({ ok: true, key, email: row.email, trial: row.trial ? 1 : 0, expires_at: row.expires_at });
+    res.json(signedResponse({ ok: true, key, email: row.email, trial: row.trial ? 1 : 0, status: 'active', expires_at: row.expires_at }));
   } catch (e) {
-    res.status(500).json({ ok: false, error: e.message });
+    res.status(500).json(signedResponse({ ok: false, error: e.message }, e.message));
   }
 });
 
@@ -1189,17 +1260,17 @@ app.post('/api/license/validate', rateLimit(60, 60000), async (req, res) => {
   try {
     const key = String((req.body && req.body.key) || '').trim().toUpperCase();
     const machineId = String((req.body && req.body.machine_id) || '').slice(0, 128);
-    if (!key) return res.json({ ok: false, error: 'Missing license key' });
+    if (!key) return res.json(signedResponse({ ok: false, error: 'Missing license key' }, 'Missing license key'));
     const row = await db.getLicenseKey(key);
-    if (!row) return res.json({ ok: false, error: 'Invalid license key' });
-    if (row.status === 'revoked') return res.json({ ok: false, error: 'License key revoked' });
-    if (db.isLicenseExpired(row)) return res.json({ ok: false, error: 'License key has expired' });
+    if (!row) return res.json(signedResponse({ ok: false, error: 'Invalid license key' }, 'Invalid license key'));
+    if (row.status === 'revoked') return res.json(signedResponse({ ok: false, error: 'License key revoked' }, 'License key revoked'));
+    if (db.isLicenseExpired(row)) return res.json(signedResponse({ ok: false, error: 'License key has expired' }, 'License key has expired'));
     if (row.status === 'active' && machineId && row.machine_id && row.machine_id !== machineId) {
-      return res.json({ ok: false, error: 'License key is activated on another PC' });
+      return res.json(signedResponse({ ok: false, error: 'License key is activated on another PC' }, 'License key is activated on another PC'));
     }
-    res.json({ ok: true, key, status: row.status, email: row.email, trial: row.trial ? 1 : 0, expires_at: row.expires_at });
+    res.json(signedResponse({ ok: true, key, status: row.status, email: row.email, trial: row.trial ? 1 : 0, expires_at: row.expires_at }));
   } catch (e) {
-    res.status(500).json({ ok: false, error: e.message });
+    res.status(500).json(signedResponse({ ok: false, error: e.message }, e.message));
   }
 });
 
@@ -1517,6 +1588,7 @@ setInterval(refresh, 30000);
   } else {
     console.log(`[CWTool Web] Persistent DB already has data (users=${counts.users}) — skipping GitHub restore.`);
   }
+  await initSignKey();
   app.listen(PORT, () => {
     console.log(`[CWTool Web] Running at ${SITE_URL}`);
     console.log(`[CWTool Web] Storage: ${db.backend === 'pg' ? 'Postgres (persistent)' : 'SQLite (fallback)'}`);

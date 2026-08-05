@@ -64,6 +64,10 @@ const SCHEMA = `
     expires_at INTEGER NOT NULL DEFAULT 0,
     created_at INTEGER NOT NULL
   );
+  CREATE TABLE IF NOT EXISTS settings (
+    key TEXT PRIMARY KEY,
+    value TEXT NOT NULL DEFAULT ''
+  );
 `;
 
 // Convert SQLite `?` placeholders to Postgres `$1, $2, ...`.
@@ -327,6 +331,18 @@ async function deleteCoupon(code) {
   await A.run('DELETE FROM coupons WHERE code = ?', [code]);
 }
 
+// ── Settings (persistent key/value store, e.g. the license-signing key) ──
+async function getSetting(key) {
+  if (!key) return null;
+  const r = await A.get('SELECT value FROM settings WHERE key = ?', [key]);
+  return r ? r.value : null;
+}
+
+async function setSetting(key, value) {
+  await A.run('INSERT INTO settings (key, value) VALUES (?, ?) ON CONFLICT(key) DO UPDATE SET value = excluded.value',
+    [key, String(value == null ? '' : value)]);
+}
+
 // ── Backup snapshot (GitHub-repo persistence) ───────────────
 async function countRows() {
   const toNum = (r) => r && typeof r.n === 'bigint' ? Number(r.n) : (Number(r.n) || 0);
@@ -461,6 +477,8 @@ module.exports = {
   listCoupons,
   getCoupon,
   deleteCoupon,
+  getSetting,
+  setSetting,
   countRows,
   diagnose,
   exportSnapshot,
