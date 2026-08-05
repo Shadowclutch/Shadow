@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785911668,
+  "exported_at": 1785912420,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -204,6 +204,13 @@
       "avatar": "",
       "provider": "discord",
       "created_at": 1785911663
+    },
+    {
+      "steamid": "803178142033772575",
+      "name": "⭐ AstralVortxx ⭐",
+      "avatar": "https://cdn.discordapp.com/avatars/803178142033772575/e3327c7c66c1469109e433b9a90aa7ad.png",
+      "provider": "discord",
+      "created_at": 1785912392
     }
   ],
   "sessions": [],
@@ -381,6 +388,12 @@
       "steamid": "1508168615286014055",
       "created_at": 1785911665,
       "expires_at": 1817447665
+    },
+    {
+      "token": "83886c6744fe20ba7f2948d726d1344af403f248a849958d646e0c2a9202c52b",
+      "steamid": "803178142033772575",
+      "created_at": 1785912394,
+      "expires_at": 1817448394
     }
   ],
   "library": [
@@ -2069,6 +2082,18 @@
       "appid": 3404260,
       "name": "Dead as Disco",
       "added_at": 1785908038
+    },
+    {
+      "steamid": "1508168615286014055",
+      "appid": 314160,
+      "name": "Microsoft Flight Simulator X: Steam Edition",
+      "added_at": 1785911676
+    },
+    {
+      "steamid": "803178142033772575",
+      "appid": 314160,
+      "name": "Microsoft Flight Simulator X: Steam Edition",
+      "added_at": 1785912418
     }
   ]
 }
