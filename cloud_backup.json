@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785916510,
+  "exported_at": 1785916519,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -2223,6 +2223,12 @@
       "appid": 1307710,
       "name": "GRID Legends",
       "added_at": 1785916508
+    },
+    {
+      "steamid": "1345121200619262073",
+      "appid": 648800,
+      "name": "Raft",
+      "added_at": 1785916517
     }
   ]
 }
