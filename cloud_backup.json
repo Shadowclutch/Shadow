@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785929371,
+  "exported_at": 1785931134,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -267,6 +267,13 @@
       "avatar": "",
       "provider": "discord",
       "created_at": 1785929364
+    },
+    {
+      "steamid": "504330993012965389",
+      "name": "bekolpa",
+      "avatar": "https://cdn.discordapp.com/avatars/504330993012965389/5d241daa2f28f0f7f9938893d5f75f46.png",
+      "provider": "discord",
+      "created_at": 1785931129
     }
   ],
   "sessions": [],
@@ -498,6 +505,12 @@
       "steamid": "1495347497563062403",
       "created_at": 1785929365,
       "expires_at": 1817465365
+    },
+    {
+      "token": "8e2c7447d5a933945827f64719e7c5a47111c0827c7d8a74eceab1c88fd66867",
+      "steamid": "504330993012965389",
+      "created_at": 1785931131,
+      "expires_at": 1817467131
     }
   ],
   "library": [
@@ -2408,6 +2421,33 @@
       "appid": 3357650,
       "name": "PRAGMATA",
       "added_at": 1785927843
+    }
+  ],
+  "downloads": [
+    {
+      "id": "372aeb427d6ccc103b9036ab",
+      "source": "test-verify",
+      "ip": "152.56.144.85",
+      "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.8972",
+      "created_at": 1785929548
+    },
+    {
+      "id": "b0d288764545c4c7b9dfec3b",
+      "source": "site",
+      "ip": "152.56.144.39",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+      "created_at": 1785930189
+    }
+  ],
+  "license_keys": [
+    {
+      "key": "SHADOW-B93E-P8RC-RZBZ-NRF3",
+      "email": "",
+      "session_id": "",
+      "status": "unused",
+      "machine_id": "",
+      "activated_at": 0,
+      "created_at": 1785930617
     }
   ]
 }
