@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785962532,
+  "exported_at": 1785962598,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -3253,6 +3253,12 @@
       "appid": 3724710,
       "name": "Gunstoppable",
       "added_at": 1785962530
+    },
+    {
+      "steamid": "1510802203831697478",
+      "appid": 974480,
+      "name": "Echoes of Mystralia",
+      "added_at": 1785962596
     }
   ],
   "downloads": [
