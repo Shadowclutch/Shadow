@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785941877,
+  "exported_at": 1785941977,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -2639,7 +2639,9 @@
       "status": "unused",
       "machine_id": "",
       "activated_at": 0,
-      "created_at": 1785930617
+      "created_at": 1785930617,
+      "trial": 0,
+      "expires_at": 0
     },
     {
       "key": "SHADOW-UWVR-XNP3-W37P-VM4W",
@@ -2648,7 +2650,9 @@
       "status": "unused",
       "machine_id": "",
       "activated_at": 0,
-      "created_at": 1785931727
+      "created_at": 1785931727,
+      "trial": 0,
+      "expires_at": 0
     },
     {
       "key": "SHADOW-LYQV-MP7K-QYXQ-Y8FL",
@@ -2657,7 +2661,9 @@
       "status": "active",
       "machine_id": "7158f06c-709e-4e06-9088-1ad181dc081a",
       "activated_at": 1785932410,
-      "created_at": 1785932393
+      "created_at": 1785932393,
+      "trial": 0,
+      "expires_at": 0
     },
     {
       "key": "SHADOW-K5HW-ZJFX-3GCU-6ZLJ",
@@ -2666,7 +2672,31 @@
       "status": "unused",
       "machine_id": "",
       "activated_at": 0,
-      "created_at": 1785940149
+      "created_at": 1785940149,
+      "trial": 0,
+      "expires_at": 0
+    },
+    {
+      "key": "SHADOW-FD48-P5LZ-77MG-336V",
+      "email": "",
+      "session_id": "",
+      "status": "unused",
+      "machine_id": "",
+      "activated_at": 0,
+      "created_at": 1785941969,
+      "trial": 0,
+      "expires_at": 0
+    },
+    {
+      "key": "TRIAL-JBHJ-97NX-9N35-5BVB",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "verify-live-test",
+      "activated_at": 1785941974,
+      "created_at": 1785941973,
+      "trial": 1,
+      "expires_at": 1785942573
     }
   ]
 }
