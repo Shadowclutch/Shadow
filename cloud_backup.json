@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785957361,
+  "exported_at": 1785957397,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -3173,6 +3173,12 @@
       "appid": 362003,
       "name": "Grand Theft Auto V",
       "added_at": 1785957359
+    },
+    {
+      "steamid": "1341837918955901071",
+      "appid": 271590,
+      "name": "Grand Theft Auto V Legacy",
+      "added_at": 1785957395
     }
   ],
   "downloads": [
