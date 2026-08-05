@@ -33,11 +33,23 @@ Endpoints:
 - `POST /api/license/admin/create` — `{count?, email?}` + admin token → mints new key(s) for manual sales (UPI/Binance).
 - `GET /api/license/admin/list` — + admin token → all keys with status/email/machine.
 - `POST /api/license/admin/revoke` — `{key}` + admin token → revokes a key (blocks future activation).
-- `GET /admin?token=...` — browser admin dashboard (mint keys, revoke, view stats). `<ADMIN_TOKEN>` = `tV3fA2HDecQmyIRz8XF49B0jgCoJNMWs` (set in Render env).
+- `POST /api/license/admin/reset` — `{key}` + admin token → clears the PC binding so a key can be re-activated (PC change / Windows reinstall).
+- `GET /api/license/pubkey` — public: base64 Ed25519 SPKI PEM. The desktop exe embeds this same constant in `app.py` (`CWT_SIGN_PUBKEY_B64`) to verify signed responses.
+- `GET /api/license/admin/signing` — + admin token → dumps the current keypair (used to migrate the private key into the `SIGN_PRIVATE_KEY` env var).
+- `GET /admin?token=...` — browser admin dashboard (mint keys, revoke, reset, coupons, view stats). `<ADMIN_TOKEN>` = `tV3fA2HDecQmyIRz8XF49B0jgCoJNMWs` (set in Render env).
 - `POST /api/checkout`, `POST /api/stripe/webhook`, `GET /api/license/redeem?session_id=...`, `GET /buy/success` — legacy Stripe flow, dormant until STRIPE keys are set.
+
+## License response signing (anti fake-server)
+Every `/api/license/trial|activate|validate` response carries `msg` + `sig` (Ed25519).
+- OK msg: `OK|key|status|expires_at|ts`; ERR msg: `ERR|<sha256(error)[:32]>|ts`.
+- The app (`app.py` `_verify_license_response`) verifies with the embedded public key before trusting anything; unverifiable responses are treated like offline (never grant, never revoke).
+- Private key resolution order: env `SIGN_PRIVATE_KEY` → `config.json sign_private_key` → `settings` DB table → auto-generate + persist to DB.
+- The auto-generated private key lives ONLY in the Supabase `settings` table (never backed up to GitHub). Copy it into the `SIGN_PRIVATE_KEY` Render env var for durability (a wiped DB would otherwise change the key and break old exes).
+- Rebuild + re-ship the exe whenever the public key changes.
 
 Required env vars on Render (add via Render dashboard → cwtool service → Environment):
 - `ADMIN_TOKEN` — `tV3fA2HDecQmyIRz8XF49B0jgCoJNMWs` (protects `/admin`, `/api/stats`, admin license routes).
+- `SIGN_PRIVATE_KEY` — optional but recommended: base64 of the Ed25519 PKCS8 PEM (from `/api/license/admin/signing`). Server auto-generates/persists in DB if absent.
 - `EXE_DOWNLOAD_URL` — optional; recommended = the GitHub Release asset URL for Shadowclutch.zip. Without it the download 302-redirects to `/cdn/Shadowclutch.zip` (this repo's `cdn/` dir — commit the zip there).
 - (Stripe, later if wanted) `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET` — set `PRICE_USD` (default 4.99) and create webhook for `checkout.session.completed`.
 
