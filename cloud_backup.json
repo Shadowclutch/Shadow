@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785967127,
+  "exported_at": 1785968051,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -379,6 +379,13 @@
       "avatar": "",
       "provider": "discord",
       "created_at": 1785961890
+    },
+    {
+      "steamid": "1066657842028871710",
+      "name": "korestiaru",
+      "avatar": "https://cdn.discordapp.com/avatars/1066657842028871710/68f87e91ec2de2317626843ea7afe5d5.png",
+      "provider": "discord",
+      "created_at": 1785968044
     }
   ],
   "sessions": [
@@ -707,6 +714,12 @@
       "steamid": "1507400412599157036",
       "created_at": 1785961892,
       "expires_at": 1817497892
+    },
+    {
+      "token": "c4feaee1857cfad0abca7f7269453e5d1edc04226f2bbe089a5975176617a7d3",
+      "steamid": "1066657842028871710",
+      "created_at": 1785968046,
+      "expires_at": 1817504046
     }
   ],
   "library": [
