@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785948744,
+  "exported_at": 1785950136,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -290,13 +290,6 @@
       "created_at": 1785931129
     },
     {
-      "steamid": "1487668000478855188",
-      "name": "ShadowClutchh",
-      "avatar": "https://cdn.discordapp.com/avatars/1487668000478855188/f1768a4587769379b481ab6452a47197.png",
-      "provider": "discord",
-      "created_at": 1785769226
-    },
-    {
       "steamid": "751518015635456153",
       "name": "Darksoul1",
       "avatar": "https://cdn.discordapp.com/avatars/751518015635456153/9319983569ff651ff2e19e560c16283f.png",
@@ -337,6 +330,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1341837918955901071/d8f28891a56dfaf5bd0509fcfafcccbe.png",
       "provider": "discord",
       "created_at": 1785947988
+    },
+    {
+      "steamid": "1487668000478855188",
+      "name": "ShadowClutchh",
+      "avatar": "https://cdn.discordapp.com/avatars/1487668000478855188/f1768a4587769379b481ab6452a47197.png",
+      "provider": "discord",
+      "created_at": 1785769226
     }
   ],
   "sessions": [],
@@ -2799,6 +2799,13 @@
       "ip": "223.233.77.66",
       "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
       "created_at": 1785948723
+    },
+    {
+      "id": "366f55b4e9b112c6c5452ffa",
+      "source": "site",
+      "ip": "49.43.153.166",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+      "created_at": 1785950088
     }
   ],
   "license_keys": [
@@ -2927,9 +2934,9 @@
       "key": "SHADOW-A26Y-RHNM-VSB3-MWWE",
       "email": "Shivam Sardana",
       "session_id": "",
-      "status": "unused",
-      "machine_id": "",
-      "activated_at": 0,
+      "status": "active",
+      "machine_id": "hw-f338b6ceb777864189efc1e2",
+      "activated_at": 1785948894,
       "created_at": 1785948740,
       "trial": 0,
       "expires_at": 0
