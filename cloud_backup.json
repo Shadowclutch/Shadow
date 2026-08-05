@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785916470,
+  "exported_at": 1785916510,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -2217,6 +2217,12 @@
       "appid": 1846380,
       "name": "Need for Speed™ Unbound",
       "added_at": 1785916467
+    },
+    {
+      "steamid": "1534185129247899669",
+      "appid": 1307710,
+      "name": "GRID Legends",
+      "added_at": 1785916508
     }
   ]
 }
