@@ -25,7 +25,7 @@ Cloud sync + backup service for the CWTool desktop app (`steam_tool` repo siblin
 Landing page is `public/index.html` (marketing + download + buy). The old cloud-library UI moved to `/app` (`public/app.html`). Payment is **manual** (UPI / Binance / PayPal) — the Stripe endpoints still exist in `server.js` but are unused until the seller turns them on.
 
 Endpoints:
-- `GET /api/download?src=<source>` — counts the download (source/IP/UA) then 302-redirects to `EXE_DOWNLOAD_URL`. Track per-source (e.g. `?src=youtube`).
+- `GET /api/download?src=<source>` — counts the download (source/IP/UA) then 302-redirects to `EXE_DOWNLOAD_URL`. Track per-source (e.g. `?src=youtube`). Default target: `/cdn/Shadowclutch.zip` (password-protected zip, password `SHADOW`; contains `Shadowclutch.exe`).
 - `GET /api/download/count` — public total for the landing page counter.
 - `GET /api/stats?token=<ADMIN_TOKEN>` — admin dashboard: download totals by source + license sales.
 - `POST /api/license/activate` — `{key, machine_id}`; binds key to one PC (second PC rejected).
@@ -38,7 +38,7 @@ Endpoints:
 
 Required env vars on Render (add via Render dashboard → cwtool service → Environment):
 - `ADMIN_TOKEN` — `tV3fA2HDecQmyIRz8XF49B0jgCoJNMWs` (protects `/admin`, `/api/stats`, admin license routes).
-- `EXE_DOWNLOAD_URL` — optional; recommended = the GitHub Release asset URL for Shadowclutch.exe. Without it the download 302-redirects to `/cdn/Shadowclutch.exe` (this repo's `cdn/` dir — commit the exe there).
+- `EXE_DOWNLOAD_URL` — optional; recommended = the GitHub Release asset URL for Shadowclutch.zip. Without it the download 302-redirects to `/cdn/Shadowclutch.zip` (this repo's `cdn/` dir — commit the zip there).
 - (Stripe, later if wanted) `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET` — set `PRICE_USD` (default 4.99) and create webhook for `checkout.session.completed`.
 
 Config fallbacks live in `config.json` (keys: `stripe_secret_key`, `stripe_webhook_secret`, `admin_token`, `price_usd`, `exe_download_url`, `product_name`). Config is checked into git, so env vars are preferred for secrets.

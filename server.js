@@ -873,7 +873,7 @@ app.get('/api/download', (req, res) => {
   const ip = (req.headers['x-forwarded-for'] || req.ip || req.socket.remoteAddress || '').toString().split(',')[0].trim().slice(0, 64);
   const ua = String(req.headers['user-agent'] || '').slice(0, 300);
   db.recordDownload({ id: crypto.randomBytes(12).toString('hex'), source, ip, user_agent: ua }).catch(() => {});
-  const target = EXE_DOWNLOAD_URL || `${SITE_URL}/cdn/Shadowclutch.exe`;
+  const target = EXE_DOWNLOAD_URL || `${SITE_URL}/cdn/Shadowclutch.zip`;
   res.redirect(target);
 });
 
@@ -1250,7 +1250,7 @@ refresh();
     console.log(`[CWTool Web] GitHub backup: ${process.env.GITHUB_REPO_TOKEN ? 'ENABLED' : 'DISABLED (set GITHUB_REPO_TOKEN to persist the library across deploys)'}`);
     console.log(`[ShadowTools Web] Stripe payments: ${STRIPE_SECRET_KEY ? `ENABLED ($${PRICE_USD}/key)` : 'DISABLED (set STRIPE_SECRET_KEY)'}`);
     console.log(`[ShadowTools Web] Stripe webhook: ${STRIPE_WEBHOOK_SECRET ? 'VERIFIED' : 'trust-any (set STRIPE_WEBHOOK_SECRET)'}`);
-    console.log(`[ShadowTools Web] Exe download URL: ${EXE_DOWNLOAD_URL || '(falling back to /cdn/Shadowclutch.exe — set EXE_DOWNLOAD_URL to a GitHub release asset)'}`);
+    console.log(`[ShadowTools Web] Download URL: ${EXE_DOWNLOAD_URL || '(falling back to /cdn/Shadowclutch.zip — set EXE_DOWNLOAD_URL to a GitHub release asset)'}`);
     console.log(`[ShadowTools Web] Admin stats: ${ADMIN_TOKEN ? '/api/stats?token=...' : 'DISABLED (set ADMIN_TOKEN)'}`);
   });
 })();
