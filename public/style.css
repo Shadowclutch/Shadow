@@ -485,6 +485,18 @@ body.landing {
 }
 .price-card h3 { margin: 0 0 4px; font-size: 17px; font-weight: 700; }
 .price { font-size: 46px; font-weight: 800; margin: 10px 0 2px; letter-spacing: -1px; }
+.price s { color: var(--muted); font-weight: 600; font-size: 26px; }
+.price-disc { color: var(--accent-2); }
+.coupon-box { display: flex; gap: 8px; margin: 14px 0 2px; }
+.coupon-box input {
+  flex: 1; background: #0a1022; border: 1px solid #33436a; border-radius: 10px; color: var(--text);
+  padding: 9px 12px; font-size: 13.5px; outline: none; font-family: var(--mono); text-transform: uppercase; letter-spacing: .5px;
+}
+.coupon-box input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(79,140,255,0.15); }
+.coupon-box .btn { padding: 9px 14px; font-size: 13px; }
+.coupon-msg { min-height: 18px; margin: 6px 0 10px; font-size: 12.5px; }
+.coupon-msg.ok { color: var(--accent-2); }
+.coupon-msg.err { color: #ff6b7a; }
 .price-caption { font-size: 12.5px; color: var(--muted); margin: 0 0 18px; }
 .price ul { list-style: none; padding: 0; margin: 0 0 22px; text-align: left; display: grid; gap: 10px; }
 .price ul li { color: var(--text); font-size: 14.5px; display: flex; gap: 10px; align-items: flex-start; }

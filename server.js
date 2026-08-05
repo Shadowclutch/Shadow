@@ -33,6 +33,7 @@ const pendingDiscord = new Map(); // state -> { createdAt, token?, user? }
 const STRIPE_SECRET_KEY = process.env.STRIPE_SECRET_KEY || serverCfg.stripe_secret_key || '';
 const STRIPE_WEBHOOK_SECRET = process.env.STRIPE_WEBHOOK_SECRET || serverCfg.stripe_webhook_secret || '';
 const PRICE_USD = parseFloat(process.env.PRICE_USD || serverCfg.price_usd || 4.99);
+const PRICE_INR = parseFloat(process.env.PRICE_INR || serverCfg.price_inr || 300);
 const PRODUCT_NAME = process.env.PRODUCT_NAME || serverCfg.product_name || 'ShadowTools License';
 // Where the actual exe lives (GitHub release asset is ideal — free CDN + real redirect).
 const EXE_DOWNLOAD_URL = process.env.EXE_DOWNLOAD_URL || serverCfg.exe_download_url || '';
@@ -963,6 +964,69 @@ app.post('/api/license/admin/revoke', async (req, res) => {
   }
 });
 
+// ── Coupons (discount codes for deals) ──────────────────────
+// POST /api/coupon/admin/create  { code?, percent?, amount?, days? }  + admin token
+app.post('/api/coupon/admin/create', async (req, res) => {
+  if (!requireAdmin(req, res)) return;
+  try {
+    let code = String((req.body && req.body.code) || '').trim().toUpperCase().replace(/[^A-Z0-9_-]/g, '').slice(0, 32);
+    if (!code) return res.status(400).json({ ok: false, error: 'Missing coupon code' });
+    const percent = Math.min(Math.max(parseInt((req.body && req.body.percent) || '0', 10) || 0, 0), 100);
+    const amount = Math.min(Math.max(parseInt((req.body && req.body.amount) || '0', 10) || 0, 0), PRICE_INR);
+    if (!percent && !amount) return res.status(400).json({ ok: false, error: 'Set a discount (% or ₹ off)' });
+    const days = Math.max(parseInt((req.body && req.body.days) || '0', 10) || 0, 0);
+    const expiresAt = days > 0 ? Math.floor(Date.now() / 1000) + days * 86400 : 0;
+    const row = await db.createCoupon({ code, percent, amount, expires_at: expiresAt });
+    backup.schedulePush();
+    console.log(`[ShadowTools Web] Coupon created: ${code} (${percent}% / ₹${amount})`);
+    res.json({ ok: true, coupon: row });
+  } catch (e) {
+    res.status(500).json({ ok: false, error: e.message });
+  }
+});
+
+app.get('/api/coupon/admin/list', async (req, res) => {
+  if (!requireAdmin(req, res)) return;
+  try {
+    res.json({ ok: true, coupons: await db.listCoupons() });
+  } catch (e) {
+    res.status(500).json({ ok: false, error: e.message });
+  }
+});
+
+app.post('/api/coupon/admin/delete', async (req, res) => {
+  if (!requireAdmin(req, res)) return;
+  try {
+    const code = String((req.body && req.body.code) || '').trim().toUpperCase();
+    if (!code) return res.status(400).json({ ok: false, error: 'Missing coupon code' });
+    await db.deleteCoupon(code);
+    backup.schedulePush();
+    res.json({ ok: true });
+  } catch (e) {
+    res.status(500).json({ ok: false, error: e.message });
+  }
+});
+
+// GET /api/coupon/validate?code=  → public: is it valid + what's the discounted price
+app.get('/api/coupon/validate', async (req, res) => {
+  try {
+    const code = String(req.query.code || '').trim().toUpperCase();
+    if (!code) return res.json({ ok: false, error: 'Enter a coupon code.' });
+    const c = await db.getCoupon(code);
+    if (!c) return res.json({ ok: false, error: 'Invalid coupon code.' });
+    const now = Math.floor(Date.now() / 1000);
+    if (c.expires_at && c.expires_at > 0 && now > c.expires_at) {
+      return res.json({ ok: false, error: 'This coupon has expired.' });
+    }
+    const base = Math.round(PRICE_INR);
+    const discount = c.percent ? Math.round(base * c.percent / 100) : Math.min(c.amount, base);
+    const price = Math.max(0, base - discount);
+    res.json({ ok: true, code: c.code, percent: c.percent, amount: c.amount, base, discount, price });
+  } catch (e) {
+    res.status(500).json({ ok: false, error: e.message });
+  }
+});
+
 // ── Stripe checkout (one-time payment → license key) ────────
 function generateLicenseKey() {
   const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
@@ -1268,6 +1332,20 @@ app.get('/admin', (req, res) => {
   </div>
 
   <div class="card">
+    <h2>Discount coupons</h2>
+    <div class="form">
+      <div class="field"><label>Code</label><input type="text" id="cCode" placeholder="SAVE20" style="width:140px"></div>
+      <div class="field"><label>% off</label><input type="number" id="cPercent" value="0" min="0" max="100" style="width:80px"></div>
+      <div class="field"><label>₹ off</label><input type="number" id="cAmount" value="0" min="0" style="width:80px"></div>
+      <div class="field"><label>Valid days (0 = forever)</label><input type="number" id="cDays" value="0" min="0" style="width:90px"></div>
+      <button class="btn green" id="couponBtn">Create coupon</button>
+    </div>
+    <table style="margin-top:16px"><thead><tr><th>Code</th><th>Discount</th><th>New price</th><th>Expires</th><th>Created</th><th></th></tr></thead>
+    <tbody id="couponRows"></tbody></table>
+    <div class="empty" id="couponEmpty" style="display:none">No coupons yet — create your first deal above.</div>
+  </div>
+
+  <div class="card">
     <h2>All license keys</h2>
     <div class="toolbar">
       <input type="search" id="search" placeholder="Search key / email / machine…">
@@ -1281,6 +1359,7 @@ app.get('/admin', (req, res) => {
 <div class="toast" id="toast"></div>
 <script>
 const TOKEN = ${JSON.stringify(ADMIN_TOKEN)};
+const BASE_PRICE = ${JSON.stringify(Math.round(PRICE_INR))};
 const api = (path, opts) => fetch(path + (path.includes('?') ? '&' : '?') + 'token=' + encodeURIComponent(TOKEN), opts).then(r => r.json());
 let ALL = [];
 function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
@@ -1350,7 +1429,51 @@ document.getElementById('genBtn').onclick = async () => {
 };
 document.getElementById('search').addEventListener('input', render);
 document.getElementById('refreshBtn').onclick = refresh;
+document.getElementById('couponBtn').onclick = async () => {
+  const code = document.getElementById('cCode').value.trim().toUpperCase();
+  const percent = parseInt(document.getElementById('cPercent').value || '0', 10) || 0;
+  const amount = parseInt(document.getElementById('cAmount').value || '0', 10) || 0;
+  const days = parseInt(document.getElementById('cDays').value || '0', 10) || 0;
+  if (!code) { toast('Enter a coupon code', true); return; }
+  const btn = document.getElementById('couponBtn');
+  btn.disabled = true;
+  const r = await api('/api/coupon/admin/create', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({code, percent, amount, days})});
+  btn.disabled = false;
+  if (!r.ok) { toast(r.error || 'Failed', true); return; }
+  toast('Coupon ' + code + ' created');
+  document.getElementById('cCode').value = ''; document.getElementById('cPercent').value = '0';
+  document.getElementById('cAmount').value = '0'; document.getElementById('cDays').value = '0';
+  loadCoupons();
+};
+async function loadCoupons(){
+  const r = await api('/api/coupon/admin/list');
+  if (!r.ok) return;
+  const list = r.coupons || [];
+  document.getElementById('couponEmpty').style.display = list.length ? 'none' : 'block';
+  document.getElementById('couponRows').innerHTML = list.map(c => {
+    const base = BASE_PRICE;
+    const disc = c.percent ? Math.round(base*c.percent/100) : Math.min(c.amount, base);
+    return \`<tr>
+      <td><code>\${esc(c.code)}</code></td>
+      <td>\${c.percent ? c.percent + '% off' : '₹' + c.amount + ' off'}</td>
+      <td>₹\${Math.max(0, base - disc)}</td>
+      <td class="mut">\${c.expires_at ? fmt(c.expires_at) : 'Never'}</td>
+      <td class="mut">\${fmt(c.created_at)}</td>
+      <td><button class="icon-btn revoke" title="Delete" data-delcoupon="\${esc(c.code)}">✕</button></td>
+    </tr>\`;
+  }).join('');
+}
+document.addEventListener('click', async (e) => {
+  const btn = e.target.closest('[data-delcoupon]');
+  if (!btn) return;
+  const code = btn.getAttribute('data-delcoupon');
+  if (!confirm('Delete coupon ' + code + '?')) return;
+  const r = await api('/api/coupon/admin/delete', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({code})});
+  if (r.ok) toast('Deleted ' + code); else toast(r.error || 'Failed', true);
+  loadCoupons();
+});
 refresh();
+loadCoupons();
 setInterval(refresh, 30000);
 </script></body></html>`);
 });

@@ -109,8 +109,13 @@
     <p class="pricing-sub">Pay once, use forever. Your key never expires.</p>
     <div class="price-card">
       <h3>ShadowTools Pro</h3>
-      <div class="price">₹300</div>
-      <p class="price-caption">≈ $3.50 · one-time, no subscription</p>
+      <div class="price"><span id="priceBase">₹300</span><span id="priceDisc" class="price-disc" style="display:none"></span></div>
+      <p class="price-caption" id="priceCaption">≈ $3.50 · one-time, no subscription</p>
+      <div class="coupon-box">
+        <input type="text" id="coupon-input" placeholder="Have a coupon? Enter code" spellcheck="false" autocomplete="off">
+        <button type="button" id="coupon-btn" class="btn btn-ghost">Apply</button>
+      </div>
+      <p class="coupon-msg" id="coupon-msg"></p>
       <ul>
         <li><span class="check">✓</span> Lifetime license key</li>
         <li><span class="check">✓</span> All tools unlocked (fixer, adder, bypasses)</li>
@@ -122,7 +127,7 @@
         <div class="pay-step">
           <div class="pay-step-num">1</div>
           <div class="pay-step-body">
-            <b>Pay ₹300</b>
+            <b id="payStep1">Pay ₹300</b>
             <span>Choose any method below and send the amount.</span>
           </div>
         </div>
@@ -155,7 +160,7 @@
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
             </button>
           </div>
-          <span class="pay-method-note">Open any UPI app (GPay, PhonePe, Paytm), pay ₹300 to the ID above.</span>
+          <span class="pay-method-note" id="upiNote">Open any UPI app (GPay, PhonePe, Paytm), pay ₹300 to the ID above.</span>
         </div>
         <div class="pay-method">
           <div class="pay-method-head">
@@ -214,6 +219,58 @@
       }
     }
     loadDownloadCount();
+
+    var BASE_PRICE = 300;
+    var couponBtn = document.getElementById('coupon-btn');
+    var couponInput = document.getElementById('coupon-input');
+    var couponMsg = document.getElementById('coupon-msg');
+    var priceBase = document.getElementById('priceBase');
+    var priceDisc = document.getElementById('priceDisc');
+    var priceCaption = document.getElementById('priceCaption');
+    var payStep1 = document.getElementById('payStep1');
+    var upiNote = document.getElementById('upiNote');
+
+    function setPrice(base, discount) {
+      if (discount > 0) {
+        priceBase.innerHTML = '<s>₹' + base.toLocaleString('en-IN') + '</s>';
+        priceDisc.style.display = 'inline';
+        priceDisc.textContent = ' ₹' + (base - discount).toLocaleString('en-IN');
+        payStep1.textContent = 'Pay ₹' + (base - discount).toLocaleString('en-IN');
+        if (upiNote) upiNote.textContent = 'Open any UPI app (GPay, PhonePe, Paytm), pay ₹' + (base - discount).toLocaleString('en-IN') + ' to the ID above.';
+      } else {
+        priceBase.textContent = '₹' + base.toLocaleString('en-IN');
+        priceDisc.style.display = 'none';
+        payStep1.textContent = 'Pay ₹' + base.toLocaleString('en-IN');
+        if (upiNote) upiNote.textContent = 'Open any UPI app (GPay, PhonePe, Paytm), pay ₹' + base.toLocaleString('en-IN') + ' to the ID above.';
+      }
+    }
+
+    function applyCoupon() {
+      var code = couponInput.value.trim().toUpperCase();
+      if (!code) { couponMsg.textContent = 'Enter a coupon code.'; couponMsg.className = 'coupon-msg err'; return; }
+      couponBtn.disabled = true;
+      fetch('/api/coupon/validate?code=' + encodeURIComponent(code))
+        .then(function (r) { return r.json(); })
+        .then(function (d) {
+          couponBtn.disabled = false;
+          if (d.ok) {
+            couponMsg.textContent = 'Coupon applied — ' + (d.percent ? d.percent + '% off' : '₹' + d.amount + ' off') + '!';
+            couponMsg.className = 'coupon-msg ok';
+            setPrice(d.base, d.discount);
+          } else {
+            couponMsg.textContent = d.error || 'Invalid coupon.';
+            couponMsg.className = 'coupon-msg err';
+            setPrice(BASE_PRICE, 0);
+          }
+        })
+        .catch(function () {
+          couponBtn.disabled = false;
+          couponMsg.textContent = 'Could not check coupon. Try again.';
+          couponMsg.className = 'coupon-msg err';
+        });
+    }
+    if (couponBtn) couponBtn.addEventListener('click', applyCoupon);
+    if (couponInput) couponInput.addEventListener('keydown', function (e) { if (e.key === 'Enter') applyCoupon(); });
 
     var copyBtn = document.getElementById('copy-upi');
     if (copyBtn) {

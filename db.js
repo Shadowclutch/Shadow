@@ -57,6 +57,13 @@ const SCHEMA = `
     expires_at INTEGER NOT NULL DEFAULT 0,
     created_at INTEGER NOT NULL
   );
+  CREATE TABLE IF NOT EXISTS coupons (
+    code TEXT PRIMARY KEY,
+    percent INTEGER NOT NULL DEFAULT 0,
+    amount INTEGER NOT NULL DEFAULT 0,
+    expires_at INTEGER NOT NULL DEFAULT 0,
+    created_at INTEGER NOT NULL
+  );
 `;
 
 // Convert SQLite `?` placeholders to Postgres `$1, $2, ...`.
@@ -293,6 +300,29 @@ async function revokeLicenseKey(key) {
   await A.run(`UPDATE license_keys SET status = 'revoked' WHERE key = ?`, [key]);
 }
 
+// ── Coupons (discount codes for deals) ──────────────────────
+async function createCoupon({ code, percent = 0, amount = 0, expires_at = 0 }) {
+  const now = Math.floor(Date.now() / 1000);
+  await A.run('INSERT INTO coupons (code, percent, amount, expires_at, created_at) VALUES (?, ?, ?, ?, ?)',
+    [code, percent, amount, expires_at || 0, now]);
+  return A.get('SELECT * FROM coupons WHERE code = ?', [code]);
+}
+
+async function listCoupons() {
+  const rows = await A.all('SELECT * FROM coupons ORDER BY created_at DESC');
+  return (rows || []).map((r) => ({
+    code: r.code, percent: r.percent, amount: r.amount, expires_at: r.expires_at, created_at: r.created_at,
+  }));
+}
+
+async function getCoupon(code) {
+  return A.get('SELECT * FROM coupons WHERE code = ?', [code]);
+}
+
+async function deleteCoupon(code) {
+  await A.run('DELETE FROM coupons WHERE code = ?', [code]);
+}
+
 // ── Backup snapshot (GitHub-repo persistence) ───────────────
 async function countRows() {
   const toNum = (r) => r && typeof r.n === 'bigint' ? Number(r.n) : (Number(r.n) || 0);
@@ -422,6 +452,10 @@ module.exports = {
   licenseStats,
   listLicenseKeys,
   revokeLicenseKey,
+  createCoupon,
+  listCoupons,
+  getCoupon,
+  deleteCoupon,
   countRows,
   diagnose,
   exportSnapshot,
