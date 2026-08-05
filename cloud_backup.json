@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785942238,
+  "exported_at": 1785942446,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -316,6 +316,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1500104974045282556/232948393dea613e310de7c4468edef9.png",
       "provider": "discord",
       "created_at": 1785940515
+    },
+    {
+      "steamid": "930126177417461770",
+      "name": "$ Boi",
+      "avatar": "https://cdn.discordapp.com/avatars/930126177417461770/84417420790fa1881758f378be1cf9cf.png",
+      "provider": "discord",
+      "created_at": 1785942434
     }
   ],
   "sessions": [],
@@ -589,6 +596,12 @@
       "steamid": "1500104974045282556",
       "created_at": 1785940517,
       "expires_at": 1817476517
+    },
+    {
+      "token": "dadf7da99bff7b00816297f6a108591a765e5ff327c1d9c495a114e71b95da70",
+      "steamid": "930126177417461770",
+      "created_at": 1785942435,
+      "expires_at": 1817478435
     }
   ],
   "library": [
@@ -2571,6 +2584,18 @@
       "appid": 4055790,
       "name": "House Party - Nocturnal Temptations Expansion Pack",
       "added_at": 1785942153
+    },
+    {
+      "steamid": "930126177417461770",
+      "appid": 271590,
+      "name": "",
+      "added_at": 1785942442
+    },
+    {
+      "steamid": "930126177417461770",
+      "appid": 4000,
+      "name": "",
+      "added_at": 1785942444
     }
   ],
   "downloads": [
