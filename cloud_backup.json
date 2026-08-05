@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785950546,
+  "exported_at": 1785951275,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -2670,6 +2670,12 @@
       "appid": 3240220,
       "name": "Grand Theft Auto V Enhanced",
       "added_at": 1785950545
+    },
+    {
+      "steamid": "1487668000478855188",
+      "appid": 271590,
+      "name": "Grand Theft Auto V Legacy",
+      "added_at": 1785951272
     }
   ],
   "downloads": [
@@ -2812,6 +2818,13 @@
       "ip": "49.43.153.166",
       "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
       "created_at": 1785950088
+    },
+    {
+      "id": "5f014d94799028ab7e9040a8",
+      "source": "site",
+      "ip": "110.226.194.200",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+      "created_at": 1785951173
     }
   ],
   "license_keys": [
