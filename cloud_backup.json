@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785944029,
+  "exported_at": 1785944991,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -2767,17 +2767,6 @@
       "expires_at": 0
     },
     {
-      "key": "TRIAL-JBHJ-97NX-9N35-5BVB",
-      "email": "",
-      "session_id": "",
-      "status": "active",
-      "machine_id": "verify-live-test",
-      "activated_at": 1785941974,
-      "created_at": 1785941973,
-      "trial": 1,
-      "expires_at": 1785942573
-    },
-    {
       "key": "TRIAL-WSN5-5HPX-4T7Z-GD9B",
       "email": "",
       "session_id": "",
@@ -2798,6 +2787,28 @@
       "created_at": 1785944026,
       "trial": 1,
       "expires_at": 1785944146
+    },
+    {
+      "key": "TRIAL-BCLD-AAZ7-GWSQ-TZ6S",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-6aeb88dbbd6affc0e60efe87",
+      "activated_at": 1785944202,
+      "created_at": 1785944202,
+      "trial": 1,
+      "expires_at": 1785944322
+    },
+    {
+      "key": "TRIAL-JBHJ-97NX-9N35-5BVB",
+      "email": "",
+      "session_id": "",
+      "status": "revoked",
+      "machine_id": "verify-live-test",
+      "activated_at": 1785941974,
+      "created_at": 1785941973,
+      "trial": 1,
+      "expires_at": 1785942573
     }
   ]
 }
