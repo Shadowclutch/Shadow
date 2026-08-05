@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785970342,
+  "exported_at": 1785971164,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -393,6 +393,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/862096420394893312/8b72c2252532483002906689e4a1000c.png",
       "provider": "discord",
       "created_at": 1785970335
+    },
+    {
+      "steamid": "1533488754176557219",
+      "name": "Rzex-Edits",
+      "avatar": "https://cdn.discordapp.com/avatars/1533488754176557219/64cc313599ad26c538d6e4b88f0e2691.png",
+      "provider": "discord",
+      "created_at": 1785971156
     }
   ],
   "sessions": [
@@ -733,6 +740,12 @@
       "steamid": "862096420394893312",
       "created_at": 1785970336,
       "expires_at": 1817506336
+    },
+    {
+      "token": "2f315b60a58cd7ef6900e5d7298e427e8bc99653ba9dc749af7f0bf005df3de6",
+      "steamid": "1533488754176557219",
+      "created_at": 1785971158,
+      "expires_at": 1817507158
     }
   ],
   "library": [
