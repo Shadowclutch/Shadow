@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785959493,
+  "exported_at": 1785959546,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -3191,6 +3191,12 @@
       "appid": 4224910,
       "name": "Ready or Not: Boiling Point",
       "added_at": 1785959491
+    },
+    {
+      "steamid": "721026721905770578",
+      "appid": 3174120,
+      "name": "Ready or Not: Dark Waters",
+      "added_at": 1785959544
     }
   ],
   "downloads": [
