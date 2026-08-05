@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785948214,
+  "exported_at": 1785948400,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -2652,6 +2652,18 @@
       "appid": 1817070,
       "name": "Marvel’s Spider-Man Remastered",
       "added_at": 1785948212
+    },
+    {
+      "steamid": "1341837918955901071",
+      "appid": 271590,
+      "name": "Grand Theft Auto V Legacy",
+      "added_at": 1785948396
+    },
+    {
+      "steamid": "1341837918955901071",
+      "appid": 3240220,
+      "name": "Grand Theft Auto V Enhanced",
+      "added_at": 1785948397
     }
   ],
   "downloads": [
