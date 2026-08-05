@@ -923,7 +923,7 @@ app.post('/api/license/admin/create', async (req, res) => {
     const count = Math.min(Math.max(parseInt((req.body && req.body.count) || '1', 10) || 1, 1), 100);
     const email = String((req.body && req.body.email) || '').slice(0, 200);
     const trial = !!(req.body && req.body.trial);
-    const ttlMin = Math.min(Math.max(parseInt((req.body && req.body.ttl_minutes) || '10', 10) || 10, 1), 10080);
+    const ttlMin = Math.min(Math.max(parseInt((req.body && req.body.ttl_minutes) || '2', 10) || 2, 1), 10080);
     const expiresAt = trial ? Math.floor(Date.now() / 1000) + ttlMin * 60 : 0;
     const keys = [];
     for (let i = 0; i < count; i++) {
@@ -1070,8 +1070,11 @@ app.post('/api/license/trial', rateLimit(20, 60000), async (req, res) => {
     if (live) {
       return res.json({ ok: true, key: live.key, trial: 1, expires_at: live.expires_at });
     }
+    if ((rows || []).length > 0) {
+      return res.json({ ok: false, error: 'Free trial already used on this PC. Purchase a license key to continue.' });
+    }
     const key = generateTrialKey();
-    const ttlMin = 10;
+    const ttlMin = 2;
     const expiresAt = Math.floor(Date.now() / 1000) + ttlMin * 60;
     await db.createLicenseKey({ key, trial: true, expires_at: expiresAt });
     await db.activateLicenseKey(key, machineId);
@@ -1214,7 +1217,7 @@ app.get('/admin', (req, res) => {
     <input type="number" id="count" value="1" min="1" max="100" style="width:70px" />
     <input type="text" id="email" placeholder="Buyer email (optional)" style="width:240px" />
     <label><input type="checkbox" id="trial" /> Trial</label>
-    <input type="number" id="ttl" value="10" min="1" max="10080" style="width:70px" title="Trial minutes" />
+    <input type="number" id="ttl" value="2" min="1" max="10080" style="width:70px" title="Trial minutes" />
     <button id="genBtn">Mint key(s)</button>
   </div>
 </div>
