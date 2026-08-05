@@ -57,14 +57,6 @@
     </div>
   </section>
 
-  <!-- ══ AD SLOT 1 (landing) ══ -->
-  <section class="ad-section">
-    <div class="ad-slot" data-ad-slot="leaderboard-top">
-      <!-- PASTE YOUR ADSENSE CODE HERE (e.g. <ins class="adsbygoogle" data-ad-client="ca-pub-XXXX" data-ad-slot="YYYY"></ins>) -->
-      <span class="ad-placeholder">Ad space · paste your AdSense code here</span>
-    </div>
-  </section>
-
   <!-- ══ FEATURES ══ -->
   <section class="features" id="features">
     <h3 class="section-title">Everything you need</h3>
@@ -92,17 +84,10 @@
     </div>
   </section>
 
-  <!-- ══ AD SLOT 2 ══ -->
-  <section class="ad-section">
-    <div class="ad-slot" data-ad-slot="leaderboard-mid">
-      <span class="ad-placeholder">Ad space · paste your AdSense code here</span>
-    </div>
-  </section>
-
   <!-- ══ PRICING ══ -->
   <section class="pricing" id="pricing">
     <h3 class="section-title">One-time payment, lifetime license</h3>
-    <p class="pricing-sub">Pay from anywhere — cards, PayPal, Apple Pay &amp; Google Pay accepted.</p>
+    <p class="pricing-sub">One-time payment — your key never expires.</p>
     <div class="price-card">
       <h4>ShadowTools Pro</h4>
       <div class="price" id="priceDisplay">$4.99</div>
@@ -112,15 +97,26 @@
         <li>✓ Cloud library sync on unlimited PCs</li>
         <li>✓ Free updates</li>
       </ul>
-      <button class="btn btn-primary btn-lg btn-block" id="buyBtn">Buy license now</button>
-      <p class="price-note">You'll receive your license key on the next page. Secure checkout via Stripe.</p>
-    </div>
-  </section>
-
-  <!-- ══ AD SLOT 3 ══ -->
-  <section class="ad-section">
-    <div class="ad-slot" data-ad-slot="leaderboard-bottom">
-      <span class="ad-placeholder">Ad space · paste your AdSense code here</span>
+      <h5 class="pay-title">How to pay</h5>
+      <div class="pay-methods">
+        <div class="pay-method">
+          <b>UPI</b>
+          <code>YOUR_UPI_ID@upi</code>
+          <span>India</span>
+        </div>
+        <div class="pay-method">
+          <b>Binance</b>
+          <code>YOUR_BINANCE_WALLET_ID</code>
+          <span>USDT / crypto</span>
+        </div>
+        <div class="pay-method">
+          <b>PayPal</b>
+          <code>your@email.com</code>
+          <span>Cards &amp; global</span>
+        </div>
+      </div>
+      <p class="pay-note">Pay with any method above, then message me your payment screenshot + email on <b>YOUR_CONTACT</b> (WhatsApp / Telegram / Discord). I'll send your license key right away.</p>
+      <p class="price-note">Payment by the seller manually — no automated checkout.</p>
     </div>
   </section>
 
@@ -158,31 +154,6 @@
       }
     }
     loadDownloadCount();
-
-    // ── Buy button → Stripe checkout ──────────────────────
-    const buyBtn = document.getElementById('buyBtn');
-    if (buyBtn) {
-      buyBtn.addEventListener('click', async () => {
-        buyBtn.disabled = true;
-        buyBtn.textContent = 'Opening secure checkout...';
-        try {
-          const r = await fetch('/api/checkout', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({}),
-          });
-          const d = await r.json();
-          if (d && d.url) {
-            window.location.href = d.url;
-            return;
-          }
-          throw new Error(d.error || 'checkout failed');
-        } catch (e) {
-          buyBtn.textContent = 'Checkout unavailable — try again';
-          buyBtn.disabled = false;
-        }
-      });
-    }
   </script>
 </body>
 </html>

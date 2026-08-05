@@ -398,13 +398,6 @@ body.landing { padding-bottom: 0; background: #0a0f1e; }
   box-shadow: 0 24px 70px rgba(79,140,255,.35); border: 1px solid #26304d;
 }
 
-.ad-section { max-width: 1100px; margin: 24px auto; padding: 0 28px; }
-.ad-slot {
-  min-height: 90px; border: 1px dashed #2c3857; border-radius: 12px;
-  display: flex; align-items: center; justify-content: center;
-  background: #10162b; color: #3d4a70; font-size: 13px;
-}
-
 .features { max-width: 1100px; margin: 40px auto; padding: 0 28px; }
 .section-title { text-align: center; font-size: 28px; margin: 0 0 30px; }
 .feature-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(230px,1fr)); gap: 18px; }
@@ -426,6 +419,19 @@ body.landing { padding-bottom: 0; background: #0a0f1e; }
 .price { font-size: 44px; font-weight: 800; margin: 14px 0; }
 .price ul { list-style: none; padding: 0; margin: 0 0 22px; text-align: left; }
 .price ul li { padding: 7px 0; color: var(--text); font-size: 14px; }
+.pay-title { margin: 6px 0 12px; font-size: 14px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+.pay-methods { display: grid; gap: 10px; margin-bottom: 14px; }
+.pay-method {
+  background: #0a0f1e; border: 1px solid var(--border); border-radius: 10px;
+  padding: 12px 14px; text-align: left; font-size: 13px;
+}
+.pay-method b { display: block; color: var(--accent); margin-bottom: 2px; }
+.pay-method code {
+  display: block; font-family: Consolas,monospace; color: var(--text);
+  word-break: break-all; margin-bottom: 2px;
+}
+.pay-method span { color: var(--muted); font-size: 12px; }
+.pay-note { font-size: 13px; color: var(--text); line-height: 1.5; }
 .price-note { font-size: 12px; color: var(--muted); margin-top: 14px; }
 
 .landing-footer { margin-top: 50px; border-top: 1px solid var(--border); background: #0d1224; }
