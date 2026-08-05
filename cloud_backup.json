@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785954924,
+  "exported_at": 1785955160,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -351,6 +351,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1502230806725398548/a4ccef922b7ddda6a94225ad6d34afb5.png",
       "provider": "discord",
       "created_at": 1785954793
+    },
+    {
+      "steamid": "238658886096257025",
+      "name": "Daimondust",
+      "avatar": "https://cdn.discordapp.com/avatars/238658886096257025/46d2e4433e8e3b1cb516099326c1c309.png",
+      "provider": "discord",
+      "created_at": 1785955150
     }
   ],
   "sessions": [
@@ -655,6 +662,12 @@
       "steamid": "1510802203831697478",
       "created_at": 1785952423,
       "expires_at": 1817488423
+    },
+    {
+      "token": "943084c3cea99cac0372a672df2483b4efa38a2fd5a8ac3438ae96364fdf2278",
+      "steamid": "238658886096257025",
+      "created_at": 1785955152,
+      "expires_at": 1817491152
     }
   ],
   "library": [
@@ -3311,6 +3324,20 @@
       "ip": "105.98.114.154",
       "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
       "created_at": 1785954808
+    },
+    {
+      "id": "41a0f13ae2abcefca993f4ec",
+      "source": "site",
+      "ip": "152.58.130.169",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+      "created_at": 1785955024
+    },
+    {
+      "id": "2ab3c832b277c262f248fe9a",
+      "source": "site",
+      "ip": "152.58.153.198",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+      "created_at": 1785955159
     }
   ],
   "license_keys": [
@@ -3452,8 +3479,19 @@
       "session_id": "",
       "status": "active",
       "machine_id": "hw-577297f792b09816c795c0e0",
-      "activated_at": 1785954920,
+      "activated_at": 1785955092,
       "created_at": 1785931727,
+      "trial": 0,
+      "expires_at": 0
+    },
+    {
+      "key": "SHADOW-4HP8-6P93-2CD8-WXMA",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "sigtest-exe-1",
+      "activated_at": 1785955126,
+      "created_at": 1785955123,
       "trial": 0,
       "expires_at": 0
     }
