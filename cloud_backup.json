@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785921717,
+  "exported_at": 1785921908,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -2364,6 +2364,12 @@
       "appid": 3240220,
       "name": "Grand Theft Auto V Enhanced",
       "added_at": 1785921169
+    },
+    {
+      "steamid": "1400096002836402319",
+      "appid": 840820,
+      "name": "Ready Or Not [Archived]",
+      "added_at": 1785921906
     }
   ]
 }
