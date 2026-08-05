@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785956095,
+  "exported_at": 1785956148,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -3572,17 +3572,6 @@
       "expires_at": 0
     },
     {
-      "key": "SHADOW-3EXN-ECFP-9VWP-2FZJ",
-      "email": "",
-      "session_id": "",
-      "status": "unused",
-      "machine_id": "",
-      "activated_at": 0,
-      "created_at": 1785955667,
-      "trial": 0,
-      "expires_at": 0
-    },
-    {
       "key": "SHADOW-GAAQ-Q9MY-NBV4-34ZW",
       "email": "",
       "session_id": "",
@@ -3623,6 +3612,17 @@
       "machine_id": "hw-c584bc44429537d5a3499ea6",
       "activated_at": 1785956092,
       "created_at": 1785955669,
+      "trial": 0,
+      "expires_at": 0
+    },
+    {
+      "key": "SHADOW-3EXN-ECFP-9VWP-2FZJ",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-ec96309c479bee38af913258",
+      "activated_at": 1785956099,
+      "created_at": 1785955667,
       "trial": 0,
       "expires_at": 0
     }
