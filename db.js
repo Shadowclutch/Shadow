@@ -51,8 +51,10 @@ const SCHEMA = `
     email TEXT NOT NULL DEFAULT '',
     session_id TEXT NOT NULL DEFAULT '',
     status TEXT NOT NULL DEFAULT 'unused',
+    trial INTEGER NOT NULL DEFAULT 0,
     machine_id TEXT NOT NULL DEFAULT '',
     activated_at INTEGER NOT NULL DEFAULT 0,
+    expires_at INTEGER NOT NULL DEFAULT 0,
     created_at INTEGER NOT NULL
   );
 `;
@@ -70,6 +72,8 @@ function createSqlite() {
   db.exec(SCHEMA);
   // Backwards-compatible migration for existing databases.
   try { db.exec(`ALTER TABLE users ADD COLUMN provider TEXT NOT NULL DEFAULT 'steam'`); } catch {}
+  try { db.exec(`ALTER TABLE license_keys ADD COLUMN expires_at INTEGER NOT NULL DEFAULT 0`); } catch {}
+  try { db.exec(`ALTER TABLE license_keys ADD COLUMN trial INTEGER NOT NULL DEFAULT 0`); } catch {}
   return {
     backend: 'sqlite',
     ready: Promise.resolve(),
@@ -110,6 +114,8 @@ function createPg(connStr) {
       connectionTimeoutMillis: 15000,
     });
     await state.pool.query(SCHEMA);
+    await state.pool.query(`ALTER TABLE license_keys ADD COLUMN IF NOT EXISTS trial INTEGER NOT NULL DEFAULT 0`).catch(() => {});
+    await state.pool.query(`ALTER TABLE license_keys ADD COLUMN IF NOT EXISTS expires_at INTEGER NOT NULL DEFAULT 0`).catch(() => {});
     console.log(`[db] Postgres backend ready (${host}:${c.port || 5432}/${c.database})`);
   })().catch((e) => {
     console.error(`[db] Postgres init failed: ${e.message}`);
@@ -228,11 +234,19 @@ async function recentDownloads(limit = 20) {
 }
 
 // ── License keys ─────────────────────────────────────────────
-async function createLicenseKey({ key, email = '', session_id = '' }) {
+async function createLicenseKey({ key, email = '', session_id = '', trial = 0, expires_at = 0 }) {
   const now = Math.floor(Date.now() / 1000);
-  await A.run('INSERT INTO license_keys (key, email, session_id, status, created_at) VALUES (?, ?, ?, ?, ?)',
-    [key, email, session_id, 'unused', now]);
+  await A.run('INSERT INTO license_keys (key, email, session_id, status, trial, expires_at, created_at) VALUES (?, ?, ?, ?, ?, ?, ?)',
+    [key, email, session_id, 'unused', trial ? 1 : 0, expires_at || 0, now]);
   return A.get('SELECT * FROM license_keys WHERE key = ?', [key]);
+}
+
+function isLicenseExpired(row) {
+  if (!row) return false;
+  if (row.expires_at && Number(row.expires_at) > 0) {
+    return Math.floor(Date.now() / 1000) > Number(row.expires_at);
+  }
+  return false;
 }
 
 async function getLicenseKey(key) {
@@ -256,7 +270,8 @@ async function licenseStats() {
   const total = toNum(await A.get('SELECT COUNT(*) AS n FROM license_keys'));
   const sold = toNum(await A.get("SELECT COUNT(*) AS n FROM license_keys WHERE session_id != ''"));
   const active = toNum(await A.get("SELECT COUNT(*) AS n FROM license_keys WHERE status = 'active'"));
-  return { total, sold, active };
+  const trials = toNum(await A.get('SELECT COUNT(*) AS n FROM license_keys WHERE trial = 1'));
+  return { total, sold, active, trials };
 }
 
 async function listLicenseKeys() {
@@ -266,8 +281,10 @@ async function listLicenseKeys() {
     email: r.email,
     session_id: r.session_id,
     status: r.status,
+    trial: r.trial ? 1 : 0,
     machine_id: r.machine_id,
     activated_at: r.activated_at,
+    expires_at: r.expires_at,
     created_at: r.created_at,
   }));
 }
@@ -396,10 +413,12 @@ module.exports = {
   recordDownload,
   downloadStats,
   recentDownloads,
+  all: A.all.bind(A),
   createLicenseKey,
   getLicenseKey,
   getLicenseBySession,
   activateLicenseKey,
+  isLicenseExpired,
   licenseStats,
   listLicenseKeys,
   revokeLicenseKey,

@@ -914,22 +914,26 @@ function requireAdmin(req, res) {
   return true;
 }
 
-// ── Admin: manual key generation (for UPI / Binance / manual sales) ──
-// POST /api/license/admin/create  { count?, email? }  → mints new key(s)
+// ── Admin: manual key generation (for UPI / Binance / manual sales + trials) ──
+// POST /api/license/admin/create  { count?, email?, trial?, ttl_minutes? }  → mints new key(s)
+//   trial=true  → trial key that expires after ttl_minutes (default 10)
 app.post('/api/license/admin/create', async (req, res) => {
   if (!requireAdmin(req, res)) return;
   try {
     const count = Math.min(Math.max(parseInt((req.body && req.body.count) || '1', 10) || 1, 1), 100);
     const email = String((req.body && req.body.email) || '').slice(0, 200);
+    const trial = !!(req.body && req.body.trial);
+    const ttlMin = Math.min(Math.max(parseInt((req.body && req.body.ttl_minutes) || '10', 10) || 10, 1), 10080);
+    const expiresAt = trial ? Math.floor(Date.now() / 1000) + ttlMin * 60 : 0;
     const keys = [];
     for (let i = 0; i < count; i++) {
-      const key = generateLicenseKey();
-      await db.createLicenseKey({ key, email });
+      const key = trial ? generateTrialKey() : generateLicenseKey();
+      await db.createLicenseKey({ key, email, trial, expires_at: expiresAt });
       keys.push(key);
     }
     backup.schedulePush();
-    console.log(`[ShadowTools Web] Admin minted ${count} license key(s)`);
-    res.json({ ok: true, keys });
+    console.log(`[ShadowTools Web] Admin minted ${count} ${trial ? `trial key(s) (${ttlMin} min)` : 'license key(s)'}`);
+    res.json({ ok: true, trial, ttl_minutes: ttlMin, expires_at: expiresAt, keys });
   } catch (e) {
     res.status(500).json({ ok: false, error: e.message });
   }
@@ -968,6 +972,16 @@ function generateLicenseKey() {
     if (i === 3 || i === 7 || i === 11) s += '-';
   }
   return 'SHADOW-' + s;
+}
+
+function generateTrialKey() {
+  const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+  let s = '';
+  for (let i = 0; i < 16; i++) {
+    s += chars[Math.floor(Math.random() * chars.length)];
+    if (i === 3 || i === 7 || i === 11) s += '-';
+  }
+  return 'TRIAL-' + s;
 }
 
 async function stripeRequest(path, opts = {}) {
@@ -1046,6 +1060,29 @@ app.post('/api/stripe/webhook', async (req, res) => {
 });
 
 // ── License endpoints (used by the desktop app) ─────────────
+// POST /api/license/trial  { machine_id }  → one free trial key per machine (10 min)
+app.post('/api/license/trial', rateLimit(20, 60000), async (req, res) => {
+  try {
+    const machineId = String((req.body && req.body.machine_id) || '').slice(0, 128);
+    if (!machineId) return res.status(400).json({ ok: false, error: 'Missing machine id' });
+    const rows = await db.all("SELECT * FROM license_keys WHERE machine_id = ? AND trial = 1", [machineId]);
+    const live = (rows || []).find((r) => !db.isLicenseExpired(r));
+    if (live) {
+      return res.json({ ok: true, key: live.key, trial: 1, expires_at: live.expires_at });
+    }
+    const key = generateTrialKey();
+    const ttlMin = 10;
+    const expiresAt = Math.floor(Date.now() / 1000) + ttlMin * 60;
+    await db.createLicenseKey({ key, trial: true, expires_at: expiresAt });
+    await db.activateLicenseKey(key, machineId);
+    backup.schedulePush();
+    console.log(`[ShadowTools Web] Free trial started for machine ${machineId} (${ttlMin} min)`);
+    res.json({ ok: true, key, trial: 1, expires_at: expiresAt });
+  } catch (e) {
+    res.status(500).json({ ok: false, error: e.message });
+  }
+});
+
 app.post('/api/license/activate', rateLimit(20, 60000), async (req, res) => {
   try {
     const key = String((req.body && req.body.key) || '').trim().toUpperCase();
@@ -1055,12 +1092,13 @@ app.post('/api/license/activate', rateLimit(20, 60000), async (req, res) => {
     const row = await db.getLicenseKey(key);
     if (!row) return res.json({ ok: false, error: 'Invalid license key' });
     if (row.status === 'revoked') return res.json({ ok: false, error: 'License key revoked' });
+    if (db.isLicenseExpired(row)) return res.json({ ok: false, error: 'License key has expired' });
     if (row.status === 'active' && row.machine_id && row.machine_id !== machineId) {
       return res.json({ ok: false, error: 'License key is already activated on another PC' });
     }
     await db.activateLicenseKey(key, machineId);
     backup.schedulePush();
-    res.json({ ok: true, key, email: row.email });
+    res.json({ ok: true, key, email: row.email, trial: row.trial ? 1 : 0, expires_at: row.expires_at });
   } catch (e) {
     res.status(500).json({ ok: false, error: e.message });
   }
@@ -1074,10 +1112,11 @@ app.post('/api/license/validate', rateLimit(60, 60000), async (req, res) => {
     const row = await db.getLicenseKey(key);
     if (!row) return res.json({ ok: false, error: 'Invalid license key' });
     if (row.status === 'revoked') return res.json({ ok: false, error: 'License key revoked' });
+    if (db.isLicenseExpired(row)) return res.json({ ok: false, error: 'License key has expired' });
     if (row.status === 'active' && machineId && row.machine_id && row.machine_id !== machineId) {
       return res.json({ ok: false, error: 'License key is activated on another PC' });
     }
-    res.json({ ok: true, key, status: row.status, email: row.email });
+    res.json({ ok: true, key, status: row.status, email: row.email, trial: row.trial ? 1 : 0, expires_at: row.expires_at });
   } catch (e) {
     res.status(500).json({ ok: false, error: e.message });
   }
@@ -1154,6 +1193,7 @@ app.get('/admin', (req, res) => {
   code{font-family:Consolas,monospace;color:#ffd479;letter-spacing:0.5px}
   .badge{padding:2px 8px;border-radius:20px;font-size:11px}
   .b-unused{background:#22304f;color:#8fb3ff}.b-active{background:#1d3d26;color:#7ee08a}.b-revoked{background:#4a1c26;color:#ff8a8a}
+  .b-trial{background:#3a2f16;color:#ffd479}
   .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
   .toast{position:fixed;bottom:20px;right:20px;background:#1d3d26;border:1px solid #2e5a3a;padding:10px 16px;border-radius:8px;display:none}
   .stats{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:14px}
@@ -1173,12 +1213,14 @@ app.get('/admin', (req, res) => {
     <label>Generate keys</label>
     <input type="number" id="count" value="1" min="1" max="100" style="width:70px" />
     <input type="text" id="email" placeholder="Buyer email (optional)" style="width:240px" />
+    <label><input type="checkbox" id="trial" /> Trial</label>
+    <input type="number" id="ttl" value="10" min="1" max="10080" style="width:70px" title="Trial minutes" />
     <button id="genBtn">Mint key(s)</button>
   </div>
 </div>
 <div class="card">
   <h2>All license keys</h2>
-  <table><thead><tr><th>Key</th><th>Status</th><th>Email</th><th>Machine</th><th>Created</th><th></th></tr></thead>
+  <table><thead><tr><th>Key</th><th>Type</th><th>Status</th><th>Email</th><th>Machine</th><th>Expires</th><th>Created</th><th></th></tr></thead>
   <tbody id="rows"></tbody></table>
 </div>
 <div class="toast" id="toast"></div>
@@ -1198,9 +1240,11 @@ async function refresh(){
   const rows = list.keys.slice(0, 200);
   document.getElementById('rows').innerHTML = rows.map(k => \`<tr>
     <td><code>\${k.key}</code></td>
+    <td>\${k.trial ? '<span class="badge b-trial">TRIAL</span>' : 'FULL'}</td>
     <td><span class="badge b-\${k.status==='active'?'active':k.status==='revoked'?'revoked':'unused'}">\${k.status}</span></td>
     <td>\${k.email || '–'}</td>
     <td title="\${k.machine_id}">\${k.machine_id ? k.machine_id.slice(0,10) + '…' : '–'}</td>
+    <td>\${k.expires_at ? fmt(k.expires_at) : '–'}</td>
     <td>\${fmt(k.created_at)}</td>
     <td>\${k.status==='revoked' ? '' : '<button class="danger" data-revoke="\${k.key}">Revoke</button>'}</td>
   </tr>\`).join('');
@@ -1214,9 +1258,11 @@ async function revoke(key){ await api('/api/license/admin/revoke', {method:'POST
 document.getElementById('genBtn').onclick = async () => {
   const count = parseInt(document.getElementById('count').value || '1', 10);
   const email = document.getElementById('email').value.trim();
-  const r = await api('/api/license/admin/create', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({count, email})});
+  const trial = document.getElementById('trial').checked;
+  const ttl = parseInt(document.getElementById('ttl').value || '10', 10);
+  const r = await api('/api/license/admin/create', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({count, email, trial, ttl_minutes: ttl})});
   if(!r.ok){ toast(r.error || 'Failed'); return; }
-  toast('Minted ' + r.keys.length + ' key(s)');
+  toast((trial ? 'Minted ' + r.keys.length + ' trial key(s)' : 'Minted ' + r.keys.length + ' key(s)') + ' → ' + r.keys.join(', '));
   document.getElementById('email').value = '';
   refresh();
 };
