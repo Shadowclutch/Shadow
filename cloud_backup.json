@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785955783,
+  "exported_at": 1785956095,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -3378,6 +3378,20 @@
       "ip": "182.178.122.159",
       "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
       "created_at": 1785955247
+    },
+    {
+      "id": "8349e507789c73ee20869c48",
+      "source": "site",
+      "ip": "152.58.130.169",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+      "created_at": 1785955968
+    },
+    {
+      "id": "7bc94b2a4cac2f0340f134cc",
+      "source": "site",
+      "ip": "152.58.153.198",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+      "created_at": 1785955996
     }
   ],
   "license_keys": [
@@ -3569,17 +3583,6 @@
       "expires_at": 0
     },
     {
-      "key": "SHADOW-3WSA-4P89-JP52-JASW",
-      "email": "",
-      "session_id": "",
-      "status": "unused",
-      "machine_id": "",
-      "activated_at": 0,
-      "created_at": 1785955669,
-      "trial": 0,
-      "expires_at": 0
-    },
-    {
       "key": "SHADOW-GAAQ-Q9MY-NBV4-34ZW",
       "email": "",
       "session_id": "",
@@ -3609,6 +3612,17 @@
       "machine_id": "",
       "activated_at": 0,
       "created_at": 1785955671,
+      "trial": 0,
+      "expires_at": 0
+    },
+    {
+      "key": "SHADOW-3WSA-4P89-JP52-JASW",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-c584bc44429537d5a3499ea6",
+      "activated_at": 1785956092,
+      "created_at": 1785955669,
       "trial": 0,
       "expires_at": 0
     }
