@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785916053,
+  "exported_at": 1785916140,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -2162,6 +2162,12 @@
       "appid": 4100940,
       "name": "Poppy Playtime - Chapter 5",
       "added_at": 1785916051
+    },
+    {
+      "steamid": "1345121200619262073",
+      "appid": 431960,
+      "name": "Wallpaper Engine",
+      "added_at": 1785916139
     }
   ]
 }
