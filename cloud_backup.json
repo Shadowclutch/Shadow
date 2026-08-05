@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785908041,
+  "exported_at": 1785911668,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -197,6 +197,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/718000676009017344/7de332da96c87a04fdd24d60a99ce36e.png",
       "provider": "discord",
       "created_at": 1785907315
+    },
+    {
+      "steamid": "1508168615286014055",
+      "name": "TEST DUMMY AVX",
+      "avatar": "",
+      "provider": "discord",
+      "created_at": 1785911663
     }
   ],
   "sessions": [],
@@ -368,6 +375,12 @@
       "steamid": "718000676009017344",
       "created_at": 1785907316,
       "expires_at": 1817443316
+    },
+    {
+      "token": "2fc2cc70954597c5c840febd3bd8866365ef743f81ce320378712cbec8727e7e",
+      "steamid": "1508168615286014055",
+      "created_at": 1785911665,
+      "expires_at": 1817447665
     }
   ],
   "library": [
