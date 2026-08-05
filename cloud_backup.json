@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785946712,
+  "exported_at": 1785946783,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -2627,6 +2627,12 @@
       "appid": 42700,
       "name": "Call of Duty: Black Ops",
       "added_at": 1785946613
+    },
+    {
+      "steamid": "1104295230590689330",
+      "appid": 2909400,
+      "name": "FINAL FANTASY VII REBIRTH",
+      "added_at": 1785946780
     }
   ],
   "downloads": [
