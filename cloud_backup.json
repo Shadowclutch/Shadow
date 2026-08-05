@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785916519,
+  "exported_at": 1785916605,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -2229,6 +2229,12 @@
       "appid": 648800,
       "name": "Raft",
       "added_at": 1785916517
+    },
+    {
+      "steamid": "1345121200619262073",
+      "appid": 105600,
+      "name": "Terraria",
+      "added_at": 1785916603
     }
   ]
 }
