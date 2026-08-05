@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785916165,
+  "exported_at": 1785916195,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -2168,6 +2168,12 @@
       "appid": 431960,
       "name": "Wallpaper Engine",
       "added_at": 1785916139
+    },
+    {
+      "steamid": "1345121200619262073",
+      "appid": 413150,
+      "name": "Stardew Valley",
+      "added_at": 1785916194
     }
   ]
 }
