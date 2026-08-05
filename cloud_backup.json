@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785952860,
+  "exported_at": 1785954924,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -344,9 +344,23 @@
       "avatar": "https://cdn.discordapp.com/avatars/1487668000478855188/f1768a4587769379b481ab6452a47197.png",
       "provider": "discord",
       "created_at": 1785769226
+    },
+    {
+      "steamid": "1502230806725398548",
+      "name": "Sophia",
+      "avatar": "https://cdn.discordapp.com/avatars/1502230806725398548/a4ccef922b7ddda6a94225ad6d34afb5.png",
+      "provider": "discord",
+      "created_at": 1785954793
     }
   ],
-  "sessions": [],
+  "sessions": [
+    {
+      "token": "1dbb1b465d7c367cc77116b2f38641bd6514b6e2058fbb3657a47a31213e78b3",
+      "steamid": "1502230806725398548",
+      "created_at": 1785954794,
+      "expires_at": 1788546794
+    }
+  ],
   "agent_tokens": [
     {
       "token": "88d602cefcccb5b65316dc16ca16c90c53ba19dab8bae576fa4cfbfd98e31607",
@@ -3290,6 +3304,13 @@
       "ip": "152.58.153.198",
       "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.8972",
       "created_at": 1785952534
+    },
+    {
+      "id": "1bdfc7a10db9c3065dc05ab4",
+      "source": "site",
+      "ip": "105.98.114.154",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+      "created_at": 1785954808
     }
   ],
   "license_keys": [
@@ -3301,17 +3322,6 @@
       "machine_id": "",
       "activated_at": 0,
       "created_at": 1785930617,
-      "trial": 0,
-      "expires_at": 0
-    },
-    {
-      "key": "SHADOW-UWVR-XNP3-W37P-VM4W",
-      "email": "",
-      "session_id": "",
-      "status": "unused",
-      "machine_id": "",
-      "activated_at": 0,
-      "created_at": 1785931727,
       "trial": 0,
       "expires_at": 0
     },
@@ -3435,6 +3445,17 @@
       "created_at": 1785951991,
       "trial": 1,
       "expires_at": 1785952111
+    },
+    {
+      "key": "SHADOW-UWVR-XNP3-W37P-VM4W",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-577297f792b09816c795c0e0",
+      "activated_at": 1785954920,
+      "created_at": 1785931727,
+      "trial": 0,
+      "expires_at": 0
     }
   ]
 }
