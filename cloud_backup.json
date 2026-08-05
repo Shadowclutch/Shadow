@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785917300,
+  "exported_at": 1785917376,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -2266,6 +2266,12 @@
       "appid": 2835570,
       "name": "Buckshot Roulette",
       "added_at": 1785917298
+    },
+    {
+      "steamid": "1345121200619262073",
+      "appid": 620,
+      "name": "Portal 2",
+      "added_at": 1785917374
     }
   ]
 }
