@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785916605,
+  "exported_at": 1785916670,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -2235,6 +2235,12 @@
       "appid": 105600,
       "name": "Terraria",
       "added_at": 1785916603
+    },
+    {
+      "steamid": "1345121200619262073",
+      "appid": 4080220,
+      "name": "EA SPORTS FC™ 27",
+      "added_at": 1785916668
     }
   ]
 }
