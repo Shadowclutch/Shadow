@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785916195,
+  "exported_at": 1785916469,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -225,6 +225,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1067314353478574151/dd2b6f467e4d5196c340526d1ad099e7.png",
       "provider": "discord",
       "created_at": 1785913127
+    },
+    {
+      "steamid": "1534185129247899669",
+      "name": "tauji",
+      "avatar": "",
+      "provider": "discord",
+      "created_at": 1785916451
     }
   ],
   "sessions": [],
@@ -420,6 +427,12 @@
       "steamid": "1067314353478574151",
       "created_at": 1785913129,
       "expires_at": 1817449129
+    },
+    {
+      "token": "c1c9cdccc39a06d9d0fe5dc841e0f5ee5c433951eaaadefa5df3f01a91f3c1e4",
+      "steamid": "1534185129247899669",
+      "created_at": 1785916453,
+      "expires_at": 1817452453
     }
   ],
   "library": [
@@ -2174,6 +2187,36 @@
       "appid": 413150,
       "name": "Stardew Valley",
       "added_at": 1785916194
+    },
+    {
+      "steamid": "1534185129247899669",
+      "appid": 1262540,
+      "name": "Need for Speed™",
+      "added_at": 1785916459
+    },
+    {
+      "steamid": "1534185129247899669",
+      "appid": 1222680,
+      "name": "Need for Speed™ Heat",
+      "added_at": 1785916461
+    },
+    {
+      "steamid": "1534185129247899669",
+      "appid": 924670,
+      "name": "Need for Spirit: Drink & Drive Simulator",
+      "added_at": 1785916463
+    },
+    {
+      "steamid": "1534185129247899669",
+      "appid": 1015470,
+      "name": "Need for Spirit: Off-Road Edition",
+      "added_at": 1785916465
+    },
+    {
+      "steamid": "1534185129247899669",
+      "appid": 1846380,
+      "name": "Need for Speed™ Unbound",
+      "added_at": 1785916467
     }
   ]
 }
