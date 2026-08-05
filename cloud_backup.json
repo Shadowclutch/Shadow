@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785931453,
+  "exported_at": 1785931732,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -2454,6 +2454,15 @@
       "machine_id": "",
       "activated_at": 0,
       "created_at": 1785930617
+    },
+    {
+      "key": "SHADOW-UWVR-XNP3-W37P-VM4W",
+      "email": "",
+      "session_id": "",
+      "status": "unused",
+      "machine_id": "",
+      "activated_at": 0,
+      "created_at": 1785931727
     }
   ]
 }
