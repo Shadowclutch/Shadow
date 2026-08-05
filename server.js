@@ -1181,95 +1181,177 @@ load();
 app.get('/admin', (req, res) => {
   if (!requireAdmin(req, res)) return;
   res.send(`<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ShadowTools Admin</title>
+<title>ShadowTools · Admin</title>
+<link rel="icon" href="/favicon.png">
 <style>
-  body{font-family:'Segoe UI',system-ui,sans-serif;background:#0a0f1e;color:#e8ecf4;margin:0;padding:24px}
-  h1{font-size:22px;margin:0 0 4px} .sub{color:#6b7794;font-size:13px;margin:0 0 20px}
-  .card{background:#121a2f;border:1px solid #26304d;border-radius:14px;padding:20px;margin-bottom:20px;max-width:900px}
-  h2{font-size:15px;margin:0 0 14px;color:#ffd479}
-  input,select,button{background:#0a0f1e;border:1px solid #3b4a6e;color:#e8ecf4;border-radius:8px;padding:9px 12px;font-size:14px}
-  button{cursor:pointer;background:#1f3a6e;border-color:#2c4c8a}
-  button:hover{background:#274b8f} button.danger{background:#5a1d2b;border-color:#7e2a3e} button.danger:hover{background:#6e2335}
+  :root{--bg:#070b16;--panel:#101828;--panel2:#0b1322;--border:#1f2c45;--text:#e8ecf4;--muted:#8b98b5;--accent:#4f8cff;--green:#39d98a;--red:#ff6b7a;--amber:#ffd479;--mono:Consolas,'Cascadia Code',monospace}
+  *{box-sizing:border-box}
+  body{font-family:'Segoe UI',system-ui,sans-serif;background:radial-gradient(1200px 600px at 80% -10%,rgba(79,140,255,.10),transparent 60%),radial-gradient(900px 500px at 0% 0%,rgba(57,217,138,.07),transparent 55%),var(--bg);color:var(--text);margin:0;padding:0;min-height:100vh}
+  .wrap{max-width:1080px;margin:0 auto;padding:28px 20px 60px}
+  header{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:26px;flex-wrap:wrap}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand img{width:40px;height:40px;border-radius:10px}
+  .brand b{font-size:18px;display:block}
+  .brand span{font-size:12px;color:var(--muted)}
+  .hdr-badge{font-size:12px;color:var(--green);background:rgba(57,217,138,.1);border:1px solid rgba(57,217,138,.3);padding:5px 12px;border-radius:20px}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:20px}
+  .stat{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--border);border-radius:14px;padding:16px 18px}
+  .stat b{display:block;font-size:26px;letter-spacing:-.5px}
+  .stat span{font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+  .stat.s-total b{color:var(--accent)} .stat.s-active b{color:var(--green)} .stat.s-sold b{color:#e8ecf4}
+  .stat.s-trial b{color:var(--amber)} .stat.s-revoked b{color:var(--red)} .stat.s-dl b{color:var(--accent)}
+  .card{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--border);border-radius:16px;padding:22px;margin-bottom:20px}
+  .card h2{font-size:15px;margin:0 0 16px;color:var(--amber);font-weight:700}
+  .form{display:flex;gap:12px;flex-wrap:wrap;align-items:flex-end}
+  .field{display:grid;gap:5px}
+  .field label{font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+  input[type=number],input[type=text],input[type=search]{
+    background:var(--bg);border:1px solid var(--border);color:var(--text);border-radius:10px;padding:9px 12px;font-size:14px;outline:none}
+  input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(79,140,255,.15)}
+  .chk{display:flex;gap:8px;align-items:center;font-size:14px;cursor:pointer;padding:9px 0}
+  .chk input{accent-color:var(--accent);width:16px;height:16px}
+  .btn{background:linear-gradient(120deg,var(--accent),#3f7af0);border:none;color:#fff;border-radius:10px;padding:10px 18px;font-size:14px;font-weight:700;cursor:pointer;transition:opacity .15s,transform .1s}
+  .btn:hover{opacity:.9} .btn:active{transform:scale(.97)} .btn:disabled{opacity:.55;cursor:not-allowed}
+  .btn.green{background:linear-gradient(120deg,#2bbd74,var(--green));color:#04160d}
+  .btn.danger{background:linear-gradient(120deg,#b03a48,var(--red));color:#fff}
+  .btn.ghost{background:transparent;border:1px solid var(--border);color:var(--muted)}
+  .mint-out{margin-top:14px;display:none}
+  .mint-out .mk{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:9px 12px;margin-bottom:8px}
+  .mint-out code{font-family:var(--mono);color:var(--amber);letter-spacing:.5px;font-size:13px}
+  .mini-btn{background:transparent;border:1px solid var(--border);color:var(--muted);border-radius:8px;padding:4px 10px;font-size:12px;cursor:pointer}
+  .mini-btn:hover{color:var(--green);border-color:var(--green)}
+  .toolbar{display:flex;gap:10px;align-items:center;margin-bottom:14px;flex-wrap:wrap}
+  .toolbar input[type=search]{flex:1;min-width:200px}
   table{width:100%;border-collapse:collapse;font-size:13px}
-  th,td{text-align:left;padding:8px 10px;border-bottom:1px solid #1d2742}
-  th{color:#9aa7c4;font-weight:600}
-  code{font-family:Consolas,monospace;color:#ffd479;letter-spacing:0.5px}
-  .badge{padding:2px 8px;border-radius:20px;font-size:11px}
-  .b-unused{background:#22304f;color:#8fb3ff}.b-active{background:#1d3d26;color:#7ee08a}.b-revoked{background:#4a1c26;color:#ff8a8a}
-  .b-trial{background:#3a2f16;color:#ffd479}
-  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-  .toast{position:fixed;bottom:20px;right:20px;background:#1d3d26;border:1px solid #2e5a3a;padding:10px 16px;border-radius:8px;display:none}
-  .stats{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:14px}
-  .stat{background:#0a0f1e;border:1px solid #26304d;border-radius:10px;padding:10px 18px;text-align:center}
-  .stat b{display:block;font-size:22px;color:#ffd479}.stat span{font-size:11px;color:#6b7794}
+  th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--border);white-space:nowrap}
+  th{color:var(--muted);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.8px}
+  td code{font-family:var(--mono);color:var(--amber);letter-spacing:.5px}
+  .badge{padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700}
+  .b-unused{background:rgba(79,140,255,.12);color:#8fb3ff}.b-active{background:rgba(57,217,138,.12);color:var(--green)}
+  .b-revoked{background:rgba(255,107,122,.14);color:var(--red)}.b-trial{background:rgba(255,212,121,.12);color:var(--amber)}
+  .b-expired{background:rgba(255,107,122,.14);color:var(--red)}
+  .mut{color:var(--muted);font-size:12.5px}
+  .act{display:flex;gap:6px}
+  .icon-btn{background:transparent;border:1px solid var(--border);border-radius:8px;width:28px;height:28px;display:grid;place-items:center;color:var(--muted);cursor:pointer;font-size:13px}
+  .icon-btn:hover{color:var(--text);border-color:#3b4a6e}
+  .icon-btn.revoke:hover{color:var(--red);border-color:var(--red)}
+  .empty{padding:34px;text-align:center;color:var(--muted)}
+  .toast{position:fixed;bottom:22px;right:22px;background:#123a26;border:1px solid #1f5c3c;padding:11px 18px;border-radius:12px;font-size:13.5px;display:none;z-index:50;max-width:80vw}
+  .toast.err{background:#47121c;border-color:#6e1f2e}
+  @media(max-width:640px){table{display:block;overflow-x:auto}}
 </style></head><body>
-<h1>ShadowTools Admin</h1>
-<p class="sub">Mint license keys for manual sales (UPI / Binance / etc.) &amp; monitor activity</p>
-<div class="card">
+<div class="wrap">
+  <header>
+    <div class="brand"><img src="/logo.png" alt=""><div><b>ShadowTools</b><span>License key management</span></div></div>
+    <span class="hdr-badge">● Admin panel</span>
+  </header>
+
   <div class="stats">
-    <div class="stat"><b id="statTotal">–</b><span>Total keys</span></div>
-    <div class="stat"><b id="statActive">–</b><span>Activated</span></div>
-    <div class="stat"><b id="statRevoked">–</b><span>Revoked</span></div>
-    <div class="stat"><b id="statDownloads">–</b><span>Downloads</span></div>
+    <div class="stat s-total"><b id="statTotal">–</b><span>Total keys</span></div>
+    <div class="stat s-sold"><b id="statSold">–</b><span>Sold</span></div>
+    <div class="stat s-active"><b id="statActive">–</b><span>Activated</span></div>
+    <div class="stat s-trial"><b id="statTrial">–</b><span>Trials</span></div>
+    <div class="stat s-revoked"><b id="statRevoked">–</b><span>Revoked</span></div>
+    <div class="stat s-dl"><b id="statDownloads">–</b><span>Downloads</span></div>
   </div>
-  <div class="row">
-    <label>Generate keys</label>
-    <input type="number" id="count" value="1" min="1" max="100" style="width:70px" />
-    <input type="text" id="email" placeholder="Buyer email (optional)" style="width:240px" />
-    <label><input type="checkbox" id="trial" /> Trial</label>
-    <input type="number" id="ttl" value="2" min="1" max="10080" style="width:70px" title="Trial minutes" />
-    <button id="genBtn">Mint key(s)</button>
+
+  <div class="card">
+    <h2>Mint license keys</h2>
+    <div class="form">
+      <div class="field"><label>Quantity</label><input type="number" id="count" value="1" min="1" max="100" style="width:80px"></div>
+      <div class="field"><label>Buyer email (optional)</label><input type="text" id="email" placeholder="buyer@example.com" style="width:230px"></div>
+      <label class="chk"><input type="checkbox" id="trial"><span>Trial key</span></label>
+      <div class="field"><label>Minutes</label><input type="number" id="ttl" value="2" min="1" max="10080" style="width:80px"></div>
+      <button class="btn" id="genBtn">Mint key(s)</button>
+    </div>
+    <div class="mint-out" id="mintOut"></div>
   </div>
-</div>
-<div class="card">
-  <h2>All license keys</h2>
-  <table><thead><tr><th>Key</th><th>Type</th><th>Status</th><th>Email</th><th>Machine</th><th>Expires</th><th>Created</th><th></th></tr></thead>
-  <tbody id="rows"></tbody></table>
+
+  <div class="card">
+    <h2>All license keys</h2>
+    <div class="toolbar">
+      <input type="search" id="search" placeholder="Search key / email / machine…">
+      <button class="btn ghost" id="refreshBtn">↻ Refresh</button>
+    </div>
+    <table><thead><tr><th>Key</th><th>Type</th><th>Status</th><th>Email</th><th>Machine</th><th>Expires</th><th>Created</th><th></th></tr></thead>
+    <tbody id="rows"></tbody></table>
+    <div class="empty" id="emptyRow" style="display:none">No keys found.</div>
+  </div>
 </div>
 <div class="toast" id="toast"></div>
 <script>
 const TOKEN = ${JSON.stringify(ADMIN_TOKEN)};
 const api = (path, opts) => fetch(path + (path.includes('?') ? '&' : '?') + 'token=' + encodeURIComponent(TOKEN), opts).then(r => r.json());
+let ALL = [];
+function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
 function fmt(ts){ if(!ts) return '–'; return new Date(ts*1000).toLocaleString(); }
-function toast(msg){ const t=document.getElementById('toast'); t.textContent=msg; t.style.display='block'; clearTimeout(toast._t); toast._t=setTimeout(()=>t.style.display='none',3000); }
+function toast(msg, isErr){ const t=document.getElementById('toast'); t.textContent=msg; t.className=isErr?'toast err':'toast'; t.style.display='block'; clearTimeout(t._t); t._t=setTimeout(()=>t.style.display='none',3500); }
+function copy(text, btn){ if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(text); } btn.textContent='✓'; setTimeout(()=>btn.textContent='⧉',1200); }
+function statusBadge(k){
+  const now = Math.floor(Date.now()/1000);
+  let st = k.status, cls = k.status;
+  if(k.expires_at && k.expires_at>0 && now>k.expires_at && st!=='revoked'){ st='expired'; cls='expired'; }
+  return '<span class="badge b-' + cls + '">' + st + '</span>';
+}
 async function refresh(){
   const [list, stats] = await Promise.all([api('/api/license/admin/list'), api('/api/stats')]);
-  if(!list.ok){ toast(list.error || 'Failed'); return; }
+  if(!list.ok){ toast(list.error || 'Failed to load', true); return; }
+  ALL = list.keys || [];
   document.getElementById('statTotal').textContent = stats.licenses ? stats.licenses.total : '–';
+  document.getElementById('statSold').textContent = stats.licenses ? stats.licenses.sold : '–';
   document.getElementById('statActive').textContent = stats.licenses ? stats.licenses.active : '–';
-  const revoked = list.keys.filter(k=>k.status==='revoked').length;
-  document.getElementById('statRevoked').textContent = revoked;
+  document.getElementById('statTrial').textContent = stats.licenses ? stats.licenses.trials : '–';
+  document.getElementById('statRevoked').textContent = (ALL.filter(k=>k.status==='revoked').length) || '–';
   document.getElementById('statDownloads').textContent = stats.downloads ? stats.downloads.total : '–';
-  const rows = list.keys.slice(0, 200);
-  document.getElementById('rows').innerHTML = rows.map(k => \`<tr>
-    <td><code>\${k.key}</code></td>
+  render();
+}
+function render(){
+  const q = (document.getElementById('search').value||'').toLowerCase().trim();
+  const rows = ALL.filter(k => !q || k.key.toLowerCase().includes(q) || (k.email||'').toLowerCase().includes(q) || (k.machine_id||'').toLowerCase().includes(q));
+  document.getElementById('emptyRow').style.display = rows.length ? 'none' : 'block';
+  document.getElementById('rows').innerHTML = rows.slice(0, 300).map(k => \`<tr>
+    <td><code>\${esc(k.key)}</code></td>
     <td>\${k.trial ? '<span class="badge b-trial">TRIAL</span>' : 'FULL'}</td>
-    <td><span class="badge b-\${k.status==='active'?'active':k.status==='revoked'?'revoked':'unused'}">\${k.status}</span></td>
-    <td>\${k.email || '–'}</td>
-    <td title="\${k.machine_id}">\${k.machine_id ? k.machine_id.slice(0,10) + '…' : '–'}</td>
-    <td>\${k.expires_at ? fmt(k.expires_at) : '–'}</td>
-    <td>\${fmt(k.created_at)}</td>
-    <td>\${k.status==='revoked' ? '' : '<button class="danger" data-revoke="\${k.key}">Revoke</button>'}</td>
+    <td>\${statusBadge(k)}</td>
+    <td>\${esc(k.email) || '–'}</td>
+    <td class="mut" title="\${esc(k.machine_id)}">\${k.machine_id ? esc(k.machine_id.slice(0,10)) + '…' : '–'}</td>
+    <td class="mut">\${k.expires_at ? fmt(k.expires_at) : '–'}</td>
+    <td class="mut">\${fmt(k.created_at)}</td>
+    <td><div class="act">
+      <button class="icon-btn" title="Copy key" onclick="copy('\${esc(k.key)}', this)">⧉</button>
+      \${k.status==='revoked' ? '' : '<button class="icon-btn revoke" title="Revoke" data-revoke="\${esc(k.key)}">✕</button>'}
+    </div></td>
   </tr>\`).join('');
 }
-document.addEventListener('click', (e) => {
+document.addEventListener('click', async (e) => {
   const btn = e.target.closest('[data-revoke]');
   if (!btn) return;
-  revoke(btn.getAttribute('data-revoke'));
+  const key = btn.getAttribute('data-revoke');
+  if (!confirm('Revoke license key ' + key + '?')) return;
+  const r = await api('/api/license/admin/revoke', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({key})});
+  if(r.ok){ toast('Revoked ' + key); } else { toast(r.error || 'Revoke failed', true); }
+  refresh();
 });
-async function revoke(key){ await api('/api/license/admin/revoke', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({key})}); toast('Revoked ' + key); refresh(); }
 document.getElementById('genBtn').onclick = async () => {
-  const count = parseInt(document.getElementById('count').value || '1', 10);
+  const count = Math.max(1, Math.min(100, parseInt(document.getElementById('count').value || '1', 10) || 1));
   const email = document.getElementById('email').value.trim();
   const trial = document.getElementById('trial').checked;
-  const ttl = parseInt(document.getElementById('ttl').value || '10', 10);
+  const ttl = Math.max(1, parseInt(document.getElementById('ttl').value || '2', 10) || 2);
+  const btn = document.getElementById('genBtn');
+  btn.disabled = true; btn.textContent = 'Minting…';
   const r = await api('/api/license/admin/create', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({count, email, trial, ttl_minutes: ttl})});
-  if(!r.ok){ toast(r.error || 'Failed'); return; }
-  toast((trial ? 'Minted ' + r.keys.length + ' trial key(s)' : 'Minted ' + r.keys.length + ' key(s)') + ' → ' + r.keys.join(', '));
+  btn.disabled = false; btn.textContent = 'Mint key(s)';
+  if(!r.ok){ toast(r.error || 'Failed', true); return; }
+  document.getElementById('mintOut').innerHTML = (r.keys||[]).map(k => \`<div class="mk"><code>\${k}</code><button class="mini-btn" onclick="copy('\${k}', this)">Copy</button></div>\`).join('');
+  document.getElementById('mintOut').style.display = 'block';
+  toast((trial?'Minted ':'Minted ') + r.keys.length + ' ' + (trial?'trial':'license') + ' key(s)');
   document.getElementById('email').value = '';
   refresh();
 };
+document.getElementById('search').addEventListener('input', render);
+document.getElementById('refreshBtn').onclick = refresh;
 refresh();
+setInterval(refresh, 30000);
 </script></body></html>`);
 });
 
