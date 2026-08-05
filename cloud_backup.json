@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785968051,
+  "exported_at": 1785970340,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -386,6 +386,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1066657842028871710/68f87e91ec2de2317626843ea7afe5d5.png",
       "provider": "discord",
       "created_at": 1785968044
+    },
+    {
+      "steamid": "862096420394893312",
+      "name": "pepi_negura",
+      "avatar": "https://cdn.discordapp.com/avatars/862096420394893312/8b72c2252532483002906689e4a1000c.png",
+      "provider": "discord",
+      "created_at": 1785970335
     }
   ],
   "sessions": [
@@ -720,6 +727,12 @@
       "steamid": "1066657842028871710",
       "created_at": 1785968046,
       "expires_at": 1817504046
+    },
+    {
+      "token": "df7bbd66bd5ab773daf7160de139f62bd1e81f3c930d2cc031fda3102affe837",
+      "steamid": "862096420394893312",
+      "created_at": 1785970336,
+      "expires_at": 1817506336
     }
   ],
   "library": [
