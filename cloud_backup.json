@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785950277,
+  "exported_at": 1785950441,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -2664,12 +2664,6 @@
       "appid": 12100,
       "name": "Grand Theft Auto III",
       "added_at": 1785866557
-    },
-    {
-      "steamid": "1487668000478855188",
-      "appid": 12210,
-      "name": "Grand Theft Auto IV: The Complete Edition",
-      "added_at": 1785950274
     }
   ],
   "downloads": [
