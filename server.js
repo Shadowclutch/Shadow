@@ -51,9 +51,17 @@ let signEnabled = false;
 
 async function initSignKey() {
   try {
-    let pem = (process.env.SIGN_PRIVATE_KEY || serverCfg.sign_private_key || '').trim();
+    // Accept either a PEM string or base64-of-PEM (e.g. copied from
+    // /api/license/admin/signing, which returns base64).
+    const normalizePem = (v) => {
+      const s = String(v || '').trim();
+      if (!s) return '';
+      if (s.includes('-----BEGIN')) return s;
+      try { return Buffer.from(s, 'base64').toString('utf8'); } catch { return s; }
+    };
+    let pem = normalizePem(process.env.SIGN_PRIVATE_KEY || serverCfg.sign_private_key);
     if (!pem) {
-      pem = ((await db.getSetting('sign_private_key')) || '').trim();
+      pem = normalizePem(await db.getSetting('sign_private_key'));
     }
     if (!pem) {
       const { privateKey } = crypto.generateKeyPairSync('ed25519');
