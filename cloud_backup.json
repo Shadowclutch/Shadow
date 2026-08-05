@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785919474,
+  "exported_at": 1785919654,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -2326,6 +2326,12 @@
       "appid": 4534960,
       "name": "Dear Passengers",
       "added_at": 1785919472
+    },
+    {
+      "steamid": "1345121200619262073",
+      "appid": 667970,
+      "name": "VTOL VR",
+      "added_at": 1785919652
     }
   ]
 }
