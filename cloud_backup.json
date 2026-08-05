@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785955410,
+  "exported_at": 1785955783,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -332,13 +332,6 @@
       "created_at": 1785946705
     },
     {
-      "steamid": "1341837918955901071",
-      "name": "KAI",
-      "avatar": "https://cdn.discordapp.com/avatars/1341837918955901071/d8f28891a56dfaf5bd0509fcfafcccbe.png",
-      "provider": "discord",
-      "created_at": 1785947988
-    },
-    {
       "steamid": "1487668000478855188",
       "name": "ShadowClutchh",
       "avatar": "https://cdn.discordapp.com/avatars/1487668000478855188/f1768a4587769379b481ab6452a47197.png",
@@ -365,6 +358,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1262894862806552629/11b36f75fdf6c8cfefe1c998de328e43.png",
       "provider": "discord",
       "created_at": 1785955180
+    },
+    {
+      "steamid": "1341837918955901071",
+      "name": "KAI",
+      "avatar": "https://cdn.discordapp.com/avatars/1341837918955901071/d8f28891a56dfaf5bd0509fcfafcccbe.png",
+      "provider": "discord",
+      "created_at": 1785947988
     }
   ],
   "sessions": [
@@ -3382,17 +3382,6 @@
   ],
   "license_keys": [
     {
-      "key": "SHADOW-B93E-P8RC-RZBZ-NRF3",
-      "email": "",
-      "session_id": "",
-      "status": "unused",
-      "machine_id": "",
-      "activated_at": 0,
-      "created_at": 1785930617,
-      "trial": 0,
-      "expires_at": 0
-    },
-    {
       "key": "SHADOW-LYQV-MP7K-QYXQ-Y8FL",
       "email": "",
       "session_id": "",
@@ -3556,6 +3545,72 @@
       "created_at": 1785955406,
       "trial": 1,
       "expires_at": 1785955526
+    },
+    {
+      "key": "SHADOW-B93E-P8RC-RZBZ-NRF3",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-c584bc44429537d5a3499ea6",
+      "activated_at": 1785955537,
+      "created_at": 1785930617,
+      "trial": 0,
+      "expires_at": 0
+    },
+    {
+      "key": "SHADOW-3EXN-ECFP-9VWP-2FZJ",
+      "email": "",
+      "session_id": "",
+      "status": "unused",
+      "machine_id": "",
+      "activated_at": 0,
+      "created_at": 1785955667,
+      "trial": 0,
+      "expires_at": 0
+    },
+    {
+      "key": "SHADOW-3WSA-4P89-JP52-JASW",
+      "email": "",
+      "session_id": "",
+      "status": "unused",
+      "machine_id": "",
+      "activated_at": 0,
+      "created_at": 1785955669,
+      "trial": 0,
+      "expires_at": 0
+    },
+    {
+      "key": "SHADOW-GAAQ-Q9MY-NBV4-34ZW",
+      "email": "",
+      "session_id": "",
+      "status": "unused",
+      "machine_id": "",
+      "activated_at": 0,
+      "created_at": 1785955670,
+      "trial": 0,
+      "expires_at": 0
+    },
+    {
+      "key": "SHADOW-W8KQ-4EDZ-K2V9-VGYG",
+      "email": "",
+      "session_id": "",
+      "status": "unused",
+      "machine_id": "",
+      "activated_at": 0,
+      "created_at": 1785955670,
+      "trial": 0,
+      "expires_at": 0
+    },
+    {
+      "key": "SHADOW-89BJ-J4C8-P35E-DNWC",
+      "email": "",
+      "session_id": "",
+      "status": "unused",
+      "machine_id": "",
+      "activated_at": 0,
+      "created_at": 1785955671,
+      "trial": 0,
+      "expires_at": 0
     }
   ]
 }
