@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785944991,
+  "exported_at": 1785946615,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -2608,6 +2608,12 @@
       "appid": 2138710,
       "name": "Sifu",
       "added_at": 1785943536
+    },
+    {
+      "steamid": "721026721905770578",
+      "appid": 42700,
+      "name": "Call of Duty: Black Ops",
+      "added_at": 1785946613
     }
   ],
   "downloads": [
@@ -2708,6 +2714,20 @@
       "ip": "152.58.153.198",
       "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
       "created_at": 1785944009
+    },
+    {
+      "id": "6cb20c4b038550705857c7d5",
+      "source": "site",
+      "ip": "152.58.153.198",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+      "created_at": 1785945346
+    },
+    {
+      "id": "c4743e0b677b8dd05a91e0cc",
+      "source": "site",
+      "ip": "72.14.199.232",
+      "user_agent": "Mediapartners-Google",
+      "created_at": 1785946077
     }
   ],
   "license_keys": [
@@ -2809,6 +2829,17 @@
       "created_at": 1785941973,
       "trial": 1,
       "expires_at": 1785942573
+    },
+    {
+      "key": "SHADOW-YX93-YZCA-PT87-S5RK",
+      "email": "um5655692@gmail.com",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-6aeb88dbbd6affc0e60efe87",
+      "activated_at": 1785945630,
+      "created_at": 1785945059,
+      "trial": 0,
+      "expires_at": 0
     }
   ]
 }
