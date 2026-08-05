@@ -29,6 +29,16 @@ const DISCORD_REDIRECT_WEB = `${SITE_URL}/auth/discord/callback`;
 const DISCORD_REDIRECT_DESKTOP = `${SITE_URL}/api/desktop/discord/callback`;
 const pendingDiscord = new Map(); // state -> { createdAt, token?, user? }
 
+// ── Commerce / licensing config ─────────────────────────────
+const STRIPE_SECRET_KEY = process.env.STRIPE_SECRET_KEY || serverCfg.stripe_secret_key || '';
+const STRIPE_WEBHOOK_SECRET = process.env.STRIPE_WEBHOOK_SECRET || serverCfg.stripe_webhook_secret || '';
+const PRICE_USD = parseFloat(process.env.PRICE_USD || serverCfg.price_usd || 4.99);
+const PRODUCT_NAME = process.env.PRODUCT_NAME || serverCfg.product_name || 'ShadowTools License';
+// Where the actual exe lives (GitHub release asset is ideal — free CDN + real redirect).
+const EXE_DOWNLOAD_URL = process.env.EXE_DOWNLOAD_URL || serverCfg.exe_download_url || '';
+// Admin token for the stats page.
+const ADMIN_TOKEN = process.env.ADMIN_TOKEN || serverCfg.admin_token || '';
+
 // ── CloudDB API ─────────────────────────────────────────────
 const CLOUDDB_BASE = 'https://hubcapmanifest.com';
 const REMOTE_CONFIG_URL = 'https://raw.githubusercontent.com/Shadowclutch/Shadow/main/config.json';
@@ -356,8 +366,9 @@ setInterval(() => {
 
 // ── App ─────────────────────────────────────────────────────
 const app = express();
-app.use(express.json());
+app.use(express.json({ verify: (req, res, buf) => { req.rawBody = buf; } }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.get('/app', (req, res) => res.sendFile(path.join(__dirname, 'public', 'app.html')));
 app.use('/cdn', express.static(path.join(__dirname, 'cdn'), {
   setHeaders(res, filePath) {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -854,6 +865,222 @@ app.get('/api/sync/owned', requireAuth, async (req, res) => {
   }
 });
 
+// ── Downloads (tracked) ─────────────────────────────────────
+// The landing-page download button hits this endpoint. It records the download
+// (source, IP, user agent) then redirects to the actual exe (GitHub release).
+app.get('/api/download', (req, res) => {
+  const source = String(req.query.src || 'site').slice(0, 50);
+  const ip = (req.headers['x-forwarded-for'] || req.ip || req.socket.remoteAddress || '').toString().split(',')[0].trim().slice(0, 64);
+  const ua = String(req.headers['user-agent'] || '').slice(0, 300);
+  db.recordDownload({ id: crypto.randomBytes(12).toString('hex'), source, ip, user_agent: ua }).catch(() => {});
+  const target = EXE_DOWNLOAD_URL || `${SITE_URL}/cdn/Shadowclutch.exe`;
+  res.redirect(target);
+});
+
+// Admin dashboard stats (protected by ADMIN_TOKEN).
+app.get('/api/stats', async (req, res) => {
+  if (!ADMIN_TOKEN) return res.status(503).json({ error: 'ADMIN_TOKEN not configured' });
+  if (req.query.token !== ADMIN_TOKEN && req.headers['x-admin-token'] !== ADMIN_TOKEN) {
+    return res.status(403).json({ error: 'Forbidden' });
+  }
+  try {
+    const [downloads, recent, licenses] = await Promise.all([
+      db.downloadStats(),
+      db.recentDownloads(20),
+      db.licenseStats(),
+    ]);
+    res.json({ downloads, recent, licenses });
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+});
+
+// Public download counter for the landing page (total only).
+app.get('/api/download/count', async (req, res) => {
+  try {
+    const stats = await db.downloadStats();
+    res.json({ total: stats.total });
+  } catch (e) {
+    res.json({ total: null });
+  }
+});
+
+// ── Stripe checkout (one-time payment → license key) ────────
+function generateLicenseKey() {
+  const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+  let s = '';
+  for (let i = 0; i < 16; i++) {
+    s += chars[Math.floor(Math.random() * chars.length)];
+    if (i === 3 || i === 7 || i === 11) s += '-';
+  }
+  return 'SHADOW-' + s;
+}
+
+async function stripeRequest(path, opts = {}) {
+  const res = await fetchWithTimeout('https://api.stripe.com/v1' + path, {
+    ...opts,
+    headers: {
+      Authorization: 'Bearer ' + STRIPE_SECRET_KEY,
+      ...(opts.headers || {}),
+    },
+  }, 30000);
+  const data = await res.json();
+  if (!res.ok) throw new Error((data.error && data.error.message) || `Stripe HTTP ${res.status}`);
+  return data;
+}
+
+app.post('/api/checkout', async (req, res) => {
+  if (!STRIPE_SECRET_KEY) return res.status(503).json({ error: 'Payments are not configured on this server yet.' });
+  try {
+    const email = String((req.body && req.body.email) || '').slice(0, 200);
+    const body = new URLSearchParams();
+    body.set('mode', 'payment');
+    body.set('line_items[0][price_data][currency]', 'usd');
+    body.set('line_items[0][price_data][unit_amount]', String(Math.round(PRICE_USD * 100)));
+    body.set('line_items[0][price_data][product_data][name]', PRODUCT_NAME);
+    body.set('line_items[0][quantity]', '1');
+    body.set('success_url', `${SITE_URL}/buy/success?session_id={CHECKOUT_SESSION_ID}`);
+    body.set('cancel_url', `${SITE_URL}/#pricing`);
+    body.set('metadata[app]', 'shadowtools');
+    if (email) body.set('customer_email', email);
+    const session = await stripeRequest('/checkout/sessions', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: body.toString(),
+    });
+    res.json({ url: session.url, id: session.id });
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+});
+
+// Stripe webhook: on a successful checkout, mint a license key tied to the session.
+app.post('/api/stripe/webhook', async (req, res) => {
+  if (!STRIPE_WEBHOOK_SECRET) {
+    // No secret configured — only accept when the request carries the admin token.
+    if (req.headers['x-admin-token'] !== ADMIN_TOKEN) return res.status(403).json({ error: 'Forbidden' });
+  } else {
+    // Verify the Stripe signature manually (HMAC-SHA256) so we don't need the SDK.
+    const sig = String(req.headers['stripe-signature'] || '');
+    const parts = sig.split(',').reduce((acc, p) => {
+      const [k, v] = p.split('=');
+      if (k && v) acc[k] = v;
+      return acc;
+    }, {});
+    const expected = crypto.createHmac('sha256', STRIPE_WEBHOOK_SECRET)
+      .update(`${parts.t}.${req.rawBody.toString()}`)
+      .digest('hex');
+    if (!parts.v1 || parts.v1 !== expected) {
+      return res.status(400).json({ error: 'Invalid signature' });
+    }
+  }
+  const payload = req.body || {};
+  if (payload.type !== 'checkout.session.completed') return res.json({ received: true });
+  const session = payload.data && payload.data.object;
+  if (!session) return res.json({ received: true });
+  const existing = await db.getLicenseBySession(session.id);
+  if (existing) return res.json({ received: true, existing: true });
+  const key = generateLicenseKey();
+  await db.createLicenseKey({
+    key,
+    email: (session.customer_details && session.customer_details.email) || '',
+    session_id: session.id,
+  });
+  console.log(`[ShadowTools Web] License issued: ${key} (session ${session.id})`);
+  backup.schedulePush();
+  res.json({ received: true, key });
+});
+
+// ── License endpoints (used by the desktop app) ─────────────
+app.post('/api/license/activate', rateLimit(20, 60000), async (req, res) => {
+  try {
+    const key = String((req.body && req.body.key) || '').trim().toUpperCase();
+    const machineId = String((req.body && req.body.machine_id) || '').slice(0, 128);
+    if (!key) return res.status(400).json({ ok: false, error: 'Missing license key' });
+    if (!machineId) return res.status(400).json({ ok: false, error: 'Missing machine id' });
+    const row = await db.getLicenseKey(key);
+    if (!row) return res.json({ ok: false, error: 'Invalid license key' });
+    if (row.status === 'revoked') return res.json({ ok: false, error: 'License key revoked' });
+    if (row.status === 'active' && row.machine_id && row.machine_id !== machineId) {
+      return res.json({ ok: false, error: 'License key is already activated on another PC' });
+    }
+    await db.activateLicenseKey(key, machineId);
+    backup.schedulePush();
+    res.json({ ok: true, key, email: row.email });
+  } catch (e) {
+    res.status(500).json({ ok: false, error: e.message });
+  }
+});
+
+app.post('/api/license/validate', rateLimit(60, 60000), async (req, res) => {
+  try {
+    const key = String((req.body && req.body.key) || '').trim().toUpperCase();
+    const machineId = String((req.body && req.body.machine_id) || '').slice(0, 128);
+    if (!key) return res.json({ ok: false, error: 'Missing license key' });
+    const row = await db.getLicenseKey(key);
+    if (!row) return res.json({ ok: false, error: 'Invalid license key' });
+    if (row.status === 'revoked') return res.json({ ok: false, error: 'License key revoked' });
+    if (row.status === 'active' && machineId && row.machine_id && row.machine_id !== machineId) {
+      return res.json({ ok: false, error: 'License key is activated on another PC' });
+    }
+    res.json({ ok: true, key, status: row.status, email: row.email });
+  } catch (e) {
+    res.status(500).json({ ok: false, error: e.message });
+  }
+});
+
+// Redeem the key for a Stripe session (shown on the post-purchase success page).
+app.get('/api/license/redeem', rateLimit(30, 60000), async (req, res) => {
+  const sessionId = String(req.query.session_id || '').slice(0, 200);
+  if (!sessionId) return res.status(400).json({ ok: false, error: 'Missing session id' });
+  try {
+    const row = await db.getLicenseBySession(sessionId);
+    if (!row) return res.json({ ok: false, error: 'No license found for this session yet (may take a few seconds).' });
+    res.json({ ok: true, key: row.key, email: row.email });
+  } catch (e) {
+    res.status(500).json({ ok: false, error: e.message });
+  }
+});
+
+// Post-purchase success page — shows the buyer their license key.
+app.get('/buy/success', (req, res) => {
+  const sessionId = String(req.query.session_id || '').replace(/[^a-zA-Z0-9_]/g, '');
+  res.send(`<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment received — ${PRODUCT_NAME}</title>
+<style>
+  body{font-family:'Segoe UI',system-ui,sans-serif;background:#0a0f1e;color:#e8ecf4;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0}
+  .card{max-width:520px;width:90%;background:#121a2f;border:1px solid #26304d;border-radius:16px;padding:36px;text-align:center}
+  h1{color:#7ee08a;margin:0 0 8px;font-size:24px}
+  p{color:#9aa7c4;line-height:1.5}
+  #keyBox{margin:20px 0;padding:16px;background:#0a0f1e;border:1px dashed #3b4a6e;border-radius:10px;font-family:Consolas,monospace;font-size:18px;letter-spacing:1px;color:#ffd479;word-break:break-all}
+  .hint{font-size:13px;color:#6b7794}
+  a{color:#6ea8ff;text-decoration:none}
+  .spin{display:inline-block;width:16px;height:16px;border:2px solid #3b4a6e;border-top-color:#6ea8ff;border-radius:50%;animation:sp .8s linear infinite;vertical-align:middle;margin-right:8px}
+  @keyframes sp{to{transform:rotate(360deg)}}
+</style></head><body><div class="card">
+<h1>Payment received!</h1>
+<p>Your license key is below. Copy it, open <b>ShadowTools</b>, click <b>Activate</b> and paste it in.</p>
+<div id="keyBox"><span class="spin"></span>Fetching your key...</div>
+<p class="hint">Keep this key private. It is locked to one PC. If you need to move it, contact support.</p>
+<p><a href="/">← Back to ShadowTools</a></p>
+</div>
+<script>
+const sid = ${JSON.stringify(sessionId)};
+async function load(){
+  for(let i=0;i<20;i++){
+    try{
+      const r=await fetch('/api/license/redeem?session_id='+encodeURIComponent(sid));
+      const d=await r.json();
+      if(d.ok){ document.getElementById('keyBox').textContent=d.key; document.getElementById('keyBox').style.borderColor='#4caf50'; return; }
+    }catch(e){}
+    await new Promise(r=>setTimeout(r,1500));
+  }
+  document.getElementById('keyBox').innerHTML='Could not fetch key yet. Please check your email or contact support.';
+}
+load();
+</script></body></html>`);
+});
+
 // ── Start ───────────────────────────────────────────────────
 // With a persistent DB (DATABASE_URL), the stored data is authoritative, so we
 // only restore from the GitHub backup when the DB is empty (e.g. the very first
@@ -878,6 +1105,10 @@ app.get('/api/sync/owned', requireAuth, async (req, res) => {
     console.log(`[CWTool Web]   web redirect:    ${DISCORD_REDIRECT_WEB}`);
     console.log(`[CWTool Web]   desktop redirect:${DISCORD_REDIRECT_DESKTOP}`);
     console.log(`[CWTool Web] GitHub backup: ${process.env.GITHUB_REPO_TOKEN ? 'ENABLED' : 'DISABLED (set GITHUB_REPO_TOKEN to persist the library across deploys)'}`);
+    console.log(`[ShadowTools Web] Stripe payments: ${STRIPE_SECRET_KEY ? `ENABLED ($${PRICE_USD}/key)` : 'DISABLED (set STRIPE_SECRET_KEY)'}`);
+    console.log(`[ShadowTools Web] Stripe webhook: ${STRIPE_WEBHOOK_SECRET ? 'VERIFIED' : 'trust-any (set STRIPE_WEBHOOK_SECRET)'}`);
+    console.log(`[ShadowTools Web] Exe download URL: ${EXE_DOWNLOAD_URL || '(falling back to /cdn/Shadowclutch.exe — set EXE_DOWNLOAD_URL to a GitHub release asset)'}`);
+    console.log(`[ShadowTools Web] Admin stats: ${ADMIN_TOKEN ? '/api/stats?token=...' : 'DISABLED (set ADMIN_TOKEN)'}`);
   });
 })();
 

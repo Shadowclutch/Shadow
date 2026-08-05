@@ -39,6 +39,22 @@ const SCHEMA = `
     created_at INTEGER NOT NULL,
     expires_at INTEGER NOT NULL
   );
+  CREATE TABLE IF NOT EXISTS downloads (
+    id TEXT PRIMARY KEY,
+    source TEXT NOT NULL DEFAULT '',
+    ip TEXT NOT NULL DEFAULT '',
+    user_agent TEXT NOT NULL DEFAULT '',
+    created_at INTEGER NOT NULL
+  );
+  CREATE TABLE IF NOT EXISTS license_keys (
+    key TEXT PRIMARY KEY,
+    email TEXT NOT NULL DEFAULT '',
+    session_id TEXT NOT NULL DEFAULT '',
+    status TEXT NOT NULL DEFAULT 'unused',
+    machine_id TEXT NOT NULL DEFAULT '',
+    activated_at INTEGER NOT NULL DEFAULT 0,
+    created_at INTEGER NOT NULL
+  );
 `;
 
 // Convert SQLite `?` placeholders to Postgres `$1, $2, ...`.
@@ -191,6 +207,58 @@ async function removeFromLibrary(steamid, appid) {
   await A.run('DELETE FROM library WHERE steamid = ? AND appid = ?', [steamid, appid]);
 }
 
+// ── Downloads (download tracking) ────────────────────────────
+async function recordDownload({ id, source = '', ip = '', user_agent = '' }) {
+  const now = Math.floor(Date.now() / 1000);
+  await A.run('INSERT INTO downloads (id, source, ip, user_agent, created_at) VALUES (?, ?, ?, ?, ?)',
+    [id, String(source).slice(0, 50), String(ip).slice(0, 64), String(user_agent).slice(0, 300), now]);
+}
+
+async function downloadStats() {
+  const toNum = (r) => r && (typeof r.n === 'bigint' ? Number(r.n) : Number(r.n) || 0);
+  const total = toNum(await A.get('SELECT COUNT(*) AS n FROM downloads'));
+  const bySource = {};
+  const rows = await A.all('SELECT source, COUNT(*) AS n FROM downloads GROUP BY source ORDER BY n DESC');
+  for (const r of rows) bySource[r.source] = toNum(r);
+  return { total, bySource };
+}
+
+async function recentDownloads(limit = 20) {
+  return A.all('SELECT source, ip, created_at FROM downloads ORDER BY created_at DESC LIMIT ?', [limit]);
+}
+
+// ── License keys ─────────────────────────────────────────────
+async function createLicenseKey({ key, email = '', session_id = '' }) {
+  const now = Math.floor(Date.now() / 1000);
+  await A.run('INSERT INTO license_keys (key, email, session_id, status, created_at) VALUES (?, ?, ?, ?, ?)',
+    [key, email, session_id, 'unused', now]);
+  return A.get('SELECT * FROM license_keys WHERE key = ?', [key]);
+}
+
+async function getLicenseKey(key) {
+  if (!key) return null;
+  return A.get('SELECT * FROM license_keys WHERE key = ?', [key]);
+}
+
+async function getLicenseBySession(sessionId) {
+  if (!sessionId) return null;
+  return A.get('SELECT * FROM license_keys WHERE session_id = ?', [sessionId]);
+}
+
+async function activateLicenseKey(key, machineId) {
+  const now = Math.floor(Date.now() / 1000);
+  await A.run(`UPDATE license_keys SET status = 'active', machine_id = ?, activated_at = ? WHERE key = ?`,
+    [String(machineId).slice(0, 128), now, key]);
+}
+
+async function licenseStats() {
+  const toNum = (r) => r && (typeof r.n === 'bigint' ? Number(r.n) : Number(r.n) || 0);
+  const total = toNum(await A.get('SELECT COUNT(*) AS n FROM license_keys'));
+  const sold = toNum(await A.get("SELECT COUNT(*) AS n FROM license_keys WHERE session_id != ''"));
+  const active = toNum(await A.get("SELECT COUNT(*) AS n FROM license_keys WHERE status = 'active'"));
+  return { total, sold, active };
+}
+
 // ── Backup snapshot (GitHub-repo persistence) ───────────────
 async function countRows() {
   const toNum = (r) => r && typeof r.n === 'bigint' ? Number(r.n) : (Number(r.n) || 0);
@@ -199,6 +267,8 @@ async function countRows() {
     sessions: toNum(await A.get('SELECT COUNT(*) AS n FROM sessions')),
     library: toNum(await A.get('SELECT COUNT(*) AS n FROM library')),
     agent_tokens: toNum(await A.get('SELECT COUNT(*) AS n FROM agent_tokens')),
+    downloads: toNum(await A.get('SELECT COUNT(*) AS n FROM downloads')),
+    license_keys: toNum(await A.get('SELECT COUNT(*) AS n FROM license_keys')),
   };
 }
 
@@ -219,11 +289,13 @@ async function exportSnapshot() {
     sessions: await A.all('SELECT * FROM sessions'),
     agent_tokens: await A.all('SELECT * FROM agent_tokens'),
     library: await A.all('SELECT * FROM library'),
+    downloads: await A.all('SELECT * FROM downloads'),
+    license_keys: await A.all('SELECT * FROM license_keys'),
   };
 }
 
 async function importSnapshot(snap) {
-  const counts = { users: 0, sessions: 0, agent_tokens: 0, library: 0 };
+  const counts = { users: 0, sessions: 0, agent_tokens: 0, library: 0, downloads: 0, license_keys: 0 };
   const upserts = [
     { table: 'users', rows: snap.users || [], sql: `
         INSERT INTO users (steamid, name, avatar, provider, created_at)
@@ -244,15 +316,38 @@ async function importSnapshot(snap) {
         INSERT INTO library (steamid, appid, name, added_at)
         VALUES (?, ?, ?, ?)
         ON CONFLICT(steamid, appid) DO UPDATE SET name = excluded.name, added_at = excluded.added_at` },
+    { table: 'downloads', rows: snap.downloads || [], sql: `
+        INSERT INTO downloads (id, source, ip, user_agent, created_at)
+        VALUES (?, ?, ?, ?, ?)
+        ON CONFLICT(id) DO NOTHING` },
+    { table: 'license_keys', rows: snap.license_keys || [], sql: `
+        INSERT INTO license_keys (key, email, session_id, status, machine_id, activated_at, created_at)
+        VALUES (?, ?, ?, ?, ?, ?, ?)
+        ON CONFLICT(key) DO UPDATE SET email = excluded.email, session_id = excluded.session_id,
+          status = excluded.status, machine_id = excluded.machine_id,
+          activated_at = excluded.activated_at, created_at = excluded.created_at` },
   ];
   for (const u of upserts) {
     for (const row of u.rows) {
       try {
-        const params = u.table === 'users'
-          ? [row.steamid, row.name || '', row.avatar || '', row.provider || 'steam', row.created_at]
-          : u.table === 'library'
-            ? [row.steamid, row.appid, row.name || '', row.added_at]
-            : [row.token, row.steamid, row.created_at, row.expires_at];
+        let params;
+        switch (u.table) {
+          case 'users':
+            params = [row.steamid, row.name || '', row.avatar || '', row.provider || 'steam', row.created_at];
+            break;
+          case 'library':
+            params = [row.steamid, row.appid, row.name || '', row.added_at];
+            break;
+          case 'downloads':
+            params = [row.id, row.source || '', row.ip || '', row.user_agent || '', row.created_at];
+            break;
+          case 'license_keys':
+            params = [row.key, row.email || '', row.session_id || '', row.status || 'unused',
+              row.machine_id || '', row.activated_at || 0, row.created_at];
+            break;
+          default:
+            params = [row.token, row.steamid, row.created_at, row.expires_at];
+        }
         await A.run(u.sql, params);
         counts[u.table]++;
       } catch {
@@ -281,6 +376,14 @@ module.exports = {
   listLibrary,
   addToLibrary,
   removeFromLibrary,
+  recordDownload,
+  downloadStats,
+  recentDownloads,
+  createLicenseKey,
+  getLicenseKey,
+  getLicenseBySession,
+  activateLicenseKey,
+  licenseStats,
   countRows,
   diagnose,
   exportSnapshot,

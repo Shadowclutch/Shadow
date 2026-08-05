@@ -3,80 +3,186 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CW Tool — Steam Cloud Library</title>
+  <title>ShadowTools — Fix, Unlock & Manage Your Steam Library</title>
+  <meta name="description" content="ShadowTools is your all-in-one Steam toolkit: repair crashes, unlock games, add to your library and auto-sync to every PC." />
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="/logo.png" />
 </head>
-<body>
-  <header>
-    <div class="brand">
-      <span class="logo">CW</span>
-      <div>
-        <h1>CW Tool</h1>
-        <p class="subtitle">Your Steam game library, synced to every PC</p>
+<body class="landing">
+
+  <header class="landing-header">
+    <div class="landing-nav">
+      <a class="brand" href="/">
+        <img src="/logo.png" alt="ShadowTools logo" class="brand-logo" />
+        <div>
+          <h1>ShadowTools</h1>
+          <p class="subtitle">Steam, but better</p>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="/app">Cloud Library</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="btn btn-ghost" href="/app">Sign in</a>
+        <a class="btn btn-primary" href="#pricing">Buy now</a>
       </div>
-    </div>
-    <div class="auth-area">
-      <span id="clouddbBadge" class="badge badge-off">CloudDB not configured</span>
-      <div id="authBox" class="auth-box"></div>
     </div>
   </header>
 
-  <main>
-    <div id="notConfiguredBanner" class="banner hidden">
-      The server has no CloudDB keys configured. Add them to config.json (clouddb_keys) or set CWT_CLOUDDB_KEY.
-    </div>
-
-    <section class="card" id="libraryCard">
-      <div class="card-title">
-        <h2>My Library</h2>
-        <span id="libraryCount" class="hint"></span>
-      </div>
-      <div id="libraryBody">
-        <div class="login-prompt">
-          <p>Sign in with Discord to save games to your library.</p>
-          <a class="steam-login-btn" href="/auth/discord">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 15.5 10 21l1.4-4.2"/><path d="M9 8c0-2 1-3 3-3s3 1 3 3c0 2.5 2 3 2 5 0 2-1.5 3-2.5 4L12 19l-2.5-2C8.5 16 7 15 7 13c0-2 2-2.5 2-5Z"/><path d="M12 5.5V3"/><path d="M8 15.5 5 16"/></svg>
-            Sign in through Discord
+  <!-- ══ HERO ══ -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <span class="badge badge-on">v3.1.1 · Windows</span>
+        <h2>Repair. Unlock. <span class="accent">Sync.</span></h2>
+        <p>
+          One clean desktop app for your Steam library — fix crash errors, unlock titles,
+          add games from the CloudDB catalog, and keep every PC in sync automatically.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="/api/download?src=site" id="downloadBtn">
+            ↓ Download ShadowTools
           </a>
+          <a class="btn btn-ghost btn-lg" href="#pricing">Get a license →</a>
+        </div>
+        <p class="hero-note" id="downloadCount">
+          <span class="spinner"></span> Checking downloads...
+        </p>
+      </div>
+      <div class="hero-art">
+        <img src="/logo.png" alt="ShadowTools" class="hero-logo" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ AD SLOT 1 (landing) ══ -->
+  <section class="ad-section">
+    <div class="ad-slot" data-ad-slot="leaderboard-top">
+      <!-- PASTE YOUR ADSENSE CODE HERE (e.g. <ins class="adsbygoogle" data-ad-client="ca-pub-XXXX" data-ad-slot="YYYY"></ins>) -->
+      <span class="ad-placeholder">Ad space · paste your AdSense code here</span>
+    </div>
+  </section>
+
+  <!-- ══ FEATURES ══ -->
+  <section class="features" id="features">
+    <h3 class="section-title">Everything you need</h3>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🛠</div>
+        <h4>Steam Fixer</h4>
+        <p>Repairs Steam installation issues and crash errors with one click — automatically restarts Steam when done.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔓</div>
+        <h4>Unlock &amp; Adder</h4>
+        <p>Add games from a 100k+ CloudDB catalog and unlock titles straight into your library.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">☁️</div>
+        <h4>Cloud Sync</h4>
+        <p>Sign in once, and your game library syncs to every PC — a background agent deploys new games automatically.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h4>Bypasses &amp; Fixes</h4>
+        <p>Built-in fixes database and bypass tools for games that won't launch.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ AD SLOT 2 ══ -->
+  <section class="ad-section">
+    <div class="ad-slot" data-ad-slot="leaderboard-mid">
+      <span class="ad-placeholder">Ad space · paste your AdSense code here</span>
+    </div>
+  </section>
+
+  <!-- ══ PRICING ══ -->
+  <section class="pricing" id="pricing">
+    <h3 class="section-title">One-time payment, lifetime license</h3>
+    <p class="pricing-sub">Pay from anywhere — cards, PayPal, Apple Pay &amp; Google Pay accepted.</p>
+    <div class="price-card">
+      <h4>ShadowTools Pro</h4>
+      <div class="price" id="priceDisplay">$4.99</div>
+      <ul>
+        <li>✓ Lifetime license key</li>
+        <li>✓ All tools unlocked (fixer, adder, bypasses)</li>
+        <li>✓ Cloud library sync on unlimited PCs</li>
+        <li>✓ Free updates</li>
+      </ul>
+      <button class="btn btn-primary btn-lg btn-block" id="buyBtn">Buy license now</button>
+      <p class="price-note">You'll receive your license key on the next page. Secure checkout via Stripe.</p>
+    </div>
+  </section>
+
+  <!-- ══ AD SLOT 3 ══ -->
+  <section class="ad-section">
+    <div class="ad-slot" data-ad-slot="leaderboard-bottom">
+      <span class="ad-placeholder">Ad space · paste your AdSense code here</span>
+    </div>
+  </section>
+
+  <footer class="landing-footer">
+    <div class="footer-inner">
+      <div class="brand">
+        <img src="/logo.png" alt="ShadowTools logo" class="brand-logo" />
+        <div>
+          <h1>ShadowTools</h1>
+          <p class="subtitle">Your Steam, synced</p>
         </div>
       </div>
-    </section>
+      <div class="footer-links">
+        <a href="/app">Cloud Library</a>
+        <a href="/api/health">API status</a>
+        <a href="/buy/support">Support</a>
+      </div>
+      <p class="footer-copy">© 2026 ShadowTools. All rights reserved.</p>
+    </div>
+  </footer>
 
-    <section class="card" id="agentCard" style="display:none">
-      <div class="card-title">
-        <h2>PC Agent — Auto-Sync</h2>
-        <span id="pcStatus" class="badge badge-off">Checking PC...</span>
-      </div>
-      <p class="hint" style="margin-top:0">
-        Install once on any PC. After that it runs silently in the background and games you
-        add here deploy to that PC's Steam automatically.
-      </p>
-      <div class="row">
-        <button id="installAgentBtn" class="primary">Download &amp; install PC agent</button>
-        <button id="copyTokenBtn" class="ghost">Copy token</button>
-      </div>
-      <p class="hint">
-        Download the file, then double-click it. One time only — no commands needed.
-        <code id="agentToken" style="display:none">......</code>
-      </p>
-    </section>
+  <script>
+    // ── Live download counter ─────────────────────────────
+    async function loadDownloadCount() {
+      try {
+        const r = await fetch('/api/download/count');
+        const d = await r.json();
+        if (d && d.total != null) {
+          const el = document.getElementById('downloadCount');
+          el.innerHTML = '⬇ <b>' + d.total.toLocaleString() + '</b> downloads so far';
+        }
+      } catch (e) {
+        const el = document.getElementById('downloadCount');
+        el.innerHTML = 'Free download · v3.1.1';
+      }
+    }
+    loadDownloadCount();
 
-    <section class="card">
-      <div class="card-title">
-        <h2>Browse CloudDB</h2>
-        <span id="searchCount" class="hint"></span>
-      </div>
-      <div class="row">
-        <input id="searchInput" type="text" placeholder="Search ~119k games..." spellcheck="false" />
-        <button id="searchBtn">Search</button>
-      </div>
-      <div id="gamesGrid" class="games-grid"></div>
-      <div id="loadMoreWrap" class="load-more-wrap hidden">
-        <button id="loadMoreBtn" class="ghost">Load more</button>
-      </div>
-    </section>
-  </main>
-
-  <script src="app.js"></script>
+    // ── Buy button → Stripe checkout ──────────────────────
+    const buyBtn = document.getElementById('buyBtn');
+    if (buyBtn) {
+      buyBtn.addEventListener('click', async () => {
+        buyBtn.disabled = true;
+        buyBtn.textContent = 'Opening secure checkout...';
+        try {
+          const r = await fetch('/api/checkout', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({}),
+          });
+          const d = await r.json();
+          if (d && d.url) {
+            window.location.href = d.url;
+            return;
+          }
+          throw new Error(d.error || 'checkout failed');
+        } catch (e) {
+          buyBtn.textContent = 'Checkout unavailable — try again';
+          buyBtn.disabled = false;
+        }
+      });
+    }
+  </script>
 </body>
 </html>

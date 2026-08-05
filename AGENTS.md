@@ -21,6 +21,35 @@ Cloud sync + backup service for the CWTool desktop app (`steam_tool` repo siblin
 - `backup.js`: auto-push throttled to `BACKUP_MIN_INTERVAL_MS` (default 30 min); manual `POST /api/backup/push` always forces.
 - Test agent token (live): `88d602cefcccb5b65316dc16ca16c90c53ba19dab8bae576fa4cfbfd98e31607` for user `1487668000478855188` (ShadowClutchh).
 
+## Monetization (downloads + Stripe + license keys)
+Landing page is `public/index.html` (marketing + download + buy). The old cloud-library UI moved to `/app` (`public/app.html`).
+
+Endpoints:
+- `GET /api/download?src=<source>` — counts the download (source/IP/UA) then 302-redirects to `EXE_DOWNLOAD_URL`. Track per-source (e.g. `?src=youtube`).
+- `GET /api/download/count` — public total for the landing page counter.
+- `GET /api/stats?token=<ADMIN_TOKEN>` — admin dashboard: download totals by source + license sales.
+- `POST /api/checkout` — creates a Stripe Checkout session for one license key.
+- `POST /api/stripe/webhook` — on `checkout.session.completed`, mints a key (`SHADOW-XXXX-...`) and stores it (session_id + email).
+- `GET /buy/success?session_id=...` — post-purchase page that shows the buyer their key.
+- `POST /api/license/activate` — `{key, machine_id}`; binds key to one PC (second PC rejected).
+- `POST /api/license/validate` — `{key, machine_id}`; status check.
+- `GET /api/license/redeem?session_id=...` — fetch key for a session.
+
+Required env vars on Render (add via Render dashboard → cwtool service → Environment):
+- `STRIPE_SECRET_KEY` — sk_live_... (Stripe Dashboard → Developers → API keys)
+- `STRIPE_WEBHOOK_SECRET` — whsec_... (Stripe → Developers → Webhooks → cwtool service endpoint). Endpoint URL: `https://cwtool.onrender.com/api/stripe/webhook`, event `checkout.session.completed`.
+- `ADMIN_TOKEN` — your private token for `/api/stats`.
+- `PRICE_USD` — optional, default 4.99.
+- `EXE_DOWNLOAD_URL` — optional; recommended = the GitHub Release asset URL for Shadowclutch.exe. Without it the download 302-redirects to `/cdn/Shadowclutch.exe` (this repo's `cdn/` dir — commit the exe there).
+- `PRODUCT_NAME` — optional, default "ShadowTools License".
+
+Config fallbacks live in `config.json` (keys: `stripe_secret_key`, `stripe_webhook_secret`, `admin_token`, `price_usd`, `exe_download_url`, `product_name`). Config is checked into git, so env vars are preferred for secrets.
+
+Ads: the landing page has three `.ad-slot` divs (leaderboard-top/mid/bottom). Paste your Google AdSense `<ins class="adsbygoogle">` snippet into those slots (and the AdSense loader script in `<head>`).
+
+Deploy: `git add -A && git commit -m "..." && git push` then hit the deploy hook (AGENTS.md top) — it builds the latest GitHub commit.
+
 ## Desktop app notes
 - `app.py` requires `sys.frozen = True` before import in test scripts (admin-elevation guard ~line 639).
 - `_backup_cloud_push` tries server push (`POST /api/backup/push`) first, falls back to GitHub merge.
+- License: on first run the app shows an activation overlay. `WindowAPI.activate_license(key)` POSTs to the server's `/api/license/activate` with a persistent `machine_id` (stored in `license.json` next to the exe). Server URL comes from config.json `server_url` / env `CWT_SERVER_URL`, defaulting to `https://cwtool.onrender.com`.

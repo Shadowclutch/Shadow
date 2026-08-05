@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShadowTools — Cloud Library</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+      <div class="brand">
+      <a href="/" style="text-decoration:none;color:inherit">
+      <span class="logo">ST</span>
+      <div>
+        <h1>ShadowTools</h1>
+        <p class="subtitle">Your Steam game library, synced to every PC</p>
+      </div>
+      </a>
+    </div>
+    <div class="auth-area">
+      <span id="clouddbBadge" class="badge badge-off">CloudDB not configured</span>
+      <div id="authBox" class="auth-box"></div>
+    </div>
+  </header>
+
+  <main>
+    <div id="notConfiguredBanner" class="banner hidden">
+      The server has no CloudDB keys configured. Add them to config.json (clouddb_keys) or set CWT_CLOUDDB_KEY.
+    </div>
+
+    <section class="card" id="libraryCard">
+      <div class="card-title">
+        <h2>My Library</h2>
+        <span id="libraryCount" class="hint"></span>
+      </div>
+      <div id="libraryBody">
+        <div class="login-prompt">
+          <p>Sign in with Discord to save games to your library.</p>
+          <a class="steam-login-btn" href="/auth/discord">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 15.5 10 21l1.4-4.2"/><path d="M9 8c0-2 1-3 3-3s3 1 3 3c0 2.5 2 3 2 5 0 2-1.5 3-2.5 4L12 19l-2.5-2C8.5 16 7 15 7 13c0-2 2-2.5 2-5Z"/><path d="M12 5.5V3"/><path d="M8 15.5 5 16"/></svg>
+            Sign in through Discord
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="agentCard" style="display:none">
+      <div class="card-title">
+        <h2>PC Agent — Auto-Sync</h2>
+        <span id="pcStatus" class="badge badge-off">Checking PC...</span>
+      </div>
+      <p class="hint" style="margin-top:0">
+        Install once on any PC. After that it runs silently in the background and games you
+        add here deploy to that PC's Steam automatically.
+      </p>
+      <div class="row">
+        <button id="installAgentBtn" class="primary">Download &amp; install PC agent</button>
+        <button id="copyTokenBtn" class="ghost">Copy token</button>
+      </div>
+      <p class="hint">
+        Download the file, then double-click it. One time only — no commands needed.
+        <code id="agentToken" style="display:none">......</code>
+      </p>
+    </section>
+
+    <section class="card">
+      <div class="card-title">
+        <h2>Browse CloudDB</h2>
+        <span id="searchCount" class="hint"></span>
+      </div>
+      <div class="row">
+        <input id="searchInput" type="text" placeholder="Search ~119k games..." spellcheck="false" />
+        <button id="searchBtn">Search</button>
+      </div>
+      <div id="gamesGrid" class="games-grid"></div>
+      <div id="loadMoreWrap" class="load-more-wrap hidden">
+        <button id="loadMoreBtn" class="ghost">Load more</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
