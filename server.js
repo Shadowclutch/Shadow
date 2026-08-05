@@ -964,6 +964,20 @@ app.post('/api/license/admin/revoke', async (req, res) => {
   }
 });
 
+// POST /api/license/admin/reset  { key }  → clears PC binding so the key can be activated again (e.g. after a Windows reinstall)
+app.post('/api/license/admin/reset', async (req, res) => {
+  if (!requireAdmin(req, res)) return;
+  try {
+    const key = String((req.body && req.body.key) || '').trim().toUpperCase();
+    if (!key) return res.status(400).json({ ok: false, error: 'Missing key' });
+    await db.resetLicenseKey(key);
+    backup.schedulePush();
+    res.json({ ok: true });
+  } catch (e) {
+    res.status(500).json({ ok: false, error: e.message });
+  }
+});
+
 // ── Coupons (discount codes for deals) ──────────────────────
 // POST /api/coupon/admin/create  { code?, percent?, amount?, days? }  + admin token
 app.post('/api/coupon/admin/create', async (req, res) => {
@@ -1398,11 +1412,21 @@ function render(){
     <td class="mut">\${fmt(k.created_at)}</td>
     <td><div class="act">
       <button class="icon-btn" title="Copy key" onclick="copy('\${esc(k.key)}', this)">⧉</button>
+      \${k.status==='revoked' ? '' : '<button class="icon-btn" title="Reset machine (re-allow activation)" data-reset="\${esc(k.key)}">↺</button>'}
       \${k.status==='revoked' ? '' : '<button class="icon-btn revoke" title="Revoke" data-revoke="\${esc(k.key)}">✕</button>'}
     </div></td>
   </tr>\`).join('');
 }
 document.addEventListener('click', async (e) => {
+  const resetBtn = e.target.closest('[data-reset]');
+  if (resetBtn) {
+    const key = resetBtn.getAttribute('data-reset');
+    if (!confirm('Reset machine for key ' + key + '?\\nThe buyer can then re-activate (e.g. after reinstalling Windows).')) return;
+    const r = await api('/api/license/admin/reset', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({key})});
+    if(r.ok){ toast('Machine reset for ' + key); } else { toast(r.error || 'Reset failed', true); }
+    refresh();
+    return;
+  }
   const btn = e.target.closest('[data-revoke]');
   if (!btn) return;
   const key = btn.getAttribute('data-revoke');

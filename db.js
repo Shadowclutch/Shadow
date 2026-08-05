@@ -300,6 +300,10 @@ async function revokeLicenseKey(key) {
   await A.run(`UPDATE license_keys SET status = 'revoked' WHERE key = ?`, [key]);
 }
 
+async function resetLicenseKey(key) {
+  await A.run(`UPDATE license_keys SET status = 'unused', machine_id = '', activated_at = 0 WHERE key = ?`, [key]);
+}
+
 // ── Coupons (discount codes for deals) ──────────────────────
 async function createCoupon({ code, percent = 0, amount = 0, expires_at = 0 }) {
   const now = Math.floor(Date.now() / 1000);
@@ -452,6 +456,7 @@ module.exports = {
   licenseStats,
   listLicenseKeys,
   revokeLicenseKey,
+  resetLicenseKey,
   createCoupon,
   listCoupons,
   getCoupon,
