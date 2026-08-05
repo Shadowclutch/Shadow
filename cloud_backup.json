@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785935400,
+  "exported_at": 1785935512,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -2446,6 +2446,12 @@
       "appid": 1623730,
       "name": "Palworld",
       "added_at": 1785935398
+    },
+    {
+      "steamid": "751518015635456153",
+      "appid": 431960,
+      "name": "Wallpaper Engine",
+      "added_at": 1785935509
     }
   ],
   "downloads": [
