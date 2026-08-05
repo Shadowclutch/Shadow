@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785948400,
+  "exported_at": 1785948744,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -2792,6 +2792,13 @@
       "ip": "152.58.153.198",
       "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
       "created_at": 1785947512
+    },
+    {
+      "id": "30b41d23031b6f4f5b1ddc5b",
+      "source": "site",
+      "ip": "223.233.77.66",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+      "created_at": 1785948723
     }
   ],
   "license_keys": [
@@ -2836,17 +2843,6 @@
       "machine_id": "",
       "activated_at": 0,
       "created_at": 1785940149,
-      "trial": 0,
-      "expires_at": 0
-    },
-    {
-      "key": "SHADOW-FD48-P5LZ-77MG-336V",
-      "email": "",
-      "session_id": "",
-      "status": "unused",
-      "machine_id": "",
-      "activated_at": 0,
-      "created_at": 1785941969,
       "trial": 0,
       "expires_at": 0
     },
@@ -2915,6 +2911,28 @@
       "created_at": 1785947593,
       "trial": 1,
       "expires_at": 1785947713
+    },
+    {
+      "key": "SHADOW-FD48-P5LZ-77MG-336V",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-c584bc44429537d5a3499ea6",
+      "activated_at": 1785948472,
+      "created_at": 1785941969,
+      "trial": 0,
+      "expires_at": 0
+    },
+    {
+      "key": "SHADOW-A26Y-RHNM-VSB3-MWWE",
+      "email": "Shivam Sardana",
+      "session_id": "",
+      "status": "unused",
+      "machine_id": "",
+      "activated_at": 0,
+      "created_at": 1785948740,
+      "trial": 0,
+      "expires_at": 0
     }
   ]
 }
