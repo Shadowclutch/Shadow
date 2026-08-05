@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785941977,
+  "exported_at": 1785942126,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -2565,12 +2565,6 @@
       "appid": 2183900,
       "name": "Warhammer 40,000: Space Marine 2",
       "added_at": 1785940677
-    },
-    {
-      "steamid": "872516016175980594",
-      "appid": 4055790,
-      "name": "House Party - Nocturnal Temptations Expansion Pack",
-      "added_at": 1785941802
     }
   ],
   "downloads": [
