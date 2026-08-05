@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785943003,
+  "exported_at": 1785943429,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -2596,6 +2596,12 @@
       "appid": 4000,
       "name": "",
       "added_at": 1785942444
+    },
+    {
+      "steamid": "718000676009017344",
+      "appid": 785847,
+      "name": "",
+      "added_at": 1785943426
     }
   ],
   "downloads": [
@@ -2654,6 +2660,34 @@
       "ip": "35.154.143.15",
       "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36",
       "created_at": 1785941236
+    },
+    {
+      "id": "70248e2669f8746587774d3e",
+      "source": "verify",
+      "ip": "152.56.142.156",
+      "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.8972",
+      "created_at": 1785943021
+    },
+    {
+      "id": "3eaf9b8863aee56331377d41",
+      "source": "site",
+      "ip": "152.56.144.236",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+      "created_at": 1785943081
+    },
+    {
+      "id": "390e211d42da34ddf50bddb0",
+      "source": "site",
+      "ip": "152.58.130.169",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+      "created_at": 1785943253
+    },
+    {
+      "id": "040b1377516bf73aed5391dc",
+      "source": "site",
+      "ip": "152.58.153.198",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+      "created_at": 1785943293
     }
   ],
   "license_keys": [
@@ -2722,6 +2756,17 @@
       "created_at": 1785941973,
       "trial": 1,
       "expires_at": 1785942573
+    },
+    {
+      "key": "TRIAL-WSN5-5HPX-4T7Z-GD9B",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "74d803c9-e06d-4c17-ae73-6054a3a80091",
+      "activated_at": 1785943356,
+      "created_at": 1785943355,
+      "trial": 1,
+      "expires_at": 1785943955
     }
   ]
 }
