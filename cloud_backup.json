@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785985739,
+  "exported_at": 1785986008,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -3355,6 +3355,12 @@
       "appid": 2231950,
       "name": "Sifu - Deluxe Cosmetic Pack",
       "added_at": 1785976204
+    },
+    {
+      "steamid": "1400452587517644882",
+      "appid": 2651280,
+      "name": "Marvel's Spider-Man 2",
+      "added_at": 1785986006
     }
   ],
   "downloads": [
