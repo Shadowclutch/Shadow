@@ -128,21 +128,21 @@
           <div class="pay-step-num">1</div>
           <div class="pay-step-body">
             <b id="payStep1">Pay ₹300</b>
-            <span>Choose any method below and send the amount.</span>
+            <span>Tap the Razorpay button below and pay with card, UPI or netbanking.</span>
           </div>
         </div>
         <div class="pay-step">
           <div class="pay-step-num">2</div>
           <div class="pay-step-body">
-            <b>Send the payment screenshot</b>
-            <span>DM it to me on Instagram — I verify it within minutes.</span>
+            <b>You're redirected to the success page</b>
+            <span>Your license key is generated and shown to you automatically.</span>
           </div>
         </div>
         <div class="pay-step">
           <div class="pay-step-num">3</div>
           <div class="pay-step-body">
-            <b>Get your license key</b>
-            <span>I send your key instantly, then you activate it in the app.</span>
+            <b>Copy your key & activate</b>
+            <span>Open the app, paste your key, and you're set — it never expires.</span>
           </div>
         </div>
       </div>
@@ -157,20 +157,7 @@
           <a class="btn btn-primary razorpay-btn" id="razorpay-btn" href="https://razorpay.me/@utkarshmishra6595" target="_blank" rel="noopener">
             Pay ₹<span id="rzpAmount">300</span> with Razorpay →
           </a>
-          <span class="pay-method-note">Pay by card, UPI or netbanking on Razorpay's secure page — no account needed.</span>
-        </div>
-        <div class="pay-method" id="upi-method">
-          <div class="pay-method-head">
-            <b>UPI</b>
-            <span class="pay-tag">Fast · India</span>
-          </div>
-          <div class="pay-copy">
-            <code id="upi-id">um5655692@okicici</code>
-            <button type="button" class="copy-btn" id="copy-upi" title="Copy UPI ID">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-            </button>
-          </div>
-          <span class="pay-method-note" id="upiNote">Open any UPI app (GPay, PhonePe, Paytm), pay ₹300 to the ID above.</span>
+          <span class="pay-method-note">Pay by card, UPI or netbanking on Razorpay's secure page — no account needed. Your key is issued instantly after payment.</span>
         </div>
         <div class="pay-method">
           <div class="pay-method-head">
@@ -180,15 +167,6 @@
           <span class="pay-method-note">USDT / crypto payments — international buyers. Wallet added soon.</span>
         </div>
       </div>
-
-      <p class="pay-note">
-        After paying, DM your payment reference / screenshot on
-        <a href="https://www.instagram.com/shadowclutch__" target="_blank" rel="noopener" class="insta-link">Instagram @shadowclutch__</a>
-        and I'll send your license key right away.
-      </p>
-      <a class="btn btn-primary btn-lg" style="width:100%;margin-top:14px" href="https://www.instagram.com/shadowclutch__" target="_blank" rel="noopener">
-        Send payment proof on Instagram →
-      </a>
     </div>
   </section>
 
@@ -239,7 +217,6 @@
     var priceDisc = document.getElementById('priceDisc');
     var priceCaption = document.getElementById('priceCaption');
     var payStep1 = document.getElementById('payStep1');
-    var upiNote = document.getElementById('upiNote');
     var rzpAmount = document.getElementById('rzpAmount');
 
     function setPrice(base, discount) {
@@ -249,13 +226,11 @@
         priceDisc.textContent = ' ₹' + (base - discount).toLocaleString('en-IN');
         payStep1.textContent = 'Pay ₹' + (base - discount).toLocaleString('en-IN');
         if (rzpAmount) rzpAmount.textContent = (base - discount).toLocaleString('en-IN');
-        if (upiNote) upiNote.textContent = 'Open any UPI app (GPay, PhonePe, Paytm), pay ₹' + (base - discount).toLocaleString('en-IN') + ' to the ID above.';
       } else {
         priceBase.textContent = '₹' + base.toLocaleString('en-IN');
         priceDisc.style.display = 'none';
         payStep1.textContent = 'Pay ₹' + base.toLocaleString('en-IN');
         if (rzpAmount) rzpAmount.textContent = base.toLocaleString('en-IN');
-        if (upiNote) upiNote.textContent = 'Open any UPI app (GPay, PhonePe, Paytm), pay ₹' + base.toLocaleString('en-IN') + ' to the ID above.';
       }
     }
 
@@ -287,37 +262,6 @@
     }
     if (couponBtn) couponBtn.addEventListener('click', applyCoupon);
     if (couponInput) couponInput.addEventListener('keydown', function (e) { if (e.key === 'Enter') applyCoupon(); });
-
-    var copyBtn = document.getElementById('copy-upi');
-    if (copyBtn) {
-      copyBtn.addEventListener('click', function () {
-        var id = document.getElementById('upi-id').textContent;
-        var done = function () {
-          copyBtn.classList.add('copied');
-          copyBtn.title = 'Copied!';
-          setTimeout(function () {
-            copyBtn.classList.remove('copied');
-            copyBtn.title = 'Copy UPI ID';
-          }, 1800);
-        };
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(id).then(done).catch(function () { fallbackCopy(id); done(); });
-        } else {
-          fallbackCopy(id);
-          done();
-        }
-      });
-      function fallbackCopy(text) {
-        var ta = document.createElement('textarea');
-        ta.value = text;
-        ta.style.position = 'fixed';
-        ta.style.opacity = '0';
-        document.body.appendChild(ta);
-        ta.select();
-        try { document.execCommand('copy'); } catch (e) {}
-        document.body.removeChild(ta);
-      }
-    }
 
     var rzpBtn = document.getElementById('razorpay-btn');
     if (rzpBtn) {
