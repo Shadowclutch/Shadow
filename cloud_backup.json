@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1786036946,
+  "exported_at": 1786038919,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -4088,6 +4088,20 @@
       "ip": "47.31.104.82",
       "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
       "created_at": 1786034315
+    },
+    {
+      "id": "9fbc7da8fbce789368499cf6",
+      "source": "site",
+      "ip": "104.28.155.91",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+      "created_at": 1786037905
+    },
+    {
+      "id": "7213a08076802ed6f6dc2d23",
+      "source": "site",
+      "ip": "117.209.21.253",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+      "created_at": 1786038751
     }
   ],
   "license_keys": [
@@ -4257,17 +4271,6 @@
       "expires_at": 0
     },
     {
-      "key": "SHADOW-GAAQ-Q9MY-NBV4-34ZW",
-      "email": "",
-      "session_id": "",
-      "status": "unused",
-      "machine_id": "",
-      "activated_at": 0,
-      "created_at": 1785955670,
-      "trial": 0,
-      "expires_at": 0
-    },
-    {
       "key": "SHADOW-W8KQ-4EDZ-K2V9-VGYG",
       "email": "",
       "session_id": "",
@@ -4363,6 +4366,28 @@
       "machine_id": "hw-e8b0f76304ec0e2d3b56fc24",
       "activated_at": 1786036943,
       "created_at": 1785955671,
+      "trial": 0,
+      "expires_at": 0
+    },
+    {
+      "key": "TRIAL-W5UH-9KA3-UEK7-SJ59",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-5a357e4e46ba62901079f92a",
+      "activated_at": 1786038545,
+      "created_at": 1786038545,
+      "trial": 1,
+      "expires_at": 1786038665
+    },
+    {
+      "key": "SHADOW-GAAQ-Q9MY-NBV4-34ZW",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-5a357e4e46ba62901079f92a",
+      "activated_at": 1786038916,
+      "created_at": 1785955670,
       "trial": 0,
       "expires_at": 0
     }
