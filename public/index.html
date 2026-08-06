@@ -154,7 +154,7 @@
             <b>Razorpay</b>
             <span class="pay-tag">Cards · UPI · Netbanking</span>
           </div>
-          <a class="btn btn-primary razorpay-btn" href="https://razorpay.me/@utkarshmishra6595" target="_blank" rel="noopener">
+          <a class="btn btn-primary razorpay-btn" id="razorpay-btn" href="https://razorpay.me/@utkarshmishra6595" target="_blank" rel="noopener">
             Pay ₹<span id="rzpAmount">300</span> with Razorpay →
           </a>
           <span class="pay-method-note">Pay by card, UPI or netbanking on Razorpay's secure page — no account needed.</span>
@@ -231,6 +231,7 @@
     loadDownloadCount();
 
     var BASE_PRICE = 300;
+    var appliedCoupon = '';
     var couponBtn = document.getElementById('coupon-btn');
     var couponInput = document.getElementById('coupon-input');
     var couponMsg = document.getElementById('coupon-msg');
@@ -267,10 +268,12 @@
         .then(function (d) {
           couponBtn.disabled = false;
           if (d.ok) {
+            appliedCoupon = code;
             couponMsg.textContent = 'Coupon applied — ' + (d.percent ? d.percent + '% off' : '₹' + d.amount + ' off') + '!';
             couponMsg.className = 'coupon-msg ok';
             setPrice(d.base, d.discount);
           } else {
+            appliedCoupon = '';
             couponMsg.textContent = d.error || 'Invalid coupon.';
             couponMsg.className = 'coupon-msg err';
             setPrice(BASE_PRICE, 0);
@@ -314,6 +317,25 @@
         try { document.execCommand('copy'); } catch (e) {}
         document.body.removeChild(ta);
       }
+    }
+
+    var rzpBtn = document.getElementById('razorpay-btn');
+    if (rzpBtn) {
+      rzpBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        var fallback = rzpBtn.getAttribute('href');
+        fetch('/api/checkout/razorpay', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ coupon: appliedCoupon })
+        })
+          .then(function (r) { return r.json(); })
+          .then(function (d) {
+            if (d && d.ok && d.url) { window.open(d.url, '_blank', 'noopener'); }
+            else { window.open(fallback, '_blank', 'noopener'); }
+          })
+          .catch(function () { window.open(fallback, '_blank', 'noopener'); });
+      });
     }
   </script>
 </body>

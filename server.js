@@ -40,6 +40,15 @@ const EXE_DOWNLOAD_URL = process.env.EXE_DOWNLOAD_URL || serverCfg.exe_download_
 // Admin token for the stats page.
 const ADMIN_TOKEN = process.env.ADMIN_TOKEN || serverCfg.admin_token || '';
 
+// ── Razorpay (auto-mint on payment) ──────────────────────────
+// Live Key ID / Key Secret from dashboard.razorpay.com → Settings → API Keys.
+// Webhook secret is the one set when creating the webhook at
+// https://dashboard.razorpay.com → Settings → Webhooks → Add New Webhook
+// (URL: <SITE_URL>/api/razorpay/webhook, event: payment_link.paid).
+const RAZORPAY_KEY_ID = process.env.RAZORPAY_KEY_ID || serverCfg.razorpay_key_id || '';
+const RAZORPAY_KEY_SECRET = process.env.RAZORPAY_KEY_SECRET || serverCfg.razorpay_key_secret || '';
+const RAZORPAY_WEBHOOK_SECRET = process.env.RAZORPAY_WEBHOOK_SECRET || serverCfg.razorpay_webhook_secret || '';
+
 // ── License response signing (anti fake-server) ─────────────
 // Every /api/license/* response carries an Ed25519 signature so the desktop app
 // can prove the reply really came from this server. A cracker's mock server
@@ -1194,6 +1203,107 @@ app.post('/api/stripe/webhook', async (req, res) => {
   res.json({ received: true, key });
 });
 
+// ── Razorpay checkout (auto-mint on payment) ────────────────
+async function razorpayRequest(path, opts = {}) {
+  const res = await fetchWithTimeout('https://api.razorpay.com/v1' + path, {
+    ...opts,
+    headers: {
+      Authorization: 'Basic ' + Buffer.from(`${RAZORPAY_KEY_ID}:${RAZORPAY_KEY_SECRET}`).toString('base64'),
+      'Content-Type': 'application/json',
+      ...(opts.headers || {}),
+    },
+  }, 30000);
+  const data = await res.json();
+  if (!res.ok) {
+    const err = data.error || {};
+    throw new Error(err.description || err.reason || err.message || `Razorpay HTTP ${res.status}`);
+  }
+  return data;
+}
+
+// Price after an optional coupon — mirrors /api/coupon/validate server-side.
+async function applyCouponPrice(couponCode) {
+  let base = Math.round(PRICE_INR);
+  const code = String(couponCode || '').trim().toUpperCase();
+  if (!code) return { base, price: base, discount: 0, coupon: null };
+  const c = await db.getCoupon(code);
+  if (!c) throw new Error('Invalid coupon code.');
+  const now = Math.floor(Date.now() / 1000);
+  if (c.expires_at && c.expires_at > 0 && now > c.expires_at) throw new Error('This coupon has expired.');
+  const discount = c.percent ? Math.round(base * c.percent / 100) : Math.min(c.amount, base);
+  return { base, price: Math.max(0, base - discount), discount, coupon: code };
+}
+
+// Create a Razorpay Payment Link for the current price. Buyer is redirected to
+// Razorpay's hosted page; on payment the webhook auto-mints a key, and the buyer
+// lands on /buy/success (via /buy/razorpay) which shows the key.
+app.post('/api/checkout/razorpay', rateLimit(20, 60000), async (req, res) => {
+  if (!RAZORPAY_KEY_ID || !RAZORPAY_KEY_SECRET) return res.status(503).json({ error: 'Razorpay is not configured on this server yet.' });
+  try {
+    const { price, discount, coupon } = await applyCouponPrice((req.body && req.body.coupon) || '');
+    const refId = 'SW-' + crypto.randomBytes(6).toString('hex').toUpperCase();
+    const link = await razorpayRequest('/payment_links', {
+      method: 'POST',
+      body: JSON.stringify({
+        amount: Math.round(price * 100),
+        currency: 'INR',
+        accept_partial: false,
+        reference_id: refId,
+        description: `${PRODUCT_NAME} (₹${price})${coupon ? ` — coupon ${coupon}` : ''}`,
+        callback_url: `${SITE_URL}/buy/razorpay`,
+        callback_method: 'get',
+        notes: { app: 'shadowtools', session_id: refId },
+      }),
+    });
+    console.log(`[ShadowTools Web] Razorpay payment link created: ${link.id} (₹${price}, ref ${refId})`);
+    res.json({ ok: true, url: link.short_url, id: link.id, reference_id: refId, price, discount });
+  } catch (e) {
+    res.status(500).json({ ok: false, error: e.message });
+  }
+});
+
+// Razorpay webhook: on payment_link.paid / payment.captured, mint a key tied to
+// the payment link's reference_id (stored in license_keys.session_id). Verifies
+// the HMAC-SHA256 signature so a fake server can't mint keys.
+app.post('/api/razorpay/webhook', async (req, res) => {
+  if (!RAZORPAY_WEBHOOK_SECRET) {
+    if (req.headers['x-admin-token'] !== ADMIN_TOKEN) return res.status(403).json({ error: 'Forbidden' });
+  } else {
+    const sig = String(req.headers['x-razorpay-signature'] || '');
+    const expected = crypto.createHmac('sha256', RAZORPAY_WEBHOOK_SECRET)
+      .update(req.rawBody.toString())
+      .digest('hex');
+    if (!sig || sig !== expected) return res.status(400).json({ error: 'Invalid signature' });
+  }
+  const payload = req.body || {};
+  let refId = '';
+  let email = '';
+  let amount = 0;
+  const pl = (payload.payload && payload.payload.payment_link && payload.payload.payment_link.entity)
+    || (payload.data && payload.data.payment_link) || null;
+  if (pl) {
+    refId = String(pl.reference_id || '');
+    amount = Number(pl.amount || 0);
+  }
+  if (!refId) {
+    const pay = (payload.payload && payload.payload.payment && payload.payload.payment.entity)
+      || (payload.data && payload.data.payment) || null;
+    if (pay) {
+      refId = String((pay.notes && pay.notes.session_id) || '');
+      email = String(pay.email || '');
+      amount = Number(pay.amount || 0);
+    }
+  }
+  if (!refId) return res.json({ received: true });
+  const existing = await db.getLicenseBySession(refId);
+  if (existing) return res.json({ received: true, existing: true });
+  const key = generateLicenseKey();
+  await db.createLicenseKey({ key, email, session_id: refId });
+  console.log(`[ShadowTools Web] Razorpay license issued: ${key} (ref ${refId}, ₹${(amount / 100).toFixed(2)})`);
+  backup.schedulePush();
+  res.json({ received: true, key });
+});
+
 // ── License endpoints (used by the desktop app) ─────────────
 // Public: the current public key (base64 of the SPKI PEM). The exe embeds this
 // constant, so a change here requires shipping a new build.
@@ -1295,9 +1405,16 @@ app.get('/api/license/redeem', rateLimit(30, 60000), async (req, res) => {
   }
 });
 
+// Razorpay callback — Razorpay appends payment_link_reference_id / razorpay_payment_id
+// as query params, so forward them into the existing success page.
+app.get('/buy/razorpay', (req, res) => {
+  const ref = String(req.query.payment_link_reference_id || req.query.session_id || '').replace(/[^a-zA-Z0-9_-]/g, '');
+  res.redirect('/buy/success?session_id=' + encodeURIComponent(ref));
+});
+
 // Post-purchase success page — shows the buyer their license key.
 app.get('/buy/success', (req, res) => {
-  const sessionId = String(req.query.session_id || '').replace(/[^a-zA-Z0-9_]/g, '');
+  const sessionId = String(req.query.session_id || '').replace(/[^a-zA-Z0-9_-]/g, '');
   res.send(`<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Payment received — ${PRODUCT_NAME}</title>
 <style>
