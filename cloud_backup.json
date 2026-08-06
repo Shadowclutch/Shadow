@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1786009955,
+  "exported_at": 1786009959,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -3738,6 +3738,12 @@
       "appid": 698780,
       "name": "Doki Doki Literature Club",
       "added_at": 1786009954
+    },
+    {
+      "steamid": "1318978685029580800",
+      "appid": 1388880,
+      "name": "Doki Doki Literature Club Plus!",
+      "added_at": 1786009957
     }
   ],
   "downloads": [
