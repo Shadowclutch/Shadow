@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785999189,
+  "exported_at": 1785999248,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -3447,6 +3447,12 @@
       "appid": 582160,
       "name": "",
       "added_at": 1785999187
+    },
+    {
+      "steamid": "1345121200619262073",
+      "appid": 238320,
+      "name": "",
+      "added_at": 1785999246
     }
   ],
   "downloads": [
