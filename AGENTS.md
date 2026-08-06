@@ -47,6 +47,11 @@ Every `/api/license/trial|activate|validate` response carries `msg` + `sig` (Ed2
 - The auto-generated private key lives ONLY in the Supabase `settings` table (never backed up to GitHub). Copy it into the `SIGN_PRIVATE_KEY` Render env var for durability (a wiped DB would otherwise change the key and break old exes).
 - Rebuild + re-ship the exe whenever the public key changes.
 
+## Razorpay (payment method)
+- Landing page has a "Pay with Razorpay" button → `https://razorpay.me/@utkarshmishra6595` (fixed ₹300 Razorpay Payment Page). Payments auto-appear in the Razorpay dashboard, so the manual flow is: buyer pays → DMs a reference → seller confirms in dashboard → mints key at `/admin`.
+- Coupon discounts are shown on the page but the razorpay.me page itself is fixed ₹300 (coupons are rare promos; manual discount = seller mints accordingly).
+- **Auto-mint is NOT wired yet.** Needs `RAZORPAY_KEY_ID`, `RAZORPAY_KEY_SECRET`, `RAZORPAY_WEBHOOK_SECRET` (env). Plan: Payment Links API + `payment_link.paid` webhook → auto-mint key → buyer retrieves via callback URL. Razorpay Intl / merchant-of-record undecided for international buyers; Binance still "coming soon".
+
 Required env vars on Render (add via Render dashboard → cwtool service → Environment):
 - `ADMIN_TOKEN` — `tV3fA2HDecQmyIRz8XF49B0jgCoJNMWs` (protects `/admin`, `/api/stats`, admin license routes).
 - `SIGN_PRIVATE_KEY` — optional but recommended: base64 of the Ed25519 PKCS8 PEM (from `/api/license/admin/signing`). Server auto-generates/persists in DB if absent.
