@@ -1742,6 +1742,7 @@ setInterval(refresh, 30000);
     console.log(`[CWTool Web] Persistent DB already has data (users=${counts.users}) — skipping GitHub restore.`);
   }
   await initSignKey();
+  console.log(`[CWTool Web] Env check: DATABASE_URL=${process.env.DATABASE_URL ? 'SET' : 'MISSING'} ADMIN_TOKEN=${process.env.ADMIN_TOKEN ? 'SET' : 'MISSING'} GITHUB_REPO_TOKEN=${process.env.GITHUB_REPO_TOKEN ? 'SET' : 'MISSING'} RAZORPAY_KEY_ID=${process.env.RAZORPAY_KEY_ID ? 'SET' : 'MISSING'} RAZORPAY_WEBHOOK_SECRET=${process.env.RAZORPAY_WEBHOOK_SECRET ? 'SET' : 'MISSING'} SITE_URL=${SITE_URL}`);
   app.listen(PORT, () => {
     console.log(`[CWTool Web] Running at ${SITE_URL}`);
     console.log(`[CWTool Web] Storage: ${db.backend === 'pg' ? 'Postgres (persistent)' : 'SQLite (fallback)'}`);
