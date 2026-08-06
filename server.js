@@ -1303,7 +1303,15 @@ app.post('/api/razorpay/webhook', async (req, res) => {
     const existing = await db.getLicenseBySession(refId);
     if (existing) return { received: true, existing: true };
     const key = generateLicenseKey();
-    await db.createLicenseKey({ key, email, session_id: refId });
+    try {
+      await db.createLicenseKey({ key, email, session_id: refId });
+    } catch (e) {
+      if (String(e.message).match(/unique|duplicate/i)) {
+        console.log(`[ShadowTools Web] Razorpay duplicate ref ${refId} rejected (DB unique guard)`);
+        return { received: true, existing: true };
+      }
+      throw e;
+    }
     console.log(`[ShadowTools Web] Razorpay license issued: ${key} (ref ${refId}, ₹${(amount / 100).toFixed(2)})`);
     backup.schedulePush();
     return { received: true, key };

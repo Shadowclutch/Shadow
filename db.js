@@ -85,6 +85,11 @@ function createSqlite() {
   try { db.exec(`ALTER TABLE users ADD COLUMN provider TEXT NOT NULL DEFAULT 'steam'`); } catch {}
   try { db.exec(`ALTER TABLE license_keys ADD COLUMN expires_at INTEGER NOT NULL DEFAULT 0`); } catch {}
   try { db.exec(`ALTER TABLE license_keys ADD COLUMN trial INTEGER NOT NULL DEFAULT 0`); } catch {}
+  // One payment = one key: detach any pre-existing duplicate refs (keep the
+  // first key per ref as an unused spare), then enforce DB-level uniqueness on
+  // non-empty session_id so no race can mint twice.
+  try { db.exec(`UPDATE license_keys SET session_id = '' WHERE session_id != '' AND key <> (SELECT MIN(key) FROM license_keys WHERE session_id = license_keys.session_id)`); } catch {}
+  try { db.exec(`CREATE UNIQUE INDEX IF NOT EXISTS uq_license_session ON license_keys (session_id) WHERE session_id != ''`); } catch {}
   return {
     backend: 'sqlite',
     ready: Promise.resolve(),
@@ -127,6 +132,11 @@ function createPg(connStr) {
     await state.pool.query(SCHEMA);
     await state.pool.query(`ALTER TABLE license_keys ADD COLUMN IF NOT EXISTS trial INTEGER NOT NULL DEFAULT 0`).catch(() => {});
     await state.pool.query(`ALTER TABLE license_keys ADD COLUMN IF NOT EXISTS expires_at INTEGER NOT NULL DEFAULT 0`).catch(() => {});
+    // One payment = one key: detach any pre-existing duplicate refs (keep the
+    // first key per ref as an unused spare), then enforce DB-level uniqueness on
+    // non-empty session_id so no race can mint twice.
+    await state.pool.query(`UPDATE license_keys SET session_id = '' WHERE session_id != '' AND key <> (SELECT MIN(key) FROM license_keys WHERE session_id = license_keys.session_id)`).catch(() => {});
+    await state.pool.query(`CREATE UNIQUE INDEX IF NOT EXISTS uq_license_session ON license_keys (session_id) WHERE session_id != ''`).catch(() => {});
     console.log(`[db] Postgres backend ready (${host}:${c.port || 5432}/${c.database})`);
   })().catch((e) => {
     console.error(`[db] Postgres init failed: ${e.message}`);
