@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1786009505,
+  "exported_at": 1786009565,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -3713,6 +3713,12 @@
       "appid": 2552450,
       "name": "KINGDOM HEARTS III + Re Mind (DLC)",
       "added_at": 1786006744
+    },
+    {
+      "steamid": "1518935901047095389",
+      "appid": 733840,
+      "name": "Anime Bubble Pop",
+      "added_at": 1786009563
     }
   ],
   "downloads": [
