@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1786006737,
+  "exported_at": 1786006746,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -3688,6 +3688,18 @@
       "appid": 24008174,
       "name": "",
       "added_at": 1786003385
+    },
+    {
+      "steamid": "806640886628089907",
+      "appid": 2552430,
+      "name": "KINGDOM HEARTS -HD 1.5+2.5 ReMIX-",
+      "added_at": 1786006741
+    },
+    {
+      "steamid": "806640886628089907",
+      "appid": 2552450,
+      "name": "KINGDOM HEARTS III + Re Mind (DLC)",
+      "added_at": 1786006744
     }
   ],
   "downloads": [
