@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1786017654,
+  "exported_at": 1786017775,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -3787,6 +3787,12 @@
       "appid": 2827200,
       "name": "MIMESIS",
       "added_at": 1786017653
+    },
+    {
+      "steamid": "1533488754176557219",
+      "appid": 3949040,
+      "name": "RV There Yet?",
+      "added_at": 1786017773
     }
   ],
   "downloads": [
