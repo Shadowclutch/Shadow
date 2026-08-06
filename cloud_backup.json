@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1786003174,
+  "exported_at": 1786003238,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -3663,6 +3663,12 @@
       "appid": 345350,
       "name": "LIGHTNING RETURNS: FINAL FANTASY XIII",
       "added_at": 1786003170
+    },
+    {
+      "steamid": "1510802203831697478",
+      "appid": 2592160,
+      "name": "",
+      "added_at": 1786003236
     }
   ],
   "downloads": [
