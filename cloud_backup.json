@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1786011369,
+  "exported_at": 1786012616,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -4215,6 +4215,39 @@
       "machine_id": "hw-577297f792b09816c795c0e0",
       "activated_at": 1785956242,
       "created_at": 1785931727,
+      "trial": 0,
+      "expires_at": 0
+    },
+    {
+      "key": "SHADOW-VK99-U8KK-Y3JE-RAVK",
+      "email": "",
+      "session_id": "SW-7BFD3A481BB1",
+      "status": "unused",
+      "machine_id": "",
+      "activated_at": 0,
+      "created_at": 1786011494,
+      "trial": 0,
+      "expires_at": 0
+    },
+    {
+      "key": "SHADOW-ARTC-YJUN-9GVQ-TR36",
+      "email": "",
+      "session_id": "SW-7BFD3A481BB1",
+      "status": "unused",
+      "machine_id": "",
+      "activated_at": 0,
+      "created_at": 1786011494,
+      "trial": 0,
+      "expires_at": 0
+    },
+    {
+      "key": "SHADOW-VX25-H6MX-FG3G-CABL",
+      "email": "",
+      "session_id": "SW-TEST12345678",
+      "status": "revoked",
+      "machine_id": "",
+      "activated_at": 0,
+      "created_at": 1786011598,
       "trial": 0,
       "expires_at": 0
     }
