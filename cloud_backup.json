@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1786012616,
+  "exported_at": 1786013035,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -332,13 +332,6 @@
       "created_at": 1785946705
     },
     {
-      "steamid": "1487668000478855188",
-      "name": "ShadowClutchh",
-      "avatar": "https://cdn.discordapp.com/avatars/1487668000478855188/f1768a4587769379b481ab6452a47197.png",
-      "provider": "discord",
-      "created_at": 1785769226
-    },
-    {
       "steamid": "1502230806725398548",
       "name": "Sophia",
       "avatar": "https://cdn.discordapp.com/avatars/1502230806725398548/a4ccef922b7ddda6a94225ad6d34afb5.png",
@@ -456,6 +449,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1318978685029580800/cf5d5c0a077d94a1b69cd51729fefb85.png",
       "provider": "discord",
       "created_at": 1786009807
+    },
+    {
+      "steamid": "1487668000478855188",
+      "name": "ShadowClutchh",
+      "avatar": "https://cdn.discordapp.com/avatars/1487668000478855188/f1768a4587769379b481ab6452a47197.png",
+      "provider": "discord",
+      "created_at": 1785769226
     }
   ],
   "sessions": [
@@ -4221,18 +4221,7 @@
     {
       "key": "SHADOW-VK99-U8KK-Y3JE-RAVK",
       "email": "",
-      "session_id": "SW-7BFD3A481BB1",
-      "status": "unused",
-      "machine_id": "",
-      "activated_at": 0,
-      "created_at": 1786011494,
-      "trial": 0,
-      "expires_at": 0
-    },
-    {
-      "key": "SHADOW-ARTC-YJUN-9GVQ-TR36",
-      "email": "",
-      "session_id": "SW-7BFD3A481BB1",
+      "session_id": "",
       "status": "unused",
       "machine_id": "",
       "activated_at": 0,
@@ -4243,11 +4232,22 @@
     {
       "key": "SHADOW-VX25-H6MX-FG3G-CABL",
       "email": "",
-      "session_id": "SW-TEST12345678",
+      "session_id": "",
       "status": "revoked",
       "machine_id": "",
       "activated_at": 0,
       "created_at": 1786011598,
+      "trial": 0,
+      "expires_at": 0
+    },
+    {
+      "key": "SHADOW-ARTC-YJUN-9GVQ-TR36",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-c584bc44429537d5a3499ea6",
+      "activated_at": 1786012953,
+      "created_at": 1786011494,
       "trial": 0,
       "expires_at": 0
     }
