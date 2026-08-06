@@ -7,13 +7,13 @@ Cloud sync + backup service for the CWTool desktop app (`steam_tool` repo siblin
 - `steam_tool`: Python desktop app (`app.py`, built exe in `dist\`).
 
 ## Live infra (all free tiers, no credit card)
-- Render service: `srv-d9nkks6417fc73diva40` (cwtool), live at `https://cwtool.onrender.com`. Deploy via hook `POST https://api.render.com/deploy/srv-d9nkks6417fc73diva40?key=ZddvHzXCzeA`. Hook deploys the latest **GitHub** commit — always `git push` before deploying.
+- Render service: `shadow-uxun` (new free-tier account, service `shadow-uxun`), live at `https://shadow-uxun.onrender.com`. Auto-deploy is enabled on the **main** branch — pushing to GitHub deploys automatically; no deploy hook needed. The old service `srv-d9nkks6417fc73diva40` (`cwtool.onrender.com`) is **suspended** (exceeded 5GB/month Hobby bandwidth) and needs a credit card to resume.
 - Supabase Postgres (source of truth): ref `zfptfguwdeqtrzvlgusw`. Must use the **Session pooler** host `aws-1-ap-south-1.pooler.supabase.com` (Render has no IPv6; direct host `db.zfptfguwdeqtrzvlgusw.supabase.co` is IPv6-only and fails with `ENETUNREACH`). Connection requires user `postgres.zfptfguwdeqtrzvlgusw` (project-ref suffix mandatory) and the DB password URL-encoded (`@`→`%40`, `#`→`%23`).
 - Render env: `DATABASE_URL` (pooler string), `GITHUB_REPO_TOKEN` (PAT for backup repo).
 - GitHub backup (safety net only): `cloud_backup.json` on branch `backup` of `Shadowclutch/Shadow`.
 
 ## Keep-alive
-- cron-job.org free job pings `https://cwtool.onrender.com/api/health` every 5 min to prevent Render free-tier 15-min spin-down.
+- cron-job.org free job pings `https://shadow-uxun.onrender.com/api/health` every 5 min to prevent Render free-tier 15-min spin-down. (PENDING: the job in the dashboard still targets the old `cwtool.onrender.com` URL — user must update it.)
 
 ## Backend behavior
 - `db.js`: dual backend — Postgres (`pg`) when `DATABASE_URL` set, else SQLite fallback (`node:sqlite`). Forces IPv4 lookup. NOTE: node-pg returns `COUNT(*)` as a string; `countRows()` coerces to numbers (restore guard `users===0 && library===0` breaks otherwise).
@@ -63,11 +63,11 @@ Required env vars on Render (add via Render dashboard → cwtool service → Env
 
 Config fallbacks live in `config.json` (keys: `stripe_secret_key`, `stripe_webhook_secret`, `admin_token`, `price_usd`, `exe_download_url`, `product_name`). Config is checked into git, so env vars are preferred for secrets.
 
-Sell flow: buyer pays via UPI/Binance/PayPal → seller opens `https://cwtool.onrender.com/admin?token=...` → mints key → sends it to buyer → buyer activates in the desktop app.
+Sell flow: buyer pays via UPI/Binance/PayPal → seller opens `https://shadow-uxun.onrender.com/admin?token=...` → mints key → sends it to buyer → buyer activates in the desktop app.
 
-Deploy: `git add -A && git commit -m "..." && git push` then hit the deploy hook (AGENTS.md top) — it builds the latest GitHub commit.
+Deploy: `git add -A && git commit -m "..." && git push` — auto-deploy on `main` releases it (no hook needed).
 
 ## Desktop app notes
 - `app.py` requires `sys.frozen = True` before import in test scripts (admin-elevation guard ~line 639).
 - `_backup_cloud_push` tries server push (`POST /api/backup/push`) first, falls back to GitHub merge.
-- License: on first run the app shows an activation overlay. `WindowAPI.activate_license(key)` POSTs to the server's `/api/license/activate` with a persistent `machine_id` (stored in `license.json` next to the exe). Server URL comes from config.json `server_url` / env `CWT_SERVER_URL`, defaulting to `https://cwtool.onrender.com`.
+- License: on first run the app shows an activation overlay. `WindowAPI.activate_license(key)` POSTs to the server's `/api/license/activate` with a persistent `machine_id` (stored in `license.json` next to the exe). Server URL comes from config.json `server_url` / env `CWT_SERVER_URL`, defaulting to `https://shadow-uxun.onrender.com`.
