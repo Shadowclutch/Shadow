@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1786017300,
+  "exported_at": 1786017439,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -3757,6 +3757,12 @@
       "appid": 1388880,
       "name": "Doki Doki Literature Club Plus!",
       "added_at": 1786009957
+    },
+    {
+      "steamid": "1533488754176557219",
+      "appid": 2625420,
+      "name": "Drive Beyond Horizons",
+      "added_at": 1786017436
     }
   ],
   "downloads": [
