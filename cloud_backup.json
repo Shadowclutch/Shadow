@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1786006746,
+  "exported_at": 1786009500,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -442,6 +442,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/806640886628089907/6b7dcc7db83451a72d2caec2ae31c6fd.png",
       "provider": "discord",
       "created_at": 1786006732
+    },
+    {
+      "steamid": "1518935901047095389",
+      "name": "nguyengokminh",
+      "avatar": "",
+      "provider": "discord",
+      "created_at": 1786009495
     }
   ],
   "sessions": [
@@ -824,6 +831,12 @@
       "steamid": "806640886628089907",
       "created_at": 1786006734,
       "expires_at": 1817542734
+    },
+    {
+      "token": "096b2faf43b68aab44caddeb3ad0c24060e2fb8005578b73216e80702ffffba4",
+      "steamid": "1518935901047095389",
+      "created_at": 1786009497,
+      "expires_at": 1817545497
     }
   ],
   "library": [
@@ -3933,6 +3946,13 @@
       "ip": "49.43.114.55",
       "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
       "created_at": 1786003806
+    },
+    {
+      "id": "4190d94ee78ec8baeadba82d",
+      "source": "site",
+      "ip": "35.154.143.15",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36",
+      "created_at": 1786008675
     }
   ],
   "license_keys": [
