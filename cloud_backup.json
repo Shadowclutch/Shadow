@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1786033374,
+  "exported_at": 1786036946,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -4067,6 +4067,27 @@
       "ip": "35.154.143.15",
       "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36",
       "created_at": 1786032976
+    },
+    {
+      "id": "f040c8adf4db43e286e71332",
+      "source": "site",
+      "ip": "47.31.104.82",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+      "created_at": 1786034125
+    },
+    {
+      "id": "ef801965ee5588c3ce6ab2e4",
+      "source": "site",
+      "ip": "47.31.104.82",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+      "created_at": 1786034236
+    },
+    {
+      "id": "fc1d794a5b15b44be2436dc5",
+      "source": "site",
+      "ip": "47.31.104.82",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+      "created_at": 1786034315
     }
   ],
   "license_keys": [
@@ -4258,17 +4279,6 @@
       "expires_at": 0
     },
     {
-      "key": "SHADOW-89BJ-J4C8-P35E-DNWC",
-      "email": "",
-      "session_id": "",
-      "status": "unused",
-      "machine_id": "",
-      "activated_at": 0,
-      "created_at": 1785955671,
-      "trial": 0,
-      "expires_at": 0
-    },
-    {
       "key": "SHADOW-3WSA-4P89-JP52-JASW",
       "email": "",
       "session_id": "",
@@ -4331,6 +4341,28 @@
       "machine_id": "hw-c584bc44429537d5a3499ea6",
       "activated_at": 1786013772,
       "created_at": 1786011494,
+      "trial": 0,
+      "expires_at": 0
+    },
+    {
+      "key": "TRIAL-VN2L-GJKG-4MPV-GYRP",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-e8b0f76304ec0e2d3b56fc24",
+      "activated_at": 1786034474,
+      "created_at": 1786034474,
+      "trial": 1,
+      "expires_at": 1786034594
+    },
+    {
+      "key": "SHADOW-89BJ-J4C8-P35E-DNWC",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-e8b0f76304ec0e2d3b56fc24",
+      "activated_at": 1786036943,
+      "created_at": 1785955671,
       "trial": 0,
       "expires_at": 0
     }
