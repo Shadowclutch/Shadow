@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1786017775,
+  "exported_at": 1786018365,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -3793,6 +3793,12 @@
       "appid": 3949040,
       "name": "RV There Yet?",
       "added_at": 1786017773
+    },
+    {
+      "steamid": "718000676009017344",
+      "appid": 2723430,
+      "name": "inKONBINI: One Store. Many Stories",
+      "added_at": 1786018363
     }
   ],
   "downloads": [
