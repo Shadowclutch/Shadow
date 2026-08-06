@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785975697,
+  "exported_at": 1785975701,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -3335,6 +3335,12 @@
       "appid": 2231950,
       "name": "Sifu - Deluxe Cosmetic Pack",
       "added_at": 1785975487
+    },
+    {
+      "steamid": "1533488754176557219",
+      "appid": 221040,
+      "name": "Resident Evil 6",
+      "added_at": 1785975699
     }
   ],
   "downloads": [
