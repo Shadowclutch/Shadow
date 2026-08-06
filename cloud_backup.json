@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1786017439,
+  "exported_at": 1786017518,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -3763,6 +3763,24 @@
       "appid": 2625420,
       "name": "Drive Beyond Horizons",
       "added_at": 1786017436
+    },
+    {
+      "steamid": "1533488754176557219",
+      "appid": 1671340,
+      "name": "Fears to Fathom - Episode 1",
+      "added_at": 1786017516
+    },
+    {
+      "steamid": "1533488754176557219",
+      "appid": 1763050,
+      "name": "Fears to Fathom - Episode 2",
+      "added_at": 1786017516
+    },
+    {
+      "steamid": "1533488754176557219",
+      "appid": 2120900,
+      "name": "Fears to Fathom - Episode 3",
+      "added_at": 1786017517
     }
   ],
   "downloads": [
