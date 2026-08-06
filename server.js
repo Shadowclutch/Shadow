@@ -1264,7 +1264,11 @@ app.post('/api/checkout/razorpay', rateLimit(20, 60000), async (req, res) => {
 
 // Razorpay webhook: on payment_link.paid / payment.captured, mint a key tied to
 // the payment link's reference_id (stored in license_keys.session_id). Verifies
-// the HMAC-SHA256 signature so a fake server can't mint keys.
+// the HMAC-SHA256 signature so a fake server can't mint keys. Webhook delivery
+// is serialized in-process so two near-simultaneous events (payment_link.paid +
+// payment.captured) can't double-mint for the same payment.
+let razorpayWebhookChain = Promise.resolve();
+
 app.post('/api/razorpay/webhook', async (req, res) => {
   if (!RAZORPAY_WEBHOOK_SECRET) {
     if (req.headers['x-admin-token'] !== ADMIN_TOKEN) return res.status(403).json({ error: 'Forbidden' });
@@ -1276,32 +1280,42 @@ app.post('/api/razorpay/webhook', async (req, res) => {
     if (!sig || sig !== expected) return res.status(400).json({ error: 'Invalid signature' });
   }
   const payload = req.body || {};
-  let refId = '';
-  let email = '';
-  let amount = 0;
-  const pl = (payload.payload && payload.payload.payment_link && payload.payload.payment_link.entity)
-    || (payload.data && payload.data.payment_link) || null;
-  if (pl) {
-    refId = String(pl.reference_id || '');
-    amount = Number(pl.amount || 0);
-  }
-  if (!refId) {
-    const pay = (payload.payload && payload.payload.payment && payload.payload.payment.entity)
-      || (payload.data && payload.data.payment) || null;
-    if (pay) {
-      refId = String((pay.notes && pay.notes.session_id) || '');
-      email = String(pay.email || '');
-      amount = Number(pay.amount || 0);
+  const handle = async () => {
+    let refId = '';
+    let email = '';
+    let amount = 0;
+    const pl = (payload.payload && payload.payload.payment_link && payload.payload.payment_link.entity)
+      || (payload.data && payload.data.payment_link) || null;
+    if (pl) {
+      refId = String(pl.reference_id || '');
+      amount = Number(pl.amount || 0);
     }
+    if (!refId) {
+      const pay = (payload.payload && payload.payload.payment && payload.payload.payment.entity)
+        || (payload.data && payload.data.payment) || null;
+      if (pay) {
+        refId = String((pay.notes && pay.notes.session_id) || '');
+        email = String(pay.email || '');
+        amount = Number(pay.amount || 0);
+      }
+    }
+    if (!refId) return { received: true };
+    const existing = await db.getLicenseBySession(refId);
+    if (existing) return { received: true, existing: true };
+    const key = generateLicenseKey();
+    await db.createLicenseKey({ key, email, session_id: refId });
+    console.log(`[ShadowTools Web] Razorpay license issued: ${key} (ref ${refId}, ₹${(amount / 100).toFixed(2)})`);
+    backup.schedulePush();
+    return { received: true, key };
+  };
+  try {
+    razorpayWebhookChain = razorpayWebhookChain.then(handle, handle);
+    const result = await razorpayWebhookChain;
+    res.json(result);
+  } catch (e) {
+    console.error('[ShadowTools Web] Razorpay webhook error:', e);
+    res.status(500).json({ received: false, error: e.message });
   }
-  if (!refId) return res.json({ received: true });
-  const existing = await db.getLicenseBySession(refId);
-  if (existing) return res.json({ received: true, existing: true });
-  const key = generateLicenseKey();
-  await db.createLicenseKey({ key, email, session_id: refId });
-  console.log(`[ShadowTools Web] Razorpay license issued: ${key} (ref ${refId}, ₹${(amount / 100).toFixed(2)})`);
-  backup.schedulePush();
-  res.json({ received: true, key });
 });
 
 // ── License endpoints (used by the desktop app) ─────────────
@@ -1405,10 +1419,16 @@ app.get('/api/license/redeem', rateLimit(30, 60000), async (req, res) => {
   }
 });
 
-// Razorpay callback — Razorpay appends payment_link_reference_id / razorpay_payment_id
-// as query params, so forward them into the existing success page.
+// Razorpay callback — Razorpay redirects here with
+// ?razorpay_payment_id=...&razorpay_payment_link_id=...&razorpay_payment_link_reference_id=...
+// (and razorpay_signature). Forward the reference (or payment id) to the success page.
 app.get('/buy/razorpay', (req, res) => {
-  const ref = String(req.query.payment_link_reference_id || req.query.session_id || '').replace(/[^a-zA-Z0-9_-]/g, '');
+  const ref = String(
+    req.query.razorpay_payment_link_reference_id ||
+    req.query.payment_link_reference_id ||
+    req.query.razorpay_payment_id ||
+    req.query.session_id || ''
+  ).replace(/[^a-zA-Z0-9_-]/g, '');
   res.redirect('/buy/success?session_id=' + encodeURIComponent(ref));
 });
 
