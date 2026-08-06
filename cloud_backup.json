@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1786013040,
+  "exported_at": 1786016217,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -456,6 +456,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1487668000478855188/f1768a4587769379b481ab6452a47197.png",
       "provider": "discord",
       "created_at": 1785769226
+    },
+    {
+      "steamid": "232088947973554176",
+      "name": "Alex Lunskay",
+      "avatar": "https://cdn.discordapp.com/avatars/232088947973554176/6852bc6996e4bd8d907d2945c2591403.png",
+      "provider": "discord",
+      "created_at": 1786016212
     }
   ],
   "sessions": [
@@ -850,6 +857,12 @@
       "steamid": "1318978685029580800",
       "created_at": 1786009808,
       "expires_at": 1817545808
+    },
+    {
+      "token": "17be2a6ce5304cbde0daabd0279896fa3f19c14c0c250e7dbc71fdecaa50ab5f",
+      "steamid": "232088947973554176",
+      "created_at": 1786016214,
+      "expires_at": 1817552214
     }
   ],
   "library": [
@@ -3984,6 +3997,13 @@
       "ip": "35.154.143.15",
       "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36",
       "created_at": 1786008675
+    },
+    {
+      "id": "a911d519aa8eb8680adde30f",
+      "source": "site",
+      "ip": "152.58.153.35",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+      "created_at": 1786013709
     }
   ],
   "license_keys": [
@@ -4219,17 +4239,6 @@
       "expires_at": 0
     },
     {
-      "key": "SHADOW-VK99-U8KK-Y3JE-RAVK",
-      "email": "",
-      "session_id": "",
-      "status": "unused",
-      "machine_id": "",
-      "activated_at": 0,
-      "created_at": 1786011494,
-      "trial": 0,
-      "expires_at": 0
-    },
-    {
       "key": "SHADOW-VX25-H6MX-FG3G-CABL",
       "email": "",
       "session_id": "",
@@ -4247,6 +4256,17 @@
       "status": "active",
       "machine_id": "hw-c584bc44429537d5a3499ea6",
       "activated_at": 1786012953,
+      "created_at": 1786011494,
+      "trial": 0,
+      "expires_at": 0
+    },
+    {
+      "key": "SHADOW-VK99-U8KK-Y3JE-RAVK",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-c584bc44429537d5a3499ea6",
+      "activated_at": 1786013772,
       "created_at": 1786011494,
       "trial": 0,
       "expires_at": 0
