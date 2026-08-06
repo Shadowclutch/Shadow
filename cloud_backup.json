@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1785971747,
+  "exported_at": 1785975489,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -3329,6 +3329,12 @@
       "appid": 4108000,
       "name": "Machine Party",
       "added_at": 1785971223
+    },
+    {
+      "steamid": "718000676009017344",
+      "appid": 2231950,
+      "name": "Sifu - Deluxe Cosmetic Pack",
+      "added_at": 1785975487
     }
   ],
   "downloads": [
