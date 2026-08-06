@@ -149,6 +149,16 @@
 
       <h4 class="pay-title">Choose a payment method</h4>
       <div class="pay-methods">
+        <div class="pay-method" id="razorpay-method">
+          <div class="pay-method-head">
+            <b>Razorpay</b>
+            <span class="pay-tag">Cards · UPI · Netbanking</span>
+          </div>
+          <a class="btn btn-primary razorpay-btn" href="https://razorpay.me/@utkarshmishra6595" target="_blank" rel="noopener">
+            Pay ₹<span id="rzpAmount">300</span> with Razorpay →
+          </a>
+          <span class="pay-method-note">Pay by card, UPI or netbanking on Razorpay's secure page — no account needed.</span>
+        </div>
         <div class="pay-method" id="upi-method">
           <div class="pay-method-head">
             <b>UPI</b>
@@ -172,7 +182,7 @@
       </div>
 
       <p class="pay-note">
-        After paying, DM your payment screenshot on
+        After paying, DM your payment reference / screenshot on
         <a href="https://www.instagram.com/shadowclutch__" target="_blank" rel="noopener" class="insta-link">Instagram @shadowclutch__</a>
         and I'll send your license key right away.
       </p>
@@ -229,6 +239,7 @@
     var priceCaption = document.getElementById('priceCaption');
     var payStep1 = document.getElementById('payStep1');
     var upiNote = document.getElementById('upiNote');
+    var rzpAmount = document.getElementById('rzpAmount');
 
     function setPrice(base, discount) {
       if (discount > 0) {
@@ -236,11 +247,13 @@
         priceDisc.style.display = 'inline';
         priceDisc.textContent = ' ₹' + (base - discount).toLocaleString('en-IN');
         payStep1.textContent = 'Pay ₹' + (base - discount).toLocaleString('en-IN');
+        if (rzpAmount) rzpAmount.textContent = (base - discount).toLocaleString('en-IN');
         if (upiNote) upiNote.textContent = 'Open any UPI app (GPay, PhonePe, Paytm), pay ₹' + (base - discount).toLocaleString('en-IN') + ' to the ID above.';
       } else {
         priceBase.textContent = '₹' + base.toLocaleString('en-IN');
         priceDisc.style.display = 'none';
         payStep1.textContent = 'Pay ₹' + base.toLocaleString('en-IN');
+        if (rzpAmount) rzpAmount.textContent = base.toLocaleString('en-IN');
         if (upiNote) upiNote.textContent = 'Open any UPI app (GPay, PhonePe, Paytm), pay ₹' + base.toLocaleString('en-IN') + ' to the ID above.';
       }
     }

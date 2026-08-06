@@ -540,6 +540,11 @@ body.landing {
 }
 .copy-btn:hover { background: rgba(79,140,255,0.22); }
 .copy-btn:active { transform: scale(0.94); }
+.razorpay-btn {
+  width: 100%; display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  margin-top: 2px; text-decoration: none;
+}
+.razorpay-btn:hover { text-decoration: none; }
 .copy-btn.copied { background: rgba(57,217,138,0.2); border-color: rgba(57,217,138,0.4); color: var(--accent-2); }
 .pay-method-note { display: block; font-size: 12px; color: var(--muted); line-height: 1.5; margin-top: 8px; }
 .pay-note { font-size: 13.5px; color: var(--muted); line-height: 1.6; margin: 0; }
