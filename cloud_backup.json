@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1786188606,
+  "exported_at": 1786188610,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -3415,6 +3415,12 @@
       "appid": 12230,
       "name": "Grand Theft Auto III",
       "added_at": 1786188604
+    },
+    {
+      "steamid": "1487668000478855188",
+      "appid": 12180,
+      "name": "Grand Theft Auto 2",
+      "added_at": 1786188608
     },
     {
       "steamid": "1533488754176557219",
