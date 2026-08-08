@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1786188583,
+  "exported_at": 1786188585,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -3805,6 +3805,12 @@
       "appid": 12250,
       "name": "Grand Theft Auto: San Andreas",
       "added_at": 1786188581
+    },
+    {
+      "steamid": "1487668000478855188",
+      "appid": 1546990,
+      "name": "Grand Theft Auto: Vice City - The Definitive Edition",
+      "added_at": 1786188586
     }
   ],
   "downloads": [
