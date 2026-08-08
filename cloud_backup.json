@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1786112945,
+  "exported_at": 1786186652,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -4116,6 +4116,34 @@
       "ip": "105.98.92.151",
       "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
       "created_at": 1786112902
+    },
+    {
+      "id": "34febb6a42b1c6553912ec16",
+      "source": "site",
+      "ip": "217.164.246.221",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+      "created_at": 1786142057
+    },
+    {
+      "id": "945f63d1128f1926809237b1",
+      "source": "site",
+      "ip": "103.181.90.186",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+      "created_at": 1786186558
+    },
+    {
+      "id": "b93eec423b9020d407d5e56e",
+      "source": "UAuz",
+      "ip": "103.3.32.7",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+      "created_at": 1786186565
+    },
+    {
+      "id": "a8bf0e182b967f7560709495",
+      "source": "site",
+      "ip": "223.196.13.4",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+      "created_at": 1786186565
     }
   ],
   "license_keys": [
@@ -4285,17 +4313,6 @@
       "expires_at": 0
     },
     {
-      "key": "SHADOW-W8KQ-4EDZ-K2V9-VGYG",
-      "email": "",
-      "session_id": "",
-      "status": "unused",
-      "machine_id": "",
-      "activated_at": 0,
-      "created_at": 1785955670,
-      "trial": 0,
-      "expires_at": 0
-    },
-    {
       "key": "SHADOW-3WSA-4P89-JP52-JASW",
       "email": "",
       "session_id": "",
@@ -4402,6 +4419,17 @@
       "machine_id": "hw-577297f792b09816c795c0e0",
       "activated_at": 1786112942,
       "created_at": 1785931727,
+      "trial": 0,
+      "expires_at": 0
+    },
+    {
+      "key": "SHADOW-W8KQ-4EDZ-K2V9-VGYG",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-b13a496b85ea3de68c76edd6",
+      "activated_at": 1786186649,
+      "created_at": 1785955670,
       "trial": 0,
       "expires_at": 0
     }
