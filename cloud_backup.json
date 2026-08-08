@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1786188717,
+  "exported_at": 1786188730,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -3859,6 +3859,12 @@
       "appid": 604590,
       "name": " Build & Battle",
       "added_at": 1786188715
+    },
+    {
+      "steamid": "1487668000478855188",
+      "appid": 1978500,
+      "name": " Castle of Full Moon 月圆之堡",
+      "added_at": 1786188728
     }
   ],
   "downloads": [
