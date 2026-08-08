@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1786188610,
+  "exported_at": 1786188640,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -3421,6 +3421,12 @@
       "appid": 12180,
       "name": "Grand Theft Auto 2",
       "added_at": 1786188608
+    },
+    {
+      "steamid": "1487668000478855188",
+      "appid": 2200760,
+      "name": "The Bogtavern",
+      "added_at": 1786188638
     },
     {
       "steamid": "1533488754176557219",
