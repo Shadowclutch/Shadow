@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1786188598,
+  "exported_at": 1786188606,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -3409,6 +3409,12 @@
       "appid": 4108000,
       "name": "Machine Party",
       "added_at": 1785971223
+    },
+    {
+      "steamid": "1487668000478855188",
+      "appid": 12230,
+      "name": "Grand Theft Auto III",
+      "added_at": 1786188604
     },
     {
       "steamid": "1533488754176557219",
