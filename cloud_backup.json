@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1786188924,
+  "exported_at": 1786536035,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -4274,17 +4274,6 @@
   ],
   "license_keys": [
     {
-      "key": "SHADOW-LYQV-MP7K-QYXQ-Y8FL",
-      "email": "",
-      "session_id": "",
-      "status": "active",
-      "machine_id": "7158f06c-709e-4e06-9088-1ad181dc081a",
-      "activated_at": 1785932410,
-      "created_at": 1785932393,
-      "trial": 0,
-      "expires_at": 0
-    },
-    {
       "key": "TRIAL-WSN5-5HPX-4T7Z-GD9B",
       "email": "",
       "session_id": "",
@@ -4556,6 +4545,17 @@
       "machine_id": "hw-b13a496b85ea3de68c76edd6",
       "activated_at": 1786186649,
       "created_at": 1785955670,
+      "trial": 0,
+      "expires_at": 0
+    },
+    {
+      "key": "SHADOW-LYQV-MP7K-QYXQ-Y8FL",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "7158f06c-709e-4e06-9088-1ad181dc081a",
+      "activated_at": 1786535193,
+      "created_at": 1785932393,
       "trial": 0,
       "expires_at": 0
     }
