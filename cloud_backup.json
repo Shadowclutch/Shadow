@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1786968554,
+  "exported_at": 1786971095,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -462,7 +462,7 @@
       "name": "ShadowClutchh",
       "avatar": "https://cdn.discordapp.com/avatars/1487668000478855188/643df94d6f030dc3f4abced9a02e7235.png",
       "provider": "discord",
-      "created_at": 1786968549
+      "created_at": 1786971091
     }
   ],
   "sessions": [
@@ -4591,6 +4591,17 @@
       "machine_id": "",
       "activated_at": 0,
       "created_at": 1786882324,
+      "trial": 0,
+      "expires_at": 0
+    },
+    {
+      "key": "SHADOW-V483-673B-MZDY-DU7U",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-c584bc44429537d5a3499ea6",
+      "activated_at": 1786970980,
+      "created_at": 1786970967,
       "trial": 0,
       "expires_at": 0
     }
