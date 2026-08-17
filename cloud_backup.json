@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1786974754,
+  "exported_at": 1786976447,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -470,6 +470,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1417514597723803708/cf2a800b7eddf847b3747e44b0e5550d.png",
       "provider": "discord",
       "created_at": 1786974732
+    },
+    {
+      "steamid": "1149035626482630656",
+      "name": "テクノ OSHIN",
+      "avatar": "https://cdn.discordapp.com/avatars/1149035626482630656/655c82a1d90b85788dd05a0eb0decb37.png",
+      "provider": "discord",
+      "created_at": 1786975540
     }
   ],
   "sessions": [
@@ -888,6 +895,12 @@
       "steamid": "1417514597723803708",
       "created_at": 1786974732,
       "expires_at": 1818510732
+    },
+    {
+      "token": "7bd58f9ac70a5eab849be28687e0744edbb9d259a3631b7e05d9a9dcbf54b23a",
+      "steamid": "1149035626482630656",
+      "created_at": 1786975540,
+      "expires_at": 1818511540
     }
   ],
   "library": [
@@ -3968,6 +3981,12 @@
       "appid": 382310,
       "name": "Eco",
       "added_at": 1786972581
+    },
+    {
+      "steamid": "1417514597723803708",
+      "appid": 3240220,
+      "name": "Grand Theft Auto V Enhanced",
+      "added_at": 1786976443
     }
   ],
   "downloads": [
