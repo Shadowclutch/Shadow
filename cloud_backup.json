@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1786982637,
+  "exported_at": 1786988589,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -505,6 +505,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1190590112078254142/89f5bcfd97626ea2bf47424bfae23e2f.png",
       "provider": "discord",
       "created_at": 1786982445
+    },
+    {
+      "steamid": "1160915638739550230",
+      "name": "Tom",
+      "avatar": "https://cdn.discordapp.com/avatars/1160915638739550230/cfec91b636c75805551c378fc83549ad.png",
+      "provider": "discord",
+      "created_at": 1786988578
     }
   ],
   "sessions": [
@@ -953,6 +960,12 @@
       "steamid": "1190590112078254142",
       "created_at": 1786982446,
       "expires_at": 1818518446
+    },
+    {
+      "token": "ebbbaf3701b2327188412adaecc1c3d25ba8df28d8c09568829007efa6c2b5ec",
+      "steamid": "1160915638739550230",
+      "created_at": 1786988579,
+      "expires_at": 1818524579
     }
   ],
   "library": [
@@ -4621,6 +4634,18 @@
       "appid": 3646510,
       "name": "Aisha’s Futa Diaries",
       "added_at": 1786979913
+    },
+    {
+      "steamid": "1160915638739550230",
+      "appid": 271590,
+      "name": "Grand Theft Auto V Legacy",
+      "added_at": 1786988586
+    },
+    {
+      "steamid": "1160915638739550230",
+      "appid": 1091500,
+      "name": "Cyberpunk 2077",
+      "added_at": 1786988588
     }
   ],
   "downloads": [
