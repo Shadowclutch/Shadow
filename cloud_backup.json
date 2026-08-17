@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1786536035,
+  "exported_at": 1786968554,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -444,13 +444,6 @@
       "created_at": 1786009807
     },
     {
-      "steamid": "1487668000478855188",
-      "name": "ShadowClutchh",
-      "avatar": "https://cdn.discordapp.com/avatars/1487668000478855188/f1768a4587769379b481ab6452a47197.png",
-      "provider": "discord",
-      "created_at": 1785769226
-    },
-    {
       "steamid": "232088947973554176",
       "name": "Alex Lunskay",
       "avatar": "https://cdn.discordapp.com/avatars/232088947973554176/6852bc6996e4bd8d907d2945c2591403.png",
@@ -463,6 +456,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1533488754176557219/64cc313599ad26c538d6e4b88f0e2691.png",
       "provider": "discord",
       "created_at": 1785971156
+    },
+    {
+      "steamid": "1487668000478855188",
+      "name": "ShadowClutchh",
+      "avatar": "https://cdn.discordapp.com/avatars/1487668000478855188/643df94d6f030dc3f4abced9a02e7235.png",
+      "provider": "discord",
+      "created_at": 1786968549
     }
   ],
   "sessions": [
@@ -471,6 +471,18 @@
       "steamid": "1502230806725398548",
       "created_at": 1785954794,
       "expires_at": 1788546794
+    },
+    {
+      "token": "dd194519f116e6cb6a62c85f816588919080384f825d5812f9692a1079e8d4af",
+      "steamid": "1487668000478855188",
+      "created_at": 1786966893,
+      "expires_at": 1789558893
+    },
+    {
+      "token": "a03a562b06e99ba3ca41ef7a36164c0c06ad40fdc4769ea20552ab58c39e5593",
+      "steamid": "1487668000478855188",
+      "created_at": 1786967049,
+      "expires_at": 1789559049
     }
   ],
   "agent_tokens": [
@@ -3925,6 +3937,18 @@
       "appid": 870990,
       "name": "!LABrpgUP!",
       "added_at": 1786188922
+    },
+    {
+      "steamid": "1487668000478855188",
+      "appid": 2483190,
+      "name": "Forza Horizon 6",
+      "added_at": 1786968552
+    },
+    {
+      "steamid": "1487668000478855188",
+      "appid": 2651280,
+      "name": "Marvel's Spider-Man 2",
+      "added_at": 1786968553
     }
   ],
   "downloads": [
@@ -4556,6 +4580,17 @@
       "machine_id": "7158f06c-709e-4e06-9088-1ad181dc081a",
       "activated_at": 1786535193,
       "created_at": 1785932393,
+      "trial": 0,
+      "expires_at": 0
+    },
+    {
+      "key": "SHADOW-DRUA-VGX4-EE7P-3M4Z",
+      "email": "",
+      "session_id": "",
+      "status": "unused",
+      "machine_id": "",
+      "activated_at": 0,
+      "created_at": 1786882324,
       "trial": 0,
       "expires_at": 0
     }
