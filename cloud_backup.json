@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1786976447,
+  "exported_at": 1786978232,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -477,6 +477,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1149035626482630656/655c82a1d90b85788dd05a0eb0decb37.png",
       "provider": "discord",
       "created_at": 1786975540
+    },
+    {
+      "steamid": "886209379379056640",
+      "name": "simp4than",
+      "avatar": "https://cdn.discordapp.com/avatars/886209379379056640/073791e7c0504d9c4fe80f5816093c19.png",
+      "provider": "discord",
+      "created_at": 1786978197
     }
   ],
   "sessions": [
@@ -901,6 +908,12 @@
       "steamid": "1149035626482630656",
       "created_at": 1786975540,
       "expires_at": 1818511540
+    },
+    {
+      "token": "513829d0d2ea956a10b0a06150d67719d64db4ccfab3e64db81f6e329223c211",
+      "steamid": "886209379379056640",
+      "created_at": 1786978074,
+      "expires_at": 1818514074
     }
   ],
   "library": [
@@ -3987,6 +4000,12 @@
       "appid": 3240220,
       "name": "Grand Theft Auto V Enhanced",
       "added_at": 1786976443
+    },
+    {
+      "steamid": "1417514597723803708",
+      "appid": 814380,
+      "name": "Sekiro™: Shadows Die Twice",
+      "added_at": 1786977131
     }
   ],
   "downloads": [
@@ -4446,24 +4465,24 @@
       "expires_at": 1785952111
     },
     {
-      "key": "SHADOW-V483-673B-MZDY-DU7U",
-      "email": "",
-      "session_id": "",
-      "status": "active",
-      "machine_id": "hw-c584bc44429537d5a3499ea6",
-      "activated_at": 1786973798,
-      "created_at": 1786970967,
-      "trial": 0,
-      "expires_at": 0
-    },
-    {
       "key": "SHADOW-DRUA-VGX4-EE7P-3M4Z",
       "email": "",
       "session_id": "",
       "status": "active",
       "machine_id": "hw-644196bff05d22a374ecc1f5",
-      "activated_at": 1786974627,
+      "activated_at": 1786977530,
       "created_at": 1786882324,
+      "trial": 0,
+      "expires_at": 0
+    },
+    {
+      "key": "SHADOW-V483-673B-MZDY-DU7U",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-c584bc44429537d5a3499ea6",
+      "activated_at": 1786978097,
+      "created_at": 1786970967,
       "trial": 0,
       "expires_at": 0
     },
