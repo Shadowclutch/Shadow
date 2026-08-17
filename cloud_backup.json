@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1786989980,
+  "exported_at": 1786990109,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -4656,33 +4656,9 @@
     },
     {
       "steamid": "1160915638739550230",
-      "appid": 2625420,
-      "name": "Drive Beyond Horizons",
-      "added_at": 1786989846
-    },
-    {
-      "steamid": "1160915638739550230",
-      "appid": 447040,
-      "name": "Watch_Dogs 2",
-      "added_at": 1786989868
-    },
-    {
-      "steamid": "1160915638739550230",
-      "appid": 243470,
-      "name": "Watch_Dogs",
-      "added_at": 1786989893
-    },
-    {
-      "steamid": "1160915638739550230",
       "appid": 2698940,
       "name": "The Crew Motorfest",
       "added_at": 1786989916
-    },
-    {
-      "steamid": "1160915638739550230",
-      "appid": 1091500,
-      "name": "Cyberpunk 2077",
-      "added_at": 1786989934
     }
   ],
   "downloads": [
