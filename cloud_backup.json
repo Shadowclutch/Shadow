@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1786973125,
+  "exported_at": 1786974754,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -463,6 +463,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1487668000478855188/643df94d6f030dc3f4abced9a02e7235.png",
       "provider": "discord",
       "created_at": 1786973120
+    },
+    {
+      "steamid": "1417514597723803708",
+      "name": "SH4DØW",
+      "avatar": "https://cdn.discordapp.com/avatars/1417514597723803708/cf2a800b7eddf847b3747e44b0e5550d.png",
+      "provider": "discord",
+      "created_at": 1786974732
     }
   ],
   "sessions": [
@@ -875,6 +882,12 @@
       "steamid": "232088947973554176",
       "created_at": 1786016214,
       "expires_at": 1817552214
+    },
+    {
+      "token": "e20e3259a847dd72c8512137a6e8ae525aa9ed538150e9cdabd71e025df236d5",
+      "steamid": "1417514597723803708",
+      "created_at": 1786974732,
+      "expires_at": 1818510732
     }
   ],
   "library": [
@@ -4304,17 +4317,6 @@
   ],
   "license_keys": [
     {
-      "key": "SHADOW-V483-673B-MZDY-DU7U",
-      "email": "",
-      "session_id": "",
-      "status": "active",
-      "machine_id": "hw-c584bc44429537d5a3499ea6",
-      "activated_at": 1786973102,
-      "created_at": 1786970967,
-      "trial": 0,
-      "expires_at": 0
-    },
-    {
       "key": "TRIAL-WSN5-5HPX-4T7Z-GD9B",
       "email": "",
       "session_id": "",
@@ -4423,6 +4425,28 @@
       "created_at": 1785951991,
       "trial": 1,
       "expires_at": 1785952111
+    },
+    {
+      "key": "SHADOW-V483-673B-MZDY-DU7U",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-c584bc44429537d5a3499ea6",
+      "activated_at": 1786973798,
+      "created_at": 1786970967,
+      "trial": 0,
+      "expires_at": 0
+    },
+    {
+      "key": "SHADOW-DRUA-VGX4-EE7P-3M4Z",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-644196bff05d22a374ecc1f5",
+      "activated_at": 1786974627,
+      "created_at": 1786882324,
+      "trial": 0,
+      "expires_at": 0
     },
     {
       "key": "SHADOW-4HP8-6P93-2CD8-WXMA",
@@ -4597,17 +4621,6 @@
       "machine_id": "7158f06c-709e-4e06-9088-1ad181dc081a",
       "activated_at": 1786535193,
       "created_at": 1785932393,
-      "trial": 0,
-      "expires_at": 0
-    },
-    {
-      "key": "SHADOW-DRUA-VGX4-EE7P-3M4Z",
-      "email": "",
-      "session_id": "",
-      "status": "unused",
-      "machine_id": "",
-      "activated_at": 0,
-      "created_at": 1786882324,
       "trial": 0,
       "expires_at": 0
     }
