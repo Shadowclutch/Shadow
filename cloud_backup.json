@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1786972582,
+  "exported_at": 1786973125,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -462,7 +462,7 @@
       "name": "ShadowClutchh",
       "avatar": "https://cdn.discordapp.com/avatars/1487668000478855188/643df94d6f030dc3f4abced9a02e7235.png",
       "provider": "discord",
-      "created_at": 1786972547
+      "created_at": 1786973120
     }
   ],
   "sessions": [
@@ -4309,7 +4309,7 @@
       "session_id": "",
       "status": "active",
       "machine_id": "hw-c584bc44429537d5a3499ea6",
-      "activated_at": 1786972529,
+      "activated_at": 1786973102,
       "created_at": 1786970967,
       "trial": 0,
       "expires_at": 0
