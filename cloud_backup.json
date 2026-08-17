@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1786979919,
+  "exported_at": 1786982456,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -491,6 +491,20 @@
       "avatar": "https://cdn.discordapp.com/avatars/1228687577142394961/16b8f5a99ff68852a4e89b775b01ee98.png",
       "provider": "discord",
       "created_at": 1786978550
+    },
+    {
+      "steamid": "1522174625591857238",
+      "name": "sym0njhazz",
+      "avatar": "",
+      "provider": "discord",
+      "created_at": 1786980850
+    },
+    {
+      "steamid": "1190590112078254142",
+      "name": "calintatalvostru",
+      "avatar": "https://cdn.discordapp.com/avatars/1190590112078254142/89f5bcfd97626ea2bf47424bfae23e2f.png",
+      "provider": "discord",
+      "created_at": 1786982445
     }
   ],
   "sessions": [
@@ -927,6 +941,18 @@
       "steamid": "1228687577142394961",
       "created_at": 1786978550,
       "expires_at": 1818514550
+    },
+    {
+      "token": "d5527ecfc1972a7b7bb095e01def1c1e6d65910dbf43d68467016e3876f9270e",
+      "steamid": "1522174625591857238",
+      "created_at": 1786980850,
+      "expires_at": 1818516850
+    },
+    {
+      "token": "741bc4c1d419723e0cd6483a1756bbbe946e7cbf6ddf031419d2f2f89c95cc6e",
+      "steamid": "1190590112078254142",
+      "created_at": 1786982446,
+      "expires_at": 1818518446
     }
   ],
   "library": [
@@ -4595,6 +4621,12 @@
       "appid": 3646510,
       "name": "Aisha’s Futa Diaries",
       "added_at": 1786979913
+    },
+    {
+      "steamid": "1190590112078254142",
+      "appid": 1962700,
+      "name": "Subnautica 2",
+      "added_at": 1786982452
     }
   ],
   "downloads": [
