@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1786972065,
+  "exported_at": 1786972551,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -462,7 +462,7 @@
       "name": "ShadowClutchh",
       "avatar": "https://cdn.discordapp.com/avatars/1487668000478855188/643df94d6f030dc3f4abced9a02e7235.png",
       "provider": "discord",
-      "created_at": 1786972062
+      "created_at": 1786972547
     }
   ],
   "sessions": [
@@ -4298,6 +4298,17 @@
   ],
   "license_keys": [
     {
+      "key": "SHADOW-V483-673B-MZDY-DU7U",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-c584bc44429537d5a3499ea6",
+      "activated_at": 1786972529,
+      "created_at": 1786970967,
+      "trial": 0,
+      "expires_at": 0
+    },
+    {
       "key": "TRIAL-WSN5-5HPX-4T7Z-GD9B",
       "email": "",
       "session_id": "",
@@ -4591,17 +4602,6 @@
       "machine_id": "",
       "activated_at": 0,
       "created_at": 1786882324,
-      "trial": 0,
-      "expires_at": 0
-    },
-    {
-      "key": "SHADOW-V483-673B-MZDY-DU7U",
-      "email": "",
-      "session_id": "",
-      "status": "active",
-      "machine_id": "hw-c584bc44429537d5a3499ea6",
-      "activated_at": 1786972041,
-      "created_at": 1786970967,
       "trial": 0,
       "expires_at": 0
     }
