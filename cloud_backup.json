@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1786989333,
+  "exported_at": 1786989870,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -4659,6 +4659,18 @@
       "appid": 427520,
       "name": "Factorio",
       "added_at": 1786989331
+    },
+    {
+      "steamid": "1160915638739550230",
+      "appid": 2625420,
+      "name": "Drive Beyond Horizons",
+      "added_at": 1786989846
+    },
+    {
+      "steamid": "1160915638739550230",
+      "appid": 447040,
+      "name": "Watch_Dogs 2",
+      "added_at": 1786989868
     }
   ],
   "downloads": [
