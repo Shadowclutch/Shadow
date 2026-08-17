@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1786988589,
+  "exported_at": 1786989333,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -512,6 +512,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1160915638739550230/cfec91b636c75805551c378fc83549ad.png",
       "provider": "discord",
       "created_at": 1786988578
+    },
+    {
+      "steamid": "1429183143759319104",
+      "name": "открывашка",
+      "avatar": "https://cdn.discordapp.com/avatars/1429183143759319104/fd4cd189614f487f16c584560b23d61c.png",
+      "provider": "discord",
+      "created_at": 1786989324
     }
   ],
   "sessions": [
@@ -966,6 +973,12 @@
       "steamid": "1160915638739550230",
       "created_at": 1786988579,
       "expires_at": 1818524579
+    },
+    {
+      "token": "3f80c1d66b36eb9cb54ce584732412cffb9a2168bd1f1c2cd515aea3460c6f2b",
+      "steamid": "1429183143759319104",
+      "created_at": 1786989324,
+      "expires_at": 1818525324
     }
   ],
   "library": [
@@ -4642,10 +4655,10 @@
       "added_at": 1786988586
     },
     {
-      "steamid": "1160915638739550230",
-      "appid": 1091500,
-      "name": "Cyberpunk 2077",
-      "added_at": 1786988588
+      "steamid": "1429183143759319104",
+      "appid": 427520,
+      "name": "Factorio",
+      "added_at": 1786989331
     }
   ],
   "downloads": [
@@ -5125,6 +5138,17 @@
       "created_at": 1786970967,
       "trial": 0,
       "expires_at": 0
+    },
+    {
+      "key": "TRIAL-27JY-AFTW-JHXH-EPSZ",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-ae3351d6666a8e7192ef17d9",
+      "activated_at": 1786988918,
+      "created_at": 1786988918,
+      "trial": 1,
+      "expires_at": 1786989038
     },
     {
       "key": "SHADOW-4HP8-6P93-2CD8-WXMA",
