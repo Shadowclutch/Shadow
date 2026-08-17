@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1786997033,
+  "exported_at": 1786997043,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -4672,6 +4672,12 @@
       "appid": 2625420,
       "name": "",
       "added_at": 1786990362
+    },
+    {
+      "steamid": "893597646474846208",
+      "appid": 1245620,
+      "name": "ELDEN RING",
+      "added_at": 1786997041
     }
   ],
   "downloads": [
