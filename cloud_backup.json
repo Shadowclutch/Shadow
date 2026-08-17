@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1786978255,
+  "exported_at": 1786979565,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -484,6 +484,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/886209379379056640/073791e7c0504d9c4fe80f5816093c19.png",
       "provider": "discord",
       "created_at": 1786978197
+    },
+    {
+      "steamid": "1228687577142394961",
+      "name": "rere",
+      "avatar": "https://cdn.discordapp.com/avatars/1228687577142394961/16b8f5a99ff68852a4e89b775b01ee98.png",
+      "provider": "discord",
+      "created_at": 1786978550
     }
   ],
   "sessions": [
@@ -914,6 +921,12 @@
       "steamid": "886209379379056640",
       "created_at": 1786978074,
       "expires_at": 1818514074
+    },
+    {
+      "token": "64bb81d29d5ec8a502703455adac90cb291398224e8d2b2732cbba8d17d37d59",
+      "steamid": "1228687577142394961",
+      "created_at": 1786978550,
+      "expires_at": 1818514550
     }
   ],
   "library": [
@@ -4012,6 +4025,246 @@
       "appid": 243470,
       "name": "Watch_Dogs",
       "added_at": 1786978251
+    },
+    {
+      "steamid": "1228687577142394961",
+      "appid": 3275860,
+      "name": "Art of Trailmakers",
+      "added_at": 1786978618
+    },
+    {
+      "steamid": "1228687577142394961",
+      "appid": 2231450,
+      "name": "Pizza Tower",
+      "added_at": 1786978623
+    },
+    {
+      "steamid": "1228687577142394961",
+      "appid": 945360,
+      "name": "Among Us",
+      "added_at": 1786978658
+    },
+    {
+      "steamid": "1228687577142394961",
+      "appid": 736260,
+      "name": "Baba Is You",
+      "added_at": 1786978663
+    },
+    {
+      "steamid": "1228687577142394961",
+      "appid": 381210,
+      "name": "Dead by Daylight",
+      "added_at": 1786978730
+    },
+    {
+      "steamid": "1228687577142394961",
+      "appid": 1657630,
+      "name": "Slime Rancher 2",
+      "added_at": 1786978779
+    },
+    {
+      "steamid": "1228687577142394961",
+      "appid": 881100,
+      "name": "Noita",
+      "added_at": 1786978801
+    },
+    {
+      "steamid": "1228687577142394961",
+      "appid": 240720,
+      "name": "Getting Over It with Bennett Foddy",
+      "added_at": 1786978814
+    },
+    {
+      "steamid": "1228687577142394961",
+      "appid": 394360,
+      "name": "Hearts of Iron IV",
+      "added_at": 1786978821
+    },
+    {
+      "steamid": "1228687577142394961",
+      "appid": 1813430,
+      "name": "Beat Banger",
+      "added_at": 1786978840
+    },
+    {
+      "steamid": "1228687577142394961",
+      "appid": 1962700,
+      "name": "Subnautica 2",
+      "added_at": 1786978964
+    },
+    {
+      "steamid": "1228687577142394961",
+      "appid": 526870,
+      "name": "Satisfactory",
+      "added_at": 1786978990
+    },
+    {
+      "steamid": "1228687577142394961",
+      "appid": 1206560,
+      "name": "WorldBox - God Simulator",
+      "added_at": 1786978998
+    },
+    {
+      "steamid": "1228687577142394961",
+      "appid": 739630,
+      "name": "Phasmophobia",
+      "added_at": 1786979013
+    },
+    {
+      "steamid": "1228687577142394961",
+      "appid": 354140,
+      "name": "Five Nights at Freddy's 3",
+      "added_at": 1786979113
+    },
+    {
+      "steamid": "1228687577142394961",
+      "appid": 732690,
+      "name": "FIVE NIGHTS AT FREDDY'S: HELP WANTED",
+      "added_at": 1786979135
+    },
+    {
+      "steamid": "1228687577142394961",
+      "appid": 2638370,
+      "name": "Five Nights at Freddy's: Into the Pit",
+      "added_at": 1786979161
+    },
+    {
+      "steamid": "1228687577142394961",
+      "appid": 2287520,
+      "name": "Five Nights at Freddy's: Help Wanted 2",
+      "added_at": 1786979172
+    },
+    {
+      "steamid": "1228687577142394961",
+      "appid": 420530,
+      "name": "OneShot",
+      "added_at": 1786979315
+    },
+    {
+      "steamid": "1228687577142394961",
+      "appid": 2868840,
+      "name": "Slay the Spire 2",
+      "added_at": 1786979436
+    },
+    {
+      "steamid": "1228687577142394961",
+      "appid": 1416050,
+      "name": "Shovel Knight Dig",
+      "added_at": 1786979442
+    },
+    {
+      "steamid": "1228687577142394961",
+      "appid": 1184760,
+      "name": "Shovel Knight Pocket Dungeon",
+      "added_at": 1786979448
+    },
+    {
+      "steamid": "1228687577142394961",
+      "appid": 1116770,
+      "name": "Shovel Knight Showdown",
+      "added_at": 1786979454
+    },
+    {
+      "steamid": "1228687577142394961",
+      "appid": 1116780,
+      "name": "Shovel Knight: King of Cards",
+      "added_at": 1786979460
+    },
+    {
+      "steamid": "1228687577142394961",
+      "appid": 589500,
+      "name": "Shovel Knight: Shovel of Hope",
+      "added_at": 1786979467
+    },
+    {
+      "steamid": "1228687577142394961",
+      "appid": 589510,
+      "name": "Shovel Knight: Specter of Torment",
+      "added_at": 1786979470
+    },
+    {
+      "steamid": "1228687577142394961",
+      "appid": 250760,
+      "name": "Shovel Knight: Treasure Trove",
+      "added_at": 1786979479
+    },
+    {
+      "steamid": "1228687577142394961",
+      "appid": 1174180,
+      "name": "Red Dead Redemption 2",
+      "added_at": 1786979485
+    },
+    {
+      "steamid": "1228687577142394961",
+      "appid": 1092790,
+      "name": "Inscryption",
+      "added_at": 1786979491
+    },
+    {
+      "steamid": "1228687577142394961",
+      "appid": 1372280,
+      "name": "MELTY BLOOD: TYPE LUMINA",
+      "added_at": 1786979498
+    },
+    {
+      "steamid": "1228687577142394961",
+      "appid": 1262240,
+      "name": "Plants vs. Zombies: Battle for Neighborville",
+      "added_at": 1786979505
+    },
+    {
+      "steamid": "1228687577142394961",
+      "appid": 3590,
+      "name": "Plants vs. Zombies: Game of the Year",
+      "added_at": 1786979511
+    },
+    {
+      "steamid": "1228687577142394961",
+      "appid": 3654560,
+      "name": "Plants vs. Zombies™: Replanted",
+      "added_at": 1786979519
+    },
+    {
+      "steamid": "1228687577142394961",
+      "appid": 774361,
+      "name": "Blasphemous",
+      "added_at": 1786979526
+    },
+    {
+      "steamid": "1228687577142394961",
+      "appid": 361420,
+      "name": "ASTRONEER",
+      "added_at": 1786979533
+    },
+    {
+      "steamid": "1228687577142394961",
+      "appid": 1106840,
+      "name": "Hydroneer",
+      "added_at": 1786979539
+    },
+    {
+      "steamid": "1228687577142394961",
+      "appid": 1017180,
+      "name": "The Long Drive",
+      "added_at": 1786979545
+    },
+    {
+      "steamid": "1228687577142394961",
+      "appid": 1426210,
+      "name": "It Takes Two",
+      "added_at": 1786979552
+    },
+    {
+      "steamid": "1228687577142394961",
+      "appid": 2768430,
+      "name": "ATLYSS",
+      "added_at": 1786979555
+    },
+    {
+      "steamid": "1228687577142394961",
+      "appid": 1222700,
+      "name": "A Way Out",
+      "added_at": 1786979562
     }
   ],
   "downloads": [
@@ -4487,7 +4740,7 @@
       "session_id": "",
       "status": "active",
       "machine_id": "hw-c584bc44429537d5a3499ea6",
-      "activated_at": 1786978097,
+      "activated_at": 1786979535,
       "created_at": 1786970967,
       "trial": 0,
       "expires_at": 0
