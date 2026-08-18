@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787026894,
+  "exported_at": 1787026990,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -4767,6 +4767,12 @@
       "appid": 227300,
       "name": "Euro Truck Simulator 2",
       "added_at": 1787026893
+    },
+    {
+      "steamid": "1442849814567194655",
+      "appid": 949230,
+      "name": "Cities: Skylines II",
+      "added_at": 1787026989
     }
   ],
   "downloads": [
