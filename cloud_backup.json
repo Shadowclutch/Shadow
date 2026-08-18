@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787067946,
+  "exported_at": 1787068074,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -5008,6 +5008,12 @@
       "appid": 1817070,
       "name": "Marvel’s Spider-Man Remastered",
       "added_at": 1787057872
+    },
+    {
+      "steamid": "475769230088732702",
+      "appid": 4433900,
+      "name": "DRAGON BALL: Sparking! ZERO - Super Limit-Breaking NEO",
+      "added_at": 1787068072
     }
   ],
   "downloads": [
