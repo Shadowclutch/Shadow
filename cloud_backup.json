@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787054002,
+  "exported_at": 1787054063,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -4922,6 +4922,12 @@
       "appid": 1671210,
       "name": "DELTARUNE",
       "added_at": 1787050558
+    },
+    {
+      "steamid": "475769230088732702",
+      "appid": 3008130,
+      "name": "Dying Light: The Beast",
+      "added_at": 1787054061
     }
   ],
   "downloads": [
