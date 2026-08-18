@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787071933,
+  "exported_at": 1787071944,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -5009,6 +5009,12 @@
       "appid": 532790,
       "name": "Vampire: The Masquerade - Bloodlines 2",
       "added_at": 1787069965
+    },
+    {
+      "steamid": "1160915638739550230",
+      "appid": 2625420,
+      "name": "Drive Beyond Horizons",
+      "added_at": 1787071942
     }
   ],
   "downloads": [
