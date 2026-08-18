@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787035718,
+  "exported_at": 1787036088,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -568,6 +568,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/459889971336052749/3a9d7c26d516198eab6e68f6381d6e15.png",
       "provider": "discord",
       "created_at": 1787028756
+    },
+    {
+      "steamid": "680220678372196364",
+      "name": "soobin",
+      "avatar": "",
+      "provider": "discord",
+      "created_at": 1787036078
     }
   ],
   "sessions": [
@@ -1070,6 +1077,12 @@
       "steamid": "459889971336052749",
       "created_at": 1787028756,
       "expires_at": 1818564756
+    },
+    {
+      "token": "979f1371b1b8e8c6dbf71accc95dd2ef16cc5d1069d5a809e36ac0871abcc76f",
+      "steamid": "680220678372196364",
+      "created_at": 1787036079,
+      "expires_at": 1818572079
     }
   ],
   "library": [
@@ -4822,6 +4835,12 @@
       "appid": 1426390,
       "name": "It Takes Two – Full Game Unlock",
       "added_at": 1787035656
+    },
+    {
+      "steamid": "680220678372196364",
+      "appid": 4128400,
+      "name": "eBaseball™: PRO SPIRIT",
+      "added_at": 1787036086
     }
   ],
   "downloads": [
