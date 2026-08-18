@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787034337,
+  "exported_at": 1787034372,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -4804,6 +4804,12 @@
       "appid": 1593500,
       "name": "God of War",
       "added_at": 1787029255
+    },
+    {
+      "steamid": "459889971336052749",
+      "appid": 1426210,
+      "name": "It Takes Two",
+      "added_at": 1787034371
     }
   ],
   "downloads": [
