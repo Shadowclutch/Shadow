@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787045046,
+  "exported_at": 1787045066,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -4867,6 +4867,12 @@
       "appid": 4128400,
       "name": "eBaseball™: PRO SPIRIT",
       "added_at": 1787036086
+    },
+    {
+      "steamid": "1460283466292658264",
+      "appid": 271590,
+      "name": "Grand Theft Auto V Legacy",
+      "added_at": 1787045065
     }
   ],
   "downloads": [
