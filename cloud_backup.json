@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787068125,
+  "exported_at": 1787068406,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -5014,6 +5014,12 @@
       "appid": 4433900,
       "name": "DRAGON BALL: Sparking! ZERO - Super Limit-Breaking NEO",
       "added_at": 1787068123
+    },
+    {
+      "steamid": "475769230088732702",
+      "appid": 4032350,
+      "name": "EA SPORTS™ College Football 27",
+      "added_at": 1787068404
     }
   ],
   "downloads": [
