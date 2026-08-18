@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787088733,
+  "exported_at": 1787088750,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -5148,6 +5148,12 @@
       "appid": 2224462,
       "name": "Street Fighter™ 6 - Outfit 1 Color 10 for Chun-Li, Jamie, Manon, Dee Jay, Juri, Ken",
       "added_at": 1787088732
+    },
+    {
+      "steamid": "297731399266467840",
+      "appid": 3401790,
+      "name": "Street Fighter™ 6 - Years 1-2 Fighters Edition Stages & Colors",
+      "added_at": 1787088749
     }
   ],
   "downloads": [
