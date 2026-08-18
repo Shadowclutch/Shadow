@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787090240,
+  "exported_at": 1787090604,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -5166,6 +5166,12 @@
       "appid": 797510,
       "name": "Splendor - The Cities",
       "added_at": 1787090211
+    },
+    {
+      "steamid": "297731399266467840",
+      "appid": 1544410,
+      "name": "THE GAME OF LIFE 2: Age of Giants World",
+      "added_at": 1787090604
     }
   ],
   "downloads": [
