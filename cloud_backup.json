@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787089094,
+  "exported_at": 1787089119,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -5154,12 +5154,6 @@
       "appid": 3401790,
       "name": "Street Fighter™ 6 - Years 1-2 Fighters Edition Stages & Colors",
       "added_at": 1787088749
-    },
-    {
-      "steamid": "297731399266467840",
-      "appid": 1235140,
-      "name": "Yakuza: Like a Dragon",
-      "added_at": 1787089093
     }
   ],
   "downloads": [
