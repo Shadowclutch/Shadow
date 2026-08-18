@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787075667,
+  "exported_at": 1787076612,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -5039,6 +5039,12 @@
       "appid": 1091500,
       "name": "Cyberpunk 2077",
       "added_at": 1787075665
+    },
+    {
+      "steamid": "1533488754176557219",
+      "appid": 431960,
+      "name": "Wallpaper Engine",
+      "added_at": 1787076610
     }
   ],
   "downloads": [
@@ -5600,9 +5606,9 @@
       "key": "SHADOW-6KKX-YQ6C-2LB4-UCXE",
       "email": "",
       "session_id": "",
-      "status": "unused",
-      "machine_id": "",
-      "activated_at": 0,
+      "status": "active",
+      "machine_id": "hw-1384281fc30fdc3252e356c1",
+      "activated_at": 1787076574,
       "created_at": 1787037807,
       "trial": 0,
       "expires_at": 0
