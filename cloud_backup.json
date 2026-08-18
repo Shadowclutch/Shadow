@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787088592,
+  "exported_at": 1787088607,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -5136,6 +5136,12 @@
       "appid": 2224461,
       "name": "Street Fighter™ 6 - Year 1 Ultimate Pass",
       "added_at": 1787088592
+    },
+    {
+      "steamid": "297731399266467840",
+      "appid": 2825190,
+      "name": "Street Fighter™ 6 - Year 2 Character Pass",
+      "added_at": 1787088607
     }
   ],
   "downloads": [
