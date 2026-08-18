@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787035600,
+  "exported_at": 1787035626,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -4816,6 +4816,12 @@
       "appid": 1426390,
       "name": "It Takes Two – Full Game Unlock",
       "added_at": 1787035599
+    },
+    {
+      "steamid": "459889971336052749",
+      "appid": 1516430,
+      "name": "It Takes Two Friend's Pass - Key",
+      "added_at": 1787035624
     }
   ],
   "downloads": [
