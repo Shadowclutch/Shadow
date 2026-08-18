@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787012287,
+  "exported_at": 1787015467,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -540,6 +540,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1372294708713357404/f0abea12bfac8dc90f0609c56beba61f.png",
       "provider": "discord",
       "created_at": 1787012023
+    },
+    {
+      "steamid": "1239463085933199403",
+      "name": "Dhrubo17g",
+      "avatar": "",
+      "provider": "discord",
+      "created_at": 1787015457
     }
   ],
   "sessions": [
@@ -1018,6 +1025,12 @@
       "steamid": "1372294708713357404",
       "created_at": 1787012024,
       "expires_at": 1818548024
+    },
+    {
+      "token": "89aa365ed5e730dc08dedda0f5f1a553e3a1dcc2d9d7b20c9f357be3107c94eb",
+      "steamid": "1239463085933199403",
+      "created_at": 1787015457,
+      "expires_at": 1818551457
     }
   ],
   "library": [
@@ -4710,6 +4723,12 @@
       "appid": 1366800,
       "name": "Crosshair X",
       "added_at": 1787012028
+    },
+    {
+      "steamid": "1239463085933199403",
+      "appid": 3751950,
+      "name": "Assassin's Creed Black Flag Resynced",
+      "added_at": 1787015462
     }
   ],
   "downloads": [
