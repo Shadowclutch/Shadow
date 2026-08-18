@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787049122,
+  "exported_at": 1787053545,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -589,6 +589,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1225770537419145260/d1e133d2f464b0325cf41257e4d23f82.png",
       "provider": "discord",
       "created_at": 1787049112
+    },
+    {
+      "steamid": "475769230088732702",
+      "name": "Lost Server",
+      "avatar": "https://cdn.discordapp.com/avatars/475769230088732702/f9ad46be9197aefc1d168e4638c09e09.png",
+      "provider": "discord",
+      "created_at": 1787050540
     }
   ],
   "sessions": [
@@ -1109,6 +1116,12 @@
       "steamid": "1460283466292658264",
       "created_at": 1787045041,
       "expires_at": 1818581041
+    },
+    {
+      "token": "b29201dd6906bfc89e88af1d173541b2828ad612b5bd0d9c686c584d99c17f70",
+      "steamid": "475769230088732702",
+      "created_at": 1787050541,
+      "expires_at": 1818586541
     }
   ],
   "library": [
@@ -4897,6 +4910,24 @@
       "appid": 224060,
       "name": "Deadpool",
       "added_at": 1787049120
+    },
+    {
+      "steamid": "475769230088732702",
+      "appid": 352400,
+      "name": "LEGO® Jurassic World",
+      "added_at": 1787050553
+    },
+    {
+      "steamid": "475769230088732702",
+      "appid": 1313140,
+      "name": "Cult of the Lamb",
+      "added_at": 1787050555
+    },
+    {
+      "steamid": "475769230088732702",
+      "appid": 1671210,
+      "name": "DELTARUNE",
+      "added_at": 1787050558
     }
   ],
   "downloads": [
