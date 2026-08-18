@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787055539,
+  "exported_at": 1787055544,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -4983,6 +4983,12 @@
       "appid": 401040,
       "name": "Disney Infinity 3.0 - Disney Originals (2.0 Edition) Character Pack",
       "added_at": 1787055537
+    },
+    {
+      "steamid": "475769230088732702",
+      "appid": 400938,
+      "name": "Disney Infinity 3.0 - Frozen Character Pack",
+      "added_at": 1787055543
     }
   ],
   "downloads": [
