@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787055544,
+  "exported_at": 1787055550,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -4989,6 +4989,12 @@
       "appid": 400938,
       "name": "Disney Infinity 3.0 - Frozen Character Pack",
       "added_at": 1787055543
+    },
+    {
+      "steamid": "475769230088732702",
+      "appid": 400965,
+      "name": "Disney Infinity 3.0 - Guardians of the Galaxy Character Pack",
+      "added_at": 1787055548
     }
   ],
   "downloads": [
