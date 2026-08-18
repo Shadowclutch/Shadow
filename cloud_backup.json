@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787074958,
+  "exported_at": 1787074996,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -5011,16 +5011,16 @@
       "added_at": 1787069965
     },
     {
-      "steamid": "1160915638739550230",
-      "appid": 447040,
-      "name": "Watch_Dogs 2",
-      "added_at": 1787072026
-    },
-    {
       "steamid": "1533488754176557219",
       "appid": 1366800,
       "name": "Crosshair X",
       "added_at": 1787074158
+    },
+    {
+      "steamid": "1160915638739550230",
+      "appid": 243470,
+      "name": "Watch_Dogs",
+      "added_at": 1787074993
     }
   ],
   "downloads": [
