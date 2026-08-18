@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787055103,
+  "exported_at": 1787055527,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -4971,6 +4971,12 @@
       "appid": 3321460,
       "name": "Crimson Desert",
       "added_at": 1787055101
+    },
+    {
+      "steamid": "475769230088732702",
+      "appid": 400996,
+      "name": "Disney Infinity 3.0 - All Disney Disc Pack",
+      "added_at": 1787055525
     }
   ],
   "downloads": [
