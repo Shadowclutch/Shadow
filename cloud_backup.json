@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787072043,
+  "exported_at": 1787074152,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -451,13 +451,6 @@
       "created_at": 1786016212
     },
     {
-      "steamid": "1533488754176557219",
-      "name": "Rzex-Edits",
-      "avatar": "https://cdn.discordapp.com/avatars/1533488754176557219/64cc313599ad26c538d6e4b88f0e2691.png",
-      "provider": "discord",
-      "created_at": 1785971156
-    },
-    {
       "steamid": "1487668000478855188",
       "name": "ShadowClutchh",
       "avatar": "https://cdn.discordapp.com/avatars/1487668000478855188/643df94d6f030dc3f4abced9a02e7235.png",
@@ -617,6 +610,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1213094189898670120/67e22353f1ab58e901b66b6d13217fd7.png",
       "provider": "discord",
       "created_at": 1787069306
+    },
+    {
+      "steamid": "1533488754176557219",
+      "name": "Rzex Edits",
+      "avatar": "https://cdn.discordapp.com/avatars/1533488754176557219/357a9eb860f0098bdb545f727d1caa33.png",
+      "provider": "discord",
+      "created_at": 1787074106
     }
   ],
   "sessions": [
