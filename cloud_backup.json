@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787055763,
+  "exported_at": 1787055767,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -5019,6 +5019,12 @@
       "appid": 2957510,
       "name": "DRAGON BALL: Sparking! ZERO Martial Arts Pack",
       "added_at": 1787055760
+    },
+    {
+      "steamid": "475769230088732702",
+      "appid": 2957460,
+      "name": "DRAGON BALL: Sparking! ZERO Pre-Order Pack",
+      "added_at": 1787055764
     }
   ],
   "downloads": [
