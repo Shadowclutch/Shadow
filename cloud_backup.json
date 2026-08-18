@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787056429,
+  "exported_at": 1787057873,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -603,6 +603,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/414831822820737038/d7270dd2aee5f73ff9c6f2191433d5d9.png",
       "provider": "discord",
       "created_at": 1787054711
+    },
+    {
+      "steamid": "1455701225440940208",
+      "name": "david67",
+      "avatar": "https://cdn.discordapp.com/avatars/1455701225440940208/214657585982a23fb0ce54d7142c15d0.png",
+      "provider": "discord",
+      "created_at": 1787057867
     }
   ],
   "sessions": [
@@ -1135,6 +1142,12 @@
       "steamid": "414831822820737038",
       "created_at": 1787054711,
       "expires_at": 1818590711
+    },
+    {
+      "token": "bf11d7f7f265cfb7c99a2cfe12ab9bff391a7fd9edb976dcd1ebaaccfa9c3d5d",
+      "steamid": "1455701225440940208",
+      "created_at": 1787057867,
+      "expires_at": 1818593867
     }
   ],
   "library": [
@@ -5037,6 +5050,18 @@
       "appid": 2957500,
       "name": "DRAGON BALL: Sparking! ZERO Victory Pack",
       "added_at": 1787056426
+    },
+    {
+      "steamid": "1455701225440940208",
+      "appid": 646910,
+      "name": "The Crew 2",
+      "added_at": 1787057871
+    },
+    {
+      "steamid": "1455701225440940208",
+      "appid": 1817070,
+      "name": "Marvel’s Spider-Man Remastered",
+      "added_at": 1787057872
     }
   ],
   "downloads": [
