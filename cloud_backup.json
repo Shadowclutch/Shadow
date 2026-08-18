@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787028850,
+  "exported_at": 1787029239,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -4798,6 +4798,12 @@
       "appid": 2661300,
       "name": "Grounded 2",
       "added_at": 1787028849
+    },
+    {
+      "steamid": "459889971336052749",
+      "appid": 2322010,
+      "name": "God of War Ragnarök",
+      "added_at": 1787029238
     }
   ],
   "downloads": [
