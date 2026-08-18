@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787012031,
+  "exported_at": 1787012287,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -4710,12 +4710,6 @@
       "appid": 1366800,
       "name": "Crosshair X",
       "added_at": 1787012028
-    },
-    {
-      "steamid": "1372294708713357404",
-      "appid": 2629230,
-      "name": "The Adventures of Sir Kicksalot",
-      "added_at": 1787012029
     }
   ],
   "downloads": [
