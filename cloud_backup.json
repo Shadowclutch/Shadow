@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787068421,
+  "exported_at": 1787069862,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -610,6 +610,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1455701225440940208/214657585982a23fb0ce54d7142c15d0.png",
       "provider": "discord",
       "created_at": 1787057867
+    },
+    {
+      "steamid": "1213094189898670120",
+      "name": "Ryou",
+      "avatar": "https://cdn.discordapp.com/avatars/1213094189898670120/67e22353f1ab58e901b66b6d13217fd7.png",
+      "provider": "discord",
+      "created_at": 1787069306
     }
   ],
   "sessions": [
@@ -1148,6 +1155,12 @@
       "steamid": "1455701225440940208",
       "created_at": 1787057867,
       "expires_at": 1818593867
+    },
+    {
+      "token": "2346ba436050c0ca25b3c3c49ecc4acbd0bfd66ebed6b056f418f1db26e19455",
+      "steamid": "1213094189898670120",
+      "created_at": 1787069307,
+      "expires_at": 1818605307
     }
   ],
   "library": [
@@ -4966,12 +4979,6 @@
       "appid": 541670,
       "name": "Disney Infinity 3.0: Gold Edition",
       "added_at": 1787054727
-    },
-    {
-      "steamid": "475769230088732702",
-      "appid": 1790600,
-      "name": "DRAGON BALL: Sparking! ZERO",
-      "added_at": 1787055712
     },
     {
       "steamid": "475769230088732702",
