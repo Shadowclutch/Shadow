@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787055714,
+  "exported_at": 1787055756,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -5007,6 +5007,12 @@
       "appid": 1790600,
       "name": "DRAGON BALL: Sparking! ZERO",
       "added_at": 1787055712
+    },
+    {
+      "steamid": "475769230088732702",
+      "appid": 3310650,
+      "name": "DRAGON BALL: Sparking! ZERO HERO OF JUSTICE Pack",
+      "added_at": 1787055755
     }
   ],
   "downloads": [
