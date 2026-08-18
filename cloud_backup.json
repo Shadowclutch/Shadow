@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787069883,
+  "exported_at": 1787069967,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -5009,6 +5009,12 @@
       "appid": 4681570,
       "name": "EA SPORTS™ College Football 27 Deluxe Edition",
       "added_at": 1787068419
+    },
+    {
+      "steamid": "475769230088732702",
+      "appid": 532790,
+      "name": "Vampire: The Masquerade - Bloodlines 2",
+      "added_at": 1787069965
     }
   ],
   "downloads": [
