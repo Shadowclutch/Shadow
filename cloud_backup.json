@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787036088,
+  "exported_at": 1787045046,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -575,6 +575,20 @@
       "avatar": "",
       "provider": "discord",
       "created_at": 1787036078
+    },
+    {
+      "steamid": "1339614156751376454",
+      "name": "MASTER",
+      "avatar": "",
+      "provider": "discord",
+      "created_at": 1787040445
+    },
+    {
+      "steamid": "1460283466292658264",
+      "name": "Odkobn",
+      "avatar": "",
+      "provider": "discord",
+      "created_at": 1787045041
     }
   ],
   "sessions": [
@@ -1083,6 +1097,18 @@
       "steamid": "680220678372196364",
       "created_at": 1787036079,
       "expires_at": 1818572079
+    },
+    {
+      "token": "427052acd51364bc83f065d9f22cd2a3308239ce17c1e218c1506650728ca673",
+      "steamid": "1339614156751376454",
+      "created_at": 1787040445,
+      "expires_at": 1818576445
+    },
+    {
+      "token": "d20d7eadf414c1fcaa65304057adf63bd1a4a2046450f0137f9e191bcd710693",
+      "steamid": "1460283466292658264",
+      "created_at": 1787045041,
+      "expires_at": 1818581041
     }
   ],
   "library": [
@@ -5395,6 +5421,17 @@
       "machine_id": "hw-ec96309c479bee38af913258",
       "activated_at": 1785956099,
       "created_at": 1785955667,
+      "trial": 0,
+      "expires_at": 0
+    },
+    {
+      "key": "SHADOW-6KKX-YQ6C-2LB4-UCXE",
+      "email": "",
+      "session_id": "",
+      "status": "unused",
+      "machine_id": "",
+      "activated_at": 0,
+      "created_at": 1787037807,
       "trial": 0,
       "expires_at": 0
     },
