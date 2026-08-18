@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787090212,
+  "exported_at": 1787090222,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -5166,6 +5166,12 @@
       "appid": 797510,
       "name": "Splendor - The Cities",
       "added_at": 1787090211
+    },
+    {
+      "steamid": "297731399266467840",
+      "appid": 1551510,
+      "name": "Psychic Guardian Super Splendor",
+      "added_at": 1787090221
     }
   ],
   "downloads": [
