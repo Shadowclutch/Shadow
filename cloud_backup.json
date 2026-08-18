@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787024678,
+  "exported_at": 1787026894,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -554,6 +554,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/220828276476608512/7f651b2d330c91611ce3fc084618955f.png",
       "provider": "discord",
       "created_at": 1787021689
+    },
+    {
+      "steamid": "1442849814567194655",
+      "name": "Crocodile",
+      "avatar": "https://cdn.discordapp.com/avatars/1442849814567194655/7c3a26b57fb382943df18f0fdc341611.png",
+      "provider": "discord",
+      "created_at": 1787026889
     }
   ],
   "sessions": [
@@ -1044,6 +1051,12 @@
       "steamid": "220828276476608512",
       "created_at": 1787021689,
       "expires_at": 1818557689
+    },
+    {
+      "token": "660f1fec92ac4ac4027f9bd9cbb93bf0609ff0500efe4fd4d450ccf222683f89",
+      "steamid": "1442849814567194655",
+      "created_at": 1787026889,
+      "expires_at": 1818562889
     }
   ],
   "library": [
@@ -4748,6 +4761,12 @@
       "appid": 1895880,
       "name": "",
       "added_at": 1787024669
+    },
+    {
+      "steamid": "1442849814567194655",
+      "appid": 227300,
+      "name": "Euro Truck Simulator 2",
+      "added_at": 1787026893
     }
   ],
   "downloads": [
