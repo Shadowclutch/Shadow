@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787054709,
+  "exported_at": 1787054717,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -596,6 +596,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/475769230088732702/f9ad46be9197aefc1d168e4638c09e09.png",
       "provider": "discord",
       "created_at": 1787050540
+    },
+    {
+      "steamid": "414831822820737038",
+      "name": "Sebi2003TV 🇩🇪🇺🇸",
+      "avatar": "https://cdn.discordapp.com/avatars/414831822820737038/d7270dd2aee5f73ff9c6f2191433d5d9.png",
+      "provider": "discord",
+      "created_at": 1787054711
     }
   ],
   "sessions": [
@@ -1122,6 +1129,12 @@
       "steamid": "475769230088732702",
       "created_at": 1787050541,
       "expires_at": 1818586541
+    },
+    {
+      "token": "ace97229b17094a99162b84af3451fb3743365407c83a3a4e80f120d81c61e89",
+      "steamid": "414831822820737038",
+      "created_at": 1787054711,
+      "expires_at": 1818590711
     }
   ],
   "library": [
