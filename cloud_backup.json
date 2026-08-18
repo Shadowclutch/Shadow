@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1786997043,
+  "exported_at": 1787012031,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -526,6 +526,20 @@
       "avatar": "https://cdn.discordapp.com/avatars/893597646474846208/78b46f7c167ec91fd9e453b0e50d98a7.png",
       "provider": "discord",
       "created_at": 1786997023
+    },
+    {
+      "steamid": "1225770537419145260",
+      "name": "odiofiusgamer15",
+      "avatar": "https://cdn.discordapp.com/avatars/1225770537419145260/d1e133d2f464b0325cf41257e4d23f82.png",
+      "provider": "discord",
+      "created_at": 1787003207
+    },
+    {
+      "steamid": "1372294708713357404",
+      "name": "Ion",
+      "avatar": "https://cdn.discordapp.com/avatars/1372294708713357404/f0abea12bfac8dc90f0609c56beba61f.png",
+      "provider": "discord",
+      "created_at": 1787012023
     }
   ],
   "sessions": [
@@ -992,6 +1006,18 @@
       "steamid": "893597646474846208",
       "created_at": 1786997024,
       "expires_at": 1818533024
+    },
+    {
+      "token": "71d685675c44ad472782d82dc567b9e31b6006370442cb7ea8c485c8ca31bc01",
+      "steamid": "1225770537419145260",
+      "created_at": 1787003207,
+      "expires_at": 1818539207
+    },
+    {
+      "token": "ab66f4eae98cf9984c71a47bab84b00f279807055fc3bfc14893a0687ffdce64",
+      "steamid": "1372294708713357404",
+      "created_at": 1787012024,
+      "expires_at": 1818548024
     }
   ],
   "library": [
@@ -4678,6 +4704,18 @@
       "appid": 1245620,
       "name": "ELDEN RING",
       "added_at": 1786997041
+    },
+    {
+      "steamid": "1372294708713357404",
+      "appid": 1366800,
+      "name": "Crosshair X",
+      "added_at": 1787012028
+    },
+    {
+      "steamid": "1372294708713357404",
+      "appid": 2629230,
+      "name": "The Adventures of Sir Kicksalot",
+      "added_at": 1787012029
     }
   ],
   "downloads": [
