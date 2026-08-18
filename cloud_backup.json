@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787090607,
+  "exported_at": 1787090616,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -5178,6 +5178,12 @@
       "appid": 2485880,
       "name": "THE GAME OF LIFE 2: El Dorado World",
       "added_at": 1787090607
+    },
+    {
+      "steamid": "297731399266467840",
+      "appid": 2218810,
+      "name": "THE GAME OF LIFE 2: Under the Sea World",
+      "added_at": 1787090616
     }
   ],
   "downloads": [
