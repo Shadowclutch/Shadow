@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787054063,
+  "exported_at": 1787054709,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -4928,6 +4928,12 @@
       "appid": 3008130,
       "name": "Dying Light: The Beast",
       "added_at": 1787054061
+    },
+    {
+      "steamid": "475769230088732702",
+      "appid": 361640,
+      "name": "Disney Infinity 3.0: Play Without Limits",
+      "added_at": 1787054707
     }
   ],
   "downloads": [
