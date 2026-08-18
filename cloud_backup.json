@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787076612,
+  "exported_at": 1787088540,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -617,6 +617,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1533488754176557219/357a9eb860f0098bdb545f727d1caa33.png",
       "provider": "discord",
       "created_at": 1787074106
+    },
+    {
+      "steamid": "297731399266467840",
+      "name": "たま たま 玉藻前 🦊",
+      "avatar": "https://cdn.discordapp.com/avatars/297731399266467840/1b442f18f691a6f8eed950153bbec5dd.png",
+      "provider": "discord",
+      "created_at": 1787088527
     }
   ],
   "sessions": [
@@ -1161,6 +1168,12 @@
       "steamid": "1213094189898670120",
       "created_at": 1787069307,
       "expires_at": 1818605307
+    },
+    {
+      "token": "08338e37117c6c8226e5666094e806456646c1880ac34beef7d4d7da276481da",
+      "steamid": "297731399266467840",
+      "created_at": 1787088527,
+      "expires_at": 1818624527
     }
   ],
   "library": [
@@ -4837,6 +4850,12 @@
       "added_at": 1786989331
     },
     {
+      "steamid": "297731399266467840",
+      "appid": 908060,
+      "name": "Talisman: Digital 5th Edition",
+      "added_at": 1787088536
+    },
+    {
       "steamid": "893597646474846208",
       "appid": 1245620,
       "name": "ELDEN RING",
@@ -4945,10 +4964,22 @@
       "added_at": 1787049120
     },
     {
+      "steamid": "297731399266467840",
+      "appid": 2909580,
+      "name": "Viractal: Will You Trust Your Party?",
+      "added_at": 1787088536
+    },
+    {
       "steamid": "475769230088732702",
       "appid": 1313140,
       "name": "Cult of the Lamb",
       "added_at": 1787050555
+    },
+    {
+      "steamid": "297731399266467840",
+      "appid": 2338140,
+      "name": "Dokapon Kingdom: Connect",
+      "added_at": 1787088537
     },
     {
       "steamid": "475769230088732702",
@@ -4979,6 +5010,12 @@
       "appid": 1817070,
       "name": "Marvel’s Spider-Man Remastered",
       "added_at": 1787057872
+    },
+    {
+      "steamid": "297731399266467840",
+      "appid": 2463800,
+      "name": "Iron Saga VS",
+      "added_at": 1787088538
     },
     {
       "steamid": "475769230088732702",
@@ -5045,6 +5082,54 @@
       "appid": 431960,
       "name": "Wallpaper Engine",
       "added_at": 1787076610
+    },
+    {
+      "steamid": "297731399266467840",
+      "appid": 1462040,
+      "name": "FINAL FANTASY VII REMAKE INTERGRADE",
+      "added_at": 1787088531
+    },
+    {
+      "steamid": "297731399266467840",
+      "appid": 3934270,
+      "name": "How Many Dudes?",
+      "added_at": 1787088532
+    },
+    {
+      "steamid": "297731399266467840",
+      "appid": 3070070,
+      "name": "TCG Card Shop Simulator",
+      "added_at": 1787088533
+    },
+    {
+      "steamid": "297731399266467840",
+      "appid": 1689620,
+      "name": "BLEACH Rebirth of Souls",
+      "added_at": 1787088534
+    },
+    {
+      "steamid": "297731399266467840",
+      "appid": 1086940,
+      "name": "Baldur's Gate 3",
+      "added_at": 1787088534
+    },
+    {
+      "steamid": "297731399266467840",
+      "appid": 1455630,
+      "name": "THE GAME OF LIFE 2",
+      "added_at": 1787088535
+    },
+    {
+      "steamid": "297731399266467840",
+      "appid": 2076010,
+      "name": "UNDER NIGHT IN-BIRTH II Sys:Celes",
+      "added_at": 1787088538
+    },
+    {
+      "steamid": "297731399266467840",
+      "appid": 2424420,
+      "name": "Avatar Legends: The Fighting Game",
+      "added_at": 1787088539
     }
   ],
   "downloads": [
