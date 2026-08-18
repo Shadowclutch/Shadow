@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787035626,
+  "exported_at": 1787035632,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -4822,6 +4822,12 @@
       "appid": 1516430,
       "name": "It Takes Two Friend's Pass - Key",
       "added_at": 1787035624
+    },
+    {
+      "steamid": "459889971336052749",
+      "appid": 1504980,
+      "name": "It Takes Two Friend's Pass",
+      "added_at": 1787035630
     }
   ],
   "downloads": [
