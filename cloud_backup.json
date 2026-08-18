@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787055562,
+  "exported_at": 1787055714,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -5001,6 +5001,12 @@
       "appid": 400966,
       "name": "Disney Infinity 3.0 - Marvel Villians Pack",
       "added_at": 1787055559
+    },
+    {
+      "steamid": "475769230088732702",
+      "appid": 1790600,
+      "name": "DRAGON BALL: Sparking! ZERO",
+      "added_at": 1787055712
     }
   ],
   "downloads": [
