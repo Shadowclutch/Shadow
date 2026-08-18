@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787090209,
+  "exported_at": 1787090212,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -5160,6 +5160,12 @@
       "appid": 798250,
       "name": "Splendor - The Strongholds",
       "added_at": 1787090208
+    },
+    {
+      "steamid": "297731399266467840",
+      "appid": 797510,
+      "name": "Splendor - The Cities",
+      "added_at": 1787090211
     }
   ],
   "downloads": [
