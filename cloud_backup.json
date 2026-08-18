@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787068411,
+  "exported_at": 1787068421,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -5026,6 +5026,12 @@
       "appid": 4041510,
       "name": "EA SPORTS™ College Football 27",
       "added_at": 1787068409
+    },
+    {
+      "steamid": "475769230088732702",
+      "appid": 4681570,
+      "name": "EA SPORTS™ College Football 27 Deluxe Edition",
+      "added_at": 1787068419
     }
   ],
   "downloads": [
