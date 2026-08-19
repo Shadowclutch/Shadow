@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787163634,
+  "exported_at": 1787164822,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6294,6 +6294,12 @@
       "appid": 368260,
       "name": "Marvel's Midnight Suns",
       "added_at": 1787163633
+    },
+    {
+      "steamid": "380878581758427137",
+      "appid": 1790600,
+      "name": "DRAGON BALL: Sparking! ZERO",
+      "added_at": 1787164819
     }
   ],
   "downloads": [
