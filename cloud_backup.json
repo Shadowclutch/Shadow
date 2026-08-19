@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787158548,
+  "exported_at": 1787158603,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6198,6 +6198,12 @@
       "appid": 850190,
       "name": "Goat Simulator 3",
       "added_at": 1787158547
+    },
+    {
+      "steamid": "1160915638739550230",
+      "appid": 1151640,
+      "name": "Horizon Zero Dawn™ Complete Edition",
+      "added_at": 1787158602
     }
   ],
   "downloads": [
