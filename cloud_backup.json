@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787161672,
+  "exported_at": 1787162615,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6252,6 +6252,12 @@
       "appid": 1217060,
       "name": "Gunfire Reborn",
       "added_at": 1787161653
+    },
+    {
+      "steamid": "1250466909892251678",
+      "appid": 1602010,
+      "name": "Persona 4 Arena Ultimax",
+      "added_at": 1787162614
     }
   ],
   "downloads": [
