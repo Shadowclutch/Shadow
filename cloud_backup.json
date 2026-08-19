@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787161605,
+  "exported_at": 1787161656,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6252,6 +6252,12 @@
       "appid": 1448440,
       "name": "Wo Long: Fallen Dynasty",
       "added_at": 1787161603
+    },
+    {
+      "steamid": "475769230088732702",
+      "appid": 1217060,
+      "name": "Gunfire Reborn",
+      "added_at": 1787161653
     }
   ],
   "downloads": [
