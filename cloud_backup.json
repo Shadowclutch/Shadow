@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787158351,
+  "exported_at": 1787158385,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6144,6 +6144,12 @@
       "appid": 270880,
       "name": "American Truck Simulator",
       "added_at": 1787158349
+    },
+    {
+      "steamid": "1160915638739550230",
+      "appid": 1808500,
+      "name": "ARC Raiders",
+      "added_at": 1787158383
     }
   ],
   "downloads": [
