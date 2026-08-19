@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787170609,
+  "exported_at": 1787171098,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6319,6 +6319,12 @@
       "appid": 3764200,
       "name": "Resident Evil Requiem",
       "added_at": 1787165332
+    },
+    {
+      "steamid": "1533488754176557219",
+      "appid": 1118200,
+      "name": "People Playground",
+      "added_at": 1787171096
     }
   ],
   "downloads": [
@@ -7036,7 +7042,7 @@
       "session_id": "",
       "status": "active",
       "machine_id": "hw-c584bc44429537d5a3499ea6",
-      "activated_at": 1787170415,
+      "activated_at": 1787170721,
       "created_at": 1787157484,
       "trial": 0,
       "expires_at": 0
