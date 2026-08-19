@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787162865,
+  "exported_at": 1787162917,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6281,7 +6281,13 @@
       "steamid": "1250466909892251678",
       "appid": 3112260,
       "name": "Virtua Fighter 5 R.E.V.O. World Stage",
-      "added_at": 1787162865
+      "added_at": 1787162866
+    },
+    {
+      "steamid": "1250466909892251678",
+      "appid": 392110,
+      "name": "ENDLESS Space™ 2",
+      "added_at": 1787162917
     }
   ],
   "downloads": [
