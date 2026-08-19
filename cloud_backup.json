@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787158603,
+  "exported_at": 1787158617,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6204,6 +6204,12 @@
       "appid": 1151640,
       "name": "Horizon Zero Dawn™ Complete Edition",
       "added_at": 1787158602
+    },
+    {
+      "steamid": "1160915638739550230",
+      "appid": 218620,
+      "name": "PAYDAY 2",
+      "added_at": 1787158616
     }
   ],
   "downloads": [
