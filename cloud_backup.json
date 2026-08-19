@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787126833,
+  "exported_at": 1787128781,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -5283,12 +5283,6 @@
       "added_at": 1787116158
     },
     {
-      "steamid": "841616852374257674",
-      "appid": 1733690,
-      "name": "Mandate Order",
-      "added_at": 1787116481
-    },
-    {
       "steamid": "660054351233941525",
       "appid": 3764200,
       "name": "",
@@ -5359,6 +5353,12 @@
       "appid": 110800,
       "name": "L.A. Noire",
       "added_at": 1787126832
+    },
+    {
+      "steamid": "841616852374257674",
+      "appid": 1733690,
+      "name": "Mandate Order",
+      "added_at": 1787128779
     }
   ],
   "downloads": [
