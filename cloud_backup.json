@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787128793,
+  "exported_at": 1787140552,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -5365,6 +5365,12 @@
       "appid": 1363080,
       "name": "Manor Lords",
       "added_at": 1787128792
+    },
+    {
+      "steamid": "1442849814567194655",
+      "appid": 605740,
+      "name": "Flashing Lights",
+      "added_at": 1787140551
     }
   ],
   "downloads": [
