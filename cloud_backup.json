@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787158405,
+  "exported_at": 1787158453,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6156,6 +6156,12 @@
       "appid": 635260,
       "name": "CarX Drift Racing Online",
       "added_at": 1787158402
+    },
+    {
+      "steamid": "1160915638739550230",
+      "appid": 2698940,
+      "name": "The Crew Motorfest",
+      "added_at": 1787158451
     }
   ],
   "downloads": [
