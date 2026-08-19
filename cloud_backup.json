@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787154097,
+  "exported_at": 1787157483,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -5204,18 +5204,6 @@
       "added_at": 1787075611
     },
     {
-      "steamid": "1160915638739550230",
-      "appid": 2625420,
-      "name": "Drive Beyond Horizons",
-      "added_at": 1787075653
-    },
-    {
-      "steamid": "1160915638739550230",
-      "appid": 1091500,
-      "name": "Cyberpunk 2077",
-      "added_at": 1787075665
-    },
-    {
       "steamid": "1533488754176557219",
       "appid": 431960,
       "name": "Wallpaper Engine",
@@ -6859,6 +6847,17 @@
       "machine_id": "hw-c8bc1b554432a085eacda8c1",
       "activated_at": 1787153398,
       "created_at": 1787152908,
+      "trial": 0,
+      "expires_at": 0
+    },
+    {
+      "key": "SHADOW-RP3B-HTZB-8XZC-ZHFJ",
+      "email": "",
+      "session_id": "",
+      "status": "unused",
+      "machine_id": "",
+      "activated_at": 0,
+      "created_at": 1787157484,
       "trial": 0,
       "expires_at": 0
     }
