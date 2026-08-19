@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787142583,
+  "exported_at": 1787142600,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -5347,6 +5347,12 @@
       "appid": 605740,
       "name": "Flashing Lights",
       "added_at": 1787140551
+    },
+    {
+      "steamid": "475769230088732702",
+      "appid": 2584270,
+      "name": "Mortal Shell II",
+      "added_at": 1787142599
     }
   ],
   "downloads": [
