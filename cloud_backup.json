@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787158453,
+  "exported_at": 1787158478,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6162,6 +6162,12 @@
       "appid": 2698940,
       "name": "The Crew Motorfest",
       "added_at": 1787158451
+    },
+    {
+      "steamid": "1160915638739550230",
+      "appid": 1091500,
+      "name": "Cyberpunk 2077",
+      "added_at": 1787158477
     }
   ],
   "downloads": [
