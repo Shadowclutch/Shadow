@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787162917,
+  "exported_at": 1787163634,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6288,6 +6288,12 @@
       "appid": 392110,
       "name": "ENDLESS Space™ 2",
       "added_at": 1787162917
+    },
+    {
+      "steamid": "475769230088732702",
+      "appid": 368260,
+      "name": "Marvel's Midnight Suns",
+      "added_at": 1787163633
     }
   ],
   "downloads": [
