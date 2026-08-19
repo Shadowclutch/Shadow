@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787165334,
+  "exported_at": 1787170609,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -708,6 +708,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1250466909892251678/ae8c194281d1fd17fbe92a0346a3d718.png",
       "provider": "discord",
       "created_at": 1787154092
+    },
+    {
+      "steamid": "971744235508334593",
+      "name": "niemiec",
+      "avatar": "https://cdn.discordapp.com/avatars/971744235508334593/b9ca1758f55614e187e4eb4e25f6ef19.png",
+      "provider": "discord",
+      "created_at": 1787170600
     }
   ],
   "sessions": [
@@ -1330,6 +1337,12 @@
       "steamid": "1250466909892251678",
       "created_at": 1787154092,
       "expires_at": 1818690092
+    },
+    {
+      "token": "d77e3aa4d6ae4df4b52bc3436fb585091d860df05d723f076cb125f8f3c3e730",
+      "steamid": "971744235508334593",
+      "created_at": 1787170601,
+      "expires_at": 1818706601
     }
   ],
   "library": [
@@ -7007,12 +7020,23 @@
       "expires_at": 0
     },
     {
+      "key": "SHADOW-ZNAF-BLV6-RYXM-LZDE",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-577297f792b09816c795c0e0",
+      "activated_at": 1787165851,
+      "created_at": 1787165748,
+      "trial": 0,
+      "expires_at": 0
+    },
+    {
       "key": "SHADOW-RP3B-HTZB-8XZC-ZHFJ",
       "email": "",
       "session_id": "",
-      "status": "unused",
-      "machine_id": "",
-      "activated_at": 0,
+      "status": "active",
+      "machine_id": "hw-c584bc44429537d5a3499ea6",
+      "activated_at": 1787170415,
       "created_at": 1787157484,
       "trial": 0,
       "expires_at": 0
