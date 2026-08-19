@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787158502,
+  "exported_at": 1787158522,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6180,6 +6180,12 @@
       "appid": 2369390,
       "name": "Far Cry 6",
       "added_at": 1787158501
+    },
+    {
+      "steamid": "1160915638739550230",
+      "appid": 1293830,
+      "name": "Forza Horizon 4",
+      "added_at": 1787158520
     }
   ],
   "downloads": [
