@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787125920,
+  "exported_at": 1787126041,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -5298,6 +5298,12 @@
       "appid": 289650,
       "name": "Assassin's Creed Unity",
       "added_at": 1787125918
+    },
+    {
+      "steamid": "278352302820032513",
+      "appid": 368500,
+      "name": "Assassin's Creed Syndicate",
+      "added_at": 1787126038
     }
   ],
   "downloads": [
