@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787171116,
+  "exported_at": 1787172118,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6319,6 +6319,12 @@
       "appid": 1118200,
       "name": "People Playground",
       "added_at": 1787171096
+    },
+    {
+      "steamid": "971744235508334593",
+      "appid": 1030830,
+      "name": "Mafia II: Definitive Edition",
+      "added_at": 1787172116
     }
   ],
   "downloads": [
