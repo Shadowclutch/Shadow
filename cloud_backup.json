@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787158478,
+  "exported_at": 1787158492,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6168,6 +6168,12 @@
       "appid": 1091500,
       "name": "Cyberpunk 2077",
       "added_at": 1787158477
+    },
+    {
+      "steamid": "1160915638739550230",
+      "appid": 552520,
+      "name": "Far Cry 5",
+      "added_at": 1787158490
     }
   ],
   "downloads": [
