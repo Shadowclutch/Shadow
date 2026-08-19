@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787124188,
+  "exported_at": 1787124432,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -477,6 +477,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/660054351233941525/a_70204bf00cd599b5e4b16b26f6bfbdf5.png",
       "provider": "discord",
       "created_at": 1787117535
+    },
+    {
+      "steamid": "1109388481525973015",
+      "name": "Neelyoo",
+      "avatar": "https://cdn.discordapp.com/avatars/1109388481525973015/2ea4780834d80d3ad9a818682229060e.png",
+      "provider": "discord",
+      "created_at": 1787124426
     },
     {
       "steamid": "1487668000478855188",
@@ -1226,6 +1233,12 @@
       "steamid": "660054351233941525",
       "created_at": 1787117536,
       "expires_at": 1818653536
+    },
+    {
+      "token": "dbc35c99d9782f9ee0db4d566d30398651ba84d9149157ac71eb98dd23f5acee",
+      "steamid": "1109388481525973015",
+      "created_at": 1787124426,
+      "expires_at": 1818660426
     }
   ],
   "library": [
@@ -5260,6 +5273,12 @@
       "appid": 3656800,
       "name": "Train Sim World® 6",
       "added_at": 1787124187
+    },
+    {
+      "steamid": "1109388481525973015",
+      "appid": 3751950,
+      "name": "Assassin's Creed Black Flag Resynced",
+      "added_at": 1787124431
     }
   ],
   "downloads": [
