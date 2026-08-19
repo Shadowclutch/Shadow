@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787117700,
+  "exported_at": 1787124188,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -5254,6 +5254,12 @@
       "appid": 3764200,
       "name": "",
       "added_at": 1787117699
+    },
+    {
+      "steamid": "1442849814567194655",
+      "appid": 3656800,
+      "name": "Train Sim World® 6",
+      "added_at": 1787124187
     }
   ],
   "downloads": [
