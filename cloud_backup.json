@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787125642,
+  "exported_at": 1787125920,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -5292,6 +5292,12 @@
       "appid": 3751950,
       "name": "Assassin's Creed Black Flag Resynced",
       "added_at": 1787124431
+    },
+    {
+      "steamid": "278352302820032513",
+      "appid": 289650,
+      "name": "Assassin's Creed Unity",
+      "added_at": 1787125918
     }
   ],
   "downloads": [
