@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787176468,
+  "exported_at": 1787176481,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6331,6 +6331,12 @@
       "appid": 1030830,
       "name": "Mafia II: Definitive Edition",
       "added_at": 1787172116
+    },
+    {
+      "steamid": "1487668000478855188",
+      "appid": 10180,
+      "name": "Call of Duty: Modern Warfare 2 (2009)",
+      "added_at": 1787176479
     }
   ],
   "downloads": [
