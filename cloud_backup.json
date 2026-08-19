@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787164822,
+  "exported_at": 1787165334,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6300,6 +6300,12 @@
       "appid": 1790600,
       "name": "DRAGON BALL: Sparking! ZERO",
       "added_at": 1787164819
+    },
+    {
+      "steamid": "380878581758427137",
+      "appid": 3764200,
+      "name": "Resident Evil Requiem",
+      "added_at": 1787165332
     }
   ],
   "downloads": [
