@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787153323,
+  "exported_at": 1787154097,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -701,6 +701,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/804372381790896208/5d3c5d7c18700219bab3ec50aade5676.png",
       "provider": "discord",
       "created_at": 1787153086
+    },
+    {
+      "steamid": "1250466909892251678",
+      "name": "𝑷𝒆𝒏𝒈𝒖𝒊𝒏𝒚",
+      "avatar": "https://cdn.discordapp.com/avatars/1250466909892251678/ae8c194281d1fd17fbe92a0346a3d718.png",
+      "provider": "discord",
+      "created_at": 1787154092
     }
   ],
   "sessions": [
@@ -1317,6 +1324,12 @@
       "steamid": "804372381790896208",
       "created_at": 1787153087,
       "expires_at": 1818689087
+    },
+    {
+      "token": "f18db905f775f5bb1ccfc2e8afa9d2884453fa60a1589969f3ed33e80dee6c36",
+      "steamid": "1250466909892251678",
+      "created_at": 1787154092,
+      "expires_at": 1818690092
     }
   ],
   "library": [
@@ -6828,17 +6841,6 @@
       "expires_at": 0
     },
     {
-      "key": "SHADOW-6JQP-BJJH-MTXA-59FW",
-      "email": "",
-      "session_id": "",
-      "status": "unused",
-      "machine_id": "",
-      "activated_at": 0,
-      "created_at": 1787152908,
-      "trial": 0,
-      "expires_at": 0
-    },
-    {
       "key": "SHADOW-LYQV-MP7K-QYXQ-Y8FL",
       "email": "",
       "session_id": "",
@@ -6846,6 +6848,17 @@
       "machine_id": "7158f06c-709e-4e06-9088-1ad181dc081a",
       "activated_at": 1786535193,
       "created_at": 1785932393,
+      "trial": 0,
+      "expires_at": 0
+    },
+    {
+      "key": "SHADOW-6JQP-BJJH-MTXA-59FW",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-c8bc1b554432a085eacda8c1",
+      "activated_at": 1787153398,
+      "created_at": 1787152908,
       "trial": 0,
       "expires_at": 0
     }
