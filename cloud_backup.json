@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787128781,
+  "exported_at": 1787128793,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -5359,6 +5359,12 @@
       "appid": 1733690,
       "name": "Mandate Order",
       "added_at": 1787128779
+    },
+    {
+      "steamid": "841616852374257674",
+      "appid": 1363080,
+      "name": "Manor Lords",
+      "added_at": 1787128792
     }
   ],
   "downloads": [
