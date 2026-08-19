@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787162857,
+  "exported_at": 1787162860,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6270,6 +6270,18 @@
       "appid": 4023150,
       "name": "WWE 2K25 Deadman Bundle Virtual Currency Pack",
       "added_at": 1787162858
+    },
+    {
+      "steamid": "1250466909892251678",
+      "appid": 3112260,
+      "name": "Virtua Fighter 5 R.E.V.O. World Stage",
+      "added_at": 1787162859
+    },
+    {
+      "steamid": "804372381790896208",
+      "appid": 3401590,
+      "name": "WWE 2K25 Deadman Edition Bonus Pack",
+      "added_at": 1787162860
     }
   ],
   "downloads": [
