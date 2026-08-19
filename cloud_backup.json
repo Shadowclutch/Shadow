@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787158385,
+  "exported_at": 1787158405,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6150,6 +6150,12 @@
       "appid": 1808500,
       "name": "ARC Raiders",
       "added_at": 1787158383
+    },
+    {
+      "steamid": "1160915638739550230",
+      "appid": 635260,
+      "name": "CarX Drift Racing Online",
+      "added_at": 1787158402
     }
   ],
   "downloads": [
