@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787126041,
+  "exported_at": 1787126046,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -5304,6 +5304,12 @@
       "appid": 368500,
       "name": "Assassin's Creed Syndicate",
       "added_at": 1787126038
+    },
+    {
+      "steamid": "278352302820032513",
+      "appid": 405080,
+      "name": "Assassin's Creed Syndicate - Jack The Ripper",
+      "added_at": 1787126044
     }
   ],
   "downloads": [
