@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787162860,
+  "exported_at": 1787162867,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6099,12 +6099,6 @@
     },
     {
       "steamid": "804372381790896208",
-      "appid": 2878960,
-      "name": "WWE 2K25",
-      "added_at": 1787153317
-    },
-    {
-      "steamid": "804372381790896208",
       "appid": 1129540,
       "name": "Orc Massage",
       "added_at": 1787153318
@@ -6120,6 +6114,12 @@
       "appid": 1571340,
       "name": "VR HOT",
       "added_at": 1787153321
+    },
+    {
+      "steamid": "804372381790896208",
+      "appid": 2878960,
+      "name": "WWE 2K25",
+      "added_at": 1787162864
     },
     {
       "steamid": "804372381790896208",
@@ -6272,16 +6272,16 @@
       "added_at": 1787162858
     },
     {
-      "steamid": "1250466909892251678",
-      "appid": 3112260,
-      "name": "Virtua Fighter 5 R.E.V.O. World Stage",
-      "added_at": 1787162859
-    },
-    {
       "steamid": "804372381790896208",
       "appid": 3401590,
       "name": "WWE 2K25 Deadman Edition Bonus Pack",
       "added_at": 1787162860
+    },
+    {
+      "steamid": "1250466909892251678",
+      "appid": 3112260,
+      "name": "Virtua Fighter 5 R.E.V.O. World Stage",
+      "added_at": 1787162866
     }
   ],
   "downloads": [
