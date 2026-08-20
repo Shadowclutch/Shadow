@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787191571,
+  "exported_at": 1787191602,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6388,6 +6388,12 @@
       "appid": 2719750,
       "name": "Star Birds",
       "added_at": 1787184596
+    },
+    {
+      "steamid": "749356999417790604",
+      "appid": 1245620,
+      "name": "ELDEN RING",
+      "added_at": 1787191601
     }
   ],
   "downloads": [
