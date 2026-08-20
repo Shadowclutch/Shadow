@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787228305,
+  "exported_at": 1787229658,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6490,6 +6490,12 @@
       "appid": 1718870,
       "name": "Spaceflight Simulator",
       "added_at": 1787228303
+    },
+    {
+      "steamid": "1160915638739550230",
+      "appid": 1222680,
+      "name": "Need for Speed™ Heat ",
+      "added_at": 1787229656
     }
   ],
   "downloads": [
