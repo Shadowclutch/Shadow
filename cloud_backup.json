@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787224101,
+  "exported_at": 1787224924,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -764,6 +764,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1248919329509216256/29c4fc66d04ecb60593447470c655e04.png",
       "provider": "discord",
       "created_at": 1787218619
+    },
+    {
+      "steamid": "1377244462639480883",
+      "name": "Prottoy",
+      "avatar": "https://cdn.discordapp.com/avatars/1377244462639480883/913e66299196560617bd5d3ed953696e.png",
+      "provider": "discord",
+      "created_at": 1787224918
     }
   ],
   "sessions": [
@@ -1440,6 +1447,12 @@
       "steamid": "1248919329509216256",
       "created_at": 1787218620,
       "expires_at": 1818754620
+    },
+    {
+      "token": "981fd36d8b9b5d82136e8665b277b2f33ead67213000dd710c361b22e6cbe7f7",
+      "steamid": "1377244462639480883",
+      "created_at": 1787224918,
+      "expires_at": 1818760918
     }
   ],
   "library": [
@@ -6470,6 +6483,48 @@
       "appid": 1475850,
       "name": "",
       "added_at": 1787221472
+    },
+    {
+      "steamid": "1377244462639480883",
+      "appid": 2531310,
+      "name": "The Last of Us™ Part II Remastered",
+      "added_at": 1787224920
+    },
+    {
+      "steamid": "1377244462639480883",
+      "appid": 271590,
+      "name": "Grand Theft Auto V Legacy",
+      "added_at": 1787224921
+    },
+    {
+      "steamid": "1377244462639480883",
+      "appid": 1593500,
+      "name": "God of War",
+      "added_at": 1787224922
+    },
+    {
+      "steamid": "1377244462639480883",
+      "appid": 2322010,
+      "name": "God of War Ragnarök",
+      "added_at": 1787224922
+    },
+    {
+      "steamid": "1377244462639480883",
+      "appid": 1091500,
+      "name": "Cyberpunk 2077",
+      "added_at": 1787224923
+    },
+    {
+      "steamid": "1377244462639480883",
+      "appid": 1222140,
+      "name": "Detroit: Become Human",
+      "added_at": 1787224923
+    },
+    {
+      "steamid": "1377244462639480883",
+      "appid": 1245620,
+      "name": "ELDEN RING",
+      "added_at": 1787224924
     }
   ],
   "downloads": [
