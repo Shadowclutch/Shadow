@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787248072,
+  "exported_at": 1787248176,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6564,6 +6564,12 @@
       "appid": 322170,
       "name": "Geometry Dash",
       "added_at": 1787233295
+    },
+    {
+      "steamid": "1424762935229681735",
+      "appid": 3240220,
+      "name": "Grand Theft Auto V Enhanced",
+      "added_at": 1787248175
     }
   ],
   "downloads": [
