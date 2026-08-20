@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787176559,
+  "exported_at": 1787184598,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -715,6 +715,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/971744235508334593/b9ca1758f55614e187e4eb4e25f6ef19.png",
       "provider": "discord",
       "created_at": 1787170600
+    },
+    {
+      "steamid": "1410042788661428365",
+      "name": "Ibby",
+      "avatar": "https://cdn.discordapp.com/avatars/1410042788661428365/69859a17acbe18c6f8509c5837106c86.png",
+      "provider": "discord",
+      "created_at": 1787184588
     }
   ],
   "sessions": [
@@ -1349,6 +1356,12 @@
       "steamid": "1487668000478855188",
       "created_at": 1787174231,
       "expires_at": 1818710231
+    },
+    {
+      "token": "eacb3f674f5dfd59e0fd4e8d2420f0532e5cc5b8ee2a228c090b685bb04ca171",
+      "steamid": "1410042788661428365",
+      "created_at": 1787184589,
+      "expires_at": 1818720589
     }
   ],
   "library": [
@@ -6337,6 +6350,18 @@
       "appid": 10180,
       "name": "Call of Duty: Modern Warfare 2 (2009)",
       "added_at": 1787176558
+    },
+    {
+      "steamid": "1410042788661428365",
+      "appid": 431960,
+      "name": "Wallpaper Engine",
+      "added_at": 1787184595
+    },
+    {
+      "steamid": "1410042788661428365",
+      "appid": 2719750,
+      "name": "Star Birds",
+      "added_at": 1787184596
     }
   ],
   "downloads": [
