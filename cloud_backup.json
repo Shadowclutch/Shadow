@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787232033,
+  "exported_at": 1787233161,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -778,6 +778,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1457013819015430185/559635c86f8d9e2466d340f0d8bc8bf8.png",
       "provider": "discord",
       "created_at": 1787228295
+    },
+    {
+      "steamid": "1342933398158839949",
+      "name": "وش دخلك في اسمي",
+      "avatar": "https://cdn.discordapp.com/avatars/1342933398158839949/7d9495a8c0cb6c8b28f627aa4c67a3b9.png",
+      "provider": "discord",
+      "created_at": 1787233044
     }
   ],
   "sessions": [
@@ -1466,6 +1473,12 @@
       "steamid": "1457013819015430185",
       "created_at": 1787228296,
       "expires_at": 1818764296
+    },
+    {
+      "token": "233caf2f07af10e0ad28f9b50879986c4abaacce378c4595f8ee762d538412e5",
+      "steamid": "1342933398158839949",
+      "created_at": 1787233045,
+      "expires_at": 1818769045
     }
   ],
   "library": [
@@ -6875,6 +6888,28 @@
   ],
   "license_keys": [
     {
+      "key": "SHADOW-SH4H-6LBH-WEU3-8B97",
+      "email": "",
+      "session_id": "",
+      "status": "unused",
+      "machine_id": "",
+      "activated_at": 0,
+      "created_at": 1787232084,
+      "trial": 0,
+      "expires_at": 1789824083
+    },
+    {
+      "key": "SHADOW-89RY-ZLQ6-UYD6-K78W",
+      "email": "",
+      "session_id": "",
+      "status": "unused",
+      "machine_id": "",
+      "activated_at": 0,
+      "created_at": 1787232084,
+      "trial": 0,
+      "expires_at": 1789824083
+    },
+    {
       "key": "TRIAL-WSN5-5HPX-4T7Z-GD9B",
       "email": "",
       "session_id": "",
@@ -6917,6 +6952,17 @@
       "created_at": 1785941973,
       "trial": 1,
       "expires_at": 1785942573
+    },
+    {
+      "key": "SHADOW-GHVL-AMUZ-K89B-7ASP",
+      "email": "",
+      "session_id": "",
+      "status": "unused",
+      "machine_id": "",
+      "activated_at": 0,
+      "created_at": 1787232085,
+      "trial": 0,
+      "expires_at": 1789824083
     },
     {
       "key": "SHADOW-YX93-YZCA-PT87-S5RK",
@@ -6985,6 +7031,28 @@
       "expires_at": 1785952111
     },
     {
+      "key": "SHADOW-X6KL-FK7V-THEH-Y849",
+      "email": "",
+      "session_id": "",
+      "status": "unused",
+      "machine_id": "",
+      "activated_at": 0,
+      "created_at": 1787232085,
+      "trial": 0,
+      "expires_at": 1789824083
+    },
+    {
+      "key": "SHADOW-P5YQ-M6VD-25F5-4V42",
+      "email": "",
+      "session_id": "",
+      "status": "unused",
+      "machine_id": "",
+      "activated_at": 0,
+      "created_at": 1787232085,
+      "trial": 0,
+      "expires_at": 1789824083
+    },
+    {
       "key": "SHADOW-DRUA-VGX4-EE7P-3M4Z",
       "email": "",
       "session_id": "",
@@ -6994,6 +7062,28 @@
       "created_at": 1786882324,
       "trial": 0,
       "expires_at": 0
+    },
+    {
+      "key": "SHADOW-TWT2-KJLA-TPWA-DJBC",
+      "email": "",
+      "session_id": "",
+      "status": "unused",
+      "machine_id": "",
+      "activated_at": 0,
+      "created_at": 1787232085,
+      "trial": 0,
+      "expires_at": 1789824083
+    },
+    {
+      "key": "SHADOW-WMYN-32CT-3ES2-8XFL",
+      "email": "",
+      "session_id": "",
+      "status": "unused",
+      "machine_id": "",
+      "activated_at": 0,
+      "created_at": 1787232086,
+      "trial": 0,
+      "expires_at": 1789824083
     },
     {
       "key": "SHADOW-V483-673B-MZDY-DU7U",
@@ -7291,6 +7381,39 @@
       "created_at": 1787231482,
       "trial": 0,
       "expires_at": 1789823482
+    },
+    {
+      "key": "SHADOW-6HHF-SW8H-B2EF-7MNK",
+      "email": "",
+      "session_id": "",
+      "status": "unused",
+      "machine_id": "",
+      "activated_at": 0,
+      "created_at": 1787232083,
+      "trial": 0,
+      "expires_at": 1789824083
+    },
+    {
+      "key": "SHADOW-7DHA-AKSA-W8EZ-WARD",
+      "email": "",
+      "session_id": "",
+      "status": "unused",
+      "machine_id": "",
+      "activated_at": 0,
+      "created_at": 1787232083,
+      "trial": 0,
+      "expires_at": 1789824083
+    },
+    {
+      "key": "SHADOW-W4EW-JB2H-WX57-YAZP",
+      "email": "",
+      "session_id": "",
+      "status": "unused",
+      "machine_id": "",
+      "activated_at": 0,
+      "created_at": 1787232084,
+      "trial": 0,
+      "expires_at": 1789824083
     }
   ]
 }
