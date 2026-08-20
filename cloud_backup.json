@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787231747,
+  "exported_at": 1787231943,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6514,6 +6514,12 @@
       "appid": 541660,
       "name": "Disney Infinity 2.0: Gold Edition",
       "added_at": 1787231745
+    },
+    {
+      "steamid": "475769230088732702",
+      "appid": 400975,
+      "name": "Disney Infinity 3.0 - Disney TV Pack",
+      "added_at": 1787231940
     }
   ],
   "downloads": [
@@ -7273,7 +7279,7 @@
       "key": "SHADOW-FPNP-MJBT-TD3M-E2UH",
       "email": "",
       "session_id": "",
-      "status": "active",
+      "status": "revoked",
       "machine_id": "hw-c584bc44429537d5a3499ea6",
       "activated_at": 1787231509,
       "created_at": 1787231482,
