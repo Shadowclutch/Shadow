@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787229773,
+  "exported_at": 1787231744,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6496,6 +6496,18 @@
       "appid": 1222680,
       "name": "Need for Speed™ Heat ",
       "added_at": 1787229770
+    },
+    {
+      "steamid": "475769230088732702",
+      "appid": 3768760,
+      "name": "007 First Light",
+      "added_at": 1787231741
+    },
+    {
+      "steamid": "475769230088732702",
+      "appid": 541640,
+      "name": "Disney Infinity 1.0: Gold Edition",
+      "added_at": 1787231742
     }
   ],
   "downloads": [
@@ -7197,28 +7209,6 @@
       "expires_at": 0
     },
     {
-      "key": "SHADOW-RP3B-HTZB-8XZC-ZHFJ",
-      "email": "",
-      "session_id": "",
-      "status": "active",
-      "machine_id": "hw-c584bc44429537d5a3499ea6",
-      "activated_at": 1787170721,
-      "created_at": 1787157484,
-      "trial": 0,
-      "expires_at": 0
-    },
-    {
-      "key": "SHADOW-DNK9-NHAM-VTQ7-2EX7",
-      "email": "",
-      "session_id": "",
-      "status": "active",
-      "machine_id": "hw-c584bc44429537d5a3499ea6",
-      "activated_at": 1787217567,
-      "created_at": 1787217559,
-      "trial": 0,
-      "expires_at": 0
-    },
-    {
       "key": "SHADOW-B93E-P8RC-RZBZ-NRF3",
       "email": "",
       "session_id": "",
@@ -7239,6 +7229,50 @@
       "created_at": 1787223761,
       "trial": 0,
       "expires_at": 0
+    },
+    {
+      "key": "SHADOW-DNK9-NHAM-VTQ7-2EX7",
+      "email": "",
+      "session_id": "",
+      "status": "revoked",
+      "machine_id": "hw-c584bc44429537d5a3499ea6",
+      "activated_at": 1787217567,
+      "created_at": 1787217559,
+      "trial": 0,
+      "expires_at": 0
+    },
+    {
+      "key": "SHADOW-RP3B-HTZB-8XZC-ZHFJ",
+      "email": "",
+      "session_id": "",
+      "status": "revoked",
+      "machine_id": "hw-c584bc44429537d5a3499ea6",
+      "activated_at": 1787170721,
+      "created_at": 1787157484,
+      "trial": 0,
+      "expires_at": 0
+    },
+    {
+      "key": "SHADOW-WQZR-6ERR-9FF4-QCPU",
+      "email": "",
+      "session_id": "",
+      "status": "revoked",
+      "machine_id": "hw-c584bc44429537d5a3499ea6",
+      "activated_at": 1787230601,
+      "created_at": 1787230073,
+      "trial": 0,
+      "expires_at": 1789822073
+    },
+    {
+      "key": "SHADOW-FPNP-MJBT-TD3M-E2UH",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-c584bc44429537d5a3499ea6",
+      "activated_at": 1787231509,
+      "created_at": 1787231482,
+      "trial": 0,
+      "expires_at": 1789823482
     }
   ]
 }
