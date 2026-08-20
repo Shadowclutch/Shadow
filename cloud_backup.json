@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787218119,
+  "exported_at": 1787218164,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6439,12 +6439,6 @@
       "appid": 431960,
       "name": "Wallpaper Engine",
       "added_at": 1787194396
-    },
-    {
-      "steamid": "1530276167083360336",
-      "appid": 3167920,
-      "name": "Low-Budget Repairs",
-      "added_at": 1787216631
     }
   ],
   "downloads": [
