@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787233161,
+  "exported_at": 1787233264,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6539,6 +6539,12 @@
       "appid": 361640,
       "name": "Disney Infinity 3.0: Play Without Limits",
       "added_at": 1787232006
+    },
+    {
+      "steamid": "1342933398158839949",
+      "appid": 322177,
+      "name": "",
+      "added_at": 1787233262
     }
   ],
   "downloads": [
