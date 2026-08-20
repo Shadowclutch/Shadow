@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787184598,
+  "exported_at": 1787184662,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -722,6 +722,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1410042788661428365/69859a17acbe18c6f8509c5837106c86.png",
       "provider": "discord",
       "created_at": 1787184588
+    },
+    {
+      "steamid": "1472395304056651858",
+      "name": "elqaddar",
+      "avatar": "",
+      "provider": "discord",
+      "created_at": 1787184613
     }
   ],
   "sessions": [
@@ -1362,6 +1369,12 @@
       "steamid": "1410042788661428365",
       "created_at": 1787184589,
       "expires_at": 1818720589
+    },
+    {
+      "token": "1bfcb054eb19ca899b27982472be8322c03d88a42c18f5e8589b2ff7e87ebd16",
+      "steamid": "1472395304056651858",
+      "created_at": 1787184613,
+      "expires_at": 1818720613
     }
   ],
   "library": [
