@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787214791,
+  "exported_at": 1787216282,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -750,6 +750,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1534900880476733601/796038affde5ea812b43011330286bd2.png",
       "provider": "discord",
       "created_at": 1787214785
+    },
+    {
+      "steamid": "1530276167083360336",
+      "name": "dequa",
+      "avatar": "",
+      "provider": "discord",
+      "created_at": 1787216267
     }
   ],
   "sessions": [
@@ -1414,6 +1421,12 @@
       "steamid": "1534900880476733601",
       "created_at": 1787214785,
       "expires_at": 1818750785
+    },
+    {
+      "token": "59dad5e7600bfc76bd9b0c15fa49dfcb7d1f46059d16c5f313e21fab5968ee7d",
+      "steamid": "1530276167083360336",
+      "created_at": 1787215516,
+      "expires_at": 1818751516
     }
   ],
   "library": [
