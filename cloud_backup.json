@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787221475,
+  "exported_at": 1787224101,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -3509,12 +3509,6 @@
     },
     {
       "steamid": "1487668000478855188",
-      "appid": 3240220,
-      "name": "Grand Theft Auto V Enhanced",
-      "added_at": 1785950545
-    },
-    {
-      "steamid": "1487668000478855188",
       "appid": 271590,
       "name": "Grand Theft Auto V Legacy",
       "added_at": 1785951272
@@ -3728,6 +3722,12 @@
       "appid": 1004640,
       "name": "FINAL FANTASY TACTICS - The Ivalice Chronicles",
       "added_at": 1785952504
+    },
+    {
+      "steamid": "1487668000478855188",
+      "appid": 3240220,
+      "name": "Grand Theft Auto V Enhanced",
+      "added_at": 1787224100
     },
     {
       "steamid": "1345121200619262073",
@@ -6995,17 +6995,6 @@
       "expires_at": 1785955526
     },
     {
-      "key": "SHADOW-B93E-P8RC-RZBZ-NRF3",
-      "email": "",
-      "session_id": "",
-      "status": "active",
-      "machine_id": "hw-c584bc44429537d5a3499ea6",
-      "activated_at": 1785955537,
-      "created_at": 1785930617,
-      "trial": 0,
-      "expires_at": 0
-    },
-    {
       "key": "SHADOW-3WSA-4P89-JP52-JASW",
       "email": "",
       "session_id": "",
@@ -7200,6 +7189,28 @@
       "machine_id": "hw-c584bc44429537d5a3499ea6",
       "activated_at": 1787217567,
       "created_at": 1787217559,
+      "trial": 0,
+      "expires_at": 0
+    },
+    {
+      "key": "SHADOW-B93E-P8RC-RZBZ-NRF3",
+      "email": "",
+      "session_id": "",
+      "status": "revoked",
+      "machine_id": "hw-c584bc44429537d5a3499ea6",
+      "activated_at": 1785955537,
+      "created_at": 1785930617,
+      "trial": 0,
+      "expires_at": 0
+    },
+    {
+      "key": "SHADOW-5CHY-PGB5-Z8CP-FDKU",
+      "email": "",
+      "session_id": "",
+      "status": "revoked",
+      "machine_id": "hw-c584bc44429537d5a3499ea6",
+      "activated_at": 1787223771,
+      "created_at": 1787223761,
       "trial": 0,
       "expires_at": 0
     }
