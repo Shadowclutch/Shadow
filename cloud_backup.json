@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787216638,
+  "exported_at": 1787217777,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -372,6 +372,13 @@
       "avatar": "",
       "provider": "discord",
       "created_at": 1785961890
+    },
+    {
+      "steamid": "1530276167083360336",
+      "name": "dequa",
+      "avatar": "",
+      "provider": "discord",
+      "created_at": 1787217757
     },
     {
       "steamid": "1066657842028871710",
@@ -750,13 +757,6 @@
       "avatar": "https://cdn.discordapp.com/avatars/1534900880476733601/796038affde5ea812b43011330286bd2.png",
       "provider": "discord",
       "created_at": 1787214785
-    },
-    {
-      "steamid": "1530276167083360336",
-      "name": "dequa",
-      "avatar": "",
-      "provider": "discord",
-      "created_at": 1787216267
     }
   ],
   "sessions": [
@@ -6445,6 +6445,12 @@
       "appid": 3167920,
       "name": "Low-Budget Repairs",
       "added_at": 1787216631
+    },
+    {
+      "steamid": "1530276167083360336",
+      "appid": 4704690,
+      "name": "MECCHA CHAMELEON",
+      "added_at": 1787217774
     }
   ],
   "downloads": [
@@ -7164,6 +7170,17 @@
       "machine_id": "hw-c584bc44429537d5a3499ea6",
       "activated_at": 1787170721,
       "created_at": 1787157484,
+      "trial": 0,
+      "expires_at": 0
+    },
+    {
+      "key": "SHADOW-DNK9-NHAM-VTQ7-2EX7",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-c584bc44429537d5a3499ea6",
+      "activated_at": 1787217567,
+      "created_at": 1787217559,
       "trial": 0,
       "expires_at": 0
     }
