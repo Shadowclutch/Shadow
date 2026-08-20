@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787194184,
+  "exported_at": 1787194274,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6407,6 +6407,12 @@
       "appid": 1245620,
       "name": "ELDEN RING",
       "added_at": 1787191601
+    },
+    {
+      "steamid": "1307403679376347237",
+      "appid": 431960,
+      "name": "Wallpaper Engine",
+      "added_at": 1787194274
     }
   ],
   "downloads": [
