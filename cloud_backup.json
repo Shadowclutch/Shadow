@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787257919,
+  "exported_at": 1787263941,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6649,6 +6649,12 @@
       "appid": 2483190,
       "name": "Forza Horizon 6",
       "added_at": 1787257918
+    },
+    {
+      "steamid": "1424762935229681735",
+      "appid": 3242750,
+      "name": "Level Devil",
+      "added_at": 1787263939
     }
   ],
   "downloads": [
