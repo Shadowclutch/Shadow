@@ -1,0 +1,11 @@
+{
+  "notifications": [
+    {
+      "id": 1,
+      "title": "Welcome to S.Tools v1.0",
+      "body": "The initial release is here! 10 themes, 119,600+ game database, and more.",
+      "type": "info",
+      "date": "2026-08-21"
+    }
+  ]
+}
