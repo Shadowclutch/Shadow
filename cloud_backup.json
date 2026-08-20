@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787218772,
+  "exported_at": 1787219030,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6458,6 +6458,12 @@
       "appid": 3949040,
       "name": "RV There Yet?",
       "added_at": 1787218326
+    },
+    {
+      "steamid": "1248919329509216256",
+      "appid": 3768760,
+      "name": "007 First Light",
+      "added_at": 1787218986
     }
   ],
   "downloads": [
