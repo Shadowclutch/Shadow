@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787248999,
+  "exported_at": 1787249073,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6582,6 +6582,12 @@
       "appid": 2651280,
       "name": "Marvel's Spider-Man 2",
       "added_at": 1787248977
+    },
+    {
+      "steamid": "1424762935229681735",
+      "appid": 3241660,
+      "name": "R.E.P.O.",
+      "added_at": 1787249072
     }
   ],
   "downloads": [
