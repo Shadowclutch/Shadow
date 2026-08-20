@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787264942,
+  "exported_at": 1787267249,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -799,6 +799,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1342933398158839949/7d9495a8c0cb6c8b28f627aa4c67a3b9.png",
       "provider": "discord",
       "created_at": 1787264923
+    },
+    {
+      "steamid": "987345793566511154",
+      "name": "robyolo",
+      "avatar": "https://cdn.discordapp.com/avatars/987345793566511154/20fe91e539edf04279f2862c3e6ad7dd.png",
+      "provider": "discord",
+      "created_at": 1787267240
     }
   ],
   "sessions": [
@@ -1505,6 +1512,12 @@
       "steamid": "1042836918431395920",
       "created_at": 1787257903,
       "expires_at": 1818793903
+    },
+    {
+      "token": "a38276ceafde221d0763c33551f455cd495aac86dc2e135f546baeeae7879873",
+      "steamid": "987345793566511154",
+      "created_at": 1787267240,
+      "expires_at": 1818803240
     }
   ],
   "library": [
@@ -6393,6 +6406,18 @@
       "added_at": 1787162860
     },
     {
+      "steamid": "987345793566511154",
+      "appid": 1904540,
+      "name": "Football Manager 2023",
+      "added_at": 1787267245
+    },
+    {
+      "steamid": "987345793566511154",
+      "appid": 2215200,
+      "name": "LEGO® Batman™: Legacy of the Dark Knight",
+      "added_at": 1787267246
+    },
+    {
       "steamid": "1250466909892251678",
       "appid": 3112260,
       "name": "Virtua Fighter 5 R.E.V.O. World Stage",
@@ -6457,6 +6482,12 @@
       "appid": 1245620,
       "name": "ELDEN RING",
       "added_at": 1787191601
+    },
+    {
+      "steamid": "987345793566511154",
+      "appid": 1290000,
+      "name": "PowerWash Simulator",
+      "added_at": 1787267247
     },
     {
       "steamid": "1307403679376347237",
@@ -6655,6 +6686,18 @@
       "appid": 3242750,
       "name": "Level Devil",
       "added_at": 1787263939
+    },
+    {
+      "steamid": "987345793566511154",
+      "appid": 3768760,
+      "name": "007 First Light",
+      "added_at": 1787267244
+    },
+    {
+      "steamid": "987345793566511154",
+      "appid": 2651280,
+      "name": "Marvel's Spider-Man 2",
+      "added_at": 1787267248
     }
   ],
   "downloads": [
