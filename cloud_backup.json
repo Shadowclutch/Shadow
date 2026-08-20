@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787226901,
+  "exported_at": 1787228304,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -771,6 +771,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1377244462639480883/913e66299196560617bd5d3ed953696e.png",
       "provider": "discord",
       "created_at": 1787224918
+    },
+    {
+      "steamid": "1457013819015430185",
+      "name": "Invandrare",
+      "avatar": "https://cdn.discordapp.com/avatars/1457013819015430185/559635c86f8d9e2466d340f0d8bc8bf8.png",
+      "provider": "discord",
+      "created_at": 1787228295
     }
   ],
   "sessions": [
@@ -1453,6 +1460,12 @@
       "steamid": "1377244462639480883",
       "created_at": 1787224918,
       "expires_at": 1818760918
+    },
+    {
+      "token": "51e5664ad08f4e12e568037aa2a15bbe02489d13b76ebcd2f1434517962ebd79",
+      "steamid": "1457013819015430185",
+      "created_at": 1787228296,
+      "expires_at": 1818764296
     }
   ],
   "library": [
@@ -6471,6 +6484,12 @@
       "appid": 1245620,
       "name": "ELDEN RING",
       "added_at": 1787224924
+    },
+    {
+      "steamid": "1457013819015430185",
+      "appid": 1718870,
+      "name": "Spaceflight Simulator",
+      "added_at": 1787228303
     }
   ],
   "downloads": [
