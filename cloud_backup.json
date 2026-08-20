@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787249073,
+  "exported_at": 1787257919,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -792,6 +792,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1424762935229681735/2ee1c4fd34543ee7b3ba2c76f23d2387.png",
       "provider": "discord",
       "created_at": 1787247997
+    },
+    {
+      "steamid": "1042836918431395920",
+      "name": "Frozan",
+      "avatar": "https://cdn.discordapp.com/avatars/1042836918431395920/69400d59b22c98a8e87808d93e9b6a77.png",
+      "provider": "discord",
+      "created_at": 1787257902
     }
   ],
   "sessions": [
@@ -1492,6 +1499,12 @@
       "steamid": "1424762935229681735",
       "created_at": 1787247997,
       "expires_at": 1818783997
+    },
+    {
+      "token": "b667de0a7c5725fdc4384f19b36ba96d504bd12a263fbb15dbced5669cab5a58",
+      "steamid": "1042836918431395920",
+      "created_at": 1787257903,
+      "expires_at": 1818793903
     }
   ],
   "library": [
@@ -6588,6 +6601,54 @@
       "appid": 3241660,
       "name": "R.E.P.O.",
       "added_at": 1787249072
+    },
+    {
+      "steamid": "1042836918431395920",
+      "appid": 993090,
+      "name": "Lossless Scaling",
+      "added_at": 1787257907
+    },
+    {
+      "steamid": "1042836918431395920",
+      "appid": 1623730,
+      "name": "Palworld",
+      "added_at": 1787257908
+    },
+    {
+      "steamid": "1042836918431395920",
+      "appid": 42680,
+      "name": "Call of Duty®: Modern Warfare® 3 (2011)",
+      "added_at": 1787257910
+    },
+    {
+      "steamid": "1042836918431395920",
+      "appid": 4100940,
+      "name": "Poppy Playtime - Chapter 5",
+      "added_at": 1787257912
+    },
+    {
+      "steamid": "1042836918431395920",
+      "appid": 221040,
+      "name": "Resident Evil 6",
+      "added_at": 1787257913
+    },
+    {
+      "steamid": "1042836918431395920",
+      "appid": 4484970,
+      "name": "Wallpaper Animator",
+      "added_at": 1787257915
+    },
+    {
+      "steamid": "1042836918431395920",
+      "appid": 2651280,
+      "name": "Marvel's Spider-Man 2",
+      "added_at": 1787257917
+    },
+    {
+      "steamid": "1042836918431395920",
+      "appid": 2483190,
+      "name": "Forza Horizon 6",
+      "added_at": 1787257918
     }
   ],
   "downloads": [
@@ -7091,17 +7152,6 @@
       "expires_at": 1789824083
     },
     {
-      "key": "SHADOW-P5YQ-M6VD-25F5-4V42",
-      "email": "",
-      "session_id": "",
-      "status": "unused",
-      "machine_id": "",
-      "activated_at": 0,
-      "created_at": 1787232085,
-      "trial": 0,
-      "expires_at": 1789824083
-    },
-    {
       "key": "SHADOW-DRUA-VGX4-EE7P-3M4Z",
       "email": "",
       "session_id": "",
@@ -7111,17 +7161,6 @@
       "created_at": 1786882324,
       "trial": 0,
       "expires_at": 0
-    },
-    {
-      "key": "SHADOW-TWT2-KJLA-TPWA-DJBC",
-      "email": "",
-      "session_id": "",
-      "status": "unused",
-      "machine_id": "",
-      "activated_at": 0,
-      "created_at": 1787232085,
-      "trial": 0,
-      "expires_at": 1789824083
     },
     {
       "key": "SHADOW-V483-673B-MZDY-DU7U",
@@ -7377,6 +7416,17 @@
       "expires_at": 0
     },
     {
+      "key": "SHADOW-TWT2-KJLA-TPWA-DJBC",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-c584bc44429537d5a3499ea6",
+      "activated_at": 1787250805,
+      "created_at": 1787232085,
+      "trial": 0,
+      "expires_at": 1789824083
+    },
+    {
       "key": "SHADOW-B93E-P8RC-RZBZ-NRF3",
       "email": "",
       "session_id": "",
@@ -7419,6 +7469,17 @@
       "created_at": 1787157484,
       "trial": 0,
       "expires_at": 0
+    },
+    {
+      "key": "SHADOW-P5YQ-M6VD-25F5-4V42",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-c584bc44429537d5a3499ea6",
+      "activated_at": 1787253056,
+      "created_at": 1787232085,
+      "trial": 0,
+      "expires_at": 1789824083
     },
     {
       "key": "SHADOW-WQZR-6ERR-9FF4-QCPU",
