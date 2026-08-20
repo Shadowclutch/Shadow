@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787218024,
+  "exported_at": 1787218119,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6445,12 +6445,6 @@
       "appid": 3167920,
       "name": "Low-Budget Repairs",
       "added_at": 1787216631
-    },
-    {
-      "steamid": "1530276167083360336",
-      "appid": 4704690,
-      "name": "MECCHA CHAMELEON",
-      "added_at": 1787218015
     }
   ],
   "downloads": [
