@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787233296,
+  "exported_at": 1787245472,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6182,15 +6182,15 @@
     },
     {
       "steamid": "804372381790896208",
-      "appid": 2807960,
-      "name": "Battlefield™ 6",
-      "added_at": 1787153312
-    },
-    {
-      "steamid": "804372381790896208",
       "appid": 2239550,
       "name": "Watch Dogs: Legion",
       "added_at": 1787153315
+    },
+    {
+      "steamid": "804372381790896208",
+      "appid": 2807960,
+      "name": "Battlefield™ 6",
+      "added_at": 1787245470
     },
     {
       "steamid": "804372381790896208",
@@ -7087,17 +7087,6 @@
       "expires_at": 1789824083
     },
     {
-      "key": "SHADOW-WMYN-32CT-3ES2-8XFL",
-      "email": "",
-      "session_id": "",
-      "status": "unused",
-      "machine_id": "",
-      "activated_at": 0,
-      "created_at": 1787232086,
-      "trial": 0,
-      "expires_at": 1789824083
-    },
-    {
       "key": "SHADOW-V483-673B-MZDY-DU7U",
       "email": "",
       "session_id": "",
@@ -7151,6 +7140,17 @@
       "created_at": 1785955406,
       "trial": 1,
       "expires_at": 1785955526
+    },
+    {
+      "key": "TRIAL-NR3J-UP56-QV2B-EXUD",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-6127fd57b348a82c5bacb019",
+      "activated_at": 1787240189,
+      "created_at": 1787240188,
+      "trial": 1,
+      "expires_at": 1787240308
     },
     {
       "key": "SHADOW-3WSA-4P89-JP52-JASW",
@@ -7318,12 +7318,23 @@
       "expires_at": 0
     },
     {
+      "key": "SHADOW-WMYN-32CT-3ES2-8XFL",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-c584bc44429537d5a3499ea6",
+      "activated_at": 1787244897,
+      "created_at": 1787232086,
+      "trial": 0,
+      "expires_at": 1789824083
+    },
+    {
       "key": "SHADOW-ZNAF-BLV6-RYXM-LZDE",
       "email": "",
       "session_id": "",
       "status": "active",
       "machine_id": "hw-577297f792b09816c795c0e0",
-      "activated_at": 1787165851,
+      "activated_at": 1787245300,
       "created_at": 1787165748,
       "trial": 0,
       "expires_at": 0
