@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787224924,
+  "exported_at": 1787225039,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6525,6 +6525,12 @@
       "appid": 1245620,
       "name": "ELDEN RING",
       "added_at": 1787224924
+    },
+    {
+      "steamid": "475769230088732702",
+      "appid": 3768760,
+      "name": "007 First Light",
+      "added_at": 1787225037
     }
   ],
   "downloads": [
