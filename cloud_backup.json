@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787340297,
+  "exported_at": 1787340523,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6977,6 +6977,12 @@
       "appid": 570,
       "name": "Dota 2",
       "added_at": 1787340296
+    },
+    {
+      "steamid": "1487668000478855188",
+      "appid": 928960,
+      "name": "Godfall",
+      "added_at": 1787340520
     }
   ],
   "downloads": [
