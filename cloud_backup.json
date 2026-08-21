@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787298983,
+  "exported_at": 1787298991,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6755,6 +6755,12 @@
       "appid": 221931,
       "name": "Call of Duty: Black Ops 2 - Deluxe",
       "added_at": 1787296090
+    },
+    {
+      "steamid": "1137380934795132948",
+      "appid": 2344520,
+      "name": "Diablo® IV",
+      "added_at": 1787298987
     }
   ],
   "downloads": [
