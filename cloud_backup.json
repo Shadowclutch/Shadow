@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787320684,
+  "exported_at": 1787322440,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6897,6 +6897,12 @@
       "appid": 227260,
       "name": "DisplayFusion",
       "added_at": 1787320682
+    },
+    {
+      "steamid": "841616852374257674",
+      "appid": 1783560,
+      "name": "The Last Caretaker",
+      "added_at": 1787322439
     }
   ],
   "downloads": [
