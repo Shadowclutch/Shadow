@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787298991,
+  "exported_at": 1787301539,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6761,6 +6761,12 @@
       "appid": 2344520,
       "name": "Diablo® IV",
       "added_at": 1787298987
+    },
+    {
+      "steamid": "1457690407973687419",
+      "appid": 573090,
+      "name": "Stormworks: Build and Rescue",
+      "added_at": 1787301537
     }
   ],
   "downloads": [
