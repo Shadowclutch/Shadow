@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787316140,
+  "exported_at": 1787316513,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -841,6 +841,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/878320406401019914/513a4fd077ead4f6de75e970944a1c90.png",
       "provider": "discord",
       "created_at": 1787316134
+    },
+    {
+      "steamid": "1197671406637428826",
+      "name": "Башкирское Мороженое",
+      "avatar": "https://cdn.discordapp.com/avatars/1197671406637428826/2c9f9b332da52dcac0e4f7f02aeb62a1.png",
+      "provider": "discord",
+      "created_at": 1787316505
     }
   ],
   "sessions": [
@@ -1583,6 +1590,12 @@
       "steamid": "878320406401019914",
       "created_at": 1787316135,
       "expires_at": 1818852135
+    },
+    {
+      "token": "547ff7f47281adaa9968f22c171dd309e5923c636c0a3f680af5848dcdf1e61f",
+      "steamid": "1197671406637428826",
+      "created_at": 1787316505,
+      "expires_at": 1818852505
     }
   ],
   "library": [
@@ -6859,6 +6872,18 @@
       "appid": 3764200,
       "name": "Resident Evil Requiem",
       "added_at": 1787304464
+    },
+    {
+      "steamid": "1197671406637428826",
+      "appid": 1657630,
+      "name": "Slime Rancher 2",
+      "added_at": 1787316510
+    },
+    {
+      "steamid": "1197671406637428826",
+      "appid": 1229490,
+      "name": "ULTRAKILL",
+      "added_at": 1787316512
     }
   ],
   "downloads": [
