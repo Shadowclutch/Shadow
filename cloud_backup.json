@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787337528,
+  "exported_at": 1787338473,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6989,6 +6989,12 @@
       "appid": 921060,
       "name": "Modern Combat 5",
       "added_at": 1787337527
+    },
+    {
+      "steamid": "1487668000478855188",
+      "appid": 1234190,
+      "name": "ANIME WAR — Modern Campaign",
+      "added_at": 1787338473
     }
   ],
   "downloads": [
