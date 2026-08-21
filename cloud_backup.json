@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787281675,
+  "exported_at": 1787293133,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -813,6 +813,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1432954366448373884/ab36470c72667f2d9d2b4b451f90b660.png",
       "provider": "discord",
       "created_at": 1787281645
+    },
+    {
+      "steamid": "539687826531287051",
+      "name": "food_sheisty",
+      "avatar": "https://cdn.discordapp.com/avatars/539687826531287051/245eb4bf57d3d7d3ffe8eed4a97e31f9.png",
+      "provider": "discord",
+      "created_at": 1787293126
     }
   ],
   "sessions": [
@@ -1531,6 +1538,12 @@
       "steamid": "1432954366448373884",
       "created_at": 1787281646,
       "expires_at": 1818817646
+    },
+    {
+      "token": "a7721cb4ddad819151737e6c33cf8473b64366dd40a3b5667af582192cd62aee",
+      "steamid": "539687826531287051",
+      "created_at": 1787293127,
+      "expires_at": 1818829127
     }
   ],
   "library": [
