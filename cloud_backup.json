@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787337235,
+  "exported_at": 1787337256,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6977,6 +6977,12 @@
       "appid": 4612680,
       "name": "盲盒模拟器 Demo",
       "added_at": 1787337234
+    },
+    {
+      "steamid": "1487668000478855188",
+      "appid": 2848190,
+      "name": "Population Goals!",
+      "added_at": 1787337255
     }
   ],
   "downloads": [
