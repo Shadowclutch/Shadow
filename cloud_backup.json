@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787317260,
+  "exported_at": 1787318919,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6897,6 +6897,12 @@
       "appid": 1229490,
       "name": "ULTRAKILL",
       "added_at": 1787316512
+    },
+    {
+      "steamid": "1042836918431395920",
+      "appid": 1778820,
+      "name": "",
+      "added_at": 1787318917
     }
   ],
   "downloads": [
