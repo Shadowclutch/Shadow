@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787340523,
+  "exported_at": 1787341579,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6983,6 +6983,12 @@
       "appid": 928960,
       "name": "Godfall",
       "added_at": 1787340520
+    },
+    {
+      "steamid": "475769230088732702",
+      "appid": 1620340,
+      "name": "Wrestling Empire",
+      "added_at": 1787341576
     }
   ],
   "downloads": [
