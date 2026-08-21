@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787301539,
+  "exported_at": 1787303891,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -827,6 +827,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1137380934795132948/833f78369393ab85e30ca62c491e8075.png",
       "provider": "discord",
       "created_at": 1787298966
+    },
+    {
+      "steamid": "1262430778676219934",
+      "name": "MrFlapi",
+      "avatar": "",
+      "provider": "discord",
+      "created_at": 1787303869
     }
   ],
   "sessions": [
@@ -1557,6 +1564,12 @@
       "steamid": "1137380934795132948",
       "created_at": 1787298967,
       "expires_at": 1818834967
+    },
+    {
+      "token": "79f8adcff630cd75d3753e9579b6647065d433cb37fe3b1e5b9ff523ea95e0e6",
+      "steamid": "1262430778676219934",
+      "created_at": 1787303869,
+      "expires_at": 1818839869
     }
   ],
   "library": [
@@ -6745,6 +6758,12 @@
       "added_at": 1787281658
     },
     {
+      "steamid": "1262430778676219934",
+      "appid": 3079210,
+      "name": "Hell Let Loose: Vietnam",
+      "added_at": 1787303889
+    },
+    {
       "steamid": "539687826531287051",
       "appid": 4026250,
       "name": "Project P.I.T.T.",
@@ -6767,6 +6786,66 @@
       "appid": 573090,
       "name": "Stormworks: Build and Rescue",
       "added_at": 1787301537
+    },
+    {
+      "steamid": "1262430778676219934",
+      "appid": 1623730,
+      "name": "Palworld",
+      "added_at": 1787303875
+    },
+    {
+      "steamid": "1262430778676219934",
+      "appid": 2483190,
+      "name": "",
+      "added_at": 1787303877
+    },
+    {
+      "steamid": "1262430778676219934",
+      "appid": 4704690,
+      "name": "MECCHA CHAMELEON",
+      "added_at": 1787303878
+    },
+    {
+      "steamid": "1262430778676219934",
+      "appid": 3240220,
+      "name": "Grand Theft Auto V Enhanced",
+      "added_at": 1787303880
+    },
+    {
+      "steamid": "1262430778676219934",
+      "appid": 3764200,
+      "name": "Resident Evil Requiem",
+      "added_at": 1787303881
+    },
+    {
+      "steamid": "1262430778676219934",
+      "appid": 1211020,
+      "name": "Wobbly Life",
+      "added_at": 1787303882
+    },
+    {
+      "steamid": "1262430778676219934",
+      "appid": 1011670,
+      "name": "Totally Reliable Delivery Service",
+      "added_at": 1787303884
+    },
+    {
+      "steamid": "1262430778676219934",
+      "appid": 3357650,
+      "name": "PRAGMATA",
+      "added_at": 1787303885
+    },
+    {
+      "steamid": "1262430778676219934",
+      "appid": 1941540,
+      "name": "Mafia: The Old Country",
+      "added_at": 1787303886
+    },
+    {
+      "steamid": "1262430778676219934",
+      "appid": 2668510,
+      "name": "Red Dead Redemption",
+      "added_at": 1787303888
     }
   ],
   "downloads": [
