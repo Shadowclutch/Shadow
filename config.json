@@ -1,26 +1,27 @@
 {
-    "clouddb_key_cooldowns":  {
-
-                              },
+    "clouddb_keys": [
+        "smm_382de56f21492a38a16358b1ca8311cd158119c72357672cdba0da6405fa4a80ba8593996d84ce1ed67cd17d65bec991",
+        "smm_ebdbea04e3c838d3fec05f9dd12dda0f38e86a55338215c0d2fd3774d837ee4a2bece9c25a7c6cc7e28734723851a954"
+    ],
+    "backup": {
+        "enabled": true,
+        "repo": "Shadowclutch/Shadow",
+        "branch": "backup",
+        "file": "cloud_backup.json"
+    },
+    "server_url": "https://shadowtools.pages.dev",
     "mirror": {
         "repos": [
-            {"repo": "um6976484-bit/CW-mirror-0", "branch": "main", "path": "cdn"},
-            {"repo": "um6976484-bit/CW-mirror-1", "branch": "main", "path": "cdn"},
-            {"repo": "um6976484-bit/CW-mirror-2", "branch": "main", "path": "cdn"},
-            {"repo": "um6976484-bit/CW-mirror-3", "branch": "main", "path": "cdn"},
-            {"repo": "um6976484-bit/CW-mirror-4", "branch": "main", "path": "cdn"},
-            {"repo": "um6976484-bit/CW-mirror-5", "branch": "main", "path": "cdn"},
-            {"repo": "um6976484-bit/CW-mirror-6", "branch": "main", "path": "cdn"},
-            {"repo": "um6976484-bit/CW-mirror-7", "branch": "main", "path": "cdn"},
-            {"repo": "um6976484-bit/CW-mirror-8", "branch": "main", "path": "cdn"},
-            {"repo": "um6976484-bit/CW-mirror-9", "branch": "main", "path": "cdn"}
+            {"repo": "um6976484-bit/CW-mirror-0", "branch": "main", "path": "cdn", "token": ""},
+            {"repo": "um6976484-bit/CW-mirror-1", "branch": "main", "path": "cdn", "token": ""},
+            {"repo": "um6976484-bit/CW-mirror-2", "branch": "main", "path": "cdn", "token": ""},
+            {"repo": "um6976484-bit/CW-mirror-3", "branch": "main", "path": "cdn", "token": ""},
+            {"repo": "um6976484-bit/CW-mirror-4", "branch": "main", "path": "cdn", "token": ""},
+            {"repo": "um6976484-bit/CW-mirror-5", "branch": "main", "path": "cdn", "token": ""},
+            {"repo": "um6976484-bit/CW-mirror-6", "branch": "main", "path": "cdn", "token": ""},
+            {"repo": "um6976484-bit/CW-mirror-7", "branch": "main", "path": "cdn", "token": ""},
+            {"repo": "um6976484-bit/CW-mirror-8", "branch": "main", "path": "cdn", "token": ""},
+            {"repo": "um6976484-bit/CW-mirror-9", "branch": "main", "path": "cdn", "token": ""}
         ]
-    },
-    "clouddb_keys":  [
-                         "smm_a0e23b0eabb578ae75bafbd32cf77158c138454e07cb5de80c7364ac2af1ccb6c2ac6c5fcf498e72046bc13a044fcac3",
-                         "smm_ce71cb980b7380813111b349f65dffbc79bc14481295fb0a9d040150c47ad12a28f565d7a899d90574d2c615c932b724",
-                         "smm_5885128afb41c9d7d2d28c4b7195790ee0a4564179c81fe8558b08bcc8fa8a1d7edc9fb8fb130b1b8b7f246b54fde88a"
-                     ],
-    "server_url":  "https://shadowtools.pages.dev/",
-    "exe_download_url": "https://github.com/Shadowclutch/Shadow/releases/latest/download/Shadowclutch.zip"
+    }
 }
