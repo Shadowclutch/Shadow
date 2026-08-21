@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787335465,
+  "exported_at": 1787335728,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6959,6 +6959,12 @@
       "appid": 4704690,
       "name": "MECCHA CHAMELEON",
       "added_at": 1787335464
+    },
+    {
+      "steamid": "1487668000478855188",
+      "appid": 4396180,
+      "name": "K-pop Idol Stories: Road to Debut Soundtrack",
+      "added_at": 1787335727
     }
   ],
   "downloads": [
