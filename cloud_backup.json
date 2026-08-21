@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787341579,
+  "exported_at": 1787344680,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -869,6 +869,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/826059803633385503/825b74ee15f9df4fe0dad10dbe970eba.png",
       "provider": "discord",
       "created_at": 1787334483
+    },
+    {
+      "steamid": "1124735513283268688",
+      "name": "Adhi",
+      "avatar": "https://cdn.discordapp.com/avatars/1124735513283268688/6c5996770c985bcd6e5b68131ff2ba04.png",
+      "provider": "discord",
+      "created_at": 1787344676
     }
   ],
   "sessions": [
@@ -1635,6 +1642,12 @@
       "steamid": "826059803633385503",
       "created_at": 1787334484,
       "expires_at": 1818870484
+    },
+    {
+      "token": "3f88d201cd65f7990aa29c49f11c834ebcd020b79b90628b8de250d4c147f45b",
+      "steamid": "1124735513283268688",
+      "created_at": 1787344676,
+      "expires_at": 1818880676
     }
   ],
   "library": [
@@ -6989,6 +7002,12 @@
       "appid": 1620340,
       "name": "Wrestling Empire",
       "added_at": 1787341576
+    },
+    {
+      "steamid": "1124735513283268688",
+      "appid": 1888930,
+      "name": "The Last of Us™ Part I",
+      "added_at": 1787344679
     }
   ],
   "downloads": [
