@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787339035,
+  "exported_at": 1787339362,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -4592,12 +4592,6 @@
     },
     {
       "steamid": "1487668000478855188",
-      "appid": 1978500,
-      "name": " Castle of Full Moon 月圆之堡",
-      "added_at": 1786188728
-    },
-    {
-      "steamid": "1487668000478855188",
       "appid": 2786780,
       "name": " Lustful Apartment",
       "added_at": 1786188756
@@ -4667,6 +4661,12 @@
       "appid": 382310,
       "name": "Eco",
       "added_at": 1786972581
+    },
+    {
+      "steamid": "1487668000478855188",
+      "appid": 1978500,
+      "name": " Castle of Full Moon 月圆之堡",
+      "added_at": 1787339361
     },
     {
       "steamid": "1417514597723803708",
