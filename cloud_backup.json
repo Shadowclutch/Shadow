@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787335781,
+  "exported_at": 1787335885,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6971,6 +6971,12 @@
       "appid": 3035090,
       "name": "Popcorn Fever",
       "added_at": 1787335765
+    },
+    {
+      "steamid": "1487668000478855188",
+      "appid": 4612680,
+      "name": "盲盒模拟器 Demo",
+      "added_at": 1787335884
     }
   ],
   "downloads": [
