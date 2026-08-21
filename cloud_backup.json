@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787335417,
+  "exported_at": 1787335465,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6953,6 +6953,12 @@
       "appid": 4704690,
       "name": "MECCHA CHAMELEON",
       "added_at": 1787334655
+    },
+    {
+      "steamid": "1424762935229681735",
+      "appid": 4704690,
+      "name": "MECCHA CHAMELEON",
+      "added_at": 1787335464
     }
   ],
   "downloads": [
