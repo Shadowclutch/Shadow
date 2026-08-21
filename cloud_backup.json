@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787338473,
+  "exported_at": 1787338625,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6995,6 +6995,12 @@
       "appid": 1234190,
       "name": "ANIME WAR — Modern Campaign",
       "added_at": 1787338473
+    },
+    {
+      "steamid": "1487668000478855188",
+      "appid": 1661610,
+      "name": "Apopia: Sugar Coated Tale",
+      "added_at": 1787338623
     }
   ],
   "downloads": [
