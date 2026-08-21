@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787339024,
+  "exported_at": 1787339035,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6965,12 +6965,6 @@
       "appid": 1661610,
       "name": "Apopia: Sugar Coated Tale",
       "added_at": 1787338623
-    },
-    {
-      "steamid": "475769230088732702",
-      "appid": 3751950,
-      "name": "Assassin's Creed Black Flag Resynced",
-      "added_at": 1787338708
     }
   ],
   "downloads": [
