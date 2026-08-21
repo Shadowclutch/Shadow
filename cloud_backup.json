@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787303891,
+  "exported_at": 1787304005,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6846,6 +6846,12 @@
       "appid": 2668510,
       "name": "Red Dead Redemption",
       "added_at": 1787303888
+    },
+    {
+      "steamid": "1137380934795132948",
+      "appid": 105600,
+      "name": "Terraria",
+      "added_at": 1787304001
     }
   ],
   "downloads": [
