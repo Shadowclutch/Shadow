@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787318919,
+  "exported_at": 1787319659,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6720,12 +6720,6 @@
     },
     {
       "steamid": "1042836918431395920",
-      "appid": 993090,
-      "name": "Lossless Scaling",
-      "added_at": 1787257907
-    },
-    {
-      "steamid": "1042836918431395920",
       "appid": 1623730,
       "name": "Palworld",
       "added_at": 1787257908
@@ -6903,6 +6897,12 @@
       "appid": 1778820,
       "name": "",
       "added_at": 1787318917
+    },
+    {
+      "steamid": "1042836918431395920",
+      "appid": 993090,
+      "name": "",
+      "added_at": 1787319658
     }
   ],
   "downloads": [
