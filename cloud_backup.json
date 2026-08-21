@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787339362,
+  "exported_at": 1787339513,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6965,6 +6965,12 @@
       "appid": 1661610,
       "name": "Apopia: Sugar Coated Tale",
       "added_at": 1787338623
+    },
+    {
+      "steamid": "1487668000478855188",
+      "appid": 772570,
+      "name": "Crew 167: The Grand Block Odyssey",
+      "added_at": 1787339512
     }
   ],
   "downloads": [
