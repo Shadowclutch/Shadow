@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787334487,
+  "exported_at": 1787334559,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6947,6 +6947,12 @@
       "appid": 1562310,
       "name": "FIFA 22 - Key",
       "added_at": 1787332306
+    },
+    {
+      "steamid": "826059803633385503",
+      "appid": 414340,
+      "name": "Hellblade: Senua's Sacrifice",
+      "added_at": 1787334559
     }
   ],
   "downloads": [
