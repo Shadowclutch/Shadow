@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787320362,
+  "exported_at": 1787320469,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6909,6 +6909,12 @@
       "appid": 993090,
       "name": "",
       "added_at": 1787319991
+    },
+    {
+      "steamid": "1042836918431395920",
+      "appid": 227260,
+      "name": "DisplayFusion",
+      "added_at": 1787320467
     }
   ],
   "downloads": [
