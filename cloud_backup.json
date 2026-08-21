@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787281662,
+  "exported_at": 1787281675,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6717,6 +6717,12 @@
       "appid": 311210,
       "name": "Call of Duty: Black Ops III",
       "added_at": 1787281658
+    },
+    {
+      "steamid": "1432954366448373884",
+      "appid": 221931,
+      "name": "Call of Duty: Black Ops 2 - Deluxe",
+      "added_at": 1787281671
     }
   ],
   "downloads": [
