@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787334559,
+  "exported_at": 1787334655,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6953,6 +6953,12 @@
       "appid": 414340,
       "name": "Hellblade: Senua's Sacrifice",
       "added_at": 1787334559
+    },
+    {
+      "steamid": "826059803633385503",
+      "appid": 4704690,
+      "name": "MECCHA CHAMELEON",
+      "added_at": 1787334655
     }
   ],
   "downloads": [
