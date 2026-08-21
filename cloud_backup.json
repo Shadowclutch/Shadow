@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787304184,
+  "exported_at": 1787304465,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6846,6 +6846,12 @@
       "appid": 105600,
       "name": "Terraria",
       "added_at": 1787304001
+    },
+    {
+      "steamid": "1262430778676219934",
+      "appid": 3764200,
+      "name": "Resident Evil Requiem",
+      "added_at": 1787304464
     }
   ],
   "downloads": [
