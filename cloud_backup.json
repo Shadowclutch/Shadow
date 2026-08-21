@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787307615,
+  "exported_at": 1787313561,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -5318,6 +5318,12 @@
       "added_at": 1787088536
     },
     {
+      "steamid": "841616852374257674",
+      "appid": 1733690,
+      "name": "Mandate Order",
+      "added_at": 1787313560
+    },
+    {
       "steamid": "297731399266467840",
       "appid": 2338140,
       "name": "Dokapon Kingdom: Connect",
@@ -5568,12 +5574,6 @@
       "appid": 110800,
       "name": "L.A. Noire",
       "added_at": 1787126832
-    },
-    {
-      "steamid": "841616852374257674",
-      "appid": 1733690,
-      "name": "Mandate Order",
-      "added_at": 1787128779
     },
     {
       "steamid": "841616852374257674",
