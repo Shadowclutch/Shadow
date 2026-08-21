@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787307592,
+  "exported_at": 1787307610,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6852,12 +6852,6 @@
       "appid": 3764200,
       "name": "Resident Evil Requiem",
       "added_at": 1787304464
-    },
-    {
-      "steamid": "987345793566511154",
-      "appid": 2358720,
-      "name": "Black Myth: Wukong",
-      "added_at": 1787307591
     }
   ],
   "downloads": [
