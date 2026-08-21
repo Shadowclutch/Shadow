@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787267250,
+  "exported_at": 1787281662,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -806,6 +806,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/987345793566511154/20fe91e539edf04279f2862c3e6ad7dd.png",
       "provider": "discord",
       "created_at": 1787267240
+    },
+    {
+      "steamid": "1432954366448373884",
+      "name": "RX7",
+      "avatar": "https://cdn.discordapp.com/avatars/1432954366448373884/ab36470c72667f2d9d2b4b451f90b660.png",
+      "provider": "discord",
+      "created_at": 1787281645
     }
   ],
   "sessions": [
@@ -1518,6 +1525,12 @@
       "steamid": "987345793566511154",
       "created_at": 1787267240,
       "expires_at": 1818803240
+    },
+    {
+      "token": "1198c0c190eb827fca6555301562026d7cd404239351366e4d5798e2ffd3edc8",
+      "steamid": "1432954366448373884",
+      "created_at": 1787281646,
+      "expires_at": 1818817646
     }
   ],
   "library": [
@@ -6698,6 +6711,12 @@
       "appid": 2651280,
       "name": "Marvel's Spider-Man 2",
       "added_at": 1787267248
+    },
+    {
+      "steamid": "1432954366448373884",
+      "appid": 311210,
+      "name": "Call of Duty: Black Ops III",
+      "added_at": 1787281658
     }
   ],
   "downloads": [
