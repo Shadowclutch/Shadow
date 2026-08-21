@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787335728,
+  "exported_at": 1787335766,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6965,6 +6965,12 @@
       "appid": 4396180,
       "name": "K-pop Idol Stories: Road to Debut Soundtrack",
       "added_at": 1787335727
+    },
+    {
+      "steamid": "1487668000478855188",
+      "appid": 3035090,
+      "name": "Popcorn Fever",
+      "added_at": 1787335765
     }
   ],
   "downloads": [
