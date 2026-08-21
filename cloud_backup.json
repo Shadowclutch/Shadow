@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787322440,
+  "exported_at": 1787332296,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -855,6 +855,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1342933398158839949/7d9495a8c0cb6c8b28f627aa4c67a3b9.png",
       "provider": "discord",
       "created_at": 1787317095
+    },
+    {
+      "steamid": "1486892000648237176",
+      "name": "そっさん",
+      "avatar": "https://cdn.discordapp.com/avatars/1486892000648237176/f7f2e9361e8a54ce6e72580ac7b967af.png",
+      "provider": "discord",
+      "created_at": 1787332288
     }
   ],
   "sessions": [
@@ -1609,6 +1616,12 @@
       "steamid": "804653084818538537",
       "created_at": 1787316566,
       "expires_at": 1818852566
+    },
+    {
+      "token": "6025dd2fd72758b2cf09ef1f8a29f59ad2cd0d51024857d4f31809110e30a9fc",
+      "steamid": "1486892000648237176",
+      "created_at": 1787332288,
+      "expires_at": 1818868288
     }
   ],
   "library": [
@@ -6899,10 +6912,22 @@
       "added_at": 1787320682
     },
     {
+      "steamid": "1486892000648237176",
+      "appid": 1313860,
+      "name": "EA SPORTS™ FIFA 21",
+      "added_at": 1787332294
+    },
+    {
       "steamid": "841616852374257674",
       "appid": 1783560,
       "name": "The Last Caretaker",
       "added_at": 1787322439
+    },
+    {
+      "steamid": "1486892000648237176",
+      "appid": 1506830,
+      "name": "FIFA 22",
+      "added_at": 1787332295
     }
   ],
   "downloads": [
@@ -7745,6 +7770,17 @@
       "created_at": 1787230073,
       "trial": 0,
       "expires_at": 1789822073
+    },
+    {
+      "key": "TRIAL-4DSR-JSW6-SS34-MXM6",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-f4be070e3b46cd18cc9afc0d",
+      "activated_at": 1787330012,
+      "created_at": 1787330011,
+      "trial": 1,
+      "expires_at": 1787330131
     },
     {
       "key": "SHADOW-FPNP-MJBT-TD3M-E2UH",
