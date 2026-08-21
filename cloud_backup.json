@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787336679,
+  "exported_at": 1787336702,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6941,6 +6941,18 @@
       "appid": 4612680,
       "name": "盲盒模拟器 Demo",
       "added_at": 1787335884
+    },
+    {
+      "steamid": "475769230088732702",
+      "appid": 5660,
+      "name": "",
+      "added_at": 1787336700
+    },
+    {
+      "steamid": "475769230088732702",
+      "appid": 5659,
+      "name": "",
+      "added_at": 1787336703
     }
   ],
   "downloads": [
