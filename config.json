@@ -1,7 +1,8 @@
 {
     "clouddb_keys": [
         "smm_382de56f21492a38a16358b1ca8311cd158119c72357672cdba0da6405fa4a80ba8593996d84ce1ed67cd17d65bec991",
-        "smm_ebdbea04e3c838d3fec05f9dd12dda0f38e86a55338215c0d2fd3774d837ee4a2bece9c25a7c6cc7e28734723851a954"
+        "smm_ebdbea04e3c838d3fec05f9dd12dda0f38e86a55338215c0d2fd3774d837ee4a2bece9c25a7c6cc7e28734723851a954",
+        "smm_033dc851b878072de6864d9487d1698149f5b188d9418dcae8ca1c71fa023f8e1f799562cf503bd6334e378c8e7b74c5"
     ],
     "backup": {
         "enabled": true,
