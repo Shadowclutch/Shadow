@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787369427,
+  "exported_at": 1787369595,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -7634,6 +7634,48 @@
       "appid": 1174180,
       "name": "Red Dead Redemption 2",
       "added_at": 1787369426
+    },
+    {
+      "steamid": "1293438432143609867",
+      "appid": 381210,
+      "name": "Dead by Daylight",
+      "added_at": 1787369572
+    },
+    {
+      "steamid": "1293438432143609867",
+      "appid": 2399830,
+      "name": "ARK: Survival Ascended",
+      "added_at": 1787369573
+    },
+    {
+      "steamid": "1293438432143609867",
+      "appid": 270880,
+      "name": "American Truck Simulator",
+      "added_at": 1787369575
+    },
+    {
+      "steamid": "1293438432143609867",
+      "appid": 1293830,
+      "name": "Forza Horizon 4",
+      "added_at": 1787369576
+    },
+    {
+      "steamid": "1293438432143609867",
+      "appid": 3949040,
+      "name": "RV There Yet?",
+      "added_at": 1787369577
+    },
+    {
+      "steamid": "1293438432143609867",
+      "appid": 236390,
+      "name": "War Thunder",
+      "added_at": 1787369578
+    },
+    {
+      "steamid": "1293438432143609867",
+      "appid": 1407200,
+      "name": "World of Tanks",
+      "added_at": 1787369579
     }
   ],
   "downloads": [
