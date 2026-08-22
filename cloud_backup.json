@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787426897,
+  "exported_at": 1787429739,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -932,6 +932,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1169390781602214028/23ea739f6aefec6228b7b2007db25de1.png",
       "provider": "discord",
       "created_at": 1787426892
+    },
+    {
+      "steamid": "1280323669192740948",
+      "name": "Logic",
+      "avatar": "https://cdn.discordapp.com/avatars/1280323669192740948/5a9214d32520f8c7e1684d146ce9ac0e.png",
+      "provider": "discord",
+      "created_at": 1787429725
     }
   ],
   "sessions": [
@@ -1752,6 +1759,12 @@
       "steamid": "1169390781602214028",
       "created_at": 1787426892,
       "expires_at": 1818962892
+    },
+    {
+      "token": "a44597d63c8d52da1ca82d360cec93c2d3d5484c3b6751bd3fb05a37414ce67a",
+      "steamid": "1280323669192740948",
+      "created_at": 1787429727,
+      "expires_at": 1818965727
     }
   ],
   "library": [
