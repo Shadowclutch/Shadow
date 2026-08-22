@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787368866,
+  "exported_at": 1787369427,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -883,6 +883,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1293438432143609867/0993fe57106dcc8fe3b1da926dec9f86.png",
       "provider": "discord",
       "created_at": 1787364096
+    },
+    {
+      "steamid": "918356124074381313",
+      "name": "Kaju Katli",
+      "avatar": "https://cdn.discordapp.com/avatars/918356124074381313/de6729e89cc584c0db0c5ccaf6fa970a.png",
+      "provider": "discord",
+      "created_at": 1787369419
     }
   ],
   "sessions": [
@@ -1661,6 +1668,12 @@
       "steamid": "1293438432143609867",
       "created_at": 1787364096,
       "expires_at": 1818900096
+    },
+    {
+      "token": "cca4ff58a9aacef4185a2b65ec2ece7c9cd7747946a06fd7aec9175d62c75f29",
+      "steamid": "918356124074381313",
+      "created_at": 1787369419,
+      "expires_at": 1818905419
     }
   ],
   "library": [
@@ -6357,6 +6370,12 @@
       "added_at": 1787153310
     },
     {
+      "steamid": "918356124074381313",
+      "appid": 863550,
+      "name": "HITMAN™ 2",
+      "added_at": 1787369424
+    },
+    {
       "steamid": "804372381790896208",
       "appid": 2239550,
       "name": "Watch Dogs: Legion",
@@ -7537,6 +7556,84 @@
       "appid": 3164500,
       "name": "Schedule I",
       "added_at": 1787368862
+    },
+    {
+      "steamid": "918356124074381313",
+      "appid": 1888930,
+      "name": "The Last of Us™ Part I",
+      "added_at": 1787369421
+    },
+    {
+      "steamid": "918356124074381313",
+      "appid": 2531310,
+      "name": "The Last of Us™ Part II Remastered",
+      "added_at": 1787369422
+    },
+    {
+      "steamid": "918356124074381313",
+      "appid": 1182900,
+      "name": "A Plague Tale: Requiem",
+      "added_at": 1787369422
+    },
+    {
+      "steamid": "918356124074381313",
+      "appid": 1659420,
+      "name": "UNCHARTED™: Legacy of Thieves Collection",
+      "added_at": 1787369422
+    },
+    {
+      "steamid": "918356124074381313",
+      "appid": 2000950,
+      "name": "Call of Duty®: Modern Warfare®",
+      "added_at": 1787369423
+    },
+    {
+      "steamid": "918356124074381313",
+      "appid": 236870,
+      "name": "HITMAN™",
+      "added_at": 1787369423
+    },
+    {
+      "steamid": "918356124074381313",
+      "appid": 2239550,
+      "name": "Watch Dogs: Legion",
+      "added_at": 1787369424
+    },
+    {
+      "steamid": "918356124074381313",
+      "appid": 447040,
+      "name": "Watch_Dogs 2",
+      "added_at": 1787369424
+    },
+    {
+      "steamid": "918356124074381313",
+      "appid": 243470,
+      "name": "Watch_Dogs",
+      "added_at": 1787369425
+    },
+    {
+      "steamid": "918356124074381313",
+      "appid": 2358720,
+      "name": "Black Myth: Wukong",
+      "added_at": 1787369425
+    },
+    {
+      "steamid": "918356124074381313",
+      "appid": 1091500,
+      "name": "Cyberpunk 2077",
+      "added_at": 1787369426
+    },
+    {
+      "steamid": "918356124074381313",
+      "appid": 1495710,
+      "name": "Cyberpunk 2077 Bonus Content",
+      "added_at": 1787369426
+    },
+    {
+      "steamid": "918356124074381313",
+      "appid": 1174180,
+      "name": "Red Dead Redemption 2",
+      "added_at": 1787369426
     }
   ],
   "downloads": [
