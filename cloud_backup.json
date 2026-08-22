@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787383936,
+  "exported_at": 1787384246,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -815,13 +815,6 @@
       "created_at": 1787293126
     },
     {
-      "steamid": "1137380934795132948",
-      "name": "zer0",
-      "avatar": "https://cdn.discordapp.com/avatars/1137380934795132948/833f78369393ab85e30ca62c491e8075.png",
-      "provider": "discord",
-      "created_at": 1787298966
-    },
-    {
       "steamid": "1262430778676219934",
       "name": "MrFlapi",
       "avatar": "",
@@ -897,6 +890,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1130295539561406504/f68e466fb3f5085a46fb757220cbd14d.png",
       "provider": "discord",
       "created_at": 1787383930
+    },
+    {
+      "steamid": "1137380934795132948",
+      "name": "zer0",
+      "avatar": "https://cdn.discordapp.com/avatars/1137380934795132948/833f78369393ab85e30ca62c491e8075.png",
+      "provider": "discord",
+      "created_at": 1787384239
     }
   ],
   "sessions": [
