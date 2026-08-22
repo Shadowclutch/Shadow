@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787369595,
+  "exported_at": 1787381209,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -8573,6 +8573,17 @@
       "created_at": 1787232084,
       "trial": 0,
       "expires_at": 1789824083
+    },
+    {
+      "key": "TRIAL-RMBX-KCHG-NV6Q-76KS",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-f5c59aac0b040c8cff95cd3d",
+      "activated_at": 1787381174,
+      "created_at": 1787381174,
+      "trial": 1,
+      "expires_at": 1787381294
     }
   ]
 }
