@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787412058,
+  "exported_at": 1787414106,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -918,6 +918,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1487668000478855188/643df94d6f030dc3f4abced9a02e7235.png",
       "provider": "discord",
       "created_at": 1787412053
+    },
+    {
+      "steamid": "1298255189169410200",
+      "name": "Los_tortas",
+      "avatar": "https://cdn.discordapp.com/avatars/1298255189169410200/78e3d2a84c8805b609fad919e5893478.png",
+      "provider": "discord",
+      "created_at": 1787414102
     }
   ],
   "sessions": [
@@ -1726,6 +1733,12 @@
       "steamid": "1496472593421697084",
       "created_at": 1787404921,
       "expires_at": 1818940921
+    },
+    {
+      "token": "de22785a300cb0de7beb73ee876dd6a34b054a61ba8c14265802e068db1b3602",
+      "steamid": "1298255189169410200",
+      "created_at": 1787414102,
+      "expires_at": 1818950102
     }
   ],
   "library": [
