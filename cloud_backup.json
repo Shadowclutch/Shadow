@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787388881,
+  "exported_at": 1787389713,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1950,12 +1950,6 @@
       "added_at": 1785835837
     },
     {
-      "steamid": "1487668000478855188",
-      "appid": 1548510,
-      "name": "Love Dating",
-      "added_at": 1785838068
-    },
-    {
       "steamid": "1004049495224492062",
       "appid": 3173560,
       "name": "Anomalous Coffee Machine",
@@ -2296,6 +2290,12 @@
       "appid": 371660,
       "name": "Far Cry Primal",
       "added_at": 1785863153
+    },
+    {
+      "steamid": "1487668000478855188",
+      "appid": 1548510,
+      "name": " ",
+      "added_at": 1787389712
     },
     {
       "steamid": "1487668000478855188",
