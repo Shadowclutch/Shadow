@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787418583,
+  "exported_at": 1787426897,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -925,6 +925,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/985025566841376778/0af0e1d0f9dd5c6554b193ced64e7a5e.png",
       "provider": "discord",
       "created_at": 1787418529
+    },
+    {
+      "steamid": "1169390781602214028",
+      "name": "???",
+      "avatar": "https://cdn.discordapp.com/avatars/1169390781602214028/23ea739f6aefec6228b7b2007db25de1.png",
+      "provider": "discord",
+      "created_at": 1787426892
     }
   ],
   "sessions": [
@@ -1739,6 +1746,12 @@
       "steamid": "1298255189169410200",
       "created_at": 1787414102,
       "expires_at": 1818950102
+    },
+    {
+      "token": "20fe74ab1907db1e78745fe03da59fde914fbc23d55d8ce831edd0c1af864cac",
+      "steamid": "1169390781602214028",
+      "created_at": 1787426892,
+      "expires_at": 1818962892
     }
   ],
   "library": [
@@ -8666,7 +8679,7 @@
       "session_id": "",
       "status": "active",
       "machine_id": "hw-c584bc44429537d5a3499ea6",
-      "activated_at": 1787411959,
+      "activated_at": 1787419159,
       "created_at": 1787232085,
       "trial": 0,
       "expires_at": 1789824083
