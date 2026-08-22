@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787390209,
+  "exported_at": 1787404566,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -904,6 +904,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/985025566841376778/0af0e1d0f9dd5c6554b193ced64e7a5e.png",
       "provider": "discord",
       "created_at": 1787386454
+    },
+    {
+      "steamid": "1018443061631668225",
+      "name": "Qtn.mic",
+      "avatar": "https://cdn.discordapp.com/avatars/1018443061631668225/c485c7121204d26ab07f7aeeed33a579.png",
+      "provider": "discord",
+      "created_at": 1787391974
     }
   ],
   "sessions": [
@@ -1700,6 +1707,12 @@
       "steamid": "985025566841376778",
       "created_at": 1787386454,
       "expires_at": 1818922454
+    },
+    {
+      "token": "f317116654b1965ee53544c1a5fbc90b282f2f9644a5c1bb6c194be16bfe9d65",
+      "steamid": "1018443061631668225",
+      "created_at": 1787391975,
+      "expires_at": 1818927975
     }
   ],
   "library": [
@@ -8047,6 +8060,20 @@
       "ip": "223.196.13.4",
       "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
       "created_at": 1786186565
+    },
+    {
+      "id": "55e0910f759733dce6515279",
+      "source": "verify",
+      "ip": "2409:40e3:5c:68e:7445:8678:aeaa:e1b4",
+      "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.9168",
+      "created_at": 1787390913
+    },
+    {
+      "id": "7656559f1d0be28bb16e13e5",
+      "source": "site",
+      "ip": "2409:40e3:5433:c3ab:44fd:ce31:b4ac:a422",
+      "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.9168",
+      "created_at": 1787403378
     }
   ],
   "license_keys": [
