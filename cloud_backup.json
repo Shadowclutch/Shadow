@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787404572,
+  "exported_at": 1787404924,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -911,6 +911,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1018443061631668225/c485c7121204d26ab07f7aeeed33a579.png",
       "provider": "discord",
       "created_at": 1787391974
+    },
+    {
+      "steamid": "1496472593421697084",
+      "name": "斧 Yasha !!",
+      "avatar": "https://cdn.discordapp.com/avatars/1496472593421697084/82d1e8e5101cd10f5310998be6e13315.png",
+      "provider": "discord",
+      "created_at": 1787404921
     }
   ],
   "sessions": [
@@ -1713,6 +1720,12 @@
       "steamid": "1018443061631668225",
       "created_at": 1787391975,
       "expires_at": 1818927975
+    },
+    {
+      "token": "5fd23effccff4be7d6bf2f6366a41b906e5592135b3ca5a69d3fbf35c48b72f0",
+      "steamid": "1496472593421697084",
+      "created_at": 1787404921,
+      "expires_at": 1818940921
     }
   ],
   "library": [
