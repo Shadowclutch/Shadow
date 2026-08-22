@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787407074,
+  "exported_at": 1787412058,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -507,13 +507,6 @@
       "created_at": 1787146788
     },
     {
-      "steamid": "1487668000478855188",
-      "name": "ShadowTools",
-      "avatar": "https://cdn.discordapp.com/avatars/1487668000478855188/643df94d6f030dc3f4abced9a02e7235.png",
-      "provider": "discord",
-      "created_at": 1787176450
-    },
-    {
       "steamid": "1417514597723803708",
       "name": "SH4DØW",
       "avatar": "https://cdn.discordapp.com/avatars/1417514597723803708/cf2a800b7eddf847b3747e44b0e5550d.png",
@@ -918,6 +911,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1496472593421697084/82d1e8e5101cd10f5310998be6e13315.png",
       "provider": "discord",
       "created_at": 1787404921
+    },
+    {
+      "steamid": "1487668000478855188",
+      "name": "ShadowTools",
+      "avatar": "https://cdn.discordapp.com/avatars/1487668000478855188/643df94d6f030dc3f4abced9a02e7235.png",
+      "provider": "discord",
+      "created_at": 1787412053
     }
   ],
   "sessions": [
@@ -8234,17 +8234,6 @@
       "expires_at": 1785952111
     },
     {
-      "key": "SHADOW-X6KL-FK7V-THEH-Y849",
-      "email": "",
-      "session_id": "",
-      "status": "unused",
-      "machine_id": "",
-      "activated_at": 0,
-      "created_at": 1787232085,
-      "trial": 0,
-      "expires_at": 1789824083
-    },
-    {
       "key": "SHADOW-DRUA-VGX4-EE7P-3M4Z",
       "email": "",
       "session_id": "",
@@ -8650,6 +8639,17 @@
       "created_at": 1787381174,
       "trial": 1,
       "expires_at": 1787381294
+    },
+    {
+      "key": "SHADOW-X6KL-FK7V-THEH-Y849",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-c584bc44429537d5a3499ea6",
+      "activated_at": 1787411959,
+      "created_at": 1787232085,
+      "trial": 0,
+      "expires_at": 1789824083
     }
   ]
 }
