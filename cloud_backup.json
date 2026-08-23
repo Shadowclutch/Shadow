@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787500139,
+  "exported_at": 1787500143,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6654,6 +6654,12 @@
       "added_at": 1787153298
     },
     {
+      "steamid": "1321487573402517576",
+      "appid": 12230,
+      "name": "Grand Theft Auto III",
+      "added_at": 1787500142
+    },
+    {
       "steamid": "804372381790896208",
       "appid": 1238880,
       "name": "Battlefield™ Hardline",
@@ -7851,12 +7857,6 @@
       "steamid": "918356124074381313",
       "appid": 1495710,
       "name": "Cyberpunk 2077 Bonus Content",
-      "added_at": 1787369426
-    },
-    {
-      "steamid": "918356124074381313",
-      "appid": 1174180,
-      "name": "Red Dead Redemption 2",
       "added_at": 1787369426
     }
   ],
