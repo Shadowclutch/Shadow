@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787505599,
+  "exported_at": 1787505616,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -3828,12 +3828,6 @@
       "added_at": 1785940245
     },
     {
-      "steamid": "1042836918431395920",
-      "appid": 4001890,
-      "name": "",
-      "added_at": 1787505597
-    },
-    {
       "steamid": "872516016175980594",
       "appid": 2840770,
       "name": "Avatar: Frontiers of Pandora",
@@ -3844,6 +3838,12 @@
       "appid": 611790,
       "name": "House Party",
       "added_at": 1785940639
+    },
+    {
+      "steamid": "1042836918431395920",
+      "appid": 4001890,
+      "name": "",
+      "added_at": 1787505615
     },
     {
       "steamid": "1510802203831697478",
