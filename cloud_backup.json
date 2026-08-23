@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787500160,
+  "exported_at": 1787500159,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1906,12 +1906,6 @@
       "appid": 271590,
       "name": "Grand Theft Auto V Legacy",
       "added_at": 1787500158
-    },
-    {
-      "steamid": "1321487573402517576",
-      "appid": 12110,
-      "name": "Grand Theft Auto: Vice City",
-      "added_at": 1787500159
     },
     {
       "steamid": "1388117382454841366",
@@ -6684,12 +6678,6 @@
       "added_at": 1787500142
     },
     {
-      "steamid": "1321487573402517576",
-      "appid": 1547000,
-      "name": "Grand Theft Auto: San Andreas - The Definitive Edition",
-      "added_at": 1787500160
-    },
-    {
       "steamid": "804372381790896208",
       "appid": 1238880,
       "name": "Battlefield™ Hardline",
@@ -7858,6 +7846,18 @@
       "appid": 1659420,
       "name": "UNCHARTED™: Legacy of Thieves Collection",
       "added_at": 1787369422
+    },
+    {
+      "steamid": "918356124074381313",
+      "appid": 2000950,
+      "name": "Call of Duty®: Modern Warfare®",
+      "added_at": 1787369423
+    },
+    {
+      "steamid": "918356124074381313",
+      "appid": 236870,
+      "name": "HITMAN™",
+      "added_at": 1787369423
     }
   ],
   "downloads": [
