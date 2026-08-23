@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787507704,
+  "exported_at": 1787507724,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -4435,6 +4435,12 @@
     },
     {
       "steamid": "1487668000478855188",
+      "appid": 945360,
+      "name": "Among Us",
+      "added_at": 1787507723
+    },
+    {
+      "steamid": "1487668000478855188",
       "appid": 12230,
       "name": "Grand Theft Auto III",
       "added_at": 1786188604
@@ -7852,12 +7858,6 @@
       "appid": 3164500,
       "name": "Schedule I",
       "added_at": 1787368862
-    },
-    {
-      "steamid": "918356124074381313",
-      "appid": 1888930,
-      "name": "The Last of Us™ Part I",
-      "added_at": 1787369421
     }
   ],
   "downloads": [
