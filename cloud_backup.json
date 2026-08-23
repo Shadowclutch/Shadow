@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787521904,
+  "exported_at": 1787521906,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -2158,6 +2158,12 @@
       "appid": 2001760,
       "name": "Beast of Reincarnation",
       "added_at": 1785854377
+    },
+    {
+      "steamid": "804372381790896208",
+      "appid": 47850,
+      "name": "FIFA Manager 11",
+      "added_at": 1787521906
     },
     {
       "steamid": "1245683012641751064",
@@ -7851,12 +7857,6 @@
       "steamid": "1293438432143609867",
       "appid": 1504150,
       "name": "Hello Guest: Hello Neighbor 2 pre-alpha",
-      "added_at": 1787364216
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 377160,
-      "name": "Fallout 4",
       "added_at": 1787364216
     }
   ],
