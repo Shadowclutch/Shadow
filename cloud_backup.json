@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787499483,
+  "exported_at": 1787500139,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6642,6 +6642,12 @@
       "added_at": 1787153296
     },
     {
+      "steamid": "1321487573402517576",
+      "appid": 12100,
+      "name": "Grand Theft Auto III",
+      "added_at": 1787500138
+    },
+    {
       "steamid": "804372381790896208",
       "appid": 233270,
       "name": "Far Cry® 3 Blood Dragon",
@@ -7852,12 +7858,6 @@
       "appid": 1174180,
       "name": "Red Dead Redemption 2",
       "added_at": 1787369426
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 381210,
-      "name": "Dead by Daylight",
-      "added_at": 1787369572
     }
   ],
   "downloads": [
