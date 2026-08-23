@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787500149,
+  "exported_at": 1787500158,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1890,10 +1890,22 @@
       "added_at": 1785687135
     },
     {
+      "steamid": "1321487573402517576",
+      "appid": 12250,
+      "name": "Grand Theft Auto: San Andreas",
+      "added_at": 1787500158
+    },
+    {
       "steamid": "1487668000478855188",
       "appid": 3595230,
       "name": "Call of Duty®: Modern Warfare® II",
       "added_at": 1785686473
+    },
+    {
+      "steamid": "1321487573402517576",
+      "appid": 271590,
+      "name": "Grand Theft Auto V Legacy",
+      "added_at": 1787500158
     },
     {
       "steamid": "1388117382454841366",
@@ -6816,6 +6828,12 @@
       "added_at": 1787267245
     },
     {
+      "steamid": "1321487573402517576",
+      "appid": 12120,
+      "name": "Grand Theft Auto: San Andreas",
+      "added_at": 1787500158
+    },
+    {
       "steamid": "1250466909892251678",
       "appid": 3112260,
       "name": "Virtua Fighter 5 R.E.V.O. World Stage",
@@ -7840,24 +7858,6 @@
       "appid": 2239550,
       "name": "Watch Dogs: Legion",
       "added_at": 1787369424
-    },
-    {
-      "steamid": "918356124074381313",
-      "appid": 447040,
-      "name": "Watch_Dogs 2",
-      "added_at": 1787369424
-    },
-    {
-      "steamid": "918356124074381313",
-      "appid": 243470,
-      "name": "Watch_Dogs",
-      "added_at": 1787369425
-    },
-    {
-      "steamid": "918356124074381313",
-      "appid": 2358720,
-      "name": "Black Myth: Wukong",
-      "added_at": 1787369425
     }
   ],
   "downloads": [
