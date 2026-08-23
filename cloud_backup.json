@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787522406,
+  "exported_at": 1787522413,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -5580,6 +5580,12 @@
       "added_at": 1786979913
     },
     {
+      "steamid": "804372381790896208",
+      "appid": 570,
+      "name": "Dota 2",
+      "added_at": 1787522411
+    },
+    {
       "steamid": "1042836918431395920",
       "appid": 993090,
       "name": "Lossless Scaling",
@@ -7852,12 +7858,6 @@
       "appid": 238320,
       "name": "Outlast",
       "added_at": 1787364213
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 489830,
-      "name": "The Elder Scrolls V: Skyrim Special Edition",
-      "added_at": 1787364215
     }
   ],
   "downloads": [
