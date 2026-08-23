@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787487914,
+  "exported_at": 1787488003,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -8367,20 +8367,30 @@
       "ip": "2409:40e3:2c:992:f87a:de1a:ff69:51ce",
       "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.9168",
       "created_at": 1787487851
+    },
+    {
+      "id": "696b830c358ee94a23030245",
+      "source": "site",
+      "ip": "2409:40e3:2c:992:f87a:de1a:ff69:51ce",
+      "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.9168",
+      "created_at": 1787487940
+    },
+    {
+      "id": "acef14cc601efcca2e022b43",
+      "source": "site",
+      "ip": "2409:40e3:2c:992:f87a:de1a:ff69:51ce",
+      "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.9168",
+      "created_at": 1787487972
+    },
+    {
+      "id": "16e89818dfe8cf9b2f0e1b64",
+      "source": "site",
+      "ip": "2409:40e3:2c:992:f87a:de1a:ff69:51ce",
+      "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.9168",
+      "created_at": 1787488000
     }
   ],
   "license_keys": [
-    {
-      "key": "SHADOW-SH4H-6LBH-WEU3-8B97",
-      "email": "",
-      "session_id": "",
-      "status": "unused",
-      "machine_id": "",
-      "activated_at": 0,
-      "created_at": 1787232084,
-      "trial": 0,
-      "expires_at": 1789824083
-    },
     {
       "key": "TRIAL-WSN5-5HPX-4T7Z-GD9B",
       "email": "",
@@ -8927,6 +8937,17 @@
       "status": "active",
       "machine_id": "hw-452e1f914f72397c14b9b865",
       "activated_at": 1787487655,
+      "created_at": 1787232084,
+      "trial": 0,
+      "expires_at": 1789824083
+    },
+    {
+      "key": "SHADOW-SH4H-6LBH-WEU3-8B97",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-5a357e4e46ba62901079f92a",
+      "activated_at": 1787487923,
       "created_at": 1787232084,
       "trial": 0,
       "expires_at": 1789824083
