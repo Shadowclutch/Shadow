@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787521908,
+  "exported_at": 1787522406,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -4488,6 +4488,12 @@
       "added_at": 1787496737
     },
     {
+      "steamid": "804372381790896208",
+      "appid": 411180,
+      "name": "Dota 2 Player Profiles",
+      "added_at": 1787522404
+    },
+    {
       "steamid": "1533488754176557219",
       "appid": 221040,
       "name": "Resident Evil 6",
@@ -7852,12 +7858,6 @@
       "appid": 489830,
       "name": "The Elder Scrolls V: Skyrim Special Edition",
       "added_at": 1787364215
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 1504150,
-      "name": "Hello Guest: Hello Neighbor 2 pre-alpha",
-      "added_at": 1787364216
     }
   ],
   "downloads": [
