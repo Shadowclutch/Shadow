@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787488059,
+  "exported_at": 1787494572,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -967,6 +967,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/804653084818538537/c7e1257ce7b339d71ef3e32dad54b2eb.png",
       "provider": "discord",
       "created_at": 1787477020
+    },
+    {
+      "steamid": "1321487573402517576",
+      "name": "ZEXSISTY",
+      "avatar": "https://cdn.discordapp.com/avatars/1321487573402517576/e735c117402e874453af1e5e23aaa71e.png",
+      "provider": "discord",
+      "created_at": 1787494557
     }
   ],
   "sessions": [
@@ -1817,6 +1824,12 @@
       "steamid": "1150390251546742844",
       "created_at": 1787474629,
       "expires_at": 1819010629
+    },
+    {
+      "token": "2acb9ea4bc69f17e3bce74e38371b1e6567e9e602c102b7d7f2453ba7fe6439a",
+      "steamid": "1321487573402517576",
+      "created_at": 1787494557,
+      "expires_at": 1819030557
     }
   ],
   "library": [
@@ -8965,6 +8978,17 @@
       "created_at": 1787232084,
       "trial": 0,
       "expires_at": 1789824083
+    },
+    {
+      "key": "SHADOW-YMYV-E286-YEQN-AG8G",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-aa0f96b7f29c181de6e67782",
+      "activated_at": 1787494001,
+      "created_at": 1787489925,
+      "trial": 0,
+      "expires_at": 2102849925
     }
   ]
 }
