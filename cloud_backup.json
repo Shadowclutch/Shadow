@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787472354,
+  "exported_at": 1787474644,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -960,6 +960,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1112379175140073503/cc1f726bb5a988cdbd3c30fb0f52a991.png",
       "provider": "discord",
       "created_at": 1787472350
+    },
+    {
+      "steamid": "1150390251546742844",
+      "name": "Mel(win)",
+      "avatar": "https://cdn.discordapp.com/avatars/1150390251546742844/fca6bcc6101e7c001b535fb03cdf25e9.png",
+      "provider": "discord",
+      "created_at": 1787474629
     }
   ],
   "sessions": [
@@ -1804,6 +1811,12 @@
       "steamid": "764452195662954526",
       "created_at": 1787471976,
       "expires_at": 1819007976
+    },
+    {
+      "token": "39216725fce7efb574e4da7df243bcc16b29aab95c423c6a82a8a0cb6869aa67",
+      "steamid": "1150390251546742844",
+      "created_at": 1787474629,
+      "expires_at": 1819010629
     }
   ],
   "library": [
@@ -8242,6 +8255,69 @@
       "ip": "2405:201:5504:e017:d097:a621:d8b2:7b46",
       "user_agent": "curl/8.21.0",
       "created_at": 1787472340
+    },
+    {
+      "id": "7a8507bf725265004837d660",
+      "source": "site",
+      "ip": "49.36.192.177",
+      "user_agent": "curl/8.21.0",
+      "created_at": 1787472435
+    },
+    {
+      "id": "c46ad2dee903d9be745a24aa",
+      "source": "site",
+      "ip": "2405:201:5504:e017:d097:a621:d8b2:7b46",
+      "user_agent": "curl/8.21.0",
+      "created_at": 1787472617
+    },
+    {
+      "id": "b05dfffba828624973fc0901",
+      "source": "<script>alert(1)</script>",
+      "ip": "2405:201:5504:e017:d097:a621:d8b2:7b46",
+      "user_agent": "curl/8.21.0",
+      "created_at": 1787472625
+    },
+    {
+      "id": "b21c793593ee6bb0647063b7",
+      "source": "../../../etc/passwd",
+      "ip": "2405:201:5504:e017:d097:a621:d8b2:7b46",
+      "user_agent": "curl/8.21.0",
+      "created_at": 1787472632
+    },
+    {
+      "id": "3b86920ce11dc0ae072db521",
+      "source": "xss<script>",
+      "ip": "2405:201:5504:e017:d097:a621:d8b2:7b46",
+      "user_agent": "curl/8.21.0",
+      "created_at": 1787472665
+    },
+    {
+      "id": "8561834600943653c7d75800",
+      "source": "audit",
+      "ip": "2405:201:5504:e017:d097:a621:d8b2:7b46",
+      "user_agent": "curl/8.21.0",
+      "created_at": 1787472857
+    },
+    {
+      "id": "3b637c5758b086faac21e46e",
+      "source": "site",
+      "ip": "2405:201:5504:e017:d097:a621:d8b2:7b46",
+      "user_agent": "curl/8.21.0",
+      "created_at": 1787473116
+    },
+    {
+      "id": "ce91f59f6c5b6b85cf771f60",
+      "source": "site",
+      "ip": "2409:40e3:5410:673f:b110:115d:ca00:13e8",
+      "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.9168",
+      "created_at": 1787474062
+    },
+    {
+      "id": "8c33578132411d989156509f",
+      "source": "site",
+      "ip": "117.255.255.64",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+      "created_at": 1787474347
     }
   ],
   "license_keys": [
@@ -8631,17 +8707,6 @@
       "expires_at": 0
     },
     {
-      "key": "SHADOW-WMYN-32CT-3ES2-8XFL",
-      "email": "",
-      "session_id": "",
-      "status": "active",
-      "machine_id": "hw-c584bc44429537d5a3499ea6",
-      "activated_at": 1787244897,
-      "created_at": 1787232086,
-      "trial": 0,
-      "expires_at": 1789824083
-    },
-    {
       "key": "SHADOW-ZNAF-BLV6-RYXM-LZDE",
       "email": "",
       "session_id": "",
@@ -8799,10 +8864,21 @@
       "key": "SHADOW-X6KL-FK7V-THEH-Y849",
       "email": "",
       "session_id": "",
-      "status": "active",
+      "status": "revoked",
       "machine_id": "hw-c584bc44429537d5a3499ea6",
       "activated_at": 1787419159,
       "created_at": 1787232085,
+      "trial": 0,
+      "expires_at": 1789824083
+    },
+    {
+      "key": "SHADOW-WMYN-32CT-3ES2-8XFL",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-c584bc44429537d5a3499ea6",
+      "activated_at": 1787474220,
+      "created_at": 1787232086,
       "trial": 0,
       "expires_at": 1789824083
     }
