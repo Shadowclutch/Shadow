@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787521883,
+  "exported_at": 1787521890,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -4332,6 +4332,12 @@
       "added_at": 1787505785
     },
     {
+      "steamid": "804372381790896208",
+      "appid": 1506830,
+      "name": "FIFA 22",
+      "added_at": 1787521888
+    },
+    {
       "steamid": "1510802203831697478",
       "appid": 536930,
       "name": "MOBIUS FINAL FANTASY",
@@ -7852,12 +7858,6 @@
       "appid": 1321680,
       "name": "Hello Neighbor 2",
       "added_at": 1787364218
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 521890,
-      "name": "Hello Neighbor",
-      "added_at": 1787364219
     }
   ],
   "downloads": [
