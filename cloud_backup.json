@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787495773,
+  "exported_at": 1787495893,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -3698,6 +3698,12 @@
       "appid": 667970,
       "name": "VTOL VR",
       "added_at": 1785919652
+    },
+    {
+      "steamid": "1486892000648237176",
+      "appid": 4913480,
+      "name": "Forza Horizon 6 1957 Ford Thunderbird",
+      "added_at": 1787495892
     },
     {
       "steamid": "1400096002836402319",
@@ -7826,12 +7832,6 @@
       "appid": 3949040,
       "name": "RV There Yet?",
       "added_at": 1787369577
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 236390,
-      "name": "War Thunder",
-      "added_at": 1787369578
     }
   ],
   "downloads": [
