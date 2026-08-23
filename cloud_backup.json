@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787496738,
+  "exported_at": 1787496837,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -5495,6 +5495,12 @@
       "added_at": 1786979913
     },
     {
+      "steamid": "1042836918431395920",
+      "appid": 993090,
+      "name": "",
+      "added_at": 1787496836
+    },
+    {
       "steamid": "1429183143759319104",
       "appid": 427520,
       "name": "Factorio",
@@ -7839,12 +7845,6 @@
       "appid": 2399830,
       "name": "ARK: Survival Ascended",
       "added_at": 1787369573
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 270880,
-      "name": "American Truck Simulator",
-      "added_at": 1787369575
     }
   ],
   "downloads": [
@@ -8806,6 +8806,17 @@
       "expires_at": 2102849925
     },
     {
+      "key": "SHADOW-W4EW-JB2H-WX57-YAZP",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-c584bc44429537d5a3499ea6",
+      "activated_at": 1787496835,
+      "created_at": 1787232084,
+      "trial": 0,
+      "expires_at": 1789824083
+    },
+    {
       "key": "SHADOW-ZNAF-BLV6-RYXM-LZDE",
       "email": "",
       "session_id": "",
@@ -8934,17 +8945,6 @@
       "machine_id": "",
       "activated_at": 0,
       "created_at": 1787232083,
-      "trial": 0,
-      "expires_at": 1789824083
-    },
-    {
-      "key": "SHADOW-W4EW-JB2H-WX57-YAZP",
-      "email": "",
-      "session_id": "",
-      "status": "unused",
-      "machine_id": "",
-      "activated_at": 0,
-      "created_at": 1787232084,
       "trial": 0,
       "expires_at": 1789824083
     },
