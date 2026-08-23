@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787495969,
+  "exported_at": 1787496109,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -973,7 +973,7 @@
       "name": "ZEXSISTY",
       "avatar": "https://cdn.discordapp.com/avatars/1321487573402517576/e735c117402e874453af1e5e23aaa71e.png",
       "provider": "discord",
-      "created_at": 1787494557
+      "created_at": 1787496106
     }
   ],
   "sessions": [
@@ -8782,6 +8782,17 @@
       "expires_at": 2102855284
     },
     {
+      "key": "SHADOW-YMYV-E286-YEQN-AG8G",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-aa0f96b7f29c181de6e67782",
+      "activated_at": 1787496071,
+      "created_at": 1787489925,
+      "trial": 0,
+      "expires_at": 2102849925
+    },
+    {
       "key": "SHADOW-ZNAF-BLV6-RYXM-LZDE",
       "email": "",
       "session_id": "",
@@ -8989,17 +9000,6 @@
       "created_at": 1787232084,
       "trial": 0,
       "expires_at": 1789824083
-    },
-    {
-      "key": "SHADOW-YMYV-E286-YEQN-AG8G",
-      "email": "",
-      "session_id": "",
-      "status": "active",
-      "machine_id": "hw-aa0f96b7f29c181de6e67782",
-      "activated_at": 1787494001,
-      "created_at": 1787489925,
-      "trial": 0,
-      "expires_at": 2102849925
     }
   ]
 }
