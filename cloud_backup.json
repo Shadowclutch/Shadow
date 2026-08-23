@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787496715,
+  "exported_at": 1787496734,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -4313,12 +4313,6 @@
       "added_at": 1785955287
     },
     {
-      "steamid": "1486892000648237176",
-      "appid": 286912,
-      "name": "Amazing Spider-Man 2 - Black Suit",
-      "added_at": 1787496713
-    },
-    {
       "steamid": "1341837918955901071",
       "appid": 271590,
       "name": "Grand Theft Auto V Legacy",
@@ -4395,6 +4389,12 @@
       "appid": 4108000,
       "name": "Machine Party",
       "added_at": 1785971223
+    },
+    {
+      "steamid": "1486892000648237176",
+      "appid": 286912,
+      "name": "Amazing Spider-Man 2 - Black Suit",
+      "added_at": 1787496733
     },
     {
       "steamid": "1487668000478855188",
