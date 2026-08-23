@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787521695,
+  "exported_at": 1787521869,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6727,6 +6727,12 @@
     },
     {
       "steamid": "804372381790896208",
+      "appid": 1313860,
+      "name": "EA SPORTS™ FIFA 21 ",
+      "added_at": 1787521868
+    },
+    {
+      "steamid": "804372381790896208",
       "appid": 1238880,
       "name": "Battlefield™ Hardline",
       "added_at": 1787153313
@@ -7852,12 +7858,6 @@
       "appid": 1364960,
       "name": "Hello Neighbor 2 Alpha 1.5",
       "added_at": 1787364222
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 2206320,
-      "name": "Hello Neighbor VR: Search and Rescue",
-      "added_at": 1787364223
     }
   ],
   "downloads": [
