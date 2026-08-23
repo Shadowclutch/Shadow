@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787496109,
+  "exported_at": 1787496715,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -974,6 +974,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1321487573402517576/e735c117402e874453af1e5e23aaa71e.png",
       "provider": "discord",
       "created_at": 1787496106
+    },
+    {
+      "steamid": "1403736009551646751",
+      "name": "Ken Kaneki",
+      "avatar": "https://cdn.discordapp.com/avatars/1403736009551646751/51a5d6d5c795552bec3f2cc615ee2dab.png",
+      "provider": "discord",
+      "created_at": 1787496302
     }
   ],
   "sessions": [
@@ -1830,6 +1837,12 @@
       "steamid": "1321487573402517576",
       "created_at": 1787494557,
       "expires_at": 1819030557
+    },
+    {
+      "token": "ae44da669e8c6f9361cfd0420f77859f5fc59987a5986e7aaaec358d8f23d259",
+      "steamid": "1403736009551646751",
+      "created_at": 1787496302,
+      "expires_at": 1819032302
     }
   ],
   "library": [
@@ -4298,6 +4311,12 @@
       "appid": 1144200,
       "name": "Ready or Not",
       "added_at": 1785955287
+    },
+    {
+      "steamid": "1486892000648237176",
+      "appid": 286912,
+      "name": "Amazing Spider-Man 2 - Black Suit",
+      "added_at": 1787496713
     },
     {
       "steamid": "1341837918955901071",
@@ -7826,12 +7845,6 @@
       "appid": 270880,
       "name": "American Truck Simulator",
       "added_at": 1787369575
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 1293830,
-      "name": "Forza Horizon 4",
-      "added_at": 1787369576
     }
   ],
   "downloads": [
