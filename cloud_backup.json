@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787495746,
+  "exported_at": 1787495750,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -3086,6 +3086,12 @@
       "appid": 2531310,
       "name": "The Last of Us™ Part II Remastered",
       "added_at": 1785865560
+    },
+    {
+      "steamid": "1486892000648237176",
+      "appid": 12170,
+      "name": "Grand Theft Auto",
+      "added_at": 1787495749
     },
     {
       "steamid": "1007140362789330944",
@@ -7826,12 +7832,6 @@
       "appid": 236390,
       "name": "War Thunder",
       "added_at": 1787369578
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 1407200,
-      "name": "World of Tanks",
-      "added_at": 1787369579
     }
   ],
   "downloads": [
