@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787495241,
+  "exported_at": 1787495298,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -8769,6 +8769,17 @@
       "created_at": 1787152908,
       "trial": 0,
       "expires_at": 0
+    },
+    {
+      "key": "SHADOW-ZVEY-LLJZ-SXZ3-3HXV",
+      "email": "",
+      "session_id": "",
+      "status": "unused",
+      "machine_id": "",
+      "activated_at": 0,
+      "created_at": 1787495284,
+      "trial": 0,
+      "expires_at": 2102855284
     },
     {
       "key": "SHADOW-ZNAF-BLV6-RYXM-LZDE",
