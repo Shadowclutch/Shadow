@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787496899,
+  "exported_at": 1787496931,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -5495,6 +5495,12 @@
       "added_at": 1786979913
     },
     {
+      "steamid": "1042836918431395920",
+      "appid": 993090,
+      "name": "Lossless Scaling",
+      "added_at": 1787496931
+    },
+    {
       "steamid": "1429183143759319104",
       "appid": 427520,
       "name": "Factorio",
@@ -7839,12 +7845,6 @@
       "appid": 2399830,
       "name": "ARK: Survival Ascended",
       "added_at": 1787369573
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 270880,
-      "name": "American Truck Simulator",
-      "added_at": 1787369575
     }
   ],
   "downloads": [
