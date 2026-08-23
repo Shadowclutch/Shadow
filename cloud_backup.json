@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787500160,
+  "exported_at": 1787505599,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -3828,6 +3828,12 @@
       "added_at": 1785940245
     },
     {
+      "steamid": "1042836918431395920",
+      "appid": 4001890,
+      "name": "",
+      "added_at": 1787505597
+    },
+    {
       "steamid": "872516016175980594",
       "appid": 2840770,
       "name": "Avatar: Frontiers of Pandora",
@@ -6930,6 +6936,12 @@
       "added_at": 1787194396
     },
     {
+      "steamid": "1321487573402517576",
+      "appid": 1546990,
+      "name": "Grand Theft Auto: Vice City - The Definitive Edition",
+      "added_at": 1787500160
+    },
+    {
       "steamid": "1530276167083360336",
       "appid": 3949040,
       "name": "RV There Yet?",
@@ -7845,18 +7857,6 @@
       "steamid": "918356124074381313",
       "appid": 2531310,
       "name": "The Last of Us™ Part II Remastered",
-      "added_at": 1787369422
-    },
-    {
-      "steamid": "918356124074381313",
-      "appid": 1182900,
-      "name": "A Plague Tale: Requiem",
-      "added_at": 1787369422
-    },
-    {
-      "steamid": "918356124074381313",
-      "appid": 1659420,
-      "name": "UNCHARTED™: Legacy of Thieves Collection",
       "added_at": 1787369422
     }
   ],
@@ -8951,17 +8951,6 @@
       "expires_at": 1789824083
     },
     {
-      "key": "SHADOW-7DHA-AKSA-W8EZ-WARD",
-      "email": "",
-      "session_id": "",
-      "status": "unused",
-      "machine_id": "",
-      "activated_at": 0,
-      "created_at": 1787232083,
-      "trial": 0,
-      "expires_at": 1789824083
-    },
-    {
       "key": "TRIAL-RMBX-KCHG-NV6Q-76KS",
       "email": "",
       "session_id": "",
@@ -8971,6 +8960,17 @@
       "created_at": 1787381174,
       "trial": 1,
       "expires_at": 1787381294
+    },
+    {
+      "key": "SHADOW-7DHA-AKSA-W8EZ-WARD",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-c584bc44429537d5a3499ea6",
+      "activated_at": 1787504527,
+      "created_at": 1787232083,
+      "trial": 0,
+      "expires_at": 1789824083
     },
     {
       "key": "SHADOW-X6KL-FK7V-THEH-Y849",
