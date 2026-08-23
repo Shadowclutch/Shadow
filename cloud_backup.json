@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787505616,
+  "exported_at": 1787505790,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -4314,6 +4314,12 @@
       "added_at": 1787495899
     },
     {
+      "steamid": "1042836918431395920",
+      "appid": 251570,
+      "name": "",
+      "added_at": 1787505785
+    },
+    {
       "steamid": "1510802203831697478",
       "appid": 536930,
       "name": "MOBIUS FINAL FANTASY",
@@ -7852,12 +7858,6 @@
       "appid": 1888930,
       "name": "The Last of Us™ Part I",
       "added_at": 1787369421
-    },
-    {
-      "steamid": "918356124074381313",
-      "appid": 2531310,
-      "name": "The Last of Us™ Part II Remastered",
-      "added_at": 1787369422
     }
   ],
   "downloads": [
