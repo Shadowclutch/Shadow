@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787522450,
+  "exported_at": 1787522457,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6763,6 +6763,12 @@
     },
     {
       "steamid": "804372381790896208",
+      "appid": 3251690,
+      "name": "Anti Terrorist Shooting Game",
+      "added_at": 1787522456
+    },
+    {
+      "steamid": "804372381790896208",
       "appid": 233270,
       "name": "Far Cry® 3 Blood Dragon",
       "added_at": 1787153298
@@ -7852,12 +7858,6 @@
       "appid": 418370,
       "name": "Resident Evil 7 Biohazard",
       "added_at": 1787364209
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 2124490,
-      "name": "SILENT HILL 2",
-      "added_at": 1787364210
     }
   ],
   "downloads": [
