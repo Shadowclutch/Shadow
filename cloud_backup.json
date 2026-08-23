@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787487009,
+  "exported_at": 1787487842,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -8339,22 +8339,32 @@
       "ip": "39.57.186.81",
       "user_agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 26_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/23G71 Instagram 443.0.0.33.78 (iPhone14,5; iOS 26_6; en_GB; en-GB; scale=3.00; 1170x2532; IABMV/1; 1043399932) Safari/604.1",
       "created_at": 1787479831
+    },
+    {
+      "id": "16a045d2764b8097e3bb08d9",
+      "source": "site",
+      "ip": "2409:40e3:2c:992:f87a:de1a:ff69:51ce",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+      "created_at": 1787487421
+    },
+    {
+      "id": "725b1b09359ec2b9139a987d",
+      "source": "site",
+      "ip": "2401:4900:1ca8:acb5:a1ad:1077:d083:1526",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+      "created_at": 1787487551
+    },
+    {
+      "id": "cee268ab927c28a17ecd0e21",
+      "source": "site",
+      "ip": "2409:40e3:2c:992:f87a:de1a:ff69:51ce",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+      "created_at": 1787487625
     }
   ],
   "license_keys": [
     {
       "key": "SHADOW-SH4H-6LBH-WEU3-8B97",
-      "email": "",
-      "session_id": "",
-      "status": "unused",
-      "machine_id": "",
-      "activated_at": 0,
-      "created_at": 1787232084,
-      "trial": 0,
-      "expires_at": 1789824083
-    },
-    {
-      "key": "SHADOW-89RY-ZLQ6-UYD6-K78W",
       "email": "",
       "session_id": "",
       "status": "unused",
@@ -8900,6 +8910,17 @@
       "machine_id": "hw-86f929c9bebc9d0eab2eac54",
       "activated_at": 1787485771,
       "created_at": 1787232085,
+      "trial": 0,
+      "expires_at": 1789824083
+    },
+    {
+      "key": "SHADOW-89RY-ZLQ6-UYD6-K78W",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-452e1f914f72397c14b9b865",
+      "activated_at": 1787487655,
+      "created_at": 1787232084,
       "trial": 0,
       "expires_at": 1789824083
     }
