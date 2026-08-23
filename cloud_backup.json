@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787522507,
+  "exported_at": 1787522552,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -4350,6 +4350,12 @@
       "added_at": 1787521902
     },
     {
+      "steamid": "804372381790896208",
+      "appid": 3768760,
+      "name": "007 First Light",
+      "added_at": 1787522550
+    },
+    {
       "steamid": "1510802203831697478",
       "appid": 536930,
       "name": "MOBIUS FINAL FANTASY",
@@ -7852,12 +7858,6 @@
       "appid": 2688950,
       "name": "Planet Coaster 2",
       "added_at": 1787364206
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 2300320,
-      "name": "Farming Simulator 25",
-      "added_at": 1787364207
     }
   ],
   "downloads": [
