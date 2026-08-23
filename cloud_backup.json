@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787483785,
+  "exported_at": 1787485776,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -8409,17 +8409,6 @@
       "expires_at": 1785942573
     },
     {
-      "key": "SHADOW-GHVL-AMUZ-K89B-7ASP",
-      "email": "",
-      "session_id": "",
-      "status": "unused",
-      "machine_id": "",
-      "activated_at": 0,
-      "created_at": 1787232085,
-      "trial": 0,
-      "expires_at": 1789824083
-    },
-    {
       "key": "SHADOW-YX93-YZCA-PT87-S5RK",
       "email": "um5655692@gmail.com",
       "session_id": "",
@@ -8900,6 +8889,17 @@
       "machine_id": "hw-c584bc44429537d5a3499ea6",
       "activated_at": 1787474220,
       "created_at": 1787232086,
+      "trial": 0,
+      "expires_at": 1789824083
+    },
+    {
+      "key": "SHADOW-GHVL-AMUZ-K89B-7ASP",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-86f929c9bebc9d0eab2eac54",
+      "activated_at": 1787485771,
+      "created_at": 1787232085,
       "trial": 0,
       "expires_at": 1789824083
     }
