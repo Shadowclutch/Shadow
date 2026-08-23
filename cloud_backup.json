@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787497275,
+  "exported_at": 1787497650,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -5498,7 +5498,7 @@
       "steamid": "1042836918431395920",
       "appid": 993090,
       "name": "Lossless Scaling",
-      "added_at": 1787497273
+      "added_at": 1787497648
     },
     {
       "steamid": "1429183143759319104",
@@ -8784,17 +8784,6 @@
       "expires_at": 0
     },
     {
-      "key": "SHADOW-ZVEY-LLJZ-SXZ3-3HXV",
-      "email": "",
-      "session_id": "",
-      "status": "unused",
-      "machine_id": "",
-      "activated_at": 0,
-      "created_at": 1787495284,
-      "trial": 0,
-      "expires_at": 2102855284
-    },
-    {
       "key": "SHADOW-W4EW-JB2H-WX57-YAZP",
       "email": "",
       "session_id": "",
@@ -8848,6 +8837,17 @@
       "created_at": 1785930617,
       "trial": 0,
       "expires_at": 0
+    },
+    {
+      "key": "SHADOW-ZVEY-LLJZ-SXZ3-3HXV",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-3c0884c9ae00fa36a0b52937",
+      "activated_at": 1787497341,
+      "created_at": 1787495284,
+      "trial": 0,
+      "expires_at": 2102855284
     },
     {
       "key": "SHADOW-5CHY-PGB5-Z8CP-FDKU",
