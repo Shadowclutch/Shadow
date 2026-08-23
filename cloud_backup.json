@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787524073,
+  "exported_at": 1787524083,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6798,6 +6798,12 @@
       "added_at": 1787524072
     },
     {
+      "steamid": "1410042788661428365",
+      "appid": 1337520,
+      "name": "Risk of Rain Returns",
+      "added_at": 1787524084
+    },
+    {
       "steamid": "804372381790896208",
       "appid": 233270,
       "name": "Far Cry® 3 Blood Dragon",
@@ -6832,6 +6838,12 @@
       "appid": 3099190,
       "name": "Anomaly Company",
       "added_at": 1787522501
+    },
+    {
+      "steamid": "1410042788661428365",
+      "appid": 2306620,
+      "name": "Risk of Rain 2: Seekers of the Storm",
+      "added_at": 1787524082
     },
     {
       "steamid": "804372381790896208",
@@ -7846,18 +7858,6 @@
       "appid": 434030,
       "name": "Aerofly FS 2 Flight Simulator",
       "added_at": 1787364197
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 1142710,
-      "name": "Total War: WARHAMMER III",
-      "added_at": 1787364198
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 779340,
-      "name": "Total War: THREE KINGDOMS",
-      "added_at": 1787364200
     }
   ],
   "downloads": [
