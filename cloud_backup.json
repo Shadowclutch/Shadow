@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787533840,
+  "exported_at": 1787533844,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6985,6 +6985,12 @@
     },
     {
       "steamid": "804372381790896208",
+      "appid": 594970,
+      "name": "Call of Duty: Modern Warfare Remastered - Variety Map Pack",
+      "added_at": 1787533843
+    },
+    {
+      "steamid": "804372381790896208",
       "appid": 1238880,
       "name": "Battlefield™ Hardline",
       "added_at": 1787153313
@@ -7852,12 +7858,6 @@
       "appid": 1672970,
       "name": "Minecraft Dungeons",
       "added_at": 1787364155
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 1928870,
-      "name": "Minecraft Legends",
-      "added_at": 1787364157
     }
   ],
   "downloads": [
