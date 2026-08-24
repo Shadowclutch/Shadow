@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787533999,
+  "exported_at": 1787534019,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -4398,6 +4398,12 @@
       "added_at": 1787533997
     },
     {
+      "steamid": "804372381790896208",
+      "appid": 4098660,
+      "name": "Call of Duty®: Black Ops 7 - Arachnid's Mark: Starter Pack",
+      "added_at": 1787534017
+    },
+    {
       "steamid": "1510802203831697478",
       "appid": 536930,
       "name": "MOBIUS FINAL FANTASY",
@@ -7852,12 +7858,6 @@
       "appid": 2651280,
       "name": "Marvel's Spider-Man 2",
       "added_at": 1787364142
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 578080,
-      "name": "PUBG: BATTLEGROUNDS",
-      "added_at": 1787364143
     }
   ],
   "downloads": [
