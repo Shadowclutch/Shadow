@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787534024,
+  "exported_at": 1787534036,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -4410,6 +4410,12 @@
       "added_at": 1787534022
     },
     {
+      "steamid": "804372381790896208",
+      "appid": 219101,
+      "name": "Call of Duty®: Black Ops II - Vengeance",
+      "added_at": 1787534034
+    },
+    {
       "steamid": "1510802203831697478",
       "appid": 536930,
       "name": "MOBIUS FINAL FANTASY",
@@ -7852,12 +7858,6 @@
       "appid": 1817190,
       "name": "Marvel's Spider-Man: Miles Morales",
       "added_at": 1787364139
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 1817070,
-      "name": "Marvel’s Spider-Man Remastered",
-      "added_at": 1787364141
     }
   ],
   "downloads": [
