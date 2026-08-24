@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787534019,
+  "exported_at": 1787534024,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -4404,6 +4404,12 @@
       "added_at": 1787534017
     },
     {
+      "steamid": "804372381790896208",
+      "appid": 1985810,
+      "name": "Call of Duty®: Black Ops Cold War",
+      "added_at": 1787534022
+    },
+    {
       "steamid": "1510802203831697478",
       "appid": 536930,
       "name": "MOBIUS FINAL FANTASY",
@@ -7852,12 +7858,6 @@
       "appid": 1817070,
       "name": "Marvel’s Spider-Man Remastered",
       "added_at": 1787364141
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 2651280,
-      "name": "Marvel's Spider-Man 2",
-      "added_at": 1787364142
     }
   ],
   "downloads": [
