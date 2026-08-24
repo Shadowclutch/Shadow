@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787533769,
+  "exported_at": 1787533777,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6907,6 +6907,12 @@
     },
     {
       "steamid": "804372381790896208",
+      "appid": 4435530,
+      "name": "Call of Duty®: Modern Warfare® 4 - Standard Edition Pack 2",
+      "added_at": 1787533775
+    },
+    {
+      "steamid": "804372381790896208",
       "appid": 233270,
       "name": "Far Cry® 3 Blood Dragon",
       "added_at": 1787153298
@@ -7851,12 +7857,6 @@
       "steamid": "1293438432143609867",
       "appid": 292030,
       "name": "The Witcher 3: Wild Hunt",
-      "added_at": 1787364159
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 990080,
-      "name": "Hogwarts Legacy",
       "added_at": 1787364159
     }
   ],
