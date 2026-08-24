@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787533968,
+  "exported_at": 1787533979,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -4380,6 +4380,12 @@
       "added_at": 1787533966
     },
     {
+      "steamid": "804372381790896208",
+      "appid": 388520,
+      "name": "Call of Duty: Black Ops III Beta",
+      "added_at": 1787533977
+    },
+    {
       "steamid": "1510802203831697478",
       "appid": 536930,
       "name": "MOBIUS FINAL FANTASY",
@@ -7852,12 +7858,6 @@
       "appid": 271590,
       "name": "Grand Theft Auto V Legacy",
       "added_at": 1787364146
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 1086940,
-      "name": "Baldur's Gate 3",
-      "added_at": 1787364148
     }
   ],
   "downloads": [
