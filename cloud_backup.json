@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787533207,
+  "exported_at": 1787533220,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6823,6 +6823,12 @@
     },
     {
       "steamid": "804372381790896208",
+      "appid": 2131650,
+      "name": "METAL GEAR SOLID 3: Snake Eater - Master Collection Version",
+      "added_at": 1787533218
+    },
+    {
+      "steamid": "804372381790896208",
       "appid": 233270,
       "name": "Far Cry® 3 Blood Dragon",
       "added_at": 1787153298
@@ -7852,12 +7858,6 @@
       "appid": 892970,
       "name": "Valheim",
       "added_at": 1787364191
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 1604030,
-      "name": "V Rising",
-      "added_at": 1787364193
     }
   ],
   "downloads": [
