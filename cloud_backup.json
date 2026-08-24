@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787553899,
+  "exported_at": 1787553905,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -7134,12 +7134,6 @@
       "added_at": 1787547764
     },
     {
-      "steamid": "1130295539561406504",
-      "appid": 5952,
-      "name": "Left 4 Dead - The Sacrifice Teaser",
-      "added_at": 1787553898
-    },
-    {
       "steamid": "804372381790896208",
       "appid": 1238880,
       "name": "Battlefield™ Hardline",
@@ -7858,6 +7852,12 @@
       "appid": 883710,
       "name": "Resident Evil 2",
       "added_at": 1787364121
+    },
+    {
+      "steamid": "1293438432143609867",
+      "appid": 952060,
+      "name": "Resident Evil 3",
+      "added_at": 1787364122
     }
   ],
   "downloads": [
