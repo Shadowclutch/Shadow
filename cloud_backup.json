@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787543412,
+  "exported_at": 1787547534,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -4416,6 +4416,12 @@
       "added_at": 1787534950
     },
     {
+      "steamid": "220828276476608512",
+      "appid": 1867240,
+      "name": "WARDOGS",
+      "added_at": 1787547532
+    },
+    {
       "steamid": "1510802203831697478",
       "appid": 536930,
       "name": "MOBIUS FINAL FANTASY",
@@ -7852,12 +7858,6 @@
       "appid": 2555190,
       "name": "Poppy Playtime - Chapter 3",
       "added_at": 1787364135
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 3008670,
-      "name": "Poppy Playtime - Chapter 4",
-      "added_at": 1787364137
     }
   ],
   "downloads": [
@@ -9037,6 +9037,17 @@
       "created_at": 1787543346,
       "trial": 1,
       "expires_at": 1787543466
+    },
+    {
+      "key": "TRIAL-25ZK-VS9L-HXAW-QL42",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-0b1b5e4804a0acda580b0cb4",
+      "activated_at": 1787546816,
+      "created_at": 1787546816,
+      "trial": 1,
+      "expires_at": 1787546936
     }
   ]
 }
