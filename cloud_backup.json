@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787533990,
+  "exported_at": 1787533999,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -4392,6 +4392,12 @@
       "added_at": 1787533989
     },
     {
+      "steamid": "804372381790896208",
+      "appid": 4384550,
+      "name": "Call of Duty®: Black Ops 6",
+      "added_at": 1787533997
+    },
+    {
       "steamid": "1510802203831697478",
       "appid": 536930,
       "name": "MOBIUS FINAL FANTASY",
@@ -7852,12 +7858,6 @@
       "appid": 578080,
       "name": "PUBG: BATTLEGROUNDS",
       "added_at": 1787364143
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 3240220,
-      "name": "Grand Theft Auto V Enhanced",
-      "added_at": 1787364145
     }
   ],
   "downloads": [
