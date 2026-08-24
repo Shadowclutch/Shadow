@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787584320,
+  "exported_at": 1787585217,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -7574,6 +7574,12 @@
       "added_at": 1787584263
     },
     {
+      "steamid": "1112379175140073503",
+      "appid": 1332010,
+      "name": "Stray",
+      "added_at": 1787585217
+    },
+    {
       "steamid": "804372381790896208",
       "appid": 233270,
       "name": "Far Cry® 3 Blood Dragon",
@@ -7878,12 +7884,6 @@
       "appid": 507320,
       "name": "The Bus - Dedicated Server",
       "added_at": 1787584224
-    },
-    {
-      "steamid": "804372381790896208",
-      "appid": 1238880,
-      "name": "Battlefield™ Hardline",
-      "added_at": 1787153313
     }
   ],
   "downloads": [
