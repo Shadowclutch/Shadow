@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787547575,
+  "exported_at": 1787547657,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6978,6 +6978,18 @@
       "added_at": 1787543411
     },
     {
+      "steamid": "220828276476608512",
+      "appid": 214630,
+      "name": "Call of Duty: Black Ops - OSX",
+      "added_at": 1787547654
+    },
+    {
+      "steamid": "220828276476608512",
+      "appid": 214640,
+      "name": "Call of Duty: Black Ops - Multiplayer OSX",
+      "added_at": 1787547658
+    },
+    {
       "steamid": "804372381790896208",
       "appid": 233270,
       "name": "Far Cry® 3 Blood Dragon",
@@ -7846,18 +7858,6 @@
       "appid": 2693060,
       "name": "Garten of Banban 7",
       "added_at": 1787364131
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 2917040,
-      "name": "Garten of Banban 8: Anti Devil",
-      "added_at": 1787364133
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 1817490,
-      "name": "Poppy Playtime - Chapter 2",
-      "added_at": 1787364134
     }
   ],
   "downloads": [
