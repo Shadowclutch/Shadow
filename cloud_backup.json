@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787533392,
+  "exported_at": 1787533520,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -4362,6 +4362,12 @@
       "added_at": 1787524139
     },
     {
+      "steamid": "804372381790896208",
+      "appid": 24880,
+      "name": "The Saboteur",
+      "added_at": 1787533518
+    },
+    {
       "steamid": "1510802203831697478",
       "appid": 536930,
       "name": "MOBIUS FINAL FANTASY",
@@ -7852,12 +7858,6 @@
       "appid": 848450,
       "name": "Subnautica: Below Zero",
       "added_at": 1787364179
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 2767030,
-      "name": "Marvel Rivals",
-      "added_at": 1787364181
     }
   ],
   "downloads": [
