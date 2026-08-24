@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787567633,
+  "exported_at": 1787567656,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -4458,6 +4458,12 @@
       "added_at": 1787567631
     },
     {
+      "steamid": "1137380934795132948",
+      "appid": 3240220,
+      "name": "Grand Theft Auto V Enhanced",
+      "added_at": 1787567655
+    },
+    {
       "steamid": "1510802203831697478",
       "appid": 536930,
       "name": "MOBIUS FINAL FANTASY",
@@ -7852,12 +7858,6 @@
       "appid": 1888930,
       "name": "The Last of Us™ Part I",
       "added_at": 1787344679
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 1174180,
-      "name": "Red Dead Redemption 2",
-      "added_at": 1787364102
     }
   ],
   "downloads": [
