@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787533982,
+  "exported_at": 1787533990,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -4386,6 +4386,12 @@
       "added_at": 1787533980
     },
     {
+      "steamid": "804372381790896208",
+      "appid": 2933620,
+      "name": "Call of Duty®: Black Ops 6 - Campaign",
+      "added_at": 1787533989
+    },
+    {
       "steamid": "1510802203831697478",
       "appid": 536930,
       "name": "MOBIUS FINAL FANTASY",
@@ -7852,12 +7858,6 @@
       "appid": 3240220,
       "name": "Grand Theft Auto V Enhanced",
       "added_at": 1787364145
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 271590,
-      "name": "Grand Theft Auto V Legacy",
-      "added_at": 1787364146
     }
   ],
   "downloads": [
