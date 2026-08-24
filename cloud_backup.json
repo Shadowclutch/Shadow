@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787583140,
+  "exported_at": 1787584191,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -4700,6 +4700,12 @@
       "added_at": 1787582965
     },
     {
+      "steamid": "1242490728215609354",
+      "appid": 111363,
+      "name": "",
+      "added_at": 1787584187
+    },
+    {
       "steamid": "1510802203831697478",
       "appid": 536930,
       "name": "MOBIUS FINAL FANTASY",
@@ -7878,12 +7884,6 @@
       "appid": 270880,
       "name": "American Truck Simulator",
       "added_at": 1787158349
-    },
-    {
-      "steamid": "1160915638739550230",
-      "appid": 1808500,
-      "name": "ARC Raiders",
-      "added_at": 1787158383
     }
   ],
   "downloads": [
@@ -9098,17 +9098,6 @@
       "expires_at": 1789824083
     },
     {
-      "key": "SHADOW-XU2U-8V22-S7G2-RZRW",
-      "email": "",
-      "session_id": "",
-      "status": "unused",
-      "machine_id": "",
-      "activated_at": 0,
-      "created_at": 1787569319,
-      "trial": 0,
-      "expires_at": 1792753319
-    },
-    {
       "key": "SHADOW-JH49-YGZ5-CE34-9EFY",
       "email": "",
       "session_id": "",
@@ -9182,6 +9171,17 @@
       "machine_id": "",
       "activated_at": 0,
       "created_at": 1787569321,
+      "trial": 0,
+      "expires_at": 1792753319
+    },
+    {
+      "key": "SHADOW-XU2U-8V22-S7G2-RZRW",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-6127fd57b348a82c5bacb019",
+      "activated_at": 1787583943,
+      "created_at": 1787569319,
       "trial": 0,
       "expires_at": 1792753319
     }
