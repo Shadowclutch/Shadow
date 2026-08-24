@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787566007,
+  "exported_at": 1787566044,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -5035,12 +5035,6 @@
     },
     {
       "steamid": "1487668000478855188",
-      "appid": 1456820,
-      "name": " Marfusha",
-      "added_at": 1786188769
-    },
-    {
-      "steamid": "1487668000478855188",
       "appid": 2668910,
       "name": " Real Shoot",
       "added_at": 1786188831
@@ -7216,6 +7210,12 @@
       "appid": 1664070,
       "name": "FIFA 22 - Ultimate Launch Edition - Key",
       "added_at": 1787555256
+    },
+    {
+      "steamid": "1487668000478855188",
+      "appid": 1456820,
+      "name": " Marfusha",
+      "added_at": 1787566043
     },
     {
       "steamid": "804372381790896208",
