@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787542409,
+  "exported_at": 1787542416,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6907,12 +6907,6 @@
     },
     {
       "steamid": "1410042788661428365",
-      "appid": 1607890,
-      "name": "Risk of Rain 2 - Expansion 1",
-      "added_at": 1787524072
-    },
-    {
-      "steamid": "1410042788661428365",
       "appid": 1337520,
       "name": "Risk of Rain Returns",
       "added_at": 1787524084
@@ -7006,12 +7000,6 @@
       "appid": 3099190,
       "name": "Anomaly Company",
       "added_at": 1787522501
-    },
-    {
-      "steamid": "1410042788661428365",
-      "appid": 2306620,
-      "name": "Risk of Rain 2: Seekers of the Storm",
-      "added_at": 1787524082
     },
     {
       "steamid": "804372381790896208",
@@ -7858,6 +7846,18 @@
       "appid": 1817490,
       "name": "Poppy Playtime - Chapter 2",
       "added_at": 1787364134
+    },
+    {
+      "steamid": "1293438432143609867",
+      "appid": 2555190,
+      "name": "Poppy Playtime - Chapter 3",
+      "added_at": 1787364135
+    },
+    {
+      "steamid": "1293438432143609867",
+      "appid": 3008670,
+      "name": "Poppy Playtime - Chapter 4",
+      "added_at": 1787364137
     }
   ],
   "downloads": [
