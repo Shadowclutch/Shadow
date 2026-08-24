@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787533777,
+  "exported_at": 1787533840,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6979,6 +6979,12 @@
     },
     {
       "steamid": "804372381790896208",
+      "appid": 2000950,
+      "name": "Call of Duty®: Modern Warfare®",
+      "added_at": 1787533838
+    },
+    {
+      "steamid": "804372381790896208",
       "appid": 1238880,
       "name": "Battlefield™ Hardline",
       "added_at": 1787153313
@@ -7852,12 +7858,6 @@
       "appid": 1928870,
       "name": "Minecraft Legends",
       "added_at": 1787364157
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 292030,
-      "name": "The Witcher 3: Wild Hunt",
-      "added_at": 1787364159
     }
   ],
   "downloads": [
