@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787547766,
+  "exported_at": 1787547852,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -4422,6 +4422,12 @@
       "added_at": 1787547532
     },
     {
+      "steamid": "220828276476608512",
+      "appid": 42700,
+      "name": "Call of Duty: Black Ops",
+      "added_at": 1787547850
+    },
+    {
       "steamid": "1510802203831697478",
       "appid": 536930,
       "name": "MOBIUS FINAL FANTASY",
@@ -7852,12 +7858,6 @@
       "appid": 3764200,
       "name": "Resident Evil Requiem",
       "added_at": 1787364125
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 2800500,
-      "name": "Blacklist Mafia",
-      "added_at": 1787364126
     }
   ],
   "downloads": [
