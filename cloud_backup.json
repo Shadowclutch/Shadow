@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787533251,
+  "exported_at": 1787533354,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6889,6 +6889,12 @@
     },
     {
       "steamid": "804372381790896208",
+      "appid": 2527540,
+      "name": "Uncharted Ocean 2",
+      "added_at": 1787533351
+    },
+    {
+      "steamid": "804372381790896208",
       "appid": 1238880,
       "name": "Battlefield™ Hardline",
       "added_at": 1787153313
@@ -7852,12 +7858,6 @@
       "appid": 581320,
       "name": "Insurgency: Sandstorm",
       "added_at": 1787364185
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 1144200,
-      "name": "Ready or Not",
-      "added_at": 1787364187
     }
   ],
   "downloads": [
