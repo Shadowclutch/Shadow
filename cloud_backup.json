@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787554000,
+  "exported_at": 1787554020,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -4428,6 +4428,12 @@
       "added_at": 1787547850
     },
     {
+      "steamid": "1130295539561406504",
+      "appid": 550,
+      "name": "Left 4 Dead 2",
+      "added_at": 1787554018
+    },
+    {
       "steamid": "1510802203831697478",
       "appid": 536930,
       "name": "MOBIUS FINAL FANTASY",
@@ -7852,12 +7858,6 @@
       "appid": 883710,
       "name": "Resident Evil 2",
       "added_at": 1787364121
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 952060,
-      "name": "Resident Evil 3",
-      "added_at": 1787364122
     }
   ],
   "downloads": [
