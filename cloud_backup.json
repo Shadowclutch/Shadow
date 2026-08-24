@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787538238,
+  "exported_at": 1787539291,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6708,6 +6708,12 @@
       "added_at": 1787153273
     },
     {
+      "steamid": "1137380934795132948",
+      "appid": 304390,
+      "name": "FOR HONOR",
+      "added_at": 1787539289
+    },
+    {
       "steamid": "804372381790896208",
       "appid": 201870,
       "name": "Assassin's Creed Revelations",
@@ -7852,12 +7858,6 @@
       "appid": 3008670,
       "name": "Poppy Playtime - Chapter 4",
       "added_at": 1787364137
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 4100940,
-      "name": "Poppy Playtime - Chapter 5",
-      "added_at": 1787364138
     }
   ],
   "downloads": [
