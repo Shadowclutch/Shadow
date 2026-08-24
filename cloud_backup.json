@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787533389,
+  "exported_at": 1787533392,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6907,6 +6907,12 @@
     },
     {
       "steamid": "804372381790896208",
+      "appid": 33229,
+      "name": "Tom Clancy's Splinter Cell Conviction",
+      "added_at": 1787533390
+    },
+    {
+      "steamid": "804372381790896208",
       "appid": 1238880,
       "name": "Battlefield™ Hardline",
       "added_at": 1787153313
@@ -7852,12 +7858,6 @@
       "appid": 2767030,
       "name": "Marvel Rivals",
       "added_at": 1787364181
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 1203220,
-      "name": "NARAKA: BLADEPOINT",
-      "added_at": 1787364183
     }
   ],
   "downloads": [
