@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787533220,
+  "exported_at": 1787533225,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6829,6 +6829,12 @@
     },
     {
       "steamid": "804372381790896208",
+      "appid": 2131640,
+      "name": "METAL GEAR SOLID 2: Sons of Liberty - Master Collection Version",
+      "added_at": 1787533222
+    },
+    {
+      "steamid": "804372381790896208",
       "appid": 233270,
       "name": "Far Cry® 3 Blood Dragon",
       "added_at": 1787153298
@@ -7852,12 +7858,6 @@
       "appid": 1326470,
       "name": "Sons Of The Forest",
       "added_at": 1787364190
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 892970,
-      "name": "Valheim",
-      "added_at": 1787364191
     }
   ],
   "downloads": [
