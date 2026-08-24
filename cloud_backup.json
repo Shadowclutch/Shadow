@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787533848,
+  "exported_at": 1787533861,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6997,6 +6997,12 @@
     },
     {
       "steamid": "804372381790896208",
+      "appid": 4435490,
+      "name": "Call of Duty®: Modern Warfare® 4",
+      "added_at": 1787533859
+    },
+    {
+      "steamid": "804372381790896208",
       "appid": 1238880,
       "name": "Battlefield™ Hardline",
       "added_at": 1787153313
@@ -7852,12 +7858,6 @@
       "appid": 105600,
       "name": "Terraria",
       "added_at": 1787364152
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 413150,
-      "name": "Stardew Valley",
-      "added_at": 1787364154
     }
   ],
   "downloads": [
