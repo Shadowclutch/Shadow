@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787584227,
+  "exported_at": 1787584264,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -7545,12 +7545,6 @@
     },
     {
       "steamid": "1242490728215609354",
-      "appid": 491540,
-      "name": "The Bus",
-      "added_at": 1787583033
-    },
-    {
-      "steamid": "1242490728215609354",
       "appid": 4793530,
       "name": "Remains on the bus",
       "added_at": 1787583112
@@ -7566,6 +7560,12 @@
       "appid": 3544250,
       "name": "The Bus - Hamburg City",
       "added_at": 1787583131
+    },
+    {
+      "steamid": "1242490728215609354",
+      "appid": 491540,
+      "name": "The Bus",
+      "added_at": 1787584263
     },
     {
       "steamid": "804372381790896208",
