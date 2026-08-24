@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787533861,
+  "exported_at": 1787533886,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -7003,6 +7003,12 @@
     },
     {
       "steamid": "804372381790896208",
+      "appid": 2075730,
+      "name": "Call of Duty®: Modern Warfare® II - Open Beta",
+      "added_at": 1787533884
+    },
+    {
+      "steamid": "804372381790896208",
       "appid": 1238880,
       "name": "Battlefield™ Hardline",
       "added_at": 1787153313
@@ -7852,12 +7858,6 @@
       "appid": 1245620,
       "name": "ELDEN RING",
       "added_at": 1787364150
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 105600,
-      "name": "Terraria",
-      "added_at": 1787364152
     }
   ],
   "downloads": [
