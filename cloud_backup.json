@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787547660,
+  "exported_at": 1787547666,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6990,6 +6990,18 @@
       "added_at": 1787547658
     },
     {
+      "steamid": "220828276476608512",
+      "appid": 3595230,
+      "name": "Call of Duty®: Modern Warfare® II",
+      "added_at": 1787547663
+    },
+    {
+      "steamid": "220828276476608512",
+      "appid": 3595270,
+      "name": "Call of Duty®: Modern Warfare® III",
+      "added_at": 1787547665
+    },
+    {
       "steamid": "804372381790896208",
       "appid": 233270,
       "name": "Far Cry® 3 Blood Dragon",
@@ -7846,18 +7858,6 @@
       "appid": 2383120,
       "name": "Garten of Banban 4",
       "added_at": 1787364129
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 2499800,
-      "name": "Garten of Banban 6",
-      "added_at": 1787364130
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 2693060,
-      "name": "Garten of Banban 7",
-      "added_at": 1787364131
     }
   ],
   "downloads": [
