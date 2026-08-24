@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787533762,
+  "exported_at": 1787533769,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6901,6 +6901,12 @@
     },
     {
       "steamid": "804372381790896208",
+      "appid": 3595230,
+      "name": "Call of Duty®: Modern Warfare® II",
+      "added_at": 1787533767
+    },
+    {
+      "steamid": "804372381790896208",
       "appid": 233270,
       "name": "Far Cry® 3 Blood Dragon",
       "added_at": 1787153298
@@ -7852,12 +7858,6 @@
       "appid": 990080,
       "name": "Hogwarts Legacy",
       "added_at": 1787364159
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 1623730,
-      "name": "Palworld",
-      "added_at": 1787364160
     }
   ],
   "downloads": [
