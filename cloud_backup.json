@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787542320,
+  "exported_at": 1787542391,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -7074,6 +7074,12 @@
       "added_at": 1787533891
     },
     {
+      "steamid": "1410042788661428365",
+      "appid": 346671,
+      "name": "",
+      "added_at": 1787542390
+    },
+    {
       "steamid": "804372381790896208",
       "appid": 1238880,
       "name": "Battlefield™ Hardline",
@@ -7852,12 +7858,6 @@
       "appid": 1817490,
       "name": "Poppy Playtime - Chapter 2",
       "added_at": 1787364134
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 2555190,
-      "name": "Poppy Playtime - Chapter 3",
-      "added_at": 1787364135
     }
   ],
   "downloads": [
