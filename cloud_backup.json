@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787554020,
+  "exported_at": 1787554684,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6330,6 +6330,12 @@
       "added_at": 1787548989
     },
     {
+      "steamid": "539687826531287051",
+      "appid": 3070070,
+      "name": "TCG Card Shop Simulator",
+      "added_at": 1787554683
+    },
+    {
       "steamid": "804372381790896208",
       "appid": 3602290,
       "name": "FEMBOY FUTA HOUSE",
@@ -7852,12 +7858,6 @@
       "appid": 2262770,
       "name": "Garten of Banban 2",
       "added_at": 1787364119
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 883710,
-      "name": "Resident Evil 2",
-      "added_at": 1787364121
     }
   ],
   "downloads": [
