@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787583128,
+  "exported_at": 1787583133,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -7556,6 +7556,12 @@
       "added_at": 1787583127
     },
     {
+      "steamid": "1242490728215609354",
+      "appid": 3544250,
+      "name": "The Bus - Hamburg City",
+      "added_at": 1787583131
+    },
+    {
       "steamid": "804372381790896208",
       "appid": 233270,
       "name": "Far Cry® 3 Blood Dragon",
@@ -7878,12 +7884,6 @@
       "appid": 1808500,
       "name": "ARC Raiders",
       "added_at": 1787158383
-    },
-    {
-      "steamid": "1160915638739550230",
-      "appid": 635260,
-      "name": "CarX Drift Racing Online",
-      "added_at": 1787158402
     }
   ],
   "downloads": [
