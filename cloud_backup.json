@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787557542,
+  "exported_at": 1787557546,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -4446,6 +4446,12 @@
       "added_at": 1787557541
     },
     {
+      "steamid": "1533488754176557219",
+      "appid": 1547000,
+      "name": "Grand Theft Auto: San Andreas - The Definitive Edition",
+      "added_at": 1787557545
+    },
+    {
       "steamid": "1510802203831697478",
       "appid": 536930,
       "name": "MOBIUS FINAL FANTASY",
@@ -7852,12 +7858,6 @@
       "appid": 242050,
       "name": "Assassin's Creed IV Black Flag",
       "added_at": 1787364108
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 582160,
-      "name": "Assassin's Creed Origins",
-      "added_at": 1787364109
     }
   ],
   "downloads": [
