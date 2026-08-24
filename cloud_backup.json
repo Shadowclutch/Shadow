@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787530264,
+  "exported_at": 1787533207,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6817,6 +6817,12 @@
     },
     {
       "steamid": "804372381790896208",
+      "appid": 2131630,
+      "name": "METAL GEAR SOLID - Master Collection Version",
+      "added_at": 1787533205
+    },
+    {
+      "steamid": "804372381790896208",
       "appid": 233270,
       "name": "Far Cry® 3 Blood Dragon",
       "added_at": 1787153298
@@ -7852,12 +7858,6 @@
       "appid": 1604030,
       "name": "V Rising",
       "added_at": 1787364193
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 1203620,
-      "name": "Enshrouded",
-      "added_at": 1787364194
     }
   ],
   "downloads": [
