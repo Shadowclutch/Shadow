@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787553708,
+  "exported_at": 1787553899,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -871,13 +871,6 @@
       "created_at": 1787369419
     },
     {
-      "steamid": "1130295539561406504",
-      "name": "houh98",
-      "avatar": "https://cdn.discordapp.com/avatars/1130295539561406504/f68e466fb3f5085a46fb757220cbd14d.png",
-      "provider": "discord",
-      "created_at": 1787383930
-    },
-    {
       "steamid": "1137380934795132948",
       "name": "zer0",
       "avatar": "https://cdn.discordapp.com/avatars/1137380934795132948/833f78369393ab85e30ca62c491e8075.png",
@@ -988,6 +981,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1487668000478855188/643df94d6f030dc3f4abced9a02e7235.png",
       "provider": "discord",
       "created_at": 1787507701
+    },
+    {
+      "steamid": "1130295539561406504",
+      "name": "houh98",
+      "avatar": "https://cdn.discordapp.com/avatars/1130295539561406504/f68e466fb3f5085a46fb757220cbd14d.png",
+      "provider": "discord",
+      "created_at": 1787553893
     }
   ],
   "sessions": [
@@ -7134,6 +7134,12 @@
       "added_at": 1787547764
     },
     {
+      "steamid": "1130295539561406504",
+      "appid": 5952,
+      "name": "Left 4 Dead - The Sacrifice Teaser",
+      "added_at": 1787553898
+    },
+    {
       "steamid": "804372381790896208",
       "appid": 1238880,
       "name": "Battlefield™ Hardline",
@@ -7852,12 +7858,6 @@
       "appid": 883710,
       "name": "Resident Evil 2",
       "added_at": 1787364121
-    },
-    {
-      "steamid": "1293438432143609867",
-      "appid": 952060,
-      "name": "Resident Evil 3",
-      "added_at": 1787364122
     }
   ],
   "downloads": [
