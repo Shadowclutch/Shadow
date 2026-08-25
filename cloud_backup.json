@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787667191,
+  "exported_at": 1787667402,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -7753,6 +7753,12 @@
     },
     {
       "steamid": "804372381790896208",
+      "appid": 2483190,
+      "name": "Forza Horizon 6",
+      "added_at": 1787667400
+    },
+    {
+      "steamid": "804372381790896208",
       "appid": 233270,
       "name": "Far Cry® 3 Blood Dragon",
       "added_at": 1787153298
@@ -7966,12 +7972,6 @@
       "appid": 1205970,
       "name": "MX vs ATV Legends",
       "added_at": 1787582997
-    },
-    {
-      "steamid": "1242490728215609354",
-      "appid": 247970,
-      "name": "Korea. IL-2 Series",
-      "added_at": 1787583000
     }
   ],
   "downloads": [
