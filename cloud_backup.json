@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787626494,
+  "exported_at": 1787626510,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6741,6 +6741,12 @@
     },
     {
       "steamid": "804372381790896208",
+      "appid": 1222670,
+      "name": "The Sims™ 4",
+      "added_at": 1787626508
+    },
+    {
+      "steamid": "804372381790896208",
       "appid": 3602290,
       "name": "FEMBOY FUTA HOUSE",
       "added_at": 1787153140
@@ -7878,12 +7884,6 @@
       "appid": 3058630,
       "name": "Assetto Corsa EVO",
       "added_at": 1787583028
-    },
-    {
-      "steamid": "1242490728215609354",
-      "appid": 1948160,
-      "name": "Euro Truck Simulator 2 Dedicated Server",
-      "added_at": 1787583029
     }
   ],
   "downloads": [
