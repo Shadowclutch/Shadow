@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787699838,
+  "exported_at": 1787700068,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -7997,12 +7997,6 @@
     },
     {
       "steamid": "1242490728215609354",
-      "appid": 3544250,
-      "name": "The Bus - Hamburg City",
-      "added_at": 1787583131
-    },
-    {
-      "steamid": "1242490728215609354",
       "appid": 491540,
       "name": "The Bus",
       "added_at": 1787584263
@@ -8132,6 +8126,12 @@
       "appid": 202990,
       "name": "Game 202990",
       "added_at": 1787687992
+    },
+    {
+      "steamid": "76561199748373229",
+      "appid": 3595230,
+      "name": "Game 3595230",
+      "added_at": 1787687993
     }
   ],
   "downloads": [
