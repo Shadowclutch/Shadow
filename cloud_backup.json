@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787645452,
+  "exported_at": 1787645732,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -6765,6 +6765,12 @@
       "added_at": 1787626508
     },
     {
+      "steamid": "1137380934795132948",
+      "appid": 227300,
+      "name": "Euro Truck Simulator 2",
+      "added_at": 1787645731
+    },
+    {
       "steamid": "804372381790896208",
       "appid": 3602290,
       "name": "FEMBOY FUTA HOUSE",
@@ -7891,12 +7897,6 @@
       "appid": 1942110,
       "name": "Bootstrap Island",
       "added_at": 1787583022
-    },
-    {
-      "steamid": "1242490728215609354",
-      "appid": 1066890,
-      "name": "Automobilista 2",
-      "added_at": 1787583024
     }
   ],
   "downloads": [
