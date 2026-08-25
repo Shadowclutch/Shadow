@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787670762,
+  "exported_at": 1787676274,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -1011,13 +1011,6 @@
       "created_at": 1787644421
     },
     {
-      "steamid": "1540408642275254435",
-      "name": "Teamapex",
-      "avatar": "",
-      "provider": "discord",
-      "created_at": 1787653431
-    },
-    {
       "steamid": "1540410355011035171",
       "name": "Jonathan",
       "avatar": "",
@@ -1037,6 +1030,13 @@
       "avatar": "https://cdn.discordapp.com/avatars/1405494046058614881/a_a3b6150c45b408fa15813f03111dbf1a.png",
       "provider": "discord",
       "created_at": 1787670755
+    },
+    {
+      "steamid": "1540408642275254435",
+      "name": "Teamapex",
+      "avatar": "",
+      "provider": "discord",
+      "created_at": 1787675883
     }
   ],
   "sessions": [
@@ -1075,12 +1075,6 @@
       "steamid": "1540408642275254435",
       "created_at": 1787652489,
       "expires_at": 1790244489
-    },
-    {
-      "token": "b215efda5eacfede25bb135b61e9e524b3f31a8bf6947a654a4756bcffea648c",
-      "steamid": "1540408642275254435",
-      "created_at": 1787653431,
-      "expires_at": 1790245431
     },
     {
       "token": "35285ab5ce39311d6be4734e7f2d0ae6473712835744ec4f13eef4dc51c41b94",
