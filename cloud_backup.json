@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787651990,
+  "exported_at": 1787652041,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -4492,12 +4492,6 @@
     },
     {
       "steamid": "1137380934795132948",
-      "appid": 3240020,
-      "name": "Mansion Mayhem: Shooting Assault",
-      "added_at": 1787567631
-    },
-    {
-      "steamid": "1137380934795132948",
       "appid": 3240220,
       "name": "Grand Theft Auto V Enhanced",
       "added_at": 1787567655
@@ -7897,6 +7891,12 @@
       "appid": 380600,
       "name": "Fishing Planet",
       "added_at": 1787583021
+    },
+    {
+      "steamid": "1242490728215609354",
+      "appid": 1942110,
+      "name": "Bootstrap Island",
+      "added_at": 1787583022
     }
   ],
   "downloads": [
