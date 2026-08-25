@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787700108,
+  "exported_at": 1787700113,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -7955,12 +7955,6 @@
     },
     {
       "steamid": "1242490728215609354",
-      "appid": 1849250,
-      "name": "EA SPORTS™ WRC",
-      "added_at": 1787583008
-    },
-    {
-      "steamid": "1242490728215609354",
       "appid": 2850950,
       "name": "Taxi Life VR",
       "added_at": 1787583009
@@ -8132,6 +8126,12 @@
       "appid": 12230,
       "name": "Grand Theft Auto III",
       "added_at": 1787500142
+    },
+    {
+      "steamid": "1321487573402517576",
+      "appid": 1547000,
+      "name": "Grand Theft Auto: San Andreas - The Definitive Edition",
+      "added_at": 1787500160
     }
   ],
   "downloads": [
