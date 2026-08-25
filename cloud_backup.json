@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787669486,
+  "exported_at": 1787669635,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -7777,6 +7777,12 @@
     },
     {
       "steamid": "804372381790896208",
+      "appid": 2397300,
+      "name": "Half Sword",
+      "added_at": 1787669633
+    },
+    {
+      "steamid": "804372381790896208",
       "appid": 233270,
       "name": "Far Cry® 3 Blood Dragon",
       "added_at": 1787153298
@@ -7966,12 +7972,6 @@
       "appid": 2141700,
       "name": "VTOL VR: T-55 Tyro - Trainer Jet",
       "added_at": 1787582982
-    },
-    {
-      "steamid": "1242490728215609354",
-      "appid": 3554630,
-      "name": "VMX",
-      "added_at": 1787582985
     }
   ],
   "downloads": [
