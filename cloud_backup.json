@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787721369,
+  "exported_at": 1787725301,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -7150,6 +7150,12 @@
       "added_at": 1787719773
     },
     {
+      "steamid": "826059803633385503",
+      "appid": 1245620,
+      "name": "ELDEN RING",
+      "added_at": 1787725300
+    },
+    {
       "steamid": "804372381790896208",
       "appid": 3602290,
       "name": "FEMBOY FUTA HOUSE",
@@ -8126,12 +8132,6 @@
       "appid": 742420,
       "name": "Saints Row",
       "added_at": 1787720208
-    },
-    {
-      "steamid": "804372381790896208",
-      "appid": 233270,
-      "name": "Far Cry® 3 Blood Dragon",
-      "added_at": 1787153298
     }
   ],
   "downloads": [
