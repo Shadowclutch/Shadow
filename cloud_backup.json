@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787719775,
+  "exported_at": 1787719784,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -7145,12 +7145,6 @@
     },
     {
       "steamid": "475769230088732702",
-      "appid": 3949550,
-      "name": "1666: Amsterdam",
-      "added_at": 1787719759
-    },
-    {
-      "steamid": "475769230088732702",
       "appid": 2975950,
       "name": "Solasta II",
       "added_at": 1787719773
@@ -8132,6 +8126,12 @@
       "appid": 233270,
       "name": "Far Cry® 3 Blood Dragon",
       "added_at": 1787153298
+    },
+    {
+      "steamid": "1321487573402517576",
+      "appid": 12230,
+      "name": "Grand Theft Auto III",
+      "added_at": 1787500142
     }
   ],
   "downloads": [
