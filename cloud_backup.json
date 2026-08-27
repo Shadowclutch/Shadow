@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787740833,
+  "exported_at": 1787793102,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -7168,6 +7168,12 @@
       "added_at": 1787725357
     },
     {
+      "steamid": "1410042788661428365",
+      "appid": 2692990,
+      "name": "DON'T SCREAM TOGETHER",
+      "added_at": 1787793099
+    },
+    {
       "steamid": "804372381790896208",
       "appid": 3602290,
       "name": "FEMBOY FUTA HOUSE",
@@ -8132,12 +8138,6 @@
       "appid": 3595230,
       "name": "Game 3595230",
       "added_at": 1787687993
-    },
-    {
-      "steamid": "1242490728215609354",
-      "appid": 266410,
-      "name": "iRacing",
-      "added_at": 1787700276
     }
   ],
   "downloads": [
@@ -9077,17 +9077,6 @@
       "expires_at": 0
     },
     {
-      "key": "SHADOW-ECXX-6JR5-6PMS-QRH3",
-      "email": "",
-      "session_id": "",
-      "status": "unused",
-      "machine_id": "",
-      "activated_at": 0,
-      "created_at": 1787569320,
-      "trial": 0,
-      "expires_at": 1792753319
-    },
-    {
       "key": "SHADOW-W4EW-JB2H-WX57-YAZP",
       "email": "",
       "session_id": "",
@@ -9097,6 +9086,17 @@
       "created_at": 1787232084,
       "trial": 0,
       "expires_at": 1789824083
+    },
+    {
+      "key": "TRIAL-7UGR-AR8A-R68Y-5W65",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "test-machine-001",
+      "activated_at": 1787759430,
+      "created_at": 1787759430,
+      "trial": 1,
+      "expires_at": 1787759550
     },
     {
       "key": "SHADOW-ZNAF-BLV6-RYXM-LZDE",
@@ -9297,17 +9297,6 @@
       "expires_at": 1789824083
     },
     {
-      "key": "SHADOW-DB64-53MZ-YZXY-FMBG",
-      "email": "",
-      "session_id": "",
-      "status": "unused",
-      "machine_id": "",
-      "activated_at": 0,
-      "created_at": 1787569321,
-      "trial": 0,
-      "expires_at": 1792753319
-    },
-    {
       "key": "TRIAL-23UQ-V9BY-KTU8-TAGT",
       "email": "",
       "session_id": "",
@@ -9341,83 +9330,6 @@
       "expires_at": 1789824083
     },
     {
-      "key": "SHADOW-JH49-YGZ5-CE34-9EFY",
-      "email": "",
-      "session_id": "",
-      "status": "unused",
-      "machine_id": "",
-      "activated_at": 0,
-      "created_at": 1787569319,
-      "trial": 0,
-      "expires_at": 1792753319
-    },
-    {
-      "key": "SHADOW-6HTY-V3HZ-54WU-ENPV",
-      "email": "",
-      "session_id": "",
-      "status": "unused",
-      "machine_id": "",
-      "activated_at": 0,
-      "created_at": 1787569319,
-      "trial": 0,
-      "expires_at": 1792753319
-    },
-    {
-      "key": "SHADOW-3LTC-U8U3-FWEE-D2TM",
-      "email": "",
-      "session_id": "",
-      "status": "unused",
-      "machine_id": "",
-      "activated_at": 0,
-      "created_at": 1787569320,
-      "trial": 0,
-      "expires_at": 1792753319
-    },
-    {
-      "key": "SHADOW-AELY-AWKY-AZFS-9Y8K",
-      "email": "",
-      "session_id": "",
-      "status": "unused",
-      "machine_id": "",
-      "activated_at": 0,
-      "created_at": 1787569320,
-      "trial": 0,
-      "expires_at": 1792753319
-    },
-    {
-      "key": "SHADOW-RMCV-GUU3-9XHG-L3JM",
-      "email": "",
-      "session_id": "",
-      "status": "unused",
-      "machine_id": "",
-      "activated_at": 0,
-      "created_at": 1787569320,
-      "trial": 0,
-      "expires_at": 1792753319
-    },
-    {
-      "key": "SHADOW-ZY3W-WP3E-JFX9-ERZL",
-      "email": "",
-      "session_id": "",
-      "status": "unused",
-      "machine_id": "",
-      "activated_at": 0,
-      "created_at": 1787569321,
-      "trial": 0,
-      "expires_at": 1792753319
-    },
-    {
-      "key": "SHADOW-YU94-ZX2C-GTU5-XYGM",
-      "email": "",
-      "session_id": "",
-      "status": "unused",
-      "machine_id": "",
-      "activated_at": 0,
-      "created_at": 1787569321,
-      "trial": 0,
-      "expires_at": 1792753319
-    },
-    {
       "key": "SHADOW-XU2U-8V22-S7G2-RZRW",
       "email": "",
       "session_id": "",
@@ -9438,6 +9350,226 @@
       "created_at": 1787489925,
       "trial": 0,
       "expires_at": 2102849925
+    },
+    {
+      "key": "TRIAL-P55C-S67R-45U7-BL53",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "test-machine-002",
+      "activated_at": 1787759431,
+      "created_at": 1787759431,
+      "trial": 1,
+      "expires_at": 1787759551
+    },
+    {
+      "key": "TRIAL-PHWW-3QAH-6XTP-H4D5",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hack-machine-1",
+      "activated_at": 1787759446,
+      "created_at": 1787759446,
+      "trial": 1,
+      "expires_at": 1787759566
+    },
+    {
+      "key": "TRIAL-XETL-FPDE-Q77A-4HSW",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hack-machine-2",
+      "activated_at": 1787759447,
+      "created_at": 1787759447,
+      "trial": 1,
+      "expires_at": 1787759567
+    },
+    {
+      "key": "TRIAL-VEEN-SWXU-9UZJ-87A8",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hack-machine-3",
+      "activated_at": 1787759448,
+      "created_at": 1787759448,
+      "trial": 1,
+      "expires_at": 1787759568
+    },
+    {
+      "key": "TRIAL-SF92-PJPN-JADT-ZHR8",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hack-machine-4",
+      "activated_at": 1787759449,
+      "created_at": 1787759449,
+      "trial": 1,
+      "expires_at": 1787759569
+    },
+    {
+      "key": "TRIAL-PUAH-3YKC-NHUW-JFFW",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hack-machine-5",
+      "activated_at": 1787759450,
+      "created_at": 1787759450,
+      "trial": 1,
+      "expires_at": 1787759570
+    },
+    {
+      "key": "SHADOW-ECXX-6JR5-6PMS-QRH3",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-f5c59aac0b040c8cff95cd3d",
+      "activated_at": 1787759842,
+      "created_at": 1787569320,
+      "trial": 0,
+      "expires_at": 1792753319
+    },
+    {
+      "key": "SHADOW-DB64-53MZ-YZXY-FMBG",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-f5c59aac0b040c8cff95cd3d",
+      "activated_at": 1787759843,
+      "created_at": 1787569321,
+      "trial": 0,
+      "expires_at": 1792753319
+    },
+    {
+      "key": "SHADOW-3LTC-U8U3-FWEE-D2TM",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-f5c59aac0b040c8cff95cd3d",
+      "activated_at": 1787759844,
+      "created_at": 1787569320,
+      "trial": 0,
+      "expires_at": 1792753319
+    },
+    {
+      "key": "SHADOW-JH49-YGZ5-CE34-9EFY",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-hacked-001",
+      "activated_at": 1787762175,
+      "created_at": 1787569319,
+      "trial": 0,
+      "expires_at": 1792753319
+    },
+    {
+      "key": "SHADOW-6HTY-V3HZ-54WU-ENPV",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-hacked-001",
+      "activated_at": 1787762176,
+      "created_at": 1787569319,
+      "trial": 0,
+      "expires_at": 1792753319
+    },
+    {
+      "key": "SHADOW-AELY-AWKY-AZFS-9Y8K",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-hacked-001",
+      "activated_at": 1787762177,
+      "created_at": 1787569320,
+      "trial": 0,
+      "expires_at": 1792753319
+    },
+    {
+      "key": "SHADOW-RMCV-GUU3-9XHG-L3JM",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-hacked-001",
+      "activated_at": 1787762177,
+      "created_at": 1787569320,
+      "trial": 0,
+      "expires_at": 1792753319
+    },
+    {
+      "key": "SHADOW-ZY3W-WP3E-JFX9-ERZL",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-hacked-001",
+      "activated_at": 1787762178,
+      "created_at": 1787569321,
+      "trial": 0,
+      "expires_at": 1792753319
+    },
+    {
+      "key": "SHADOW-YU94-ZX2C-GTU5-XYGM",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-hacked-001",
+      "activated_at": 1787762179,
+      "created_at": 1787569321,
+      "trial": 0,
+      "expires_at": 1792753319
+    },
+    {
+      "key": "TRIAL-JD67-34BG-B2KR-4RSB",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-rotate-453-1787762191",
+      "activated_at": 1787762191,
+      "created_at": 1787762191,
+      "trial": 1,
+      "expires_at": 1787762311
+    },
+    {
+      "key": "TRIAL-KAEX-AG7H-NYG7-H33M",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-rotate-10082-1787762192",
+      "activated_at": 1787762192,
+      "created_at": 1787762192,
+      "trial": 1,
+      "expires_at": 1787762312
+    },
+    {
+      "key": "TRIAL-QXUJ-58JJ-M75V-DYHU",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-rotate-26291-1787762193",
+      "activated_at": 1787762193,
+      "created_at": 1787762193,
+      "trial": 1,
+      "expires_at": 1787762313
+    },
+    {
+      "key": "TRIAL-MDLG-2KNX-ZYQ7-LA24",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-rotate-10070-1787762194",
+      "activated_at": 1787762194,
+      "created_at": 1787762194,
+      "trial": 1,
+      "expires_at": 1787762314
+    },
+    {
+      "key": "TRIAL-3WMT-PEX8-9TYP-WWTE",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-rotate-16571-1787762195",
+      "activated_at": 1787762195,
+      "created_at": 1787762195,
+      "trial": 1,
+      "expires_at": 1787762315
     }
   ]
 }
