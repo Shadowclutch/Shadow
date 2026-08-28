@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787930984,
+  "exported_at": 1787931141,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -7213,7 +7213,13 @@
       "steamid": "826059803633385503",
       "appid": 816020,
       "name": "JUMP FORCE",
-      "added_at": 1787930983
+      "added_at": 1787930986
+    },
+    {
+      "steamid": "1402327044473356362",
+      "appid": 2591280,
+      "name": "F1® Manager 2024",
+      "added_at": 1787931140
     },
     {
       "steamid": "804372381790896208",
@@ -8155,12 +8161,6 @@
       "steamid": "76561199748373229",
       "appid": 3340,
       "name": "AstroPop Deluxe",
-      "added_at": 1787687991
-    },
-    {
-      "steamid": "76561199748373229",
-      "appid": 575590,
-      "name": "Balloon Popping Pigs",
       "added_at": 1787687991
     }
   ],
