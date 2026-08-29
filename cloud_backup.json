@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1787979407,
+  "exported_at": 1787997258,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -9616,6 +9616,17 @@
       "created_at": 1787977624,
       "trial": 1,
       "expires_at": 1787977744
+    },
+    {
+      "key": "TRIAL-BKLA-7447-AE9J-QN53",
+      "email": "",
+      "session_id": "",
+      "status": "active",
+      "machine_id": "hw-5e8fac1de3e3e0ecc3e05725",
+      "activated_at": 1787987666,
+      "created_at": 1787987665,
+      "trial": 1,
+      "expires_at": 1787987785
     }
   ]
 }
