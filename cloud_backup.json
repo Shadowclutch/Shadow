@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1788077703,
+  "exported_at": 1788087624,
   "users": [
     {
       "steamid": "1401936796719255676",
@@ -7216,12 +7216,6 @@
       "added_at": 1787930986
     },
     {
-      "steamid": "1402327044473356362",
-      "appid": 2591280,
-      "name": "F1® Manager 2024",
-      "added_at": 1787931140
-    },
-    {
       "steamid": "918356124074381313",
       "appid": 1985810,
       "name": "Call of Duty®: Black Ops Cold War",
@@ -8161,6 +8155,12 @@
       "steamid": "76561199748373229",
       "appid": 3340,
       "name": "AstroPop Deluxe",
+      "added_at": 1787687991
+    },
+    {
+      "steamid": "76561199748373229",
+      "appid": 575590,
+      "name": "Balloon Popping Pigs",
       "added_at": 1787687991
     }
   ],
