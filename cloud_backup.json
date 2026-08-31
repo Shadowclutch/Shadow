@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1788196890,
+  "exported_at": 1788198481,
   "users": [
     {
       "steamid": "76561198754059454",
@@ -262,6 +262,12 @@
       "appid": 3240220,
       "name": "Grand Theft Auto V Enhanced",
       "added_at": 1788196889
+    },
+    {
+      "steamid": "76561198754059454",
+      "appid": 1659040,
+      "name": "",
+      "added_at": 1788198480
     },
     {
       "steamid": "76561199748373229",
