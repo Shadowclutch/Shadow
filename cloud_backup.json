@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1788194097,
+  "exported_at": 1788195002,
   "users": [
     {
       "steamid": "76561199748373229",
@@ -10,18 +10,18 @@
       "created_at": 1788194094
     },
     {
+      "steamid": "76561198754059454",
+      "name": "rezi",
+      "avatar": "",
+      "provider": "activation",
+      "created_at": 1788195000
+    },
+    {
       "steamid": "99999999999999999",
       "name": "Friend",
       "avatar": "",
       "provider": "activation",
       "created_at": 1787691708
-    },
-    {
-      "steamid": "76561198754059454",
-      "name": "rezii",
-      "avatar": "https://avatars.cloudflare.steamstatic.com/2f4c82d98cce65843fa49ab6d8d63c6da5013092_full.jpg",
-      "provider": "steam",
-      "created_at": 1788117369
     }
   ],
   "sessions": [
@@ -228,6 +228,12 @@
       "steamid": "76561199748373229",
       "created_at": 1788194094,
       "expires_at": 1790786094
+    },
+    {
+      "token": "5c8993ce80f4cd5eb57f17c9fa1b30b64163f5659e1e3a9743414b9d02df8ccc",
+      "steamid": "76561198754059454",
+      "created_at": 1788195000,
+      "expires_at": 1790787000
     }
   ],
   "agent_tokens": [
