@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": 1788196728,
+  "exported_at": 1788196761,
   "users": [
     {
       "steamid": "76561198754059454",
@@ -234,12 +234,6 @@
       "steamid": "76561198754059454",
       "created_at": 1788195000,
       "expires_at": 1790787000
-    },
-    {
-      "token": "03233c0e411b78f5abadb9e64fa00a5a6be7ce9113b9a40d60cfd3c870953044",
-      "steamid": "76561199748373229",
-      "created_at": 1788195989,
-      "expires_at": 1790787989
     }
   ],
   "agent_tokens": [
@@ -261,7 +255,7 @@
       "steamid": "76561199748373229",
       "appid": 3240220,
       "name": "Grand Theft Auto V Enhanced",
-      "added_at": 1788196728
+      "added_at": 1788196760
     },
     {
       "steamid": "76561199748373229",
